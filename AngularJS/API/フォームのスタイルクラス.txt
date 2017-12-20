@@ -1,0 +1,22 @@
+
+ 1.ng-valid	入力値が妥当
+ 2.ng-valid-key	入力値が妥当（keyに指定した要素のみ）
+ 3.ng-invalid	入力値が不正
+ 4.ng-invalid-key	入力値が不正（keyに指定した要素のみ）
+ 5.ng-pristine	入力値が初期値から変更されていない
+ 6.ng-dirty	入力値が初期値から変更された
+ 7.ng-touched	フォーム要素にフォーカスが当たったことがある。
+ 8.ng-untouched	フォーム要素にフォーカスが当たったことがない。
+ 9.ng-pending	$asyncValidatorsが保留状態であるか
+10.ng-submitted	フォームがサブミットされたか（form要素のみ指定可能）
+
+※keyにはrequired,minなどの検証項目がくる。
+
+例
+
+form.css
+input.ng-invalid {background-color:#fee;}
+エラーがある要素の背景を変更
+
+input.ng-dirty.ng-invalid {background-color:#fee;}
+エラーがある箇所＋値が初期値から変更されている要素の背景を変更

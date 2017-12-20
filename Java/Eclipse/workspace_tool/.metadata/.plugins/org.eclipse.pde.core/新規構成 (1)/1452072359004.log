@@ -1,0 +1,64 @@
+!SESSION 2016-01-06 18:25:58.825 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_60
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
+Command-line arguments:  -dev file:C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/workspace/.metadata/.plugins/org.eclipse.pde.core/新規構成 (1)/dev.properties -os win32 -ws win32 -arch x86_64 -consoleLog -console
+
+!ENTRY org.eclipse.equinox.console 4 0 2016-01-06 18:25:59.811
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.equinox.console [79]
+  Unresolved requirement: Import-Package: org.apache.felix.service.command; version="0.8.0"; status="provisional"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1562)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.osgi 4 0 2016-01-06 18:25:59.814
+!MESSAGE バンドル initial@reference:file:plugins/org.eclipse.equinox.console_1.1.100.v20141023-1406.jar は解決されませんでした。
+
+!ENTRY org.eclipse.osgi 4 0 2016-01-06 18:25:59.816
+!MESSAGE Could not start bundle: org.eclipse.equinox.console
+!STACK 0
+org.osgi.framework.BundleException: Could not start bundle: org.eclipse.equinox.console
+	at org.eclipse.core.runtime.internal.adaptor.ConsoleManager.checkForConsoleBundle(ConsoleManager.java:64)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:331)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:231)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1488)
+Caused by: org.osgi.framework.BundleException: Could not resolve module: org.eclipse.equinox.console [79]
+  Unresolved requirement: Import-Package: org.apache.felix.service.command; version="0.8.0"; status="provisional"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:392)
+	at org.eclipse.core.runtime.internal.adaptor.ConsoleManager.checkForConsoleBundle(ConsoleManager.java:62)
+	... 10 more
+Root exception:
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.equinox.console [79]
+  Unresolved requirement: Import-Package: org.apache.felix.service.command; version="0.8.0"; status="provisional"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:392)
+	at org.eclipse.core.runtime.internal.adaptor.ConsoleManager.checkForConsoleBundle(ConsoleManager.java:62)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.startup(EclipseStarter.java:331)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:231)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1488)

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>sample23-07</title>
+        <h:outputStylesheet name="mystyle.css" library="css" />
+    </h:head>
+    <h:body>
+        <h1>フィールドに属性を指定する</h1>
+        <h:form>
+            <h:dataTable value="#{bb.all}" var="item">
+                <h:column>
+                    <p:graphicImage value="#{bb.pic}">
+                        <f:param name="empId" value="#{item.id}"/>
+                    </p:graphicImage>
+                </h:column>
+                <h:column>
+                    <h:panelGrid columns="2">
+                        userid：<h:outputText value="#{item.id}"/>
+                        名　前：<h:outputText value="#{item.name}"/>
+                        カラー：<h:outputText value="#{item.color}"/>
+                        記録日時：
+                        <h:outputText value="#{item.dateTime}">
+                            <f:convertDateTime pattern="yyyy/MM/dd HH:mm:ss"/>
+                        </h:outputText>
+                        開始時刻：
+                        <h:outputText value="#{item.startTime}">
+                            <f:convertDateTime pattern="HH:mm:ss"/>
+                        </h:outputText>
+                        誕生日：
+                        <h:outputText value="#{item.birthday.getTime()}">
+                            <f:convertDateTime pattern="yyyy/M/d"/>
+                        </h:outputText>		   
+                    </h:panelGrid>
+                </h:column>
+            </h:dataTable>  
+        </h:form>
+    </h:body>
+</html>

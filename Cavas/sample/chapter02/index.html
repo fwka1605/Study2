@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Hello Canvas</title>
+	<style>
+		.canvas {
+			border: 1px solid gray;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="./../js/canvas.js"></script>
+</head>
+
+<body>
+
+四角形（線）を描画
+<canvas id="canvas1" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+四角形（塗り潰し）を描画
+<canvas id="canvas2" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+四角形（色変化）を描画
+<canvas id="canvas3" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+四角形（クリア）を描画
+<canvas id="canvas4" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+
+
+<script>
+	//ロード時に描画関数(draw)を呼び出す
+	window.addEventListener('load',function(){
+		draw1();
+		draw2();
+		draw3();
+		draw4();
+		clear1();
+	});
+
+	function draw1(){
+		var ctx = getCanvasContextById("canvas1")
+
+		// 四角形を描画
+		ctx.strokeRect(100,50,120,60);
+		ctx.strokeRect(5,5,20,120);
+		ctx.strokeRect(200,120,200,200);
+	}
+
+	function clear1(){
+		clearCanvasById("canvas1");
+	}
+
+	function draw2(){
+		var ctx = getCanvasContextById("canvas2")
+
+		ctx.fillRect(100,50,120,60);
+		ctx.fillRect(5,5,20,120);
+		ctx.fillRect(200,120,200,200);
+	}
+
+	function draw3(){
+		var ctx = getCanvasContextById("canvas3")
+
+		ctx.strokeStyle='red';
+		ctx.strokeRect(100,50,120,60);
+
+		ctx.fillStyle='blue';
+		ctx.fillRect(5,5,20,120);
+
+		ctx.strokeStyle='#ff00ff';
+		ctx.strokeRect(200,120,200,200);
+
+		ctx.fillStyle='rgb(255,255,0)';
+		ctx.fillRect(0,200,75,75);
+	}
+
+	function draw4(){
+		var ctx = getCanvasContextById("canvas4")
+
+		ctx.strokeStyle='red';
+		ctx.strokeRect(100,50,120,60);
+
+		ctx.strokeStyle='#0000ff';
+		ctx.strokeRect(250,100,75,75);
+
+		ctx.clearRect(160,70,150,70);
+	}
+
+
+
+</script>
+
+</body>
+
+</html>

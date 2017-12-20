@@ -1,0 +1,26 @@
+linky
+
+{{str | linky [:target] }}
+
+str:返還対象の文字列
+target:アンカータグのtarget属性(_blank,_self,_paret,_topなど）
+
+linkyフィルターを利用することで、URLやメールアドレスなどの
+文字列をHTMLアンカーに整形できます。
+
+linkyはngSanitizeモジュールで提供されるフィルターのため、
+angular-sanitize.min.jsをインポートし、JSで依存関係を設定する
+必要があります。
+
+<ul>
+  <li ng-repeat="url in urls" ng-bind-html="url | linky"></li>
+</ul>
+
+linkyフィルターはアンカータグを出力するので、ng-bind-html属性で
+出力しなければならない。
+
+注意
+・リンク化する対象は、http/https/ftp/mailto の4種類
+・メールアドレスには、「mailto:」を付けても付けなくても同じくメールリンクとして認識
+・URLを含んだ文字列は、URL部分だけをリンク化
+

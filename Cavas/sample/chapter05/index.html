@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Hello Canvas</title>
+	<style>
+		.canvas {
+			border: 1px solid gray;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="./../js/canvas.js"></script>
+</head>
+
+<body>
+<br>
+文字列の表示
+<br>
+<canvas id="canvas1" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+
+
+<script>
+	//ロード時に描画関数(draw)を呼び出す
+	window.addEventListener('load',function(){
+		//drawBase();
+		draw1();
+	});
+
+	function drawBase(){
+		var ctx = getCanvasContextById("canvas1");
+
+		ctx.beginPath();
+		ctx.fillStyle='white';
+		ctx.globalAlpha=0.5
+		ctx.fillRect(0,0,640,400);
+	}
+
+	function draw1(){
+		var ctx = getCanvasContextById("canvas1");
+
+		ctx.font = 'bold 48px monospace';
+		ctx.strokeText('太文字、48px、等幅フォント',10,50);
+
+		ctx.font='24px serif';
+		ctx.fillText('24px、明朝系フォント',10,150);
+
+		ctx.font='300% sans-serif';
+		ctx.fillText('300%、ゴシック系フォント',10,250);
+
+		ctx.font='italic 3em monospace';
+		ctx.strokeText('イタリック、3em、等幅フォント',10,350);
+
+		ctx.beginPath();
+	}	
+
+
+
+</script>
+
+</body>
+
+</html>

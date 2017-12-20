@@ -1,0 +1,6 @@
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\Date\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\Date\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\Date\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\Date\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\Date\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\Date\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

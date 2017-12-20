@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript introduction Practice</title>
+  <style>
+    .myStyle{
+      font-weight: bold;
+      border:1px solid gray;
+    }
+  </style>
+</head>
+<body>
+  <h1>見出し</h1>
+  <p id="msg">こんにちは！</p>
+  <button id="add">Click</button>
+  <script>
+    document.getElementById('add').addEventListener('click',function(){
+      var greet = document.createElement("p");
+      var text = document.createTextNode("hello world!");
+
+      document.body.appendChild(greet).appendChild(text);
+    });
+
+  </script>
+</body>
+</html>

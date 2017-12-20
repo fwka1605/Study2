@@ -1,0 +1,7 @@
+package guessNumber;
+
+import java.io.Serializable;
+
+public class UserNumberBean implements Serializable {
+
+}

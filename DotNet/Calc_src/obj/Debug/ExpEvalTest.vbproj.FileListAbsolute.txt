@@ -1,0 +1,8 @@
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\Calc_src\bin\ExpEvalTest.exe
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\Calc_src\bin\ExpEvalTest.pdb
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\Calc_src\bin\ExpEvalTest.xml
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\Calc_src\obj\Debug\ExpEvalTest.Form.resources
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\Calc_src\obj\Debug\ExpEvalTest.vbproj.GenerateResource.Cache
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\Calc_src\obj\Debug\ExpEvalTest.exe
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\Calc_src\obj\Debug\ExpEvalTest.xml
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\Calc_src\obj\Debug\ExpEvalTest.pdb

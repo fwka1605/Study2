@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Hello Canvas</title>
+	<style>
+		.canvas {
+			border: 1px solid gray;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="./../js/canvas.js"></script>
+</head>
+
+<body>
+<br>
+文字列の表示位置
+<br>
+<canvas id="canvas1" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+文字列の表示位置(ベースの変更)
+<br>
+<canvas id="canvas2" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+
+
+<script>
+	//ロード時に描画関数(draw)を呼び出す
+	window.addEventListener('load',function(){
+		//drawBase();
+		draw1();
+		draw2();
+	});
+
+	function drawBase(){
+		var ctx = getCanvasContextById("canvas1");
+
+		ctx.beginPath();
+		ctx.fillStyle='white';
+		ctx.globalAlpha=0.5
+		ctx.fillRect(0,0,640,400);
+	}
+
+	function draw1(){
+		var ctx = getCanvasContextById("canvas1");
+
+		ctx.beginPath();	
+
+		ctx.font = '64px sans-serif';
+		ctx.fillText('Hey',260,200);
+
+		ctx.beginPath();
+		ctx.fillStyle='red';
+		ctx.arc(260,200,5,0,360*Math.PI/180);
+		ctx.fill();
+
+	}	
+
+	function draw2(){
+		var ctx = getCanvasContextById("canvas2");
+
+		ctx.beginPath();	
+
+		ctx.font='224px monospace';
+
+		ctx.textAlign = 'left';
+		ctx.textBaseline ='top';
+		ctx.fillText('A',320,200);
+
+		ctx.textAlign = 'left';
+		ctx.textBaseline ='bottom';
+		ctx.fillText('B',320,200);
+
+		ctx.textAlign ='center';
+		ctx.textBaseline='middle';
+		ctx.fillText('C',320,200);
+
+		ctx.textAlign='right';
+		ctx.textBaseline='top';
+		ctx.fillText('D',320,200);
+
+		ctx.textAlign='right';
+		ctx.textBaseline='bottom';
+		ctx.fillText('E',320,200);
+
+		ctx.beginPath();
+		ctx.fillStyle = 'red';
+		ctx.arc(320,200,5,0,360*Math.PI/180);
+		ctx.fill();
+	}	
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>sample23-09</title>
+        <h:outputStylesheet name="mystyle.css" library="css" />
+    </h:head>
+    <h:body>
+        <h3>Map型のフィールド変数</h3>
+        <h:form>
+            <h:dataTable value="#{bb.all}" var="item">
+                <h:column>#{item.id}</h:column>
+                <h:column>#{item.name}</h:column>
+                <h:column>
+                    <h:selectOneRadio value="">
+                        <f:selectItems value="#{item.items}"/>
+                    </h:selectOneRadio>
+                </h:column>
+            </h:dataTable>  
+        </h:form>
+    </h:body>
+</html>

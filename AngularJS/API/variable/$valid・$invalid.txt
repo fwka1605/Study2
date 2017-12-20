@@ -1,0 +1,17 @@
+$valid・$invalid
+
+$invalidはAngularJSで提供されているフォーム全体での入力要素の
+正常の有無を示す真偽値である。
+
+
+$invalidはAngularJSで提供されているフォーム全体での入力要素の
+エラーの有無を示す真偽値である。
+
+JavaScript側で使用するより、HTML側でエラーメッセージの
+表示灯で利用するケースが多い。
+
+例
+
+<input type="submit" value="登録" ng-disabled="myForm.$invalid" />
+
+エラーがあれば、ボタンはdisable（使用不可）になる。

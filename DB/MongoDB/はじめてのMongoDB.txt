@@ -1,0 +1,739 @@
+①下記フォルダーを作成
+C:\Users\maruyama\Documents\Study\DB\Mongodb\data
+
+②DBを作成
+C:\Users\maruyama\Documents\Study\DB\Mongodb>mongod --dbpath=data
+2017-03-02T14:20:45.641+0900 I CONTROL  [initandlisten] MongoDB starting : pid=9232 port=27017 dbpath=data 64-bit host=maru
+2017-03-02T14:20:45.642+0900 I CONTROL  [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2017-03-02T14:20:45.642+0900 I CONTROL  [initandlisten] db version v3.4.2
+2017-03-02T14:20:45.643+0900 I CONTROL  [initandlisten] git version: 3f76e40c105fc223b3e5aac3e20dcd026b83b38b
+2017-03-02T14:20:45.643+0900 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1u-fips  22 Sep 2016
+2017-03-02T14:20:45.644+0900 I CONTROL  [initandlisten] allocator: tcmalloc
+2017-03-02T14:20:45.645+0900 I CONTROL  [initandlisten] modules: none
+2017-03-02T14:20:45.645+0900 I CONTROL  [initandlisten] build environment:
+2017-03-02T14:20:45.646+0900 I CONTROL  [initandlisten]     distmod: 2008plus-ssl
+2017-03-02T14:20:45.647+0900 I CONTROL  [initandlisten]     distarch: x86_64
+2017-03-02T14:20:45.647+0900 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-03-02T14:20:45.648+0900 I CONTROL  [initandlisten] options: { storage: { dbPath: "data" } }
+2017-03-02T14:20:45.687+0900 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3546M,session_max=20000,eviction=(threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-03-02T14:20:46.519+0900 I CONTROL  [initandlisten]
+2017-03-02T14:20:46.520+0900 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2017-03-02T14:20:46.523+0900 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2017-03-02T14:20:46.525+0900 I CONTROL  [initandlisten]
+2017-03-02T14:20:47.614+0900 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'data/diagnostic.data'
+2017-03-02T14:20:47.855+0900 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+2017-03-02T14:20:47.855+0900 I INDEX    [initandlisten]          building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2017-03-02T14:20:47.893+0900 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+2017-03-02T14:20:47.895+0900 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+2017-03-02T14:20:47.916+0900 I NETWORK  [thread1] waiting for connections on port 27017
+
+③DBが起動して、フォルダーに以下のファイルが作成される。
+
+C:\Users\maruyama\Documents\Study\DB\Mongodb\data>tree /F
+フォルダー パスの一覧:  ボリューム OS
+ボリューム シリアル番号は 000000BE 1E6C:DA63 です
+	C:.
+│  collection-0--5461386640074706236.wt
+│  collection-2--5461386640074706236.wt
+│  index-1--5461386640074706236.wt
+│  index-3--5461386640074706236.wt
+│  index-4--5461386640074706236.wt
+│  mongod.lock
+│  sizeStorer.wt
+│  storage.bson
+│  WiredTiger
+│  WiredTiger.lock
+│  WiredTiger.turtle
+│  WiredTiger.wt
+│  WiredTigerLAS.wt
+│  _mdb_catalog.wt
+│
+├─diagnostic.data
+│      metrics.2017-03-02T05-20-48Z-00000
+│      metrics.interim
+│
+└─journal
+        WiredTigerLog.0000000001
+        WiredTigerPreplog.0000000001
+        WiredTigerPreplog.0000000002
+
+
+④別CMDを起動して、クライアントを起動する。
+
+C:\>mongo
+MongoDB shell version v3.4.2
+connecting to: mongodb://127.0.0.1:27017
+MongoDB server version: 3.4.2
+Server has startup warnings:
+2017-03-02T14:20:46.519+0900 I CONTROL  [initandlisten]
+2017-03-02T14:20:46.520+0900 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2017-03-02T14:20:46.523+0900 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2017-03-02T14:20:46.525+0900 I CONTROL  [initandlisten]
+>
+
+⑤使用するDBを選択
+show dbs
+use test
+
+⑥データを５件登録する
+
+・データの挿入
+    数値は浮動小数点になるため、整数の場合はNumberIntメソッドを使用する。
+    現在日時は、new Date()コンストラクタを実行する。
+  db.col1.insert({name:"Naruhiko Ogasawara",age:NumberInt(43),height:172.0})
+  db.col1.insert({name:"Sho Hakuho",age;30,heigth:NumberInt(192)})
+  db.col1.insert({title:"My first article",author:"naruhiko",create_at:new Date()})
+  db.col1.insert({item_id:"0123",kind:"TShirt",color:["blue","green"]})
+
+・JavaScriptの変数を利用して Insert文を実行する。
+
+  yamadaUser={
+    name:"Taro Yamada",
+    address:"Test Address",
+    phone:"000-000-0000"
+    }
+
+  sampleOrder = [
+    {kind:"coffee",amount:2},
+    {kind:"tea",amount:3}
+    ]
+
+  db.col1.insert({user:yamadaUser,orders:sampleOrder})
+
+・同一の_idで値を挿入してエラーを発生させる。
+
+  var doc = db.col1.findOne()
+  var newDoc = doc
+  newDoc.name="Ichiro Tanaka"
+  newDoc
+
+  db.col1.insert(newDoc)
+
+・JavaScriptの制御文を使用する
+
+for(var i=0;i<100000;i++){
+    db.col2.insert({n:i,create_at:new Date()})
+}
+
+db.col2.count()
+
+・キーの存在(ageフィールドが存在するか、しないか）
+
+db.col1.find({age:{$exists:true}})
+db.col1.find({age:{$exists:false}})
+
+・範囲の指定（身長が１６０㎝以上）
+
+db.col1.find({height:{$gte:160}})
+
+・配列値の扱い（color配列の値で検索）
+
+db.col1.find({color:"blue"})
+db.col1.find({color:"pink"})
+
+・検索条件を配列で指定する（kindがT-ShirtかMug Cupに一致するか）
+
+db.col1.find({kind:{$in:["T-Shirt","Mug Cup"]}})
+
+・ネストしたドキュメントの検索
+
+db.col1.find({"user.name":"Taro Yamada"})
+
+	user.nameをダブルコーテーションで囲む必要がある。
+
+・複数の検索条件
+
+db.col1.find({height:{$gte:160},height:{$lt:180}})
+db.col1.find({$and:[{height:{$gte:160},height:{$lt:180}}] })
+
+・射影（フィールドの一部のみ検索する）
+
+db.col1.find({name:"Naruhiko Ogasawara"})
+db.col1.find({name:"Naruhiko Ogasawara"},{height:1})
+db.col1.find({name:"Naruhiko Ogasawara"},{height:1,_id:0})
+
+	heightのみ出力、_idを出力しない
+
+・findとfindOneの違い
+
+findは検索結果としてカーソルを返すが、findOneは検索結果としてドキュメントを返す。
+
+カーソルを操作するメソッドとして、skipとlimitがある。
+
+・カーソル操作(カーソルを変数に格納し、１００００件スキップして、５行を出力する）
+
+var cursor1 = db.col2.find()
+
+cursor.skip(1000).limit(5)
+
+	skipもlimitも一度しか実行できない。２回実行するとエラーになる。
+
+・findとfindOneの違い
+
+var doc = db.col1.findOne()
+printjson(doc)
+
+var cursor = db.col1.find().limit(1)
+printjson(cursor)
+
+cursor.forEach(function(e){printjson(e)})
+
+	カーソルを使用して、ループなどの処理を行うことができる。
+
+・カーソルを使用したドキュメントのコピー
+
+var doc = db.col1.findOne()
+db.col3.insert(doc)
+db.col3.find()
+
+・ドキュメント全体の更新
+
+db.col3.update({name:"Naruhiko Ogasawara"},{foo:"bar"})
+db.col3.find()
+
+・ドキュメントの一部の更新
+
+var doc2=db.col3.findOne()
+doc2
+
+	findOneでドキュメントを検索して、変数に格納する
+
+doc2.baz=123
+doc2
+
+	変数に格納した値を更新する。
+
+db.col3.update({_id:doc2["_id"]},doc2)
+db.col3.find()
+
+	変数に格納されているIDを条件にして、ドキュメントを指定して
+	値を更新する。
+
+・ドキュメントの一部要素の追加または上書き
+
+
+db.col1.update({name:"Naruhiko Ogasawara"},{$set:{age:NumberInt(44)}})
+db.col1.findOne({name:"Naruhiko Ogasawara"})
+
+db.col1.update({name:"Naruhiko Ogasawara"},{$set:{sex:"mable"}})
+db.col1.findOne({name:"Naruhiko Ogasawara"})
+
+db.col1.findOne({name:"Sho Hakuho"})
+db.col1.update({name:"Sho Hakuho"},{$set:{age:31,sex:"male"}})
+db.col1.findOne({name:"Sho Hakuho"})
+
+・$incによる更新(加減算）
+
+var stock={num:1000,item_id:"A001",kind:"t-shirt",color:"blue"}
+db.col1.insert(stock)
+db.col1.findOne({item_id:"A001"})
+
+var st1 = db.col1.findOne({item_id:"A001"})
+db.col1.update({_id:st1["_id"]},{$set:{num:st1["num"]-2}})
+db.col1.findOne({item_id:"A001"})
+
+	トランザクションがない、ロックを掛けられない、そのため
+	データに矛盾が生じる可能性があるが、$incにより、それを
+	回避できる
+
+db.col1.update({item_id:"A001"},{$inc:{num:-2}})
+db.col1.findOne({item_id:"A001"})
+
+・$mulによる更新（乗減算）
+
+db.col1.update({item_id:"A001"},{$mul:{num:0.5}})
+db.col1.findOne({item_id:"A001"})
+
+・$unset フィールドを削除する
+
+db.col1.findOne({name:"Naruhiko Ogasawara"})
+db.col1.update({name:"Naruhiko Ogasawara"},{$unset:{sex:1}})
+db.col1.findOne({name:"Naruhiko Ogasawara"})
+
+・$inc,$mul,$set,$unsetなどの同時使用
+
+db.col1.findOne({name:"Sho Hakuho"})
+db.col1.update({name:"Sho Hakuho"},{$set:{sex:"male"},$inc:{age:1},$unset:{height:1}})
+db.col1.findOne({name:"Sho Hakuho"})
+
+・複雑な構造を持つドキュメントの更新
+
+db.col1.findOne({"user.name":"Taro Yamada"})
+db.col1.update({"user.name":"Taro Yamada"},{$set:{"user.address":"1-1-1 Chiyoda-ku"}})
+db.col1.findOne({"user.name":"Taro Yamada"})
+
+・配列の更新
+db.col1.insert({ary:[0,1,2,3,2,1,0]})
+db.col1.find({ary:{$exists:true}})
+
+db.col1.update({ary:{$exists:true}},{$push:{ary:10}})
+db.col1.find({ary:{$exists:true}})
+	末尾に10を追加
+
+db.col1.update({ary:{$exists:true}},{$pop:{ary:-1}})
+db.col1.find({ary:{$exists:true}})
+	先頭から要素を削除
+
+db.col1.update({ary:{$exists:true}},{$pop:{ary:1}})
+db.col1.find({ary:{$exists:true}})
+	末尾から要素を削除
+
+db.col1.update({ary:{$exists:true}},{$pull:{ary:{$gte:2}}})
+db.col1.find({ary:{$exists:true}})
+	2以上の要素を削除
+
+db.col1.update({ary:{$exists:true}},{$pullAll:{ary:[1,2]}})
+db.col1.find({ary:{$exists:true}})
+	1と2に一致する要素を削除
+
+・save()とupdate()のupsertによる更新
+　値がなければINSERTあればUPDATEする
+
+doc={name:{first:"Naruhiko",family:"Ogasawara"},twitter:"naruOga"}
+db.col1.insert(doc)
+docInserted=db.col1.findOne({"name.first":"Naruhiko"})
+
+newDoc={_id:docInserted["_id"],nick:"naruoga",favoriteFood:["ramen","curry"]}
+db.col1.save(newDoc)
+db.col1.findOne({_id:newDoc["_id"]})
+
+
+db.col1.update({nick:"naruoga"},{$set:{email:"naruoga@example.org"}},{upsert:true})
+db.col1.findOne({nick:"naruoga"})
+
+db.col1.update({nick:"foo"},{nick:"foo",bar:"baz"},{upsert:true})
+db.col1.findOne({nick:"foo"})
+
+・複数ドキュメントに対する更新 multiオプション
+
+db.col2.find().limit(10)
+db.col2.update({n:{$gte:3,$lte:8}},{$set:{foo:"bar"}},{multi:true})
+db.col2.find().limit(10)
+
+・ドキュメントの破棄 remove
+
+db.col1.find()
+db.col1.remove({nick:"foo"})
+db.col1.find()
+
+・全ドキュメントの破棄
+
+db.col3.find()
+db.col3.remove({})
+db.col3.find()
+
+・索引の確認
+
+db.system.indexes.find()
+
+	結果として何も出なかった
+
+db.col1.getIndexes()
+[
+        {
+                "v" : 2,
+                "key" : {
+                        "_id" : 1
+                },
+                "name" : "_id_",
+                "ns" : "test.col1"
+        }
+]
+
+・実行計画の確認
+
+db.col2.find({n:{$gte:10000,$lt:10005}}).count()
+db.col2.createIndex({n:1})
+db.col2.find({n:{$gte:10000,$lt:10005}}).count()
+
+db.system.profile.find({},{command:1,millis:1})
+
+	結果として何も出なかった
+
+・実行計画の確認　索引が使用されているか？
+
+db.col2.find({n:{$gte:10000,$lt:10005}}).explain()
+
+{
+        "queryPlanner" : {
+                "plannerVersion" : 1,
+                "namespace" : "test.col2",
+                "indexFilterSet" : false,
+                "parsedQuery" : {
+                        "$and" : [
+                                {
+                                        "n" : {
+                                                "$lt" : 10005
+                                        }
+                                },
+                                {
+                                        "n" : {
+                                                "$gte" : 10000
+                                        }
+                                }
+                        ]
+                },
+                "winningPlan" : {
+                        "stage" : "FETCH",
+                        "inputStage" : {
+                                "stage" : "IXSCAN",
+                                "keyPattern" : {
+                                        "n" : 1
+                                },
+                                "indexName" : "n_1",
+                                "isMultiKey" : false,
+                                "multiKeyPaths" : {
+                                        "n" : [ ]
+                                },
+                                "isUnique" : false,
+                                "isSparse" : false,
+                                "isPartial" : false,
+                                "indexVersion" : 2,
+                                "direction" : "forward",
+                                "indexBounds" : {
+                                        "n" : [
+                                                "[10000.0, 10005.0)"
+                                        ]
+                                }
+                        }
+                },
+                "rejectedPlans" : [ ]
+        },
+        "serverInfo" : {
+                "host" : "maru",
+                "port" : 27017,
+                "version" : "3.4.2",
+                "gitVersion" : "3f76e40c105fc223b3e5aac3e20dcd026b83b38b"
+        },
+        "ok" : 1
+}
+
+	winningPlanでIXSCANされており、indexNameが"n_1"が使用されている
+
+・索引の削除
+
+db.col2.dropIndex({n:1})
+
+db.col2.find({n:{$gte:10000,$lt:10005}}).explain().queryPlanner.winningPlan
+{
+        "stage" : "COLLSCAN",
+        "filter" : {
+                "$and" : [
+                        {
+                                "n" : {
+                                        "$lt" : 10005
+                                }
+                        },
+                        {
+                                "n" : {
+                                        "$gte" : 10000
+                                }
+                        }
+                ]
+        },
+        "direction" : "forward"
+}
+>	queryPlanner.winningPlanで範囲を指定して出力している。
+	その結果がCOLLSCAN（全権検索）されている。
+
+・ネストしたドキュメントのインデックス
+
+db.col1.createIndex({"user.name":1})
+{
+        "createdCollectionAutomatically" : false,
+        "numIndexesBefore" : 1,
+        "numIndexesAfter" : 2,
+        "ok" : 1
+}
+
+db.col1.find({"user.name":"Taro Yamada"})
+
+db.col1.find({"user.name":"Taro Yamada"}).explain().queryPlanner.winningPlan
+
+{
+        "stage" : "FETCH",
+        "inputStage" : {
+                "stage" : "IXSCAN",
+                "keyPattern" : {
+                        "user.name" : 1
+                },
+                "indexName" : "user.name_1",
+                "isMultiKey" : false,
+                "multiKeyPaths" : {
+                        "user.name" : [ ]
+                },
+                "isUnique" : false,
+                "isSparse" : false,
+                "isPartial" : false,
+                "indexVersion" : 2,
+                "direction" : "forward",
+                "indexBounds" : {
+                        "user.name" : [
+                                "[\"Taro Yamada\", \"Taro Yamada\"]"
+                        ]
+                }
+        }
+}
+
+・配列への索引の作成
+
+db.col1.createIndex({color:1})
+
+db.col1.find({color:"blue"})
+
+db.col1.find({color:"blue"}).explain().queryPlanner.winningPlan
+{
+        "stage" : "FETCH",
+        "inputStage" : {
+                "stage" : "IXSCAN",
+                "keyPattern" : {
+                        "color" : 1
+                },
+                "indexName" : "color_1",
+                "isMultiKey" : true,
+                "multiKeyPaths" : {
+                        "color" : [
+                                "color"
+                        ]
+                },
+                "isUnique" : false,
+                "isSparse" : false,
+                "isPartial" : false,
+                "indexVersion" : 2,
+                "direction" : "forward",
+                "indexBounds" : {
+                        "color" : [
+                                "[\"blue\", \"blue\"]"
+                        ]
+                }
+        }
+}
+
+・ユニークインデックス
+
+db.col3.insert({foo:1,bar:2})
+db.col3.insert({foo:1,bar:3})
+db.col3.insert({foo:2,bar:4})
+
+db.col3.find()
+
+db.col3.createIndex({foo:1},{unique:true})
+
+doc=db.col3.findOne({foo:1})
+db.col3.remove(doc)
+
+db.col3.find()
+
+db.col3.createIndex({foo:1},{unique:true})
+
+db.col3.getIndexes()
+
+db.col3.insert({foo:1,bar:3})
+
+・カバードクエリ
+
+db.col2.createIndex({n:1,created_at:-1})
+
+db.col2.getIndexes()
+
+db.col2.createIndex({n:1,created_at:-1})
+{
+        "createdCollectionAutomatically" : false,
+        "numIndexesBefore" : 2,
+        "numIndexesAfter" : 3,
+        "ok" : 1
+}
+> db.col2.find({n:{$gte:10000,$lt:10005}},{n:1,created_at:-1,_id:0}).explain("executionStats")
+{
+        "queryPlanner" : {
+                "plannerVersion" : 1,
+                "namespace" : "test.col2",
+                "indexFilterSet" : false,
+                "parsedQuery" : {
+                        "$and" : [
+                                {
+                                        "n" : {
+                                                "$lt" : 10005
+                                        }
+                                },
+                                {
+                                        "n" : {
+                                                "$gte" : 10000
+                                        }
+                                }
+                        ]
+                },
+                "winningPlan" : {
+                        "stage" : "PROJECTION",
+                        "transformBy" : {
+                                "n" : 1,
+                                "created_at" : -1,
+                                "_id" : 0
+                        },
+                        "inputStage" : {
+                                "stage" : "IXSCAN",
+                                "keyPattern" : {
+                                        "n" : 1,
+                                        "created_at" : -1
+                                },
+                                "indexName" : "n_1_created_at_-1",
+                                "isMultiKey" : false,
+                                "multiKeyPaths" : {
+                                        "n" : [ ],
+                                        "created_at" : [ ]
+                                },
+                                "isUnique" : false,
+                                "isSparse" : false,
+                                "isPartial" : false,
+                                "indexVersion" : 2,
+                                "direction" : "forward",
+                                "indexBounds" : {
+                                        "n" : [
+                                                "[10000.0, 10005.0)"
+                                        ],
+                                        "created_at" : [
+                                                "[MaxKey, MinKey]"
+                                        ]
+                                }
+                        }
+                },
+                "rejectedPlans" : [ ]
+        },
+        "executionStats" : {
+                "executionSuccess" : true,
+                "nReturned" : 5,
+                "executionTimeMillis" : 86,
+                "totalKeysExamined" : 5,
+                "totalDocsExamined" : 0,
+                "executionStages" : {
+                        "stage" : "PROJECTION",
+                        "nReturned" : 5,
+                        "executionTimeMillisEstimate" : 86,
+                        "works" : 6,
+                        "advanced" : 5,
+                        "needTime" : 0,
+                        "needYield" : 0,
+                        "saveState" : 1,
+                        "restoreState" : 1,
+                        "isEOF" : 1,
+                        "invalidates" : 0,
+                        "transformBy" : {
+                                "n" : 1,
+                                "created_at" : -1,
+                                "_id" : 0
+                        },
+                        "inputStage" : {
+                                "stage" : "IXSCAN",
+                                "nReturned" : 5,
+                                "executionTimeMillisEstimate" : 86,
+                                "works" : 6,
+                                "advanced" : 5,
+                                "needTime" : 0,
+                                "needYield" : 0,
+                                "saveState" : 1,
+                                "restoreState" : 1,
+                                "isEOF" : 1,
+                                "invalidates" : 0,
+                                "keyPattern" : {
+                                        "n" : 1,
+                                        "created_at" : -1
+                                },
+                                "indexName" : "n_1_created_at_-1",
+                                "isMultiKey" : false,
+                                "multiKeyPaths" : {
+                                        "n" : [ ],
+                                        "created_at" : [ ]
+                                },
+                                "isUnique" : false,
+                                "isSparse" : false,
+                                "isPartial" : false,
+                                "indexVersion" : 2,
+                                "direction" : "forward",
+                                "indexBounds" : {
+                                        "n" : [
+                                                "[10000.0, 10005.0)"
+                                        ],
+                                        "created_at" : [
+                                                "[MaxKey, MinKey]"
+                                        ]
+                                },
+                                "keysExamined" : 5,
+                                "seeks" : 1,
+                                "dupsTested" : 0,
+                                "dupsDropped" : 0,
+                                "seenInvalidated" : 0
+                        }
+                }
+        },
+        "serverInfo" : {
+                "host" : "maru",
+                "port" : 27017,
+                "version" : "3.4.2",
+                "gitVersion" : "3f76e40c105fc223b3e5aac3e20dcd026b83b38b"
+        },
+        "ok" : 1
+}
+
+	totalKeysExamined、つまり、実行されたキーが5個であるのに対し、
+	totalDocsExamined、ドキュメントの中身を得るために、DBアクセスをした
+	文書数が0個であること、つまり索引だけで検索が完了していることがわかる
+
+・ソート
+
+db.col2.find()
+
+db.col2.find().sort({n:-1})
+
+・索引とソート
+
+db.col2.getIndexes()
+
+db.col2.find().sort({n:1}).skip(50000).limit(5)
+
+・JSONファイルのimport
+
+mongoimport -d test -c countries json\east-n-southeast-asia.json
+
+2017-03-06T22:47:39.309+0900    connected to: localhost
+2017-03-06T22:47:39.642+0900    imported 22 documents
+
+db.countries.find({},{"Government.Country name.conventional short form":1,_id:0})
+
+db.countries.findOne({"Government.Country name.conventional short form.text":"Japan"},{Introduction:1})
+
+・CSVファイルのインポート
+
+mongoimport -d test -c zips --type csv --fields zipcode,prefecture,city,town,pref_rome,city_rome,town_rome KEN_ALL_ROME.CSV
+
+db.zips.find().limit(5)
+
+・数値を文字列に変換する（zipsコレクションのzipcodeが数字のため、文字列に変換する）
+
+db.zips.find().forEach(
+	function(doc){
+		var zipcode = doc.zipcode;
+		// 数値から先頭0埋めした7桁の文字列に変換している
+		doc.zipcode = ("0000000" + zipcode.toString()).substr(-7);
+		db.zips.save(doc)
+	}
+)
+
+db.zips.find().limit(5)
+
+・JSONファイルへのエクスポート処理
+
+mongoexport -d test -c zips -o zips.json
+
+2017-03-06T23:08:39.231+0900    connected to: localhost
+2017-03-06T23:08:40.229+0900    [........................]  test.zips  0/123929  (0.0%)
+2017-03-06T23:08:41.230+0900    [####....................]  test.zips  24000/123929  (19.4%)
+2017-03-06T23:08:42.231+0900    [##########..............]  test.zips  56000/123929  (45.2%)
+2017-03-06T23:08:43.229+0900    [###############.........]  test.zips  80000/123929  (64.6%)
+2017-03-06T23:08:44.230+0900    [#####################...]  test.zips  112000/123929  (90.4%)
+2017-03-06T23:08:44.563+0900    [########################]  test.zips  123929/123929  (100.0%)
+2017-03-06T23:08:44.563+0900    exported 123929 records
+
+・CSVファイルへのエクスポート処理
+
+mongoexport -d test -c zips --type=csv --fields=zipcode,prefecture,city,town,pref_rome,city_rome,town_rome -o zips.csv
+

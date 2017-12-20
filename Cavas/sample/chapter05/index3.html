@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Hello Canvas</title>
+	<style>
+		.canvas {
+			border: 1px solid gray;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="./../js/canvas.js"></script>
+</head>
+
+<body>
+<br>
+文字列の表示位置(スタイル)
+<br>
+<canvas id="canvas1" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+
+
+<script>
+	//ロード時に描画関数(draw)を呼び出す
+	window.addEventListener('load',function(){
+		draw1();
+	});
+
+	function draw1(){
+		var ctx = getCanvasContextById("canvas1");
+
+		ctx.beginPath();	
+
+		ctx.font ='48px sans-serif';
+		ctx.textBaseline='top';
+
+		ctx.strokeStyle='red';
+		ctx.strokeText('輪郭線の色を変える',10,10);
+
+		ctx.fillStyle='blue';
+		ctx.fillText('塗り潰しの色を変える',10,85);
+
+		ctx.fillStyle='red';
+		ctx.strokeStyle='blue';
+		ctx.fillText('塗り潰しと輪郭線',10,165);
+		ctx.strokeText('塗り潰しと輪郭線',10,165);
+
+		ctx.fillStyle='green';
+		ctx.shadowColor='#888';
+		ctx.shadowOffsetX=2;
+		ctx.shadowOffsetY=2;
+		ctx.shadowBlur=1;
+		ctx.fillText('影をつける',10,240);
+
+		let width=ctx.measureText('グラデーションをかける').width;
+		let grad = ctx.createLinearGradient(10,315,10+width,315);
+		grad.addColorStop(0,'red');
+		grad.addColorStop(0.5,'green');
+		grad.addColorStop(1,'blue');
+		ctx.fillStyle=grad;
+		ctx.fillText('グラデーションをかける',10,315);
+
+	}	
+
+
+
+</script>
+
+</body>
+
+</html>

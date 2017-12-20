@@ -1,0 +1,6 @@
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\ExcelController\ExcelController\bin\Debug\ExcelController.exe.config
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\ExcelController\ExcelController\bin\Debug\ExcelController.exe
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\ExcelController\ExcelController\bin\Debug\ExcelController.pdb
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\ExcelController\ExcelController\obj\Debug\ExcelController.exe
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\ExcelController\ExcelController\obj\Debug\ExcelController.pdb
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\ExcelController\ExcelController\obj\Debug\ExcelControl.csprojResolveAssemblyReference.cache

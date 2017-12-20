@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Hello Canvas</title>
+	<style>
+		#canvas {
+			border: 1px solid gray;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="./../js/canvas.js"></script>
+</head>
+
+<body>
+
+<div>色<input id='drawStrokeStyle' type='color' default="black"></div>
+<div>太さ<input id='drawLineWidth' type='number' min='1' max='30' default=1></div>
+<button id='btn_drawset'>設定</button>
+
+<br>
+<button id='btn_drawclear'>クリア</button>
+
+<br>
+<br>
+
+
+<script>
+
+	var canvas;
+	var context;
+
+	var x,y;	// 現在位置
+	var borderWidth = 1;
+	var isDrawing = false;
+
+	var drawStrokeStyle;
+	var drawLineWidth;
+
+	//ロード時に描画関数(draw)を呼び出す
+	window.addEventListener('load',function(){
+		drawInit();
+	});
+
+	function drawInit(){
+		canvas = document.createElement('canvas');
+		canvas.textContent='Canvasに対応したブラウザを使用してください。';
+
+		canvas.id='canvas';
+		canvas.width=640;
+		canvas.height=400;
+
+		document.body.appendChild(canvas);
+
+		if(!canvas || !canvas.getContext) return;
+
+		context = canvas.getContext('2d');
+
+
+		context.lineCap='round';
+
+		// マウスイベントリスナーの登録
+		canvas.addEventListener('mousedown',onDown);
+		canvas.addEventListener('mousemove',onMove);
+		canvas.addEventListener('mouseup',onUp);
+		canvas.addEventListener('mouseleave',onLeave);
+
+		// タッチパネルイベントリスナー登録
+		canvas.addEventListener('touchstart',onDown);
+		canvas.addEventListener('touchmove',onMove);
+		canvas.addEventListener('touched',onUp);
+	}	
+
+	jQuery(function($){
+		$("#btn_drawset").on("click",function(){
+			drawStrokeStyle = $("#drawStrokeStyle").val();
+			drawLineWidth = $("#drawLineWidth").val();
+
+			context.strokeStyle=drawStrokeStyle;
+			context.lineWidth=drawLineWidth;
+		});
+
+		$("#btn_drawclear").on("click",function(){
+			context.clearRect(0,0,canvas.width,canvas.height);
+		});
+	});
+
+	// マウスボタンを押す
+	function onDown(e){
+		// 現在位置を設定
+		x = e.pageX-(canvas.offsetLeft+borderWidth);
+		y = e.pageY-(canvas.offsetTop+borderWidth);
+		// フラグを描画中に設定
+		isDrawing = true;
+	}
+
+	function onMove(e){
+		if(!isDrawing) return;
+
+		// 描画
+		context.beginPath();
+
+
+		// 現在位置に移動
+		context.moveTo(x,y);
+
+		// 新たな位置を設定
+		x = e.pageX-(canvas.offsetLeft+borderWidth);
+		y = e.pageY-(canvas.offsetTop+borderWidth);
+
+		context.lineTo(x,y);
+		context.stroke();
+	}
+
+	function onUp(e){
+		// 描画を終了
+		isDrawing=false;
+	}
+
+	function onLeave(e){
+		// 描画を終了
+		isDrawing=false;
+	}
+
+</script>
+
+</body>
+
+</html>

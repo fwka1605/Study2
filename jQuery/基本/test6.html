@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<title>セレクター、:nth-child()、:even、:odd</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style>
+body {
+	margin:20px;
+}
+</style>
+
+<script>
+jQuery(function($){
+	$("li").each(function(index){
+		var name = $(this).text();
+		console.log(index + ":" + name);
+	});
+
+
+});
+</script>
+
+</head>
+
+<body>
+
+
+	<ul>
+		<li>太郎</li>
+		<li>次郎</li>
+		<li>三郎</li>
+		<li>四郎</li>
+	</ul>
+
+</body>
+</html>

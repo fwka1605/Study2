@@ -1,0 +1,12 @@
+$http			非同期通信の実行
+$resource		HTTP経由でのCRUD処理
+$interval		指定された時間単位に処理を実行
+$timeout		指定時間の経過によって処理を実行
+$location		ページのアドレス情報を取得/設定
+$q			非同期処理のための機能群
+$routeProvider		ルートの定義
+$cookie			クッキーを登録/削除
+$log			開発者ツールにログを出力
+$exceptionHandler	アプリ共通の例外処理を定義
+$injector		依存性注入に関わる機能を提供
+$swipe			モバイルデバイスへの対応

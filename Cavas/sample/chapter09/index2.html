@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Hello Canvas</title>
+	<style>
+		#bg-canvas {
+			position:fixed;
+			top:0;
+			left:0;
+			width:100%;
+			height: 100%;
+			z-index: -1;
+		}
+
+		#wrapper{
+			width:85%;
+			background:rgb(255,255,255,0.8);
+			margin:0 auto;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="./../js/canvas.js"></script>
+</head>
+
+<body>
+
+	<div id="wrapper">
+		<h1>タイトル</h1>
+		<main>
+			<p>本文本文本文本文本文本文</p>
+			<p>本文本文本文本文本文本文</p>
+			<p>本文本文本文本文本文本文</p>
+			<p>本文本文本文本文本文本文</p>
+			<p>本文本文本文本文本文本文</p>
+			<p>本文本文本文本文本文本文</p>
+		</main>
+	</div>
+
+	<script>
+		window.addEventListener('load',function(){
+			draw1();
+		});
+
+		function draw1(){
+			let canvas = document.createElement('canvas');
+			canvas.id='bg-canvas';
+
+			canvas.width=window.innerWidth;
+			canvas.heigth=window.innerHeight;
+
+			document.body.appendChild(canvas);
+
+			let ctx = getCanvasContextById("bg-canvas");
+
+			for(let i=0;i<30;i++){
+
+				let x = rand(0,canvas.width);
+				let y = rand(0,canvas.height);
+
+				let dx1 = rand(-200,200);
+				let dy1 = rand(-100,100);
+				let dx2 = rand(-200,200);
+				let dy2 = rand(-100,100);
+
+				let r=rand(0,255);
+				let g=rand(0,255);
+				let b=rand(0,255);
+
+				ctx.globalAlpha=0.7;
+				ctx.fillStyle ='rgb(' + r + ',' + g + ',' + b + ')';
+
+				ctx.beginPath();
+				ctx.moveTo(x,y);
+				ctx.lineTo(x+dx1,y+dy1);
+				ctx.lineTo(x+dx2,y+dy2);
+				ctx.fill();
+
+			}
+
+
+		}
+
+		function rand(min,max){
+			return (Math.random()*(max-min) + min)>>0;
+		}
+	</script>
+
+</body>
+
+</html>

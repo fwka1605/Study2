@@ -1,0 +1,51 @@
+angular.equals(o1,o2)
+	o1,o2:比較するオブジェクト（オブジェクト、配列、正規表現のいずれか）
+
+説明：
+オブジェクトが等しいかどうかを判定する
+
+例：
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+<script>
+var obj1 = {
+  name: '山田理央',
+  sex: 'female',
+  family: [ 'トクジロウ', 'ウタ', 'ニンザブロウ' ],
+  toString : function() { /* メソッドの中身 */ },
+  $other: 'hogehoge'
+};
+
+var obj2 = {
+  name: '山田理央',
+  sex: 'female',
+  family: [ 'トクジロウ', 'ウタ', 'ニンザブロウ' ],
+  work : function() { /* メソッドの中身 */ }
+}
+console.log(angular.equals(obj1, obj2));
+console.log(angular.equals(['い', 'ろ', 'は'], ['い', 'ろ', 'は']));
+console.log(angular.equals(undefined, undefined));
+console.log(angular.equals(NaN, NaN));
+console.log(angular.equals(/[0-9]/, /[0-9]/));
+</script>
+
+結果：
+全てtrueになる。
+
+equalsメソッドが、オブジェクト同士が等しいとみなす条件
+・オブジェクト（値）同士が ===演算子による比較でtrueを返すこと。
+・オブジェクト（値）同士が同じ型で、かつ、すべてのプロパティが
+　angular.equalsメソッドによる比較で等価であること。
+・値同士がいずれもNaN（Not a Number）であること
+　（注意：JavaScriptではNaN同士の比較はfalseになる。）
+・値同士がいずれも同じ正規表現であること。
+
+なお、プロパティの比較に際して、以下のものは無視されます。
+・function型のプロパティ
+・$で始まる名前のプロパティ
+
+
+
+
+
+
+

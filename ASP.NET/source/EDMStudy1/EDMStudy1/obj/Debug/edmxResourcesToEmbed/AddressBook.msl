@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AddressBookStoreContainer" CdmEntityContainer="AddressBookContainer">
+    <EntitySetMapping Name="Entries">
+      <EntityTypeMapping TypeName="IsTypeOf(AddressBook.Entry)">
+        <MappingFragment StoreEntitySet="Entries">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MailAddress" ColumnName="MailAddress" />
+          <ScalarProperty Name="TelNo" ColumnName="TelNo" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="IsTypeOf(AddressBook.Category)">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="EntryCategory" TypeName="AddressBook.EntryCategory" StoreEntitySet="EntryCategory">
+      <EndProperty Name="Entry">
+        <ScalarProperty Name="ID" ColumnName="Entries_ID" />
+      </EndProperty>
+      <EndProperty Name="Category">
+        <ScalarProperty Name="ID" ColumnName="Categories_ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

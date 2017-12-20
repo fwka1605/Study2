@@ -1,0 +1,18 @@
+$pristine・$dirty
+
+$pristineと$dirtyを利用して、フォームや入力要素の値が
+変更されていない($pristine)、または変更された($dirty)かを
+判断できる。
+
+フォーム名.$pristine	フォームは変更されていない
+フォーム名.$dirty	フォームは変更された
+
+フォーム名.入力要素.$pristine	入力要素は変更されていない
+フォーム名.入力要素.$dirty	入力要素は変更された
+
+例
+<input type="reset" value="リセット"
+	ng-disable="myForm.$pristine" />
+
+値が変更されていない場合はリセットボタンをdisableにする。
+

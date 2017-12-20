@@ -1,0 +1,39 @@
+package co.jp.itf.main.util.db.sqlserver;
+
+import co.jp.itf.main.util.db.ConnectionManagerUtil;
+import oracle.jdbc.pool.OracleDataSource;
+
+public class ConnectionManagerUtilForSqlServer extends ConnectionManagerUtil{
+
+    /* ユーザ名 */
+    private static final String USER = "sa";
+    /* パスワード */
+    private static final String PASS = "nouvelle";
+    /* サーバ名 */
+    private static final String SERVER_IP = "192.168.0.66";
+    /* SID */
+    private static final String SID = "navio_app";
+
+	@Override
+	public void beginConnection(){
+
+        try {
+
+        	if(conn!=null){
+        		releaseConnection();
+        	}
+
+        	Driver d = (Driver) Class.forName( "com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
+
+        	String connUrl = "jdbc:sqlserver://localhost\\SQLEXPRESS;database=Northwind;" + "integratedSecurity=false;user=sa;password=your password"; Connection con = d.connect(connUrl, new Properties()); - See more at: http://java.keicode.com/lib/mssql-jdbc-basic.php#sthash.51nP6lkC.dpuf
+
+
+        }
+        catch(Exception e){
+        	e.printStackTrace();
+        }
+	}
+
+
+
+}

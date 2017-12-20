@@ -1,0 +1,8 @@
+C:\Users\NVLCLT13\Documents\nouvelle\study\ASP.NET\source\EDMStudy2\EDMStudy2\bin\Debug\EDMStudy2.exe.config
+C:\Users\NVLCLT13\Documents\nouvelle\study\ASP.NET\source\EDMStudy2\EDMStudy2\bin\Debug\EDMStudy2.exe
+C:\Users\NVLCLT13\Documents\nouvelle\study\ASP.NET\source\EDMStudy2\EDMStudy2\bin\Debug\EDMStudy2.pdb
+C:\Users\NVLCLT13\Documents\nouvelle\study\ASP.NET\source\EDMStudy2\EDMStudy2\bin\Debug\EntityFramework.dll
+C:\Users\NVLCLT13\Documents\nouvelle\study\ASP.NET\source\EDMStudy2\EDMStudy2\bin\Debug\EntityFramework.xml
+C:\Users\NVLCLT13\Documents\nouvelle\study\ASP.NET\source\EDMStudy2\EDMStudy2\bin\Debug\ja\EntityFramework.resources.dll
+C:\Users\NVLCLT13\Documents\nouvelle\study\ASP.NET\source\EDMStudy2\EDMStudy2\obj\Debug\EDMStudy2.exe
+C:\Users\NVLCLT13\Documents\nouvelle\study\ASP.NET\source\EDMStudy2\EDMStudy2\obj\Debug\EDMStudy2.pdb

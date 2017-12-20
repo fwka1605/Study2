@@ -1,0 +1,108 @@
+isXxxxx
+
+変数の型を判定するたものメソッド
+
+・isArray(value)	値が配列であるか？
+
+例：
+console.log(angular.isArray(['a', 'b']));
+console.log(angular.isArray(new Array('a', 'b')));
+
+結果：
+true
+true
+
+・isDate(value)		値が日付型であるか？
+
+例：
+console.log(angular.isDate(new Date()));
+console.log(angular.isDate(new Date().getTime()));
+
+結果：
+true
+true
+
+isDefined(value)	値がundefinedではないか？
+isUndefined(value)	値がundefinedであるか？
+
+例：
+console.log(angular.isDefined(undefined));
+console.log(angular.isDefined(null));
+console.log(angular.isUndefined(undefined));
+console.log(angular.isUndefined(null));
+
+結果：
+false
+true
+true
+false
+
+・isElement(value)	値が要素オブジェクトであるか？
+
+例：
+console.log(angular.isElement(document.getElementById('main')));
+console.log(angular.isElement($('#main')));
+
+結果：
+true
+true
+
+～isElementオブジェクトでは、JavaScript標準のElementオブジェクトだけではなく、
+　jQueryでラッピングされたそれも要素とみなされます。
+
+
+・isFunction(value)	値が関数が多であるか？
+
+例：
+console.log(angular.isFunction(function() { /* 任意の処理 */ }));
+console.log(angular.isFunction(new Function()));
+
+結果：
+true
+true
+
+・isNumber(value)	値が数値型であるか？
+
+例：
+console.log(angular.isNumber(0.123E10));
+console.log(angular.isNumber('0.123E10'));
+console.log(angular.isNumber(0xFF));
+
+結果：
+true
+false
+true
+
+・isObject(value)	値がオブジェクト型であるか？
+
+例：
+console.log(angular.isObject(['a', 'b']));
+console.log(angular.isObject(null));
+console.log(angular.isObject(undefined));
+console.log(angular.isObject('山田'));
+console.log(angular.isObject(new Date()));
+console.log(angular.isObject(['a', 'b']));
+console.log(angular.isObject({ foo: 'bar' }));
+
+結果：
+true
+false
+false
+false
+true
+true
+
+～isObjectメソッドでは、JavaScriptのtypeof演算子と異なり、
+　nullをオブジェクトとみなしません。
+
+・isString(value)	値が文字列型であるか？
+
+例：
+console.log(angular.isString('山田'));
+console.log(angular.isString(12345));
+
+結果：
+true
+false
+
+

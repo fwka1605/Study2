@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Hello Canvas</title>
+	<style>
+		.canvas {
+			border: 1px solid gray;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="./../js/canvas.js"></script>
+</head>
+
+<body>
+<br>
+直線を描画
+<br>
+<canvas id="canvas1" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+直線(複数)を描画
+<br>
+<canvas id="canvas2" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+直線(複数)を描画2
+<br>
+<canvas id="canvas3" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+三角形を描画
+<br>
+<canvas id="canvas4" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+五角形を描画
+<br>
+<canvas id="canvas5" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+四角形を描画
+<br>
+<canvas id="canvas6" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+閉じた図形を描画
+<br>
+<canvas id="canvas7" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+
+
+
+<script>
+	//ロード時に描画関数(draw)を呼び出す
+	window.addEventListener('load',function(){
+		draw1();
+		draw2();
+		draw3();
+		draw4();
+		draw5();
+		draw6();
+		draw7();
+	});
+
+	function draw1(){
+		var ctx = getCanvasContextById("canvas1");
+
+		ctx.beginPath();
+		ctx.moveTo(50,50);
+		ctx.lineTo(500,300);
+		ctx.stroke();
+	}
+
+	function draw2(){
+		var ctx = getCanvasContextById("canvas2");
+
+		ctx.beginPath();
+		ctx.moveTo(100,100);
+		ctx.lineTo(250,200);
+		ctx.lineTo(250,350);
+		ctx.lineTo(400,350);
+		ctx.stroke();
+	}
+
+	function draw3(){
+		var ctx = getCanvasContextById("canvas3");
+
+		ctx.beginPath();
+
+		ctx.moveTo(50,50);
+		ctx.lineTo(150,200);
+
+		ctx.moveTo(200,50);
+		ctx.lineTo(200,200);
+		ctx.lineTo(300,200);
+
+		ctx.moveTo(450,50);
+		ctx.lineTo(350,200);
+
+		ctx.stroke();
+	}
+
+	function draw4(){
+		var ctx = getCanvasContextById("canvas4");
+
+		ctx.beginPath();
+		ctx.moveTo(320,50);
+		ctx.lineTo(150,300);
+		ctx.lineTo(490,300);
+		ctx.closePath();
+		ctx.stroke();
+	}
+
+	function draw5(){
+		var ctx = getCanvasContextById("canvas5");
+
+		ctx.beginPath();
+
+		ctx.moveTo(320,50);
+		ctx.lineTo(150,175);
+		ctx.lineTo(235,320);
+		ctx.lineTo(405,320);
+		ctx.lineTo(490,175);
+		ctx.closePath();
+		ctx.stroke();
+	}	
+
+	function draw6(){
+		var ctx = getCanvasContextById("canvas6");
+
+		myStrokeRect(100,120,100,100,ctx);
+		myStrokeRect(200,240,120,160,ctx);
+		myStrokeRect(300,50,250,130,ctx);
+	}	
+
+	function myStrokeRect(x,y,width,height,ctx){
+		ctx.beginPath();
+
+		ctx.moveTo(x,y);
+		ctx.lineTo(x+width,y);
+		ctx.lineTo(x+width,y+height);
+		ctx.lineTo(x,y+height);
+		ctx.closePath();
+
+		ctx.stroke();
+	}
+
+	function draw7(){
+		var ctx = getCanvasContextById("canvas7");
+
+		ctx.beginPath();
+		ctx.moveTo(30,100);
+		ctx.lineTo(230,100);
+		ctx.lineTo(230,300);
+		ctx.lineTo(30,300);
+		ctx.closePath();
+
+		ctx.moveTo(430,50);
+		ctx.lineTo(260,175);
+		ctx.lineTo(345,320);
+		ctx.lineTo(515,320);
+		ctx.lineTo(600,175);
+
+		ctx.closePath();
+
+		ctx.fill();
+
+	}	
+</script>
+
+</body>
+
+</html>

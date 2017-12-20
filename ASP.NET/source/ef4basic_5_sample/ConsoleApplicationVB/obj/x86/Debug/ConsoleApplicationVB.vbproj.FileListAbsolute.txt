@@ -1,0 +1,11 @@
+C:\home\Work\WINGS\@IT\201008EF4\sample\sample\ConsoleApplication1\ConsoleApplicationVB\bin\Debug\ConsoleApplicationVB.exe.config
+C:\home\Work\WINGS\@IT\201008EF4\sample\sample\ConsoleApplication1\ConsoleApplicationVB\bin\Debug\ConsoleApplicationVB.exe
+C:\home\Work\WINGS\@IT\201008EF4\sample\sample\ConsoleApplication1\ConsoleApplicationVB\bin\Debug\ConsoleApplicationVB.pdb
+C:\home\Work\WINGS\@IT\201008EF4\sample\sample\ConsoleApplication1\ConsoleApplicationVB\bin\Debug\ConsoleApplicationVB.xml
+C:\home\Work\WINGS\@IT\201008EF4\sample\sample\ConsoleApplication1\ConsoleApplicationVB\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\home\Work\WINGS\@IT\201008EF4\sample\sample\ConsoleApplication1\ConsoleApplicationVB\obj\x86\Debug\ConsoleApplicationVB.Resources.resources
+C:\home\Work\WINGS\@IT\201008EF4\sample\sample\ConsoleApplication1\ConsoleApplicationVB\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\home\Work\WINGS\@IT\201008EF4\sample\sample\ConsoleApplication1\ConsoleApplicationVB\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\home\Work\WINGS\@IT\201008EF4\sample\sample\ConsoleApplication1\ConsoleApplicationVB\obj\x86\Debug\ConsoleApplicationVB.exe
+C:\home\Work\WINGS\@IT\201008EF4\sample\sample\ConsoleApplication1\ConsoleApplicationVB\obj\x86\Debug\ConsoleApplicationVB.xml
+C:\home\Work\WINGS\@IT\201008EF4\sample\sample\ConsoleApplication1\ConsoleApplicationVB\obj\x86\Debug\ConsoleApplicationVB.pdb

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CodeZine Android Studio 2で始めるアプリ開発入門 メニューサンプル メニューリスト画面用コンテキストメニューファイル。 @author Shinzo SAITO ファイル名=res/menu/menu_context_menu_list.xml -->
+
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="@string/menu_list_context_desc"
+        android:id="@+id/menuListContextDesc"/>
+
+    <item
+        android:title="@string/menu_list_context_order"
+        android:id="@+id/menuListContextOrder"/>
+</menu>

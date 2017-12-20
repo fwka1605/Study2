@@ -1,0 +1,39 @@
+$error
+
+$errorはAngularJSで提供されているフォームの入力要素の
+エラー情報を格納するオブジェクトである。
+
+JavaScript側で使用するより、HTML側でエラーメッセージの
+表示灯で利用するケースが多い。
+
+フォーム名.入力要素名.$error.検証型
+
+検証が多には以下のような内容がある。
+
+ 1.email	メールアドレスの妥当性
+ 2.max		最大値検証
+ 3.maxlength	文字列の最大長検証
+ 4.min		最小値検証
+ 5.minlength	文字列の最小長検証
+ 6.number	数値検証
+ 7.pattern	正規表現検証
+ 8.required	必須検証
+ 9.url		URLの妥当性検証
+10.date		日付検証
+11.datetimelocal	日付時刻検証
+12.time		時刻検証
+13.week		週検証
+14.month	月検証
+
+
+例
+
+  <span ng-show="myForm.name.$error.required">
+    名前（漢字）は必須です。
+  </span>
+  <span ng-show="myForm.name.$error.minlength">
+    名前（漢字）は3文字以上で入力してください。
+  </span>
+  <span ng-show="myForm.name.$error.maxlength">
+    名前（漢字）は10文字以上で入力してください。
+  </span>

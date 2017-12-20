@@ -1,0 +1,62 @@
+angular.forEach(obj,iterator[,context])
+	obj:処理対象の配列/オブジェクト
+	iterator:配列/オブジェクトを処理するためのコールバック関数
+	context:コールバック関数内でthisとすべきオブジェクト
+
+説明：
+配列/オブジェクトの内容を順に処理できます。
+
+例１：配列を処理する
+
+angular.forEach(books, function(value, index, ary) {
+  console.log(index + '. ' + value.title);
+});
+
+引数iterator(コールバック関数）における引数
+・value 配列の値
+・index 配列の添え字
+・ary 配列そのもの
+
+
+例２：オブジェクトを処理する
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+<script>
+var book = {
+  isbn: '978-4-7741-7078-7',
+  title: 'サーブレット＆JSPポケットリファレンス',
+  price: 2680,
+  publish: '技術評論社',
+};
+angular.forEach(book, function(value, key, obj) {
+  console.log(key + '：' + value);
+});
+</script>
+
+結果
+isbn：978-4-7741-7078-7
+title：サーブレット＆JSPポケットリファレンス
+price：2680
+ publish：技術評論社
+
+引数iterator(コールバック関数）における引数
+・value プロパティ値
+・key プロパティ名
+・obj オブジェクトそのもの
+
+例３：コールバック関数配下のthisを固定する。
+
+forEachメソッドの引数のcontextを指定することで、コールバック関数配下での
+thisが参照するオブジェクトを指定できる。
+
+angular.forEach(books, function(value, index, ary) {
+  this.push(index + '. ' + value.title);
+}, result);
+
+console.log(result);
+
+上記例では、thisにresult（配列）を指定している。
+それをログに出力している。
+
+
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>jQuery test2</title>
+	<script src="http://code.jquery.com/jquery-1.12.4.min.js" ></script>
+	<script>
+		function add_element(){
+			$("#box").append("<p>p要素を追加しました</p>");
+		}
+
+		jQuery(function($){
+			$("#add").click(add_element);
+		});
+	</script>
+</head>
+
+<body>
+
+	<button id="add">要素を追加</button>
+	<div id="box"></div>
+	
+</body>
+	
+</html>

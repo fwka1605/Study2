@@ -1,0 +1,12 @@
+<form name="myForm" ng-submit="onsubmit()" novalidate>
+
+</form>
+
+Angular-JSで、ng-minlengthなどの入力チェック機能を利用する場合は、
+HTML5の検証機能を無効にする必要がある。
+
+デフォルトでは、HTML5の検証機能は有効なため、form要素に
+novalidateを指定する必要がある。
+
+これを付け忘れると、AngularJSとHTML5の検証機能がバッティングし、
+想定外の問題が発生する可能性がある。

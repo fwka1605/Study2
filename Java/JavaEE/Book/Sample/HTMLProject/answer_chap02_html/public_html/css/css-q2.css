@@ -1,0 +1,84 @@
+body {
+	font-size: 12pt;
+	color: #444444;
+	margin: 0px;
+	padding: 0px;
+}
+
+div#container {
+	padding: 20px;
+	width: 750px;
+}
+
+#header {
+	margin:0px;
+}
+
+#navi {
+	margin-top: 30px;
+	margin-bottom: 0px;
+}
+
+#article {
+	margin: 0px;
+	padding: 15px;
+	background-color: #DDDDDD;
+	font-family: メイリオ;
+	font-size: 0.75em;
+	line-height: 140%;
+}
+#footer {
+	margin-top: 5px;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 0.9em;
+	text-align: right;
+}
+
+#header h1 {
+	font-family: HGP創英角ｺﾞｼｯｸUB;
+	font-size: 3em;
+	color: #000066;
+	font-weight: bolder;
+	letter-spacing: 0.3em;
+	margin-bottom: 0px;
+}
+
+#header p {
+	font-family: HGP創英角ｺﾞｼｯｸUB;
+	font-size: 1em;
+	color: #000066;
+	margin-top: 5px;
+}
+
+#navi img {
+	margin-bottom: 0;
+}
+
+#navi ul {
+	color: #FFFFFF;
+	margin: 0;
+	padding: 10px 20px;
+	list-style-type: none;
+	background-color: #000066;
+}
+
+#navi li {
+	font-size: 0.75em;
+	padding-right: 20px;
+	display: inline;
+}
+
+address {
+	font-size: 0.75em;
+	font-style: normal;
+}
+
+li a {
+	text-decoration: none;
+	color: white;
+}
+li  a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+	

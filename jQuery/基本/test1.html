@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>jQuery test1</title>
+	<script src="http://code.jquery.com/jquery-1.12.4.min.js" ></script>
+	
+	<script>
+		jQuery(function($){
+			var color_div = $("#color_div");
+			console.log(color_div);
+			color_div.css("border","1px solid red");
+		});
+	</script>
+</head>
+
+<body>
+
+<div id="color_div">ここのDIVの枠線をjQeuryで変更します。
+</body>
+	
+</html>

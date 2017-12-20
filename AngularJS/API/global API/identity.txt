@@ -1,0 +1,37 @@
+angular.identity(value)
+
+value:任意の値
+
+angular.identityメソッドは、与えられた引数を何もせずに
+そのまま返すメソッドです。
+
+noopメソッドと同じく、高階関数などでデフォルトの挙動を表すために
+使用します。
+
+例：
+<script>
+var transfer = function(value, callback) {
+  return (callback || angular.identity)(value);
+};
+
+console.log(
+  transfer(10, function(value) {
+    return value * value;
+  })
+);
+</script>
+結果：100が返る。
+
+例：
+<script>
+var transfer = function(value, callback) {
+  return (callback || angular.identity)(value);
+};
+
+console.log(
+  transfer(10)
+);
+</script>
+結果：callback関数が省略されたので、angular.identityにより引数
+10がそのまま返えされる。
+

@@ -1,0 +1,13 @@
+$sce
+
+$sceはAnguraJSでサイトの信頼性を設定する際などに使用します。
+
+$scope. url = $ sce. trustAsResourceUrl(' http:// www. wings. msn. to/');
+$scope.url = $sce.trustAs($sce.RESOURCE_URL,'http://www.wings.msn.to/');
+
+
+これにより、iframeで別ドメインのサイトを閲覧したりすることができるようになります。
+ただし、これらのメソッドは上記サイトが安全であると宣言するだけであり、
+上記サイトが安全であることを保障するものではない。
+サイトが安全であることを保障するのは、あくまでも開発者である。
+

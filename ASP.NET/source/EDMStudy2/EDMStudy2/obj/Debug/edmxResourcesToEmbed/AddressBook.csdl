@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AddressBookModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="AddressBookEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Categories" EntityType="AddressBookModel.Category" />
+    <EntitySet Name="Entries" EntityType="AddressBookModel.Entry" />
+    <AssociationSet Name="EntryCategory" Association="AddressBookModel.EntryCategory">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Entries" EntitySet="Entries" />
+    </AssociationSet>
+    <FunctionImport Name="UpdateAge">
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="age" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Detail" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Entries" Relationship="AddressBookModel.EntryCategory" FromRole="Categories" ToRole="Entries" />
+  </EntityType>
+  <EntityType Name="Entry">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="Age" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="Categories" Relationship="AddressBookModel.EntryCategory" FromRole="Entries" ToRole="Categories" />
+    <Property Name="AddressType" Type="AddressBookModel.AddressType" Nullable="false" />
+  </EntityType>
+  <Association Name="EntryCategory">
+    <End Role="Categories" Type="AddressBookModel.Category" Multiplicity="*" />
+    <End Role="Entries" Type="AddressBookModel.Entry" Multiplicity="*" />
+  </Association>
+  <ComplexType Name="AddressType">
+    <Property Type="String" Name="TelNo" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MailAddress" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </ComplexType>
+</Schema>

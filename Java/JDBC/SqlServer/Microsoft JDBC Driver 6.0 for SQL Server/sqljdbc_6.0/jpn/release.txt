@@ -1,0 +1,169 @@
+リリース情報
+ Microsoft JDBC Driver 6.0 for SQL Server
+ 2016 年 5 月
+
+------------
+概要
+------------
+このファイルには、Microsoft JDBC Driver 6.0 for SQL Server ドキュメントを補足する最新情報
+またはその他の重要な情報が記載されています。JDBC Driver をインストールする前に、このファイルをよくお読みください。
+
+
+Microsoft はお客様のフィードバックを重要なご提案として受け止め、
+その迅速な対応に努めています。JDBC Driver のブログとオンライン フォーラムを使用してフィードバックを送信する方法については、
+Microsoft JDBC Driver 6.0 for SQL Server のページ (http://msdn.microsoft.com/data/jdbc) を参照してください。
+
+
+------------
+インストール
+------------
+JDBC Driver のインストール手順は install.txt に記載されています。 Windows と Unix オペレーティング システムで JDBC Driver をインストールする場合の詳細については、
+そのファイルを参照してください。
+
+
+---------------------------
+サポートされているオペレーティング システム
+---------------------------
+Microsoft JDBC Driver 6.0 for SQL Server は以下のオペレーティング システムをサポートします。
+  Windows Server 2008 SP2
+  Windows Server 2008 R2 SP1
+  Windows Server 2012
+  Windows Server 2012 R2
+  Windows Vista SP2
+  Windows 7 SP1
+  Windows 8
+  Windows 8.1
+  Windows 10
+  Linux
+  Unix
+
+上記のリストは、サポートされているオペレーティング システムの例の一部です。JDBC ドライバーは、
+Java 仮想マシン (JVM) の使用をサポートするすべてのオペレーティング システムで機能するように設計されています。
+ただし、公式にテストされたのは、Oracle Solaris (x86)、SUSE Linux、Windows Vista Service Pack 2 以降の各オペレーティング システムだけです。
+
+
+
+----------------
+リリース内容
+----------------
+Microsoft JDBC Driver 6.0 for SQL Server の zip または tar 形式の実行可能ファイルを使用すると、
+選択したインストール ディレクトリの下の各ディレクトリに以下のファイルがアンパックされます。
+
+<インストール ディレクトリ>\sqljdbc_<バージョン>\<言語>\install.txt
+<インストール ディレクトリ>\sqljdbc_<バージョン>\<言語>\release.txt
+<インストール ディレクトリ>\sqljdbc_<バージョン>\<言語>\license.txt
+<インストール ディレクトリ>\sqljdbc_<バージョン>\<言語>\sqljdbc.jar
+<インストール ディレクトリ>\sqljdbc_<バージョン>\<言語>\sqljdbc4.jar
+<インストール ディレクトリ>\sqljdbc_<バージョン>\<言語>\sqljdbc41.jar
+<インストール ディレクトリ>\sqljdbc_<バージョン>\<言語>\sqljdbc42.jar
+<インストール ディレクトリ>\sqljdbc_<バージョン>\<言語>\auth\x86\sqljdbc_auth.dll
+<インストール ディレクトリ>\sqljdbc_<バージョン>\<言語>\auth\x64\sqljdbc_auth.dll
+<インストール ディレクトリ>\sqljdbc_<バージョン>\<言語>\samples\<サンプル ファイル...>
+<インストール ディレクトリ>\sqljdbc_<バージョン>\<言語>\xa\xa_install.sql
+<インストール ディレクトリ>\sqljdbc_<バージョン>\<言語>\xa\x86\sqljdbc_xa.dll
+<インストール ディレクトリ>\sqljdbc_<バージョン>\<言語>\xa\x64\sqljdbc_xa.dll
+
+各コンポーネントの詳細については、次のオンライン ドキュメントを参照してください。
+Microsoft JDBC Driver for SQL Server のドキュメント: 
+(https://msdn.microsoft.com/en-us/library/dn197850(v=sql.10).aspx)
+
+ドキュメント
+-------------
+このパッケージには、このリリース情報、インストール手順、ライセンス条項が含まれています。
+他のドキュメントはすべてオンラインで提供されます。
+
+オフラインのヘルプ ファイルの提供は中止されたことにご注意ください。
+
+
+JAR ファイル
+---------
+旧バージョンとの互換性を確保しながら、将来のアップグレード シナリオにも対応できるよう、
+JDBC Driver 6.0 では、sqljdbc.jar、sqljdbc4.jar、sqljdbc41.jar、sqljdbc42.jar という 4 つの JAR クラス ライブラリが
+各インストール パッケージに含まれています。 
+
+重要な注意点: sqljdbc.jar と sqljdbc4.jar は下位互換性の目的でのみ提供されており、
+このリリースに組み込まれている新機能は含まれていません。 
+sqljdbc41.jar と sqljdbc42.jar にのみ新機能が含まれています。
+
+
+機能に固有のファイル
+---------
+Azure Active Directory と (Windows 上の) 統合認証のコンポーネントは、auth ディレクトリに含まれています。
+
+JDBC 分散トランザクション コンポーネントは xa ディレクトリに含まれています。
+
+
+サンプル
+-------
+JDBC ドライバーの各種機能を示すサンプル アプリケーションは、samples ディレクトリに含まれています。
+各サンプルとその実行方法の詳細については、
+オンライン ドキュメントを参照してください。
+
+
+-----------
+変更一覧
+-----------
+4.2 から 6.0 での変更:
+
+新機能: Always Encrypted - アプリケーション開発者は、SQL Server 2016 CTP 以降で利用できる Always Encrypted (AE) 機能を利用できるようになりました。
+JDBC ドライバーによって、SQL Server の暗号化されたデータベースの列に格納されている機密データについて透過的に暗号化と暗号化の解除を行うことで、
+Always Encrypted 機能が利用できます。詳細については、
+JDBC ドライバーを使った Always Encrypted の使用に関する MSDN ドキュメントを参照してください。
+
+新機能: 国際化ドメイン名 - JDBC ドライバーでは、サーバー名とインスタンス名の国際化ドメイン名 (IDN) がサポートされるようになりました。
+詳細については、JDBC ドライバーを使った IDN の使用に関する MSDN ドキュメントを参照してください。
+
+新機能: テーブル値パラメーター - テーブル値パラメーターを使用すると、クライアント アプリケーションから SQL Server に複数行のデータを簡単にマーシャリングできます。
+その際、複数のラウンド トリップや、データ処理用の特別なサーバー側ロジックは必要ありません。
+テーブル値パラメーターは、クライアント アプリケーションのデータの行をカプセル化して、
+単一のパラメーター化コマンドでサーバーに送信する目的でも使用できます。詳細については、テーブル値パラメーターに関する MSDN ドキュメントを参照してください。
+
+新機能: Azure Active Directory (AAD) - AAD 認証は、AAD の ID を使用して Azure SQL Database v12 に接続するメカニズムです。
+AAD 認証は、データベース ユーザーの ID を一元的に管理する目的で使用できるほか、SQL Server 認証の代わりとして使用することもできます。
+JDBC Driver 6.0 を使用すれば、JDBC 接続文字列に AAD の資格情報を指定して Azure SQL DB に接続できます。
+詳細については、JDBC ドライバーの接続プロパティの設定に関する MSDN ドキュメントを参照してください。
+
+機能強化: AlwaysOn 可用性グループ (AG) - このドライバーでは、AlwaysOn 可用性グループへの透過的な接続がサポートされるようになりました。
+ドライバーがサーバー インフラストラクチャの現在の AlwaysOn トポロジをすばやく検出し、
+現在アクティブなサーバーに透過的に接続します。
+詳細については、JDBC ドライバーの接続プロパティの設定に関する MSDN ドキュメントを参照してください。
+
+機能強化: JDBC ドライバーでは、サブクエリや結合などの複雑なクエリで、準備されたステートメントを使用したパラメーター メタデータの取得がサポートされるようになりました。
+なお、この機能強化を利用できるのは、SQL Server 2012 以降のバージョンを使用する場合に限られます。
+
+
+------------
+既知の問題
+------------
+Microsoft JDBC Driver 6.0 for SQL Server に関する既知の問題には、次のものがあります。
+
+1) SQL Server 2008 または 2008 R2 を使用している場合のパラメーター メタデータの制限
+
+1.a) パラメーター化された MERGE クエリと共に使用された場合、
+PreparedStatement.getParameterMetadata() が SQLException をスローします。
+1.b) 準備されたステートメント用のパラメーター メタデータは、サブクエリや結合のあるクエリでは機能しません。
+
+
+2) Java Kerberos および IBM VM
+
+Windows 環境で実行する場合、Java Kerberos 機能を実装するには、
+構成ファイルでプリンシパル名を指定する必要があります。例: 
+SQLJDBCDriver {
+  com.ibm.security.auth.module.Krb5LoginModule required
+  seDefaultCcache=true
+  credsType=initiator
+  principal=principalname@principaldomain;
+};
+
+
+3) SQL Azure との接続の終了
+
+SQL Azure への接続時に非アクティブな状態が一定時間続くと、ファイアウォールなどのネットワーク コンポーネントにより、
+アイドル接続が終了されることがあります。ネットワーク コンポーネントによってアイドル接続がドロップされる状況を回避するには、
+ドライバーが読み込まれているオペレーティング システムで、
+次のレジストリ設定 (Windows 以外の場合はこれらに相当する設定) を行う必要があります。
+           
+レジストリ設定                                                                   推奨値
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\KeepAliveTime            30000
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\KeepAliveInterval         1000
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\TcpMaxDataRetransmission  10

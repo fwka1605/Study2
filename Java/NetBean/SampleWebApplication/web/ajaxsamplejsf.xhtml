@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>JSF+Ajaxサンプル</title>
+        <script type="text/javascript">
+        <!--
+            function success(event){
+                //Ajaxイベント送信が発生するごとに起動する。
+                //送信成功～サーバからの応答後の処理で利用する。
+                alert("Success. " + event.status);
+            }
+
+            function failure(event){
+                //Ajax送信に失敗した場合に出力される。
+                //サーバからのエラーもここに出力されるので
+                //サーバのデバッグ情報と共に参考にするとよい。
+                alert("Error. " + event.status);
+            }
+        //-->
+        </script>
+    </h:head>
+    <h:body>
+        <h:form id="form1">
+            <table border="1">
+                <tr>
+                    <td>ユーザID</td>
+                    <td>
+                        <h:inputText id="username" value="#{user.username}" validator="#{user.validationUsername}">
+                            <f:ajax render="nameError" event="blur"/>
+                        </h:inputText>
+                    </td>
+                    <td width="450px"><h:message for="username" id="nameError" style="color: red"/></td>
+                </tr>
+                <tr>
+                    <td>パスワード</td>
+                    <td>
+                        <h:inputSecret id="password" value="#{user.password}" validatorMessage="パスワードは5～16文字の間で、半角英数のみ許可されます">
+                            <f:validateLength minimum="0" maximum="16"/>
+                            <f:validateRegex pattern="[0-9A-Za-z]+"/>
+                            <f:ajax render="passwordError" event="valueChange"/>
+                        </h:inputSecret></td>
+                    <td><h:message for="password" id="passwordError" style="color: red"/></td>
+                </tr>
+                <tr>
+                    <td>メールアドレス</td>
+                    <td>
+                        <h:inputText id="email" value="#{user.email}" validator="sample.emailValidator">
+                            <f:ajax render="emailError" event="blur" />
+                        </h:inputText></td>
+                    <td><h:message for="email" id="emailError" style="color: red"/></td>
+                </tr>
+                <tr>
+                    <td>年齢：(数値で0～150まで)</td>
+                    <td>
+                        <h:inputText id="age" value="#{user.age}" validatorMessage="年齢は0～150までの数値を入力してください">
+                            <f:validateRegex pattern="[0-9]+" />
+                            <f:validateLongRange maximum="150" minimum="0" />　
+                            <f:ajax render="ageError" event="blur"/>
+                        </h:inputText></td>
+                    <td><h:message for="age" id="ageError" style="color: red"/></td>
+                </tr>
+            </table>
+
+            <hr />
+            <h:commandButton id="sender" action="#{user.action}" value="送信する">
+                <f:ajax execute="form1" onevent="success" onerror="failure" render="result" />
+            </h:commandButton>
+            
+            <h:outputText id="result" value="#{user.result}"></h:outputText>
+        </h:form>
+    </h:body>
+</html>
+

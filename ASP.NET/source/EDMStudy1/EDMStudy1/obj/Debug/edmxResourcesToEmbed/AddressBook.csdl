@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="AddressBook" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="AddressBookContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Entries" EntityType="AddressBook.Entry" />
+    <EntitySet Name="Categories" EntityType="AddressBook.Category" />
+    <AssociationSet Name="EntryCategory" Association="AddressBook.EntryCategory">
+      <End Role="Entry" EntitySet="Entries" />
+      <End Role="Category" EntitySet="Categories" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Entry">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="MailAddress" Nullable="false" />
+    <Property Type="String" Name="TelNo" Nullable="false" />
+    <Property Type="Int16" Name="Age" Nullable="false" />
+    <NavigationProperty Name="Categories" Relationship="AddressBook.EntryCategory" FromRole="Entry" ToRole="Category" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="CategoryName" Nullable="false" />
+    <Property Type="String" Name="Detail" Nullable="false" />
+    <NavigationProperty Name="Entries" Relationship="AddressBook.EntryCategory" FromRole="Category" ToRole="Entry" />
+  </EntityType>
+  <Association Name="EntryCategory">
+    <End Type="AddressBook.Entry" Role="Entry" Multiplicity="*" />
+    <End Type="AddressBook.Category" Role="Category" Multiplicity="*" />
+  </Association>
+</Schema>

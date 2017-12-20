@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Hello Canvas</title>
+	<style>
+		.canvas {
+			border: 1px solid gray;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="./../js/canvas.js"></script>
+</head>
+
+<body>
+<br>
+アニメーション(移動＋透明度)
+<br>
+<canvas id="canvas1" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+<br>
+アニメーション(回転)
+<br>
+<canvas id="canvas2" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+
+
+<script>
+	//ロード時に描画関数(draw)を呼び出す
+	window.addEventListener('load',function(){
+		draw1();
+		draw2();
+	});
+
+	function draw1(){
+		var canvas = getCanvasById("canvas1");
+		var ctx = getCanvasContextById("canvas1");
+
+		ctx.beginPath();
+
+		var x=0;
+		var y=0;
+		var alpha=0;
+
+		function animation(){
+			ctx.clearRect(0,0,canvas.width,canvas.height);
+
+			x += 2;
+			y += 1;
+			alpha += 0.005;
+
+			ctx.globalAlpha = alpha;
+			ctx.fillStyle = 'red';
+			ctx.fillRect(x,y,200,200);
+		}
+
+		setInterval(animation,1000/30);
+	}	
+
+	function draw2(){
+
+		var canvas = getCanvasById("canvas2");
+		var ctx = getCanvasContextById("canvas2");
+
+		ctx.beginPath();
+
+		var angle = 0;
+
+		function animation(){
+			ctx.clearRect(0,0,canvas.width,canvas.height);
+
+			angle += 1;
+
+			ctx.save();
+			ctx.translate(320,200);
+			ctx.rotate(angle*Math.PI/180);
+			ctx.fillStyle='red';
+			ctx.fillRect(-100,-100,200,200);
+
+			ctx.restore();
+		}
+
+		setInterval(animation,1000/30);
+	}
+		
+</script>
+
+</body>
+
+</html>

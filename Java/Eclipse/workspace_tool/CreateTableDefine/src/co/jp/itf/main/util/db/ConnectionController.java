@@ -1,0 +1,36 @@
+package co.jp.itf.main.util.db;
+
+import co.jp.itf.main.util.db.oracle.ConnectionManagerUtilForOracle;
+import co.jp.itf.main.util.db.posgre.ConnectionManagerUtilForPostgre;
+import co.jp.itf.main.util.db.sqlserver.ConnectionManagerUtilForSqlServer;
+
+public class ConnectionController {
+
+	public static final String DB_TYPE_ORACLE = "ORACLE";
+	public static final String DB_TYPE_POSGRE = "POSGRE";
+	public static final String DB_TYPE_SQLSERVER = "SQLSERVER";
+
+
+
+	public static ConnectionManagerUtil connectionManager = null;
+
+	public static ConnectionManagerUtil getConnectionManager(String dbType){
+
+		if(connectionManager==null){
+			if(dbType.equals(DB_TYPE_ORACLE)){
+				connectionManager = new ConnectionManagerUtilForOracle();
+			}
+			else if(dbType.equals(DB_TYPE_POSGRE)){
+				connectionManager = new ConnectionManagerUtilForPostgre();
+			}
+			else if(dbType.equals(DB_TYPE_SQLSERVER)){
+				connectionManager = new ConnectionManagerUtilForSqlServer();
+
+			}
+		}
+
+		return connectionManager;
+
+	}
+
+}

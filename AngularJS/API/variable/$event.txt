@@ -1,0 +1,24 @@
+イベントオブジェクト
+
+基本
+	type:イベントの種類
+	which:キーコード、マウスボタンの種類
+	timeStamp:イベントの発生時刻
+	altKey:Altキーを押したか
+	ctrlKey:Ctrlキーを押したか
+	shiftKey:Shiftキーを押したか
+座標
+	screenX:スクリーン上のX座標
+	screenY：スクリーン上のY座標
+	pageX:ページ上のX座標
+	pageY:ページ上のY座標
+	clientX:ブラウザ表示領域上のX座標
+	clientY:ブラウザ表示領域上のY座標
+	offsetX：要素上のX座標
+	offsetY：要素上のY座標
+
+操作
+	preventDefault():デフォルト動作をキャンセル
+	stopPropagation():パブリングを止める
+	stopImmediatePropagation():パブリングを止めて以降のイベントも中止
+

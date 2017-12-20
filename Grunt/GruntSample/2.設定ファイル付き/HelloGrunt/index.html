@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Gruntサンプルページ</title>
+
+<!-- jQueryの読込 -->
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<!-- 外部JavaScriptの読込 -->
+<!-- 元のJavaScriptはこちら-->
+<!--
+<script src="js_src/timer.js"></script>
+<script src="js_src/color.js"></script>
+-->
+<!-- 最小化したJavaScriptはこちら -->
+<script src="js/timer.min.js"></script>
+<script src="js/color.min.js"></script>
+
+</head>
+<body ng-controller="MyController">
+<h1>Gruntサンプルページ</h1>
+
+<h3>indexTimer.js：現在時刻の表示</h3>
+<p>現在時刻：<span id="now-time"></span></p>
+<button id="toggle-timer">開始／停止</button>
+
+<h3>indexColor.js：背景色の変更</h3>
+<button id="random-color">背景色変更</button>
+
+<p>
+</body>
+</html>

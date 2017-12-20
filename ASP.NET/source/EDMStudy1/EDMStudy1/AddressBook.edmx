@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AddressBook.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="AddressBookStoreContainer">
+    <EntitySet Name="Entries" EntityType="AddressBook.Store.Entries" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Categories" EntityType="AddressBook.Store.Categories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EntryCategory" EntityType="AddressBook.Store.EntryCategory" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_EntryCategory_Entry" Association="AddressBook.Store.FK_EntryCategory_Entry">
+      <End Role="Entry" EntitySet="Entries" />
+      <End Role="EntryCategory" EntitySet="EntryCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EntryCategory_Category" Association="AddressBook.Store.FK_EntryCategory_Category">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="EntryCategory" EntitySet="EntryCategory" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Entries">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="MailAddress" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TelNo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Age" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Detail" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EntryCategory">
+    <Key>
+      <PropertyRef Name="Entries_ID" />
+      <PropertyRef Name="Categories_ID" />
+    </Key>
+    <Property Name="Entries_ID" Type="int" Nullable="false" />
+    <Property Name="Categories_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_EntryCategory_Entry">
+    <End Role="Entry" Type="AddressBook.Store.Entries" Multiplicity="1" />
+    <End Role="EntryCategory" Type="AddressBook.Store.EntryCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Entry">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EntryCategory">
+        <PropertyRef Name="Entries_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EntryCategory_Category">
+    <End Role="EntryCategory" Type="AddressBook.Store.EntryCategory" Multiplicity="*" />
+    <End Role="Category" Type="AddressBook.Store.Categories" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EntryCategory">
+        <PropertyRef Name="Categories_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="AddressBook" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="AddressBookContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Entries" EntityType="AddressBook.Entry" />
+          <EntitySet Name="Categories" EntityType="AddressBook.Category" />
+          <AssociationSet Name="EntryCategory" Association="AddressBook.EntryCategory">
+            <End Role="Entry" EntitySet="Entries" />
+            <End Role="Category" EntitySet="Categories" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Entry">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="MailAddress" Nullable="false" />
+          <Property Type="String" Name="TelNo" Nullable="false" />
+          <Property Type="Int16" Name="Age" Nullable="false" />
+          <NavigationProperty Name="Categories" Relationship="AddressBook.EntryCategory" FromRole="Entry" ToRole="Category" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="CategoryName" Nullable="false" />
+          <Property Type="String" Name="Detail" Nullable="false" />
+          <NavigationProperty Name="Entries" Relationship="AddressBook.EntryCategory" FromRole="Category" ToRole="Entry" />
+        </EntityType>
+        <Association Name="EntryCategory">
+          <End Type="AddressBook.Entry" Role="Entry" Multiplicity="*" />
+          <End Type="AddressBook.Category" Role="Category" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AddressBookStoreContainer" CdmEntityContainer="AddressBookContainer">
+    <EntitySetMapping Name="Entries">
+      <EntityTypeMapping TypeName="IsTypeOf(AddressBook.Entry)">
+        <MappingFragment StoreEntitySet="Entries">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="MailAddress" ColumnName="MailAddress" />
+          <ScalarProperty Name="TelNo" ColumnName="TelNo" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="IsTypeOf(AddressBook.Category)">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="EntryCategory" TypeName="AddressBook.EntryCategory" StoreEntitySet="EntryCategory">
+      <EndProperty Name="Entry">
+        <ScalarProperty Name="ID" ColumnName="Entries_ID" />
+      </EndProperty>
+      <EndProperty Name="Category">
+        <ScalarProperty Name="ID" ColumnName="Categories_ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="なし" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

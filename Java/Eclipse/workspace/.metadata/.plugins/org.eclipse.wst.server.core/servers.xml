@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" glassfish.adminname="admin" glassfish.adminserverportnumber="4848" glassfish.domainpath="C:/glassfish-4.1.1/glassfish4/glassfish/domains/domain1" glassfish.jarDeploy="false" glassfish.keepSessions="true" glassfish.serverportnumber="8080" glassfish.useAnonymousConnection="true" hostname="localhost" id="ローカル・ホスト の GlassFish 4 [domain1]" name="ローカル・ホスト の GlassFish 4 [domain1]" runtime-id="GlassFish 4" server-type="org.glassfish.jst.server.glassfish4" server-type-id="org.glassfish.jst.server.glassfish4" start-timeout="240" stop-timeout="240" timestamp="11">
+    <list key="modules" value0="JsfStudy::org.eclipse.jst.jee.server:JsfStudy::jst.web::3.1" value1="jsfDemo::org.eclipse.jst.jee.server:jsfDemo::jst.web::2.5"/>
+  </server>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/ローカル・ホスト の Tomcat8 (Java8)-config" deployDir="wtpwebapps" hostname="localhost" id="ローカル・ホスト の Tomcat8 (Java8)" name="ローカル・ホスト の Tomcat8 (Java8)" runtime-id="Tomcat8 (Java8)" server-type="org.eclipse.jst.server.tomcat.80" server-type-id="org.eclipse.jst.server.tomcat.80" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="1">
+    <list key="modules" value0="jsfDemo::org.eclipse.jst.jee.server:jsfDemo::jst.web::2.5"/>
+  </server>
+</servers>

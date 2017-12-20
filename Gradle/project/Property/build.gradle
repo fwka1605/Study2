@@ -1,0 +1,7 @@
+task myTask{
+    ext.myProperty="myValue"
+}
+
+task print << {
+    println myTask.myProperty
+}

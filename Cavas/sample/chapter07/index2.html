@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Hello Canvas</title>
+	<style>
+		.canvas {
+			border: 1px solid gray;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="./../js/canvas.js"></script>
+</head>
+
+<body>
+<br>
+画像の平行移動
+<br>
+<canvas id="canvas1" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+
+
+<script>
+	//ロード時に描画関数(draw)を呼び出す
+	window.addEventListener('load',function(){
+		draw1();
+	});
+
+	function draw1(){
+		var ctx = getCanvasContextById("canvas1");
+
+		ctx.beginPath();
+		ctx.fillRect(220,50,200,200);
+
+		ctx.beginPath();
+
+		ctx.translate(350,150);
+		ctx.scale(1,0.5);
+		ctx.rotate(45*Math.PI/180);
+
+		ctx.fillStyle='red';
+		ctx.fillRect(220,50,200,200);
+	}	
+		
+</script>
+
+</body>
+
+</html>

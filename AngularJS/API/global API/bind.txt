@@ -1,0 +1,33 @@
+angular.bind(selef, fnc [,args])
+
+	self	fncの中でthisとみなすオブジェクト
+	fnc	対象の関数
+	args	関数に渡す引数（可変長引数）
+
+説明：
+
+angular.bindメソッドは、指定された関数の配下でのthisを
+一時的に固定します。
+
+例：
+
+<script>
+var obj = {
+  title: 'AngularJSアプリケーションプログラミング',
+  price: 3500,
+  show: function() {
+    console.log(this.title + '：' + this.price);
+  }
+};
+
+document.getElementById('btn').addEventListener('click',
+  angular.bind(obj, obj.show), true);
+</script>
+
+通常、イベントリスナーの中では、thisキーワードは、
+イベントの発生元（ここではボタンbtn)を指している。
+
+その際に、angular.bind(obj, obj.show)を記載することによって、
+thisオブジェクトがobjectに固定される。
+
+

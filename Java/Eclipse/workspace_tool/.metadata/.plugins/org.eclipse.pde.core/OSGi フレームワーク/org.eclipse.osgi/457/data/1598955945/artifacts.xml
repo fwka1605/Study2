@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\PyDev' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
+  <properties size='1'>
+    <property name='p2.timestamp' value='1452068605622'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='22'>
+    <artifact classifier='osgi.bundle' id='org.python.pydev.shared_interactive_console' version='4.3.0.201508182223'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/PyDev/eclipse/plugins/org.python.pydev.shared_interactive_console_4.3.0.201508182223/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\PyDev\eclipse\plugins\org.python.pydev.shared_interactive_console_4.3.0.201508182223'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.python.pydev.django' version='4.3.0.201508182223'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/PyDev/eclipse/plugins/org.python.pydev.django_4.3.0.201508182223/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\PyDev\eclipse\plugins\org.python.pydev.django_4.3.0.201508182223'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.python.pydev.help' version='4.3.0.201508182223'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/PyDev/eclipse/plugins/org.python.pydev.help_4.3.0.201508182223/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\PyDev\eclipse\plugins\org.python.pydev.help_4.3.0.201508182223'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.python.pydev.analysis' version='4.3.0.201508182223'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/PyDev/eclipse/plugins/com.python.pydev.analysis_4.3.0.201508182223/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\PyDev\eclipse\plugins\com.python.pydev.analysis_4.3.0.201508182223'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.python.pydev.shared_ui' version='4.3.0.201508182223'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/PyDev/eclipse/plugins/org.python.pydev.shared_ui_4.3.0.201508182223/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\PyDev\eclipse\plugins\org.python.pydev.shared_ui_4.3.0.201508182223'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.python.pydev.parser' version='4.3.0.201508182223'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/PyDev/eclipse/plugins/org.python.pydev.parser_4.3.0.201508182223/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\PyDev\eclipse\plugins\org.python.pydev.parser_4.3.0.201508182223'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.python.pydev.ast' version='4.3.0.201508182223'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/PyDev/eclipse/plugins/org.python.pydev.ast_4.3.0.201508182223/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\PyDev\eclipse\plugins\org.python.pydev.ast_4.3.0.201508182223'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.python.pydev.shared_core' version='4.3.0.201508182223'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/PyDev/eclipse/plugins/org.python.pydev.shared_core_4.3.0.201508182223/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\PyDev\eclipse\plugins\org.python.pydev.shared_core_4.3.0.201508182223'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.python.pydev.feature' version='4.3.0.201508182223'>
+      <properties size='3'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/PyDev/eclipse/features/org.python.pydev.feature_4.3.0.201508182223/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\PyDev\eclipse\features\org.python.pydev.feature_4.3.0.201508182223'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.python.pydev' version='4.3.0.201508182223'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/PyDev/eclipse/plugins/com.python.pydev_4.3.0.201508182223/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\PyDev\eclipse\plugins\com.python.pydev_4.3.0.201508182223'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.python.pydev.debug' version='4.3.0.201508182223'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/PyDev/eclipse/plugins/org.python.pydev.debug_4.3.0.201508182223/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\PyDev\eclipse\plugins\org.python.pydev.debug_4.3.0.201508182223'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.python.pydev.codecompletion' version='4.3.0.201508182223'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/PyDev/eclipse/plugins/com.python.pydev.codecompletion_4.3.0.201508182223/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\PyDev\eclipse\plugins\com.python.pydev.codecompletion_4.3.0.201508182223'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.python.pydev.fastparser' version='4.3.0.201508182223'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/PyDev/eclipse/plugins/com.python.pydev.fastparser_4.3.0.201508182223/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\PyDev\eclipse\plugins\com.python.pydev.fastparser_4.3.0.201508182223'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.python.pydev.mylyn' version='0.6.0'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/PyDev/eclipse/plugins/org.python.pydev.mylyn_0.6.0/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\PyDev\eclipse\plugins\org.python.pydev.mylyn_0.6.0'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.python.pydev' version='4.3.0.201508182223'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/PyDev/eclipse/plugins/org.python.pydev_4.3.0.201508182223/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\PyDev\eclipse\plugins\org.python.pydev_4.3.0.201508182223'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.python.pydev.mylyn.feature' version='0.6.0'>
+      <properties size='3'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/PyDev/eclipse/features/org.python.pydev.mylyn.feature_0.6.0/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\PyDev\eclipse\features\org.python.pydev.mylyn.feature_0.6.0'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.python.pydev.customizations' version='4.3.0.201508182223'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/PyDev/eclipse/plugins/org.python.pydev.customizations_4.3.0.201508182223/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\PyDev\eclipse\plugins\org.python.pydev.customizations_4.3.0.201508182223'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.python.pydev.refactoring' version='4.3.0.201508182223'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/PyDev/eclipse/plugins/org.python.pydev.refactoring_4.3.0.201508182223/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\PyDev\eclipse\plugins\org.python.pydev.refactoring_4.3.0.201508182223'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.python.pydev.refactoring' version='4.3.0.201508182223'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/PyDev/eclipse/plugins/com.python.pydev.refactoring_4.3.0.201508182223/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\PyDev\eclipse\plugins\com.python.pydev.refactoring_4.3.0.201508182223'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.python.pydev.core' version='4.3.0.201508182223'>
+      <properties size='2'>
+        <property name='artifact.size' value='0'/>
+        <property name='download.size' value='0'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/PyDev/eclipse/plugins/org.python.pydev.core_4.3.0.201508182223/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\PyDev\eclipse\plugins\org.python.pydev.core_4.3.0.201508182223'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.python.pydev.jython' version='4.3.0.201508182223'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/PyDev/eclipse/plugins/org.python.pydev.jython_4.3.0.201508182223/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\PyDev\eclipse\plugins\org.python.pydev.jython_4.3.0.201508182223'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.python.pydev.debug' version='4.3.0.201508182223'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/PyDev/eclipse/plugins/com.python.pydev.debug_4.3.0.201508182223/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\PyDev\eclipse\plugins\com.python.pydev.debug_4.3.0.201508182223'/>
+      </repositoryProperties>
+    </artifact>
+  </artifacts>
+</repository>

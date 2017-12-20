@@ -1,0 +1,49 @@
+﻿@model Mvc4TestApplication1.Models.Book
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Book</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Isbn)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Isbn)
+    </div>
+        <div class="display-label">
+         @Html.DisplayNameFor(model => model.Title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Price)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Price)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Publish)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Publish)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Published)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Published)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Isbn }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

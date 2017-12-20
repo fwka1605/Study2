@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Hello Canvas</title>
+	<style>
+		.canvas {
+			border: 1px solid gray;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="./../js/canvas.js"></script>
+</head>
+
+<body>
+<br>
+透明度を描画(rgbaを使用)
+<br>
+<canvas id="canvas1" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+透明度を描画(globalAlphaを使用)
+<br>
+<canvas id="canvas2" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+
+
+<script>
+	//ロード時に描画関数(draw)を呼び出す
+	window.addEventListener('load',function(){
+		draw1();
+		draw2();
+	});
+
+	function draw1(){
+		var ctx = getCanvasContextById("canvas1");
+
+		// 三角形
+		ctx.beginPath();
+		ctx.moveTo(250,100);
+		ctx.lineTo(100,330);
+		ctx.lineTo(400,330);
+		ctx.closePath();
+		ctx.fillStyle='blue';
+		ctx.fill();
+
+		// 四角形
+		// 色＋透明度（0～1）を設定
+		ctx.fillStyle = 'rgba(255,0,0,0.5)';
+		ctx.fillRect(250,50,300,300);
+
+		ctx.fillStyle = 'rgba(255,255,255,0.5)';
+		ctx.fillRect(150,40,300,300);
+	}
+
+	function draw2(){
+		var ctx = getCanvasContextById("canvas2");
+
+		// 三角形
+		ctx.beginPath();
+		ctx.moveTo(250,100);
+		ctx.lineTo(100,330);
+		ctx.lineTo(400,330);
+		ctx.closePath();
+		ctx.fillStyle='blue';
+		ctx.fill();
+
+		// 四角形
+		// 色＋透明度（0～1）を設定
+		ctx.fillStyle = 'rgb(255,0,0)';
+		ctx.globalAlpha = 0.5;
+		ctx.fillRect(250,50,300,300);
+
+		ctx.fillStyle = 'rgb(255,255,255)';
+		ctx.globalAlpha = 0.5;
+		ctx.fillRect(150,40,300,300);
+		ctx.fillRect(150,40,300,300);
+	}
+
+
+
+</script>
+
+</body>
+
+</html>

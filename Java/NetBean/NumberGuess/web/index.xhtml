@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>番号あわせサンプル</title>
+    </h:head>
+    <!-- 番号あわせロジックを実装したManagedBeanはnumberの名前で管理される。-->
+    <h:body style="font-size: 18px">
+        次の番号の間から選んだ番号を予想してください。<br />
+        <h:outputText id="result" value="#{number.message}" style="color:green" />
+        [ #{number.smallest}～#{number.biggest} ]<br />
+        残り回数は #{number.remainingGuesses} 回です。<br />
+        <h:form id="form1">
+            <!-- 番号予想を入力 -->
+            <h:inputText id="guess" value="#{number.guess}" 
+               validatorMessage="#{number.smallest}から#{number.biggest}の数値を入力してください">
+                <f:validateLongRange maximum="#{number.biggest}" minimum="#{number.smallest}" />
+                <f:ajax render="guessError" event="blur"/>
+            </h:inputText>
+            <!-- 入力チェック用エラーメッセージ -->
+            <h:message for="guess" id="guessError" style="color: red"/>
+            <br />
+            
+            <!-- 送信ボタン -->
+            <h:commandButton id="sender" action="#{number.check}" value="送信する" />
+        </h:form>
+    </h:body>
+</html>

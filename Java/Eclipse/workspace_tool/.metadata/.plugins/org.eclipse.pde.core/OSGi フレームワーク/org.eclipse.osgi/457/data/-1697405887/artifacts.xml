@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Subversive' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
+  <properties size='1'>
+    <property name='p2.timestamp' value='1452068605794'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='16'>
+    <artifact classifier='osgi.bundle' id='org.eclipse.team.svn' version='3.0.0.I20150529-1700'>
+      <properties size='2'>
+        <property name='artifact.size' value='18676'/>
+        <property name='download.size' value='18676'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/Subversive/eclipse/plugins/org.eclipse.team.svn_3.0.0.I20150529-1700.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Subversive\eclipse\plugins\org.eclipse.team.svn_3.0.0.I20150529-1700.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.polarion.eclipse.team.svn.connector.svnkit17' version='5.0.0.I20150529-1700'>
+      <properties size='2'>
+        <property name='artifact.size' value='5916853'/>
+        <property name='download.size' value='5916853'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/Subversive/eclipse/plugins/org.polarion.eclipse.team.svn.connector.svnkit17_5.0.0.I20150529-1700.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Subversive\eclipse\plugins\org.polarion.eclipse.team.svn.connector.svnkit17_5.0.0.I20150529-1700.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.polarion.eclipse.team.svn.connector.svnkit18' version='5.0.0.I20150529-1700'>
+      <properties size='2'>
+        <property name='artifact.size' value='6452347'/>
+        <property name='download.size' value='6452347'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/Subversive/eclipse/plugins/org.polarion.eclipse.team.svn.connector.svnkit18_5.0.0.I20150529-1700.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Subversive\eclipse\plugins\org.polarion.eclipse.team.svn.connector.svnkit18_5.0.0.I20150529-1700.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.team.svn.mylyn' version='3.0.0.I20150529-1700'>
+      <properties size='2'>
+        <property name='artifact.size' value='34532'/>
+        <property name='download.size' value='34532'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/Subversive/eclipse/plugins/org.eclipse.team.svn.mylyn_3.0.0.I20150529-1700.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Subversive\eclipse\plugins\org.eclipse.team.svn.mylyn_3.0.0.I20150529-1700.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.team.svn.mylyn' version='3.0.0.I20150529-1700'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/Subversive/eclipse/features/org.eclipse.team.svn.mylyn_3.0.0.I20150529-1700/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Subversive\eclipse\features\org.eclipse.team.svn.mylyn_3.0.0.I20150529-1700'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.team.svn' version='3.0.0.I20150529-1700'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/Subversive/eclipse/features/org.eclipse.team.svn_3.0.0.I20150529-1700/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Subversive\eclipse\features\org.eclipse.team.svn_3.0.0.I20150529-1700'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.polarion.eclipse.team.svn.connector' version='5.0.0.I20150529-1700'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/Subversive/eclipse/features/org.polarion.eclipse.team.svn.connector_5.0.0.I20150529-1700/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Subversive\eclipse\features\org.polarion.eclipse.team.svn.connector_5.0.0.I20150529-1700'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.polarion.eclipse.team.svn.connector' version='5.0.0.I20150529-1700'>
+      <properties size='2'>
+        <property name='artifact.size' value='4240'/>
+        <property name='download.size' value='4240'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/Subversive/eclipse/plugins/org.polarion.eclipse.team.svn.connector_5.0.0.I20150529-1700.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Subversive\eclipse\plugins\org.polarion.eclipse.team.svn.connector_5.0.0.I20150529-1700.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.polarion.eclipse.team.svn.connector.svnkit17' version='5.0.0.I20150529-1700'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/Subversive/eclipse/features/org.polarion.eclipse.team.svn.connector.svnkit17_5.0.0.I20150529-1700/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Subversive\eclipse\features\org.polarion.eclipse.team.svn.connector.svnkit17_5.0.0.I20150529-1700'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.team.svn.ui.startup' version='3.0.0.I20150529-1700'>
+      <properties size='2'>
+        <property name='artifact.size' value='13361'/>
+        <property name='download.size' value='13361'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/Subversive/eclipse/plugins/org.eclipse.team.svn.ui.startup_3.0.0.I20150529-1700.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Subversive\eclipse\plugins\org.eclipse.team.svn.ui.startup_3.0.0.I20150529-1700.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.team.svn.revision.graph' version='3.0.0.I20150529-1700'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/Subversive/eclipse/features/org.eclipse.team.svn.revision.graph_3.0.0.I20150529-1700/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Subversive\eclipse\features\org.eclipse.team.svn.revision.graph_3.0.0.I20150529-1700'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.team.svn.ui' version='3.0.0.I20150529-1700'>
+      <properties size='2'>
+        <property name='artifact.size' value='2557995'/>
+        <property name='download.size' value='2557995'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/Subversive/eclipse/plugins/org.eclipse.team.svn.ui_3.0.0.I20150529-1700.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Subversive\eclipse\plugins\org.eclipse.team.svn.ui_3.0.0.I20150529-1700.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.team.svn.help' version='3.0.0.I20150529-1700'>
+      <properties size='2'>
+        <property name='artifact.size' value='2908776'/>
+        <property name='download.size' value='2908776'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/Subversive/eclipse/plugins/org.eclipse.team.svn.help_3.0.0.I20150529-1700.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Subversive\eclipse\plugins\org.eclipse.team.svn.help_3.0.0.I20150529-1700.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.team.svn.core' version='3.0.0.I20150529-1700'>
+      <properties size='2'>
+        <property name='artifact.size' value='1040572'/>
+        <property name='download.size' value='1040572'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/Subversive/eclipse/plugins/org.eclipse.team.svn.core_3.0.0.I20150529-1700.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Subversive\eclipse\plugins\org.eclipse.team.svn.core_3.0.0.I20150529-1700.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.team.svn.revision.graph' version='3.0.0.I20150529-1700'>
+      <properties size='2'>
+        <property name='artifact.size' value='383865'/>
+        <property name='download.size' value='383865'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/Subversive/eclipse/plugins/org.eclipse.team.svn.revision.graph_3.0.0.I20150529-1700.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Subversive\eclipse\plugins\org.eclipse.team.svn.revision.graph_3.0.0.I20150529-1700.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.polarion.eclipse.team.svn.connector.svnkit18' version='5.0.0.I20150529-1700'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/Subversive/eclipse/features/org.polarion.eclipse.team.svn.connector.svnkit18_5.0.0.I20150529-1700/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Subversive\eclipse\features\org.polarion.eclipse.team.svn.connector.svnkit18_5.0.0.I20150529-1700'/>
+      </repositoryProperties>
+    </artifact>
+  </artifacts>
+</repository>

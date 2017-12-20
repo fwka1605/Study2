@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<input type="file" id="file">
+<ul id="sortable">
+
+</ul>
+<p id="img_data"></p>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+if(window.FileReader ){
+	$( function() {
+		$( "#sortable" ).sortable();
+		$( "#sortable" ).disableSelection();
+	} );
+	
+	// ファイル読み込み用のオブジェクトを作成する
+	var reader = new FileReader();
+	
+	// ファイルの読み込みが正常終了した際のコールバックメソッド
+	reader.onload = function(e) {
+		let li =$("<li/>");
+		$("<img width='20%' heigth='20%'>").attr("src",reader.result).appendTo(li);
+		li.appendTo("#sortable");
+	};
+	
+	// ファイルが選択された際
+	$("#file").change(function(){
+		for(var file of this.files){
+			// Data URI Scheme 文字列を得る
+			// Data URIとは、「コンテンツタイプ」と「バイナリ」の２つの情報を取得する」
+			// 例（画像ファイルの読み込み）data:image/png;base64,バイナリデータ
+			// 非同期メソッド。 読み込みが完了すると、onloadイベントが発報される
+			
+			reader.readAsDataURL(file);
+		}
+	});
+}
+</script>
+</body>
+</html>
+

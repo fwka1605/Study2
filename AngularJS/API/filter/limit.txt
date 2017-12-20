@@ -1,0 +1,90 @@
+limitTo
+
+{{expression | limitTo:num}}
+
+expression:ソート対象の文字列
+num:取得する件数
+
+{{expression | limitTo:num:start}}
+
+ページング機能を実装しやすいように、limitToフィルターに引数start(開始位置)
+が追加されました。
+
+start:開始位置（デフォルトは0。負数で配列の末尾からのインデックス値）
+
+{{str | limitTo:num}}
+
+str:操作する文字列
+num:取得する文字数
+
+limitToは配列だけでなく、文字列にも使用できます。
+これにより文字列の先頭からnum文字取得することができます。
+
+１．通常の例
+
+<table class="table">
+  <tr>
+    <th>書名</th><th>価格</th><th>出版社</th><th>刊行日</th>
+  </tr>
+  <tr ng-repeat="book in books | orderBy: 'published' | limitTo: 3">
+    <td><a ng-href="http://www.wings.msn.to/index.php/-/A-03/{{book.isbn}}/">
+      {{book.title}}</a></td>
+    <td>{{book.price}}円</td>
+    <td>{{book.publish}}</td>
+    <td>{{book.published | date}}</td>
+  </tr>
+</table>
+
+books配列をpublishedキーでソートし、先頭から3件を表示する。
+
+<tr ng-repeat="book in books | orderBy: 'published' | limitTo: -3">
+
+limitToにマイナスを指定すると、後ろから3件表示されることになる。
+
+２．ページング機能の例
+
+<table class="table">
+  <tr>
+    <th>書名</th><th>価格</th><th>出版社</th><th>刊行日</th>
+  </tr>
+  <tr ng-repeat="book in books | orderBy: 'published' | limitTo: len: start">
+    <td><a ng-href="http://www.wings.msn.to/index.php/-/A-03/{{book.isbn}}/">
+      {{book.title}}</a></td>
+    <td>{{book.price}}円</td>
+    <td>{{book.publish}}</td>
+    <td>{{book.published | date}}</td>
+  </tr>
+</table>
+<ul class="pagination">
+  <li><a href="#" ng-click="pager(0)">1</a></li>
+  <li><a href="#" ng-click="pager(1)">2</a></li>
+  <li><a href="#" ng-click="pager(2)">3</a></li>
+</ul>
+
+angular.module('myApp', [])
+  .controller('MyController', ['$scope', function($scope) {
+    $scope.len = 3;
+    $scope.start = 0
+
+    $scope.pager = function(page){
+      $scope.start = $scope.len * page;
+    };
+
+    $scope.books = [
+      {
+        isbn: '978-4-7741-7078-7',
+        title: 'サーブレット＆JSPポケットリファレンス',
+        price: 2680,
+        publish: '技術評論社',
+        published: new Date(2015, 0, 8)
+      }
+    ];
+  }]);
+
+３．部分文字列
+
+<ul ng-init="msg = 'いろはにほへとちりぬるを'">
+  <li>元の文字列：{{msg}}</li>
+  <li>先頭5文字：{{msg | limitTo: 5}}</li>
+  <li>末尾5文字：{{msg | limitTo:-5}}</li>
+</ul>

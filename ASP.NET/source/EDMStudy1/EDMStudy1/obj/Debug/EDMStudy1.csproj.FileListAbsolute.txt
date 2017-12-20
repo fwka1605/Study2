@@ -1,0 +1,16 @@
+C:\Users\NVLCLT13\Documents\nouvelle\study\ASP.NET\source\EDMStudy1\EDMStudy1\bin\Debug\EDMStudy1.exe.config
+C:\Users\NVLCLT13\Documents\nouvelle\study\ASP.NET\source\EDMStudy1\EDMStudy1\bin\Debug\EDMStudy1.exe
+C:\Users\NVLCLT13\Documents\nouvelle\study\ASP.NET\source\EDMStudy1\EDMStudy1\bin\Debug\EDMStudy1.pdb
+C:\Users\NVLCLT13\Documents\nouvelle\study\ASP.NET\source\EDMStudy1\EDMStudy1\bin\Debug\EntityFramework.dll
+C:\Users\NVLCLT13\Documents\nouvelle\study\ASP.NET\source\EDMStudy1\EDMStudy1\bin\Debug\EntityFramework.xml
+C:\Users\NVLCLT13\Documents\nouvelle\study\ASP.NET\source\EDMStudy1\EDMStudy1\bin\Debug\ja\EntityFramework.resources.dll
+C:\Users\NVLCLT13\Documents\nouvelle\study\ASP.NET\source\EDMStudy1\EDMStudy1\obj\Debug\EDMStudy1.exe
+C:\Users\NVLCLT13\Documents\nouvelle\study\ASP.NET\source\EDMStudy1\EDMStudy1\obj\Debug\EDMStudy1.pdb
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\ASP.NET\source\EDMStudy1\EDMStudy1\bin\Debug\EDMStudy1.exe.config
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\ASP.NET\source\EDMStudy1\EDMStudy1\obj\Debug\EDMStudy1.exe
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\ASP.NET\source\EDMStudy1\EDMStudy1\obj\Debug\EDMStudy1.pdb
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\ASP.NET\source\EDMStudy1\EDMStudy1\bin\Debug\EDMStudy1.exe
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\ASP.NET\source\EDMStudy1\EDMStudy1\bin\Debug\EDMStudy1.pdb
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\ASP.NET\source\EDMStudy1\EDMStudy1\bin\Debug\EntityFramework.dll
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\ASP.NET\source\EDMStudy1\EDMStudy1\bin\Debug\EntityFramework.xml
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\ASP.NET\source\EDMStudy1\EDMStudy1\bin\Debug\ja\EntityFramework.resources.dll

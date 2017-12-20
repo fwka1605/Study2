@@ -1,0 +1,379 @@
+package co.jp.itf.main.util.db.sqlserver;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.List;
+
+import co.jp.itf.main.dto.ColumnDto;
+import co.jp.itf.main.dto.IndexDto;
+import co.jp.itf.main.dto.TableDto;
+import co.jp.itf.main.util.db.ConnectionController;
+import co.jp.itf.main.util.db.ConnectionManagerUtil;
+
+public class TableDefineUtilForSqlServer {
+
+	private static ConnectionManagerUtil connectionManagerUtil = null;
+
+	public static void createTableData(List<TableDto> tableList) {
+
+		try{
+
+			connectionManagerUtil = ConnectionController.getConnectionManager(ConnectionController.DB_TYPE_SQLSERVER);
+			connectionManagerUtil.beginConnection();
+
+			System.out.println("createTableData start");
+
+			// テーブルリストの取得
+			getTableList(tableList);
+
+			for (TableDto tableDto : tableList) {
+				getColumnList(tableDto);
+				getIndexList(tableDto);
+			}
+
+			connectionManagerUtil.releaseConnection();
+
+			System.out.println("createTableData end");
+
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+
+	}
+
+	private static void getTableList(List<TableDto> tableList){
+		Statement stmt = null;
+		ResultSet rs = null;
+		try {
+
+			/* Statementの作成 */
+			stmt = connectionManagerUtil.getConnection().createStatement();
+
+			/* Resultsetの作成 */
+
+			String sql =
+					"	SELECT									" + "\n" +
+					"		tables.name	AS TABLE_NAME			" + "\n" +
+					"		,convert(varchar,extProp.value) AS COMMENTS			" + "\n" +
+					//"		,DB_NAME()	AS db_name				" + "\n" +
+					//"		,SCHEMA_NAME(tables.schema_id)   AS schema_name	" + "\n" +
+					//"		,tables.type_desc	AS table_type	" + "\n" +
+					"	FROM									" + "\n" +
+					"		sys.tables tables					" + "\n" +
+					/* コメントデータは拡張プロパティシステムビューに存在する */
+					"	LEFT OUTER JOIN sys.extended_properties extProp	" + "\n" +
+					"	ON	" + "\n" +
+					/* テーブルの場合、classの値は常に1 (OBJECT_OR_COLUMN) */
+					"		extProp.class = 1							" + "\n" +
+					/* テーブルのobject_idはmajor_idと対応する */
+					"		AND tables.object_id = extProp.major_id		" + "\n" +
+					/* テーブルの場合、minor_idの値は常に0 */
+					"		AND extProp.minor_id = 0					" + "\n" +
+					"	ORDER BY										" + "\n" +
+					//"		db_name,									" + "\n" +
+					//"		schema_name,								" + "\n" +
+					"		table_name									";
+
+
+			System.out.println(sql);
+
+			rs = stmt.executeQuery(sql);
+
+
+
+			/* 取得したデータを表示します。 */
+			TableDto dtoTmp = null;
+			String	strTmp = null;
+			while (rs.next()) {
+				dtoTmp = new TableDto();
+				dtoTmp.setTableName(rs.getString("TABLE_NAME"));
+
+				String comments = rs.getString("COMMENTS");
+				dtoTmp.setComments("");
+
+				tableList.add(dtoTmp);
+			}
+
+			// データベースのクローズ
+			rs.close();
+			stmt.close();
+
+
+		} catch (Exception e) {
+			tableList = null;
+			e.printStackTrace ();
+		}
+
+	}
+
+	private static void getColumnList(TableDto tableDto){
+
+		PreparedStatement preStm = null;
+		ResultSet rs = null;
+
+
+		try {
+
+			/* Statementの作成 */
+
+			String sql =
+			"	SELECT															" + "\n" +
+			"	    columns.name                       AS column_name			" + "\n" +
+			"	    ,TYPE_NAME(columns.system_type_id) AS data_type				" + "\n" +
+			"	    ,columns.max_length                AS data_length			" + "\n" +
+			"	    ,columns.precision                 AS data_precision		" + "\n" +
+			"	    ,columns.scale                     AS scale					" + "\n" +
+			"	    ,columns.is_nullable               AS nullable				" + "\n" +
+			"	FROM															" + "\n" +
+			"	    sys.tables tables											" + "\n" +
+			"	        INNER JOIN sys.columns columns							" + "\n" +
+			"	        ON														" + "\n" +
+			"	            tables.object_id = columns.object_id				" + "\n" +
+			"	WHERE															" + "\n" +
+			"		tables.name=?												" + "\n" +
+			"	ORDER BY														" + "\n" +
+			" 		tables.name, columns.column_id								";
+
+
+
+			preStm = connectionManagerUtil.getConnection().prepareStatement(sql);
+			preStm.setString(1, tableDto.getTableName());
+			rs = preStm.executeQuery();
+
+			/* 取得したデータを表示します。 */
+			String	strTmp = null;
+			ColumnDto dtoTmp = null;
+			int tablePosition = 1;
+			while (rs.next()) {
+
+				dtoTmp = new ColumnDto();
+
+				dtoTmp.setTablePosition(tablePosition);
+
+				dtoTmp.setColumnName(rs.getString("column_name"));
+				dtoTmp.setDataType(rs.getString("data_type"));
+
+				dtoTmp.setDataLength(rs.getInt("data_precision"));
+				dtoTmp.setDataLength(rs.getInt("data_length"));
+
+				if("0".equals(rs.getString("nullable"))){
+					dtoTmp.setNullAble(false);
+				}
+				else{
+					dtoTmp.setNullAble(true);
+				}
+
+				getColumnAttributes(dtoTmp, tableDto.getTableName(), dtoTmp.getColumnName());
+				tableDto.getColumnList().add(dtoTmp);
+
+				tablePosition++;
+			}
+
+			// データベースのクローズ
+			rs.close();
+			preStm.close();
+
+		} catch (Exception e) {
+			e.printStackTrace ();
+		}
+	}
+
+	private static void getColumnAttributes(ColumnDto columnDto,String tableName,String columnName){
+
+		Connection conn = null;
+		PreparedStatement preStm = null;
+		ResultSet rs = null;
+
+		try {
+
+			/* Statementの作成 */
+			String sql =
+					"	SELECT												" + "\n" +
+							"		tables.name					AS table_name		" + "\n" +
+							"		,columns.name				AS column_name		" + "\n" +
+							"		,columns.column_id			AS ordinal_position	" + "\n" +
+									/* PKか否かの判別フラグ */
+							"		,CAST(CASE 										" + "\n" +
+							"			WHEN pk_cols.key_ordinal IS NOT NULL THEN 	" + "\n" +
+							"				1 										" + "\n" +
+							"			ELSE 										" + "\n" +
+							"				0 										" + "\n" +
+							"		 END AS bit) AS pk_constraint_type				" + "\n" +
+							"		,pk_cols.key_ordinal		AS pk_position		" + "\n" +
+									/* ユニークキー(UQ)か否かの判別フラグ */
+							"		,CAST(CASE 										" + "\n" +
+							"			WHEN uq_cols.key_ordinal IS NOT NULL THEN 	" + "\n" +
+							"				1 										" + "\n" +
+							"			ELSE 										" + "\n" +
+							"				0 										" + "\n" +
+							"		 END AS bit) AS uq_constraint_type				" + "\n" +
+							"		,uq_cols.key_ordinal		AS uq_position		" + "\n" +
+							"	FROM												" + "\n" +
+							"		sys.tables tables								" + "\n" +
+							"			INNER JOIN sys.columns columns				" + "\n" +
+							"			ON											" + "\n" +
+							"				tables.object_id = columns.object_id	" + "\n" +
+										/* プライマリーキーの情報を取得する為に以下の情報を外部結合 */
+							"			LEFT OUTER JOIN (								" + "\n" +
+							"				SELECT										" + "\n" +
+							"					 key_const.name	   AS constraint_name	" + "\n" +
+							"					,idx_cols.key_ordinal AS key_ordinal	" + "\n" +
+							"					,cols.name			AS col_name			" + "\n" +
+							"					,cols.object_id	   AS col_object_id		" + "\n" +
+							"					,cols.column_id	   AS col_column_id		" + "\n" +
+							"				FROM										" + "\n" +
+							"					sys.tables tbls							" + "\n" +
+													/* PKの情報を結合 */
+							"						INNER JOIN sys.key_constraints key_const				" + "\n" +
+							"						ON														" + "\n" +
+							"								tbls.object_id = key_const.parent_object_id		" + "\n" +
+							"							AND key_const.type = 'PK'							" + "\n" +
+													/* 対応するインデックス情報からカラムと特定 */
+							"						INNER JOIN sys.index_columns idx_cols					" + "\n" +
+							"						ON														" + "\n" +
+							"								key_const.parent_object_id = idx_cols.object_id	" + "\n" +
+							"							AND key_const.unique_index_id  = idx_cols.index_id	" + "\n" +
+							"						INNER JOIN sys.columns cols								" + "\n" +
+							"						ON														" + "\n" +
+							"								idx_cols.object_id = cols.object_id				" + "\n" +
+							"							AND idx_cols.column_id = cols.column_id				" + "\n" +
+							"			) pk_cols															" + "\n" +
+							"			ON																	" + "\n" +
+							"					columns.object_id = pk_cols.col_object_id					" + "\n" +
+							"				AND columns.column_id = pk_cols.col_column_id					" + "\n" +
+										/* ユニークキーの情報を取得する為に以下の情報を外部結合 */
+							"			LEFT OUTER JOIN (													" + "\n" +
+							"				SELECT															" + "\n" +
+							"					 key_const.name	   AS constraint_name						" + "\n" +
+							"					,idx_cols.key_ordinal AS key_ordinal						" + "\n" +
+							"					,cols.name			AS col_name								" + "\n" +
+							"					,cols.object_id	   AS col_object_id							" + "\n" +
+							"					,cols.column_id	   AS col_column_id							" + "\n" +
+							"				FROM															" + "\n" +
+							"					sys.tables tbls												" + "\n" +
+													/* UQ(ユニークキー)の情報を結合 */
+							"						INNER JOIN sys.key_constraints key_const				" + "\n" +
+							"						ON														" + "\n" +
+							"								tbls.object_id = key_const.parent_object_id		" + "\n" +
+							"							AND key_const.type = 'UQ'							" + "\n" +
+													/* 対応するインデックス情報からカラムと特定 */
+							"						INNER JOIN sys.index_columns idx_cols					" + "\n" +
+							"						ON														" + "\n" +
+							"								key_const.parent_object_id = idx_cols.object_id	" + "\n" +
+							"							AND key_const.unique_index_id  = idx_cols.index_id	" + "\n" +
+							"						INNER JOIN sys.columns cols								" + "\n" +
+							"						ON														" + "\n" +
+							"								idx_cols.object_id = cols.object_id				" + "\n" +
+							"							AND idx_cols.column_id = cols.column_id				" + "\n" +
+							"			) uq_cols															" + "\n" +
+							"			ON																	" + "\n" +
+							"					columns.object_id = uq_cols.col_object_id					" + "\n" +
+							"				AND columns.column_id = uq_cols.col_column_id					" + "\n" +
+							"	WHERE																		" + "\n" +
+							"			tables.name = ?														" + "\n" +
+							"		and columns.name = ?													" + "\n" +
+							"		and (																	" + "\n" +
+							"					pk_cols.constraint_name is not null 						" + "\n" +
+							"				or	uq_cols.constraint_name is not null 						" + "\n" +
+							"			)																	" + "\n" +
+							"	ORDER BY																	" + "\n" +
+							"		table_name, columns.column_id											";
+
+			//System.out.println(sql);
+			preStm = connectionManagerUtil.getConnection().prepareStatement(sql	);
+
+			preStm.setString(1, tableName);
+			preStm.setString(2, columnName);
+
+			rs = preStm.executeQuery();
+
+			/* 取得したデータを表示します。 */
+			if (rs.next()) {
+
+				columnDto.setConstraintType(rs.getString("constraint_type"));
+				columnDto.setConstraintPosition(rs.getInt("position"));
+				columnDto.setComments("");
+
+			}
+
+			// データベースのクローズ
+			rs.close();
+			preStm.close();
+
+
+		} catch (Exception e) {
+			e.printStackTrace ();
+		}
+	}
+
+	private static void getIndexList(TableDto tableDto){
+
+		PreparedStatement preStm = null;
+		ResultSet rs = null;
+
+
+		try {
+
+			/* Statementの作成 */
+			preStm = connectionManagerUtil.getConnection().prepareStatement(
+					"	select	"+
+					"		index_name,table_name"+
+					"	from "+
+					"		user_indexes"+
+					"	where "+
+					"		table_name=?");
+			preStm.setString(1, tableDto.getTableName());
+			rs = preStm.executeQuery();
+
+
+			/* 取得したデータを表示します。 */
+			IndexDto 	indexDtoTmp		= null;
+			while (rs.next()) {
+				indexDtoTmp = new IndexDto();
+
+				indexDtoTmp.setIndexName(rs.getString("index_name"));
+				indexDtoTmp.setTableName(rs.getString("table_name"));
+				tableDto.getIndexList().add(indexDtoTmp);
+			}
+
+			// データベースのクローズ
+			rs.close();
+			preStm.close();
+
+			for(IndexDto dtoTmp:tableDto.getIndexList()){
+				/* Statementの作成 */
+				preStm = connectionManagerUtil.getConnection().prepareStatement(
+						"	select	"+
+						"		index_name,table_name,column_name,column_position"+
+						"	from "+
+						"		user_ind_columns"+
+						"	where "+
+						"		table_name=? and index_name=?");
+				preStm.setString(1, dtoTmp.getTableName());
+				preStm.setString(2, dtoTmp.getIndexName());
+
+				rs = preStm.executeQuery();
+
+				/* 取得したデータを表示します。 */
+				ColumnDto	columnDtoTmp 	= null;
+				while (rs.next()) {
+					columnDtoTmp = new ColumnDto();
+
+					columnDtoTmp.setColumnName(rs.getString("column_name"));
+					columnDtoTmp.setIndexPosition(rs.getInt("column_position"));
+					dtoTmp.getColumnList().add(columnDtoTmp);
+				}
+				// データベースのクローズ
+				rs.close();
+				preStm.close();
+			}
+
+
+		} catch (Exception e) {
+			e.printStackTrace ();
+		}
+	}
+}

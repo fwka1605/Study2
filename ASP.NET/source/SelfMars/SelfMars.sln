@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfMars", "SelfMars\SelfMars.csproj", "{B37252DD-F1F6-42E1-8EAD-253C8D885469}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfMRRS.Entity", "SelfMRRS.Entity\SelfMRRS.Entity.csproj", "{F77F3B02-C8F1-44B5-80DC-F0C109D14323}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfMRRS.DAL", "SelfMRRS.DAL\SelfMRRS.DAL.csproj", "{891F85E3-C458-4782-A32D-8A1AFB82DD7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B37252DD-F1F6-42E1-8EAD-253C8D885469}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B37252DD-F1F6-42E1-8EAD-253C8D885469}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B37252DD-F1F6-42E1-8EAD-253C8D885469}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B37252DD-F1F6-42E1-8EAD-253C8D885469}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F77F3B02-C8F1-44B5-80DC-F0C109D14323}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F77F3B02-C8F1-44B5-80DC-F0C109D14323}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F77F3B02-C8F1-44B5-80DC-F0C109D14323}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F77F3B02-C8F1-44B5-80DC-F0C109D14323}.Release|Any CPU.Build.0 = Release|Any CPU
+		{891F85E3-C458-4782-A32D-8A1AFB82DD7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{891F85E3-C458-4782-A32D-8A1AFB82DD7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{891F85E3-C458-4782-A32D-8A1AFB82DD7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{891F85E3-C458-4782-A32D-8A1AFB82DD7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

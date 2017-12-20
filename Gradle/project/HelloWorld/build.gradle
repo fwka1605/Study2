@@ -1,0 +1,21 @@
+task hello{
+	doLast{
+		println "Hello world!"
+	}
+}
+
+task helloShort <<{
+	println "Hello world!"
+}
+
+task upper << {
+	String someString = "test string"
+
+	println "Original:" + someString
+	println "Upper:" + someString.toUpperCase()
+
+}
+
+task count << {
+	4.times {print "$it "}
+}

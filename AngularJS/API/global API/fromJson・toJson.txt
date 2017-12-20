@@ -1,0 +1,67 @@
+fromJson/toJson
+
+Json文字列とJavaScriptオブジェクト間の変換を行う。
+
+angular.fromJson(json)		JsonをJavaScriptオブジェクトに変換する
+angular.toJson(obj[,pretty])	JavaScriptオブジェクトをJsonに変換する。
+
+json：JSON文字列
+obj:任意のオブジェクト（Object,Array,Date,string,number)
+pretty:返還後の文字列に空白や改行を含める（デフォルトはfalse)
+
+※toJsonメソッドはでは、JavaScriptオブジェクトに含まれるメソッド（function値）は
+　返還対象から除外されます。 これは、JavaScript標準のJSON.stringifyメソッドでも
+　同様の性質があります。
+
+
+例：
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+<script>
+var book = {
+    'isbn': '978-4-7741-7078-7',
+    'title': 'サーブレット＆JSPポケットリファレンス',
+    'price': 2680,
+    'publish': '技術評論社',
+    'published': new Date(2015, 0, 8),
+    '$$memo' : 'サーバサイドJavaアプリ開発者必携の一冊',
+    'toString' : function() { return this.title; }
+  };
+console.log(angular.toJson(book));	// デフォルト
+
+console.log(angular.toJson(book, true));
+
+var json = angular.toJson(book);
+var obj = angular.fromJson(json);
+console.log(obj.price);
+</script>
+
+結果：
+
+{"isbn":"978-4-7741-7078-7","title":"サーブレット＆JSPポケットリファレンス","price":2680,"publish":"技術評論社","published":"2015-01-07T15:00:00.000Z"}
+
+{
+  "isbn": "978-4-7741-7078-7",
+  "title": "サーブレット＆JSPポケットリファレンス",
+  "price": 2680,
+  "publish": "技術評論社",
+  "published": "2015-01-07T15:00:00.000Z"
+}
+
+2680
+
+
+注意
+JavaScript標準で提供されるJSON.parse/stringfyメソッドとほぼ同等ですが、
+以下の点が異なります。
+
+・$$ で始まる名前のプロパティを除去（toJsonメソッド）
+	$$～ は、AngularJSで利用しているため。
+
+・文字列以外を渡した場合には、引数の値そのままを返す（fromJsonメソッド）
+
+
+
+
+
+
+

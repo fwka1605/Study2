@@ -1,0 +1,6 @@
+C:\home\Work\WINGS\@IT\201008EF4\sample\sample\ConsoleApplication1\ConsoleApplicationCS\bin\Debug\ConsoleApplication1.exe.config
+C:\home\Work\WINGS\@IT\201008EF4\sample\sample\ConsoleApplication1\ConsoleApplicationCS\bin\Debug\ConsoleApplication1.exe
+C:\home\Work\WINGS\@IT\201008EF4\sample\sample\ConsoleApplication1\ConsoleApplicationCS\bin\Debug\ConsoleApplication1.pdb
+C:\home\Work\WINGS\@IT\201008EF4\sample\sample\ConsoleApplication1\ConsoleApplicationCS\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\home\Work\WINGS\@IT\201008EF4\sample\sample\ConsoleApplication1\ConsoleApplicationCS\obj\x86\Debug\ConsoleApplication1.exe
+C:\home\Work\WINGS\@IT\201008EF4\sample\sample\ConsoleApplication1\ConsoleApplicationCS\obj\x86\Debug\ConsoleApplication1.pdb

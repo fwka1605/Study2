@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="drag_style.css">
+</head>
+<body>
+
+<div class="container">
+	<div id="drop" border="1">
+		<span id="drop_message">PCにある画像ファイルをここにドラッグ&amp;ドロップしてみてください。</span><br>
+		<span id="drop_result_message"></span>
+	</div>
+</div> 
+
+<br>
+
+<table border="1">
+	<tr>
+		<td>
+			<ul id="sortable"></ul>
+		</td>
+		<td>
+			<img id="big_image"/>
+		</td>
+	</tr>
+</table>
+
+
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+
+
+
+var imageCount = 0;
+var imageFile=[];
+
+if(window.FileReader ){
+
+	// 要素のソート機能
+	$( function() {
+		$( "#sortable" ).sortable();
+		$( "#sortable" ).disableSelection();
+	} );
+	
+	// ファイルのドラッグ機能
+	$('#drop').on('dragover', function(e) {
+		return false;
+	});
+ 
+ 	// ファイルのドロップ機能
+	$('#drop').on('drop', function(e) {
+		onDropFile(e);
+		return false;
+	});
+	
+	// ファイルのドロップ機能
+	function onDropFile(event) {
+
+		var file = event.originalEvent.dataTransfer.files[0];
+		
+		if(!file.type.match(/^image\/(jpeg|png)$/)) {
+			$('#drop_result_message').css('color', '#ff0000').html( "JPEGまたはPNGファイルを指定してください。");
+			return;
+		}
+ 
+		// ファイル読み込み用のオブジェクトを作成する
+		var reader = new FileReader();
+	
+		// ファイルの読み込みが正常終了した際のコールバックメソッド
+		reader.onload = function(e) {
+			// アップしたファイル数を増やす。
+			imageCount++;
+			// 画像配置用のLI要素を作成
+			let li =$("<li>"+file.name+"</li>");
+			
+			// 画像ファイルを設定し、LI要素配下に付与する
+			let newImg = $("<img id='Thumbnail'" + imageCount + " width='20%' heigth='20%'>");
+			newImg.attr("src",reader.result).appendTo(li);
+			imageFile.push(newImg[0].baseURI);
+			
+			
+			
+			// LI要素をUI要素配下に付与する。
+			li.appendTo("#sortable");
+
+			// LI要素にclickイベントハンドラを付与する。
+			li.on('click',function(){
+				let img = this.children;
+				
+				$("#big_image").attr("src",img[0].attributes["src"].value);
+			});			
+			
+			
+			
+			// 表示メッセージを切り替える。
+			$('#drop_result_message').css('color', '#000000').html("成功しました。 " +imageCount + "の画像ファイルをアップしました。");
+
+		};
+
+		// 画像ファイルを読み込む
+		reader.readAsDataURL(file);
+	}
+}
+</script>
+</body>
+</html>
+

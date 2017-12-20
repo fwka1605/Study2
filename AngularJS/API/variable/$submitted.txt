@@ -1,0 +1,13 @@
+$submitted
+
+$submittedで、フォームがサブミット済みか否かを把握できる。
+これにより、サブミットボタンの連打を防ぐことができる。
+
+例
+
+<input type="submit" value="登録"
+	ng-disabled="myForm.$invalid || myForm.$submitted" />
+
+入力フォームに検証エラーがある($invalid)か、サブミットボタンが
+押された($submitted)場合は、サブミットボタンを無効にする。
+

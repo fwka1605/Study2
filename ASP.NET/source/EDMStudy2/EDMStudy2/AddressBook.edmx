@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AddressBookModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="AddressBookModelStoreContainer">
+          <EntitySet Name="Categories" EntityType="AddressBookModel.Store.Categories" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Entries" EntityType="AddressBookModel.Store.Entries" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EntryCategory" EntityType="AddressBookModel.Store.EntryCategory" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_EntryCategory_Category" Association="AddressBookModel.Store.FK_EntryCategory_Category">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="EntryCategory" EntitySet="EntryCategory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EntryCategory_Entry" Association="AddressBookModel.Store.FK_EntryCategory_Entry">
+            <End Role="Entries" EntitySet="Entries" />
+            <End Role="EntryCategory" EntitySet="EntryCategory" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Categories">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Detail" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Entries">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="MailAddress" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="TelNo" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Age" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EntryCategory">
+          <Key>
+            <PropertyRef Name="Entries_ID" />
+            <PropertyRef Name="Categories_ID" />
+          </Key>
+          <Property Name="Entries_ID" Type="int" Nullable="false" />
+          <Property Name="Categories_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_EntryCategory_Category">
+          <End Role="Categories" Type="AddressBookModel.Store.Categories" Multiplicity="1" />
+          <End Role="EntryCategory" Type="AddressBookModel.Store.EntryCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categories">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="EntryCategory">
+              <PropertyRef Name="Categories_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EntryCategory_Entry">
+          <End Role="Entries" Type="AddressBookModel.Store.Entries" Multiplicity="1" />
+          <End Role="EntryCategory" Type="AddressBookModel.Store.EntryCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Entries">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="EntryCategory">
+              <PropertyRef Name="Entries_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="update_age" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="name" Type="nvarchar" Mode="In" />
+          <Parameter Name="age" Type="int" Mode="In" />
+        </Function>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AddressBookModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="AddressBookEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Categories" EntityType="AddressBookModel.Category" />
+          <EntitySet Name="Entries" EntityType="AddressBookModel.Entry" />
+          <AssociationSet Name="EntryCategory" Association="AddressBookModel.EntryCategory">
+            <End Role="Categories" EntitySet="Categories" />
+            <End Role="Entries" EntitySet="Entries" />
+          </AssociationSet>
+          <FunctionImport Name="UpdateAge">
+            <Parameter Name="name" Mode="In" Type="String" />
+            <Parameter Name="age" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Detail" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Entries" Relationship="AddressBookModel.EntryCategory" FromRole="Categories" ToRole="Entries" />
+        </EntityType>
+        <EntityType Name="Entry">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="Age" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="Categories" Relationship="AddressBookModel.EntryCategory" FromRole="Entries" ToRole="Categories" />
+          <Property Name="AddressType" Type="AddressBookModel.AddressType" Nullable="false" />
+        </EntityType>
+        <Association Name="EntryCategory">
+          <End Role="Categories" Type="AddressBookModel.Category" Multiplicity="*" />
+          <End Role="Entries" Type="AddressBookModel.Entry" Multiplicity="*" />
+        </Association>
+        <ComplexType Name="AddressType">
+          <Property Type="String" Name="TelNo" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MailAddress" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AddressBookModelStoreContainer" CdmEntityContainer="AddressBookEntities">
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="AddressBookModel.Category">
+              <MappingFragment StoreEntitySet="Categories">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="Detail" ColumnName="Detail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Entries">
+            <EntityTypeMapping TypeName="AddressBookModel.Entry">
+              <MappingFragment StoreEntitySet="Entries">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ComplexProperty Name="AddressType">
+                  <ScalarProperty Name="MailAddress" ColumnName="MailAddress" />
+                  <ScalarProperty Name="TelNo" ColumnName="TelNo" />
+                </ComplexProperty>
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="EntryCategory" TypeName="AddressBookModel.EntryCategory" StoreEntitySet="EntryCategory">
+            <EndProperty Name="Categories">
+              <ScalarProperty Name="ID" ColumnName="Categories_ID" />
+            </EndProperty>
+            <EndProperty Name="Entries">
+              <ScalarProperty Name="ID" ColumnName="Entries_ID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <FunctionImportMapping FunctionImportName="UpdateAge" FunctionName="AddressBookModel.Store.update_age" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="なし" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,6 @@
+$touched・$untouched
+
+$touchedと$untouchedはAngularJSで提供されているフォーム要素に
+フォーカスがあたった($touched)か、あたっていない($untouched)かを
+示すフラグである。
+

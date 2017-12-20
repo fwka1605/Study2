@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AddressBookModelStoreContainer" CdmEntityContainer="AddressBookEntities">
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="AddressBookModel.Category">
+        <MappingFragment StoreEntitySet="Categories">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Entries">
+      <EntityTypeMapping TypeName="AddressBookModel.Entry">
+        <MappingFragment StoreEntitySet="Entries">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ComplexProperty Name="AddressType">
+            <ScalarProperty Name="MailAddress" ColumnName="MailAddress" />
+            <ScalarProperty Name="TelNo" ColumnName="TelNo" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="EntryCategory" TypeName="AddressBookModel.EntryCategory" StoreEntitySet="EntryCategory">
+      <EndProperty Name="Categories">
+        <ScalarProperty Name="ID" ColumnName="Categories_ID" />
+      </EndProperty>
+      <EndProperty Name="Entries">
+        <ScalarProperty Name="ID" ColumnName="Entries_ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="UpdateAge" FunctionName="AddressBookModel.Store.update_age" />
+  </EntityContainerMapping>
+</Mapping>

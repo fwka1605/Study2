@@ -1,0 +1,78 @@
+angular.copy(souce [,dest])
+
+	souce	コピー元のオブジェクトまたは配列
+	dest	コピー先のオブジェクトまたは配列
+
+説明：
+	copyメソッドを利用することで、オブジェクトまたは配列をコピーできる。
+
+	・引数destを省略した場合は、戻り値として配列/オブジェクトのコピーを返す。
+	・引数destを指定した場合は、その要素（またはプロパティ）を全て削除した
+	　上で、コピーを実行。
+	・引数sourceが配列/オブジェクトでない場合は、その値をそのまま戻りとして返す。
+	・引数source/destが同一の場合、copyメソッドは例外を返す。
+
+例：
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+<script>
+var authors1 = ['山田太郎', '佐藤次郎', '鈴木三郎'];
+var authors2 = ['山田さくら', '佐藤もも', '鈴木うめ', '田中ぼたん'];
+
+var book1 ={
+  isbn: '978-4-7741-7078-7',
+  title: 'サーブレット＆JSPポケットリファレンス',
+  price: 2680,
+  publish: '技術評論社'
+};
+
+var book2 ={
+  isbn: '978-4-7741-XXXX-X',
+  title: '未定',
+  price: 2680,
+  publish: '技術評論社',
+  cdrom: false
+};
+
+console.log('引数dest（コピー前）：');
+console.log(book2);
+console.log(authors2);
+
+var result_book = angular.copy(book1, book2);
+var result_authors = angular.copy(authors1, authors2);
+
+console.log('copyメソッドの戻り値：');
+console.log(result_book);
+console.log(result_authors);
+
+console.log('引数dest（コピー後）：');
+console.log(book2);
+console.log(authors2);
+</script>
+
+捕捉：シャローコピーとディープコピー
+
+コピーには、厳密にはシャローコピー（浅いコピー）とディープコピー（深いコピー）がある。
+
+・シャローコピー
+標準のJavaScriptでは、配列をコピーするためにconcatメソッドが使われます。
+このコピーは、シャローコピーです。
+要素が値型である場合は、コピー元の修正がコピー先に影響することはないのですが、
+要素が参照型である場合は、コピー元の修正がコピー先に影響することになります。
+このようにオブジェクト配下のメンバーではなく、オブジェクトの参照をコピーすることを、
+シャロー（浅い）コピーと呼ばれます。
+
+・ディープコピー
+angular.copyメソッドによるコピーはディープコピーになります。
+ディープコピーでは、要素が参照型である場合は、オブジェクトの参照ではなく、別の
+オブジェクトを作成してコピーを行います。 そのため参照元の修正が参照先に影響を
+及ぼすことはありません。
+、
+
+
+
+
+
+
+
+
+

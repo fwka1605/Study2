@@ -1,0 +1,22 @@
+lowercase/uppercaseメソッド
+
+文字列を小文字・大文字に変換する。
+
+例：
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+<script>
+console.log(angular.lowercase('Wings Project'));
+console.log(angular.uppercase('Wings Project'));
+</script>
+
+結果： 
+wings project
+WINGS PROJECT
+
+full:バージョン番号の完全表記
+major:メジャーバージョン番号
+minor:マイナーバージョン番号
+dot:ドットバージョン番号
+codeName:コード名
+
+

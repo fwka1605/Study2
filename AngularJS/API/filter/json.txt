@@ -1,0 +1,10 @@
+json
+
+{{expression | json }}
+
+expression:JavaScriptのオブジェクト
+
+
+jsonフィルターは、JavaScriptのオブジェクトJSON形式に変換します。
+HTML改行も入力してくれるため、デバック時にオブジェクトの内容を
+確認するために利用できます。

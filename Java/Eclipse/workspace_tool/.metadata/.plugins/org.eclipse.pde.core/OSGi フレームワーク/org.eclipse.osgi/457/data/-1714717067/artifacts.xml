@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Glance' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
+  <properties size='1'>
+    <property name='p2.timestamp' value='1452068604981'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='8'>
+    <artifact classifier='osgi.bundle' id='com.xored.glance.ui' version='1.1.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='121195'/>
+        <property name='download.size' value='121195'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/Glance/eclipse/plugins/com.xored.glance.ui_1.1.1.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Glance\eclipse\plugins\com.xored.glance.ui_1.1.1.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.xored.glance.ui.cvs' version='1.1.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='40543'/>
+        <property name='download.size' value='40543'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/Glance/eclipse/plugins/com.xored.glance.ui.cvs_1.1.1.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Glance\eclipse\plugins\com.xored.glance.ui.cvs_1.1.1.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.xored.glance.ui.controls' version='1.1.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='64607'/>
+        <property name='download.size' value='64607'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/Glance/eclipse/plugins/com.xored.glance.ui.controls_1.1.1.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Glance\eclipse\plugins\com.xored.glance.ui.controls_1.1.1.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='com.xored.glance.cvs' version='1.1.1'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/Glance/eclipse/features/com.xored.glance.cvs_1.1.1/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Glance\eclipse\features\com.xored.glance.cvs_1.1.1'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='com.xored.glance.gef' version='1.1.1'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/Glance/eclipse/features/com.xored.glance.gef_1.1.1/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Glance\eclipse\features\com.xored.glance.gef_1.1.1'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.xored.glance.ui.viewers' version='1.1.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='15226'/>
+        <property name='download.size' value='15226'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/Glance/eclipse/plugins/com.xored.glance.ui.viewers_1.1.1.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Glance\eclipse\plugins\com.xored.glance.ui.viewers_1.1.1.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='com.xored.glance' version='1.1.1'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/Glance/eclipse/features/com.xored.glance_1.1.1/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Glance\eclipse\features\com.xored.glance_1.1.1'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.xored.glance.ui.gef' version='1.1.1'>
+      <properties size='2'>
+        <property name='artifact.size' value='24372'/>
+        <property name='download.size' value='24372'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/Glance/eclipse/plugins/com.xored.glance.ui.gef_1.1.1.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\Glance\eclipse\plugins\com.xored.glance.ui.gef_1.1.1.jar'/>
+      </repositoryProperties>
+    </artifact>
+  </artifacts>
+</repository>

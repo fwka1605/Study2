@@ -1,0 +1,5277 @@
+PHPフレームワーク CakePHP 3入門
+
+掲載リスト
+
+
+リスト1-1
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteRule    ^$    webroot/    [L]
+	RewriteRule    (.*) webroot/$1    [L]
+</IfModule>
+
+
+リスト1-2
+// 'baseUrl' => env('SCRIPT_NAME'),
+
+
+リスト2-1
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+	<meta http-equiv="content-type" 
+		content="text/html; charset=UTF-8">
+	<title>Hello</title>
+</head>
+<body>
+	<p>This is Test Page.</p>
+	<p>これは、テストページです。</p>
+</body>
+</html>
+
+
+リスト2-2
+<?php
+namespace App\Controller;
+
+class HelloController extends AppController {
+
+	public $name = 'Hello';
+	public $autoRender = false;
+  	
+	public function index(){
+		echo "hello world!";
+	}
+}
+
+
+リスト2-3
+<?php
+namespace App\Controller;
+
+class HelloController extends AppController {
+
+	public function index(){
+		$this->name = 'Hello';
+		$this->autoRender = false;
+		echo "hello world!";
+	}
+}
+
+
+リスト2-4
+<?php
+namespace App\Controller;
+
+class HelloController extends AppController {
+
+	$name = 'Hello';
+	$autoRender = false;
+	
+	public function index(){
+		$this->name = 'Hello';
+		$this->autoRender = false;
+		echo "hello world!";
+	}
+}
+
+
+リスト2-5
+<?php
+namespace App\Controller;
+
+class HelloController extends AppController {
+
+	public $name = 'Hello';
+	public $autoRender = false; 
+  	
+	public function index(){
+		echo "hello world!";
+	}
+	
+	public function other(){
+		echo "これは、index以外の表示です。";
+	}
+}
+
+
+リスト2-6
+<a href="/hello/other">otherへ移動</a>
+
+
+リスト2-7
+<?php
+namespace App\Controller;
+
+class HelloController extends AppController {
+
+	public $name = 'Hello';
+	public $autoRender = false; 
+  	
+	public function index(){
+		$this->setAction("other"); // フォワード
+		// $this->redirect("./other"); // リダイレクト
+	}
+	
+	public function other(){
+		echo "これは、index以外の表示です。";
+	}
+}
+
+
+リスト2-8
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Hello Page</title>
+</head>
+<body>
+<h1>サンプル見出し</h1>
+	<p>こんにちは！　これは、CakePHPのサンプルです。</p>
+</body>
+</html>
+
+
+リスト2-9
+<?php
+namespace App\Controller;
+
+class HelloController extends AppController {
+
+	public $name = 'Hello';
+	public $autoRender = true; 
+	
+	public function index(){
+		$this->viewBuilder()->autoLayout(false);
+	}
+	
+}
+
+
+リスト2-10
+<?=date('Y/m/d',time()) ?>
+
+
+リスト2-11
+public function index(){
+}
+
+
+リスト2-12
+<h1>サンプル見出し</h1>
+<p>こんにちは！　これは、CakePHPのサンプルです。</p>
+<br/><br/>
+<?=date('Y/m/d',time()) ?>
+
+
+リスト2-13
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Hello Page</title>
+</head>
+<body>
+	<h1>サンプル見出し</h1>
+	<p>これは、index以外の表示です。</p>
+</body>
+</html>
+
+
+リスト2-14
+<?php
+namespace App\Controller;
+
+class HelloController extends AppController {
+
+	public function initialize(){
+		$this->name = 'Hello';
+		$this->autoRender = false;
+		$this->viewBuilder()->autoLayout(false);		
+	}
+
+	public function index(){
+		$this->viewBuilder()->autoLayout(true);
+		$this->autoRender = true;
+	}
+	
+	public function other(){
+		$this->viewBuilder()->autoLayout(false);
+		$this->autoRender = true;
+	}
+	
+}
+
+
+リスト2-15
+body {
+	background: #eee;
+	color: #999;
+	margin: 10px 0px;
+}
+#header{
+	font-size: 18pt;
+	font-weight: bold;
+	margin: 10px;
+}
+#content{
+	background: #fff;
+	color: #999;
+	padding: 10px 25px 30px 25px;
+	font-size:14pt;
+}
+#footer{
+	text-align: right;
+	font-size: 12pt;
+	margin: 10pt;
+}
+h1 {
+	color: #aaa;
+	font-size: 24pt;
+	margin: 20pt 0pt 50pt 0pt;
+}
+
+
+リスト2-16
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+	<?=$this->Html->charset(); ?>
+	<title>
+		<?= $this->fetch('title') ?>
+	</title>
+	<?php
+	echo $this->Html->css('cake.hello');
+	echo $this->Html->script('cake.hello');
+	echo $this->fetch('meta');
+	echo $this->fetch('css');
+	echo $this->fetch('script');
+	?>
+</head>
+<body>
+	<div id="container">
+		<div id="header">** Header **</div>
+		<div id="content">
+			<?=$this->fetch('content') ?>
+		</div>
+		<div id="footer">** this is test. **</div>
+	</div>
+</body>
+</html>
+
+
+リスト2-17
+<?php
+namespace App\Controller;
+
+class HelloController extends AppController {
+
+	public function initialize(){
+		$this->name = 'Hello';
+		$this->viewBuilder()->autoLayout(true);		
+		$this->viewBuilder()->layout('Hello');		
+	}
+
+	public function index(){
+	}
+		
+}
+
+
+リスト2-18
+<p class="header">
+<?=$msg ?>
+</p>
+
+
+リスト2-19
+<div class="footer">
+	<div style="text-decoration: underline;">
+		copyright SYODA-Tuyano. 2016</div>
+</div>
+
+
+リスト2-20
+<div class="footer">
+	<center><b>copyright SYODA-Tuyano. 2016</b></center>
+</div>
+
+
+リスト2-21
+<body>
+	<div id="container">
+		<div id="header">
+			<?=$this->element('Hello\header',['msg'=>$msg]) ?>
+		</div>
+		<div id="content">
+			<?=$this->fetch('content') ?>
+		</div>
+		<div id="footer">
+			<?=$this->element($footer) ?>
+		</div>
+	</div>
+</body>
+
+
+リスト2-22
+<?php
+namespace App\Controller;
+
+class HelloController extends AppController {
+
+	public function initialize(){
+		$this->name = 'Hello';
+		$this->viewBuilder()->autoLayout(true);		
+		$this->viewBuilder()->layout('Hello');		
+	}
+
+	public function index(){
+		$this->set('msg','ヘッダーエレメント!!');
+		$n = rand(1,2);
+		$this->set('footer','Hello\footer' . $n);
+	}
+		
+}
+
+
+リスト2-23——index.ctp
+<h1>サンプル見出し</h1>
+<p>フォームの送信</p>
+<form method="get" action="/hello/sendForm">
+	<input type="text" name="text1" />
+	<input type="submit" />
+</form>
+
+
+リスト2-24——send_form.ctp
+<h1>送信結果</h1>
+<p><?=$result ?></p>
+
+
+リスト2-25——HelloController.php
+<?php
+namespace App\Controller;
+
+class HelloController extends AppController {
+
+	public function initialize(){
+		$this->viewBuilder()->layout('Hello');		
+		$this->set('msg','Hello/index');
+		$this->set('footer','Hello\footer2');
+	}
+
+	public function index(){
+	}
+		
+	public function sendForm(){
+		$str = $this->request->query['text1'];
+		$result = "";
+		if ($str != ""){
+			$result = "you type: " . $str;
+		} else {
+			$result = "empty.";
+		}
+		$this->set("result",$result);
+	}
+}
+
+
+リスト2-26
+public function sendForm(){
+	$str = $this->request->query['text1'];
+	$result = "";
+	if ($str != ""){
+		$result = "you type: " . $str;
+	} else {
+		$result = "empty.";
+	}
+	$this->set("result",htmlspecialchars($result));
+}
+
+
+リスト2-27
+public function sendForm(){
+	$str = $this->request->query['text1'];
+	$result = "";
+	if ($str != ""){
+		$result = "you type: " . $str;
+	} else {
+		$result = "empty.";
+	}
+	$this->set("result", h($result));
+}
+
+
+リスト2-28
+<h1>サンプル見出し</h1>
+<p>フォームの送信</p>
+<form method="get" action="./sendForm">
+	<input type="checkbox" name="check1" id="c1" />
+		<label for="c1">チェック</label><br />
+	<input type="radio" name="radio1" id="r1" value="No.1" />
+		<label for="r1">ラジオ1</label><br />
+	<input type="radio" name="radio1" id="r2" value="No.2" />
+		<label for="r2">ラジオ2</label><br />
+	<select name="select1">
+		<option value="Windows">Windows</option>
+		<option value="Linux">Linux</option>
+		<option value="MacOSX">MacOSX</option>		
+	</select>
+	<input type="submit" />
+</form>
+
+
+リスト2-29
+public function sendForm(){
+	$result = "※送信された情報<br/>";
+	foreach($this->request->query as $key => $val){
+		$result .= $key . " => " . $val . "<br/>";
+	}
+	$this->set("result",$result);
+}
+
+
+リスト2-30
+<form method="get" action="./sendForm">
+	<input type="hidden" name="check1" value="off">
+	<input type="hidden" name="radio1" value="off">
+	<input type="checkbox" name="check1" id="c1" />
+		<label for="c1">チェック</label><br />
+	<input type="radio" name="radio1" id="r1" value="No.1" />
+		<label for="r1">ラジオ1</label><br />
+	<input type="radio" name="radio1" id="r2" value="No.2" />
+		<label for="r2">ラジオ2</label><br />
+	<select name="select1">
+		<option value="Windows">Windows</option>
+		<option value="Linux">Linux</option>
+		<option value="MacOSX">MacOSX</option>		
+	</select>
+	<input type="submit" />
+</form>
+
+
+リスト2-31――index.ctp
+<h1>サンプル見出し</h1>
+<p>フォームの送信</p>
+<form method="post" action="/hello/sendForm">
+	<input type="text" name="text1" />
+	<input type="submit" />
+</form>
+
+
+リスト2-32――send_form.ctp
+<h1>送信結果</h1>
+<p><?php echo $result; ?></p>
+
+
+リスト2-33
+public function sendForm(){
+	$str = $this->request->data('text1');
+	$result = "";
+	if ($str != ""){
+		$result = "you type: " . $str;
+	} else {
+		$result = "empty.";
+	}
+	$this->set("result", h($result));
+}
+
+
+リスト2-34
+<h1>サンプル見出し</h1>
+<p>
+	<?=$result; ?>
+</p>
+<?=$this->Form->create(null,
+		['type'=>'post', 'url'=>['controller'=>'Hello', 
+		'action'=>'index']]) ?>
+	<?=$this->Form->text("HelloForm.text1") ?>
+	<?=$this->Form->submit("送信") ?>
+<?=$this->Form->end(); ?>
+
+
+リスト2-35
+public function index(){
+	$result = "";
+	if ($this->request->isPost()){
+		$result = "<pre>※送信された情報<br/>";
+		foreach($this->request->data['HelloForm'] as $key => $val){
+			$result .= $key . ' => ' . $val;
+		}
+		$result .= "</pre>";
+	} else {
+		$result  = "※なにか書いて送信してください。";
+	}
+	$this->set("result", $result);
+}
+
+
+リスト2-36
+<form method="post" accept-charset="utf-8" action="/hello">
+	<div style="display:none;">
+		<input type="hidden" name="_method" value="POST"/>
+	</div>
+	<input type="text" name="HelloForm[text1]"/>
+	<div class="submit">
+		<input type="submit" value="送信"/>
+	</div>
+</form>
+
+
+リスト2-37——フォームのタグ
+<?=$this->Form->create(null,
+		['type'=>'post', 'url'=>['action'=>'index']]) ?>
+	<?=$this->Form->checkbox("HelloForm.check1",
+		['checked'=>true]) ?>checkbox
+	<?=$this->Form->submit("送信") ?>
+<?=$this->Form->end(); ?>
+
+
+リスト2-38——生成されるHTMLコード
+<form method="post" accept-charset="utf-8" index="index" action="/hello">
+	<div style="display:none;">
+		<input type="hidden" name="_method" value="POST"/>
+	</div>	<input type="hidden" name="HelloForm[check1]" value="0"/>
+	<input type="checkbox" name="HelloForm[check1]" value="1" checked="checked">
+	checkbox
+	<div class="submit">
+		<input type="submit" value="送信"/>
+	</div>
+</form>
+
+
+リスト2-39——ラベルを追加したフォーム
+<?=$this->Form->create(null,
+		['type'=>'post', 'url'=>['action'=>'index']]) ?>
+	<?=$this->Form->checkbox("HelloForm.check1",
+		['checked'=>true]) ?>
+	<?=$this->Form->label('HelloForm.check1') ?>
+	<?=$this->Form->submit("送信") ?>
+<?=$this->Form->end(); ?>
+
+リスト2-40——生成されたHTMLコード
+
+<form action="/cake3app/hello/." id="Form" method="post" 
+		accept-charset="utf-8">
+	<div style="display:none;">
+		<input type="hidden" name="_method" value="POST"/>
+	</div>
+	<input type="hidden" name="data[HelloForm][check1]" 
+		id="HelloFormCheck1_" value="0"/>
+	<input type="checkbox" name="data[HelloForm][check1]"  checked="checked" 
+		value="1" id="HelloFormCheck1"/>
+	<label for="HelloFormCheck1">Check1</label>
+	<div class="submit">
+		<input  type="submit" value="送信"/>
+	</div>
+</form>
+
+
+リスト2-41——フォームのタグ
+<?=$this->Form->create(null,
+		['type'=>'post', 'url'=>['action'=>'index']]) ?>
+	<?=$this->Form->radio("HelloForm.radio1",
+		[
+			['text'=>'ウインドウズ','value'=>'Windows'],
+			['text'=>'リナックス', 'value'=>'Linux'],
+			['text'=>'マックOS', 'value'=>'macOS']
+		],
+		['label'=>true, 'value'=>'Linux']) ?>
+	<?=$this->Form->submit("送信") ?>
+<?=$this->Form->end(); ?>
+
+
+リスト2-42——生成されるHTMLコード
+<form method="post" accept-charset="utf-8" index="index" action="/hello">
+	<div style="display:none;">
+		<input type="hidden" name="_method" value="POST"/>
+	</div>
+	<input type="hidden" name="HelloForm[radio1]" value=""/>
+	<label for="helloform-radio1-windows">
+	<input type="radio" name="HelloForm[radio1]" value="Windows" 
+		id="helloform-radio1-windows">ウインドウズ</label>
+	<label for="helloform-radio1-linux">
+	<input type="radio" name="HelloForm[radio1]" value="Linux" 
+		id="helloform-radio1-linux" checked="checked">リナックス</label>
+	<label for="helloform-radio1-macos">
+	<input type="radio" name="HelloForm[radio1]" value="macOS" 
+		id="helloform-radio1-macos">マックOS</label>
+	<div class="submit">
+		<input type="submit" value="送信"/>
+	</div>
+</form>
+
+
+リスト2-43——フォームのタグ
+<?=$this->Form->create(null,
+		['type'=>'post', 'url'=>['action'=>'index']]) ?>
+	<?php echo $this->Form->select('HelloForm.select1', 
+			array('ウインドウズ'=>'Windows',
+				'リナックス'=>'Linux','マックOS'=>'MacOS X'),
+			array('empty'=>'項目を選んでください')); ?>
+<?php echo $this->Form->end("送信"); ?>
+
+
+リスト2-44——生成されるHTMLコード
+<form method="post" accept-charset="utf-8" index="index" action="/hello">
+	<div style="display:none;">
+		<input type="hidden" name="_method" value="POST"/>
+	</div>	
+	<select name="HelloForm[select1]">
+		<option value="">項目を選んでください</option>
+		<option value="ウインドウズ" selected="selected">Windows</option>
+		<option value="リナックス">Linux</option>
+		<option value="マックOS">macOS</option>
+	</select>	
+	<div class="submit">
+		<input type="submit" value="送信"/>
+	</div>
+</form>	
+
+
+リスト2-45
+<?=$this->Form->create(null,
+		['type'=>'post',['action'=>'index']]) ?>
+	<?= $this->Form->select('HelloForm.select1', 
+			[
+				'ウインドウズ'=>'Windows',
+				'リナックス'=>'Linux',
+				'マックOS'=>'macOS'
+			],
+			['size'=>5, 'empty'=>'項目を選んでください']) ?>
+	<?=$this->Form->submit("送信") ?>
+<?=$this->Form->end(); ?>
+
+
+リスト2-46
+['size'=>5, 'multiple'=>true, 'empty'=>'項目を選んでください']
+
+
+リスト2-47
+public function index(){
+	$result = "";
+	if ($this->request->isPost()){
+		$result = "<pre>※送信された情報<br/>";
+		foreach($this->request->data['HelloForm'] as $key => $val){
+			$v_str = '';
+			foreach($val as $v){
+				$v_str .= $v . ' ';
+			}
+			$result .= $key . ' => ' . $v_str;
+		}
+		$result .= "</pre>";
+	} else {
+		$result  = "※なにか書いて送信してください。";
+	}
+	$this->set("result", $result);
+}
+
+
+リスト2-48
+<?=$this->Form->create(null,
+		['type'=>'post',['action'=>'index']]) ?>
+	<?= $this->Form->select('HelloForm.select1', 
+			[
+				'PC'=>[
+					'ウインドウズ'=>'Windows',
+					'リナックス'=>'Linux',
+					'マックOS'=>'macOS'
+				],
+				'mobile'=>[
+					'アンドロイド'=>'Android',
+					'アイフォン'=>'iPhone',
+					'ガラケー'=>'cellphone'
+				]
+			],
+			['size'=>10, 'empty'=>'項目を選んでください']) ?>
+	<?=$this->Form->submit("送信") ?>
+<?=$this->Form->end(); ?>
+
+
+リスト2-49
+<select name="HelloForm[select1]" size="10">
+	<option value="">項目を選んでください</option>
+	<optgroup label="PC">
+		<option value="ウインドウズ">Windows</option>
+		<option value="リナックス">Linux</option>
+		<option value="マックOS">macOS</option>
+	</optgroup>
+	<optgroup label="mobile">
+		<option value="アンドロイド">Android</option>
+		<option value="アイフォン">iPhone</option>
+		<option value="ガラケー">cellphone</option>
+	</optgroup>
+</select>
+
+
+リスト2-50
+<?= $this->Form->select('HelloForm.select1', 
+		[
+			'PC'=>[
+				'ウインドウズ'=>'Windows',
+				'リナックス'=>'Linux',
+				'マックOS'=>'macOS',
+				'mobile'=>[
+					'アンドロイド'=>'Android',
+					'アイフォン'=>'iPhone',
+					'ガラケー'=>'Cellphone'
+				]
+			]
+		],
+		['size'=>10, 'empty'=>'項目を選んでください']) ?>
+
+
+リスト2-51
+<h1>サンプル見出し</h1>
+<pre>
+<?php print_r($result); ?>
+</pre>
+<?php
+	echo $this->Form->create(null,
+		['type'=>'post', 'url'=>['action'=>'index']]);
+	echo $this->Form->dateTime('HelloForm.date');
+	echo $this->Form->submit("送信");
+	echo $this->Form->end();
+?>
+
+
+リスト2-52
+public function index(){
+	$result = "";
+	if ($this->request->isPost()){
+		$result = $this->request->data['HelloForm']['date'];
+	} else {
+		$result  = "※なにか書いて送信してください。";
+	}
+	$this->set("result", $result);
+}
+
+
+リスト3-1
+'Datasources' => [
+	'default' => [
+		'className' => 'Cake\Database\Connection',
+		'driver' => 'Cake\Database\Driver\Mysql',
+		'persistent' => false,
+		'host' => 'localhost',
+		//'port' => 'non_standard_port_number',
+		'username' => 'my_app',
+		'password' => 'secret',
+		'database' => 'my_app',
+		'encoding' => 'utf8',
+		'timezone' => 'UTC',
+		'flags' => [],
+		'cacheMetadata' => true,
+		'log' => false,
+		'quoteIdentifiers' => false,
+		//'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
+		'url' => env('DATABASE_URL', null),
+	],
+
+	'test' => [
+		'className' => 'Cake\Database\Connection',
+		'driver' => 'Cake\Database\Driver\Mysql',
+		'persistent' => false,
+		'host' => 'localhost',
+		//'port' => 'non_standard_port_number',
+		'username' => 'my_app',
+		'password' => 'secret',
+		'database' => 'test_myapp',
+		'encoding' => 'utf8',
+		'timezone' => 'UTC',
+		'cacheMetadata' => true,
+		'quoteIdentifiers' => false,
+		'log' => false,
+		//'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
+		'url' => env('DATABASE_TEST_URL', null),
+	],
+],
+
+
+リスト3-2
+'Datasources' => [
+
+	'default' => [
+		'className' => 'Cake\Database\Connection',
+		'driver' => 'Cake\Database\Driver\Sqlite',
+		'persistent' => false,
+		'username' => '',
+		'password' => '',
+		'database' => ROOT . DS . 'db' . DS . 'mydata.sqlite3',
+		'encoding' => 'utf8',
+		'cacheMetadata' => true,
+	],
+
+	'test' => [……略……]
+],
+
+
+リスト3-3
+<?php
+namespace App\Model\Entity;
+
+use Cake\ORM\Entity;
+
+class Board extends Entity {
+
+	protected $_accessible = [
+		'*' => true,
+		'id' => false
+	];
+}
+
+
+リスト3-4
+<?php
+namespace App\Model\Table;
+
+use Cake\ORM\Table;
+
+class BoardsTable extends Table {
+}
+
+
+リスト3-5
+<?php
+namespace App\Controller;
+
+class BoardsController extends AppController {
+
+	public function index(){
+		$data = $this->Boards->find('all');
+		$this->set('data',$data);
+	}
+}
+
+
+リスト3-6
+Cake\ORM\Query Object
+(
+	[(help)] => This is a Query object, to get the results execute or iterate it.
+	[sql] => SELECT Boards.id AS "Boards__id", Boards.name AS "Boards__name", Boards.title AS "Boards__title", Boards.content AS "Boards__content" FROM boards Boards
+	[params] => Array
+		(
+		)
+
+	[defaultTypes] => Array
+		(
+			[Boards__id] => integer
+			[Boards.id] => integer
+			[id] => integer
+			[Boards__name] => text
+			[Boards.name] => text
+			[name] => text
+			[Boards__title] => text
+			[Boards.title] => text
+			[title] => text
+			[Boards__content] => text
+			[Boards.content] => text
+			[content] => text
+		)
+
+	……以下略……
+
+)
+
+
+リスト3-7
+<h1>Databaseサンプル</h1>
+<table>
+<thead>
+	<tr>
+		<th>ID</th>
+		<th>NAME</th>
+		<th>TITLE</th>
+		<th>CONTENT</th>
+	</tr>
+</thead>
+<tbody>
+<?php foreach ($data as $obj): ?>
+	<tr>
+		<td><?= $obj->id ?></td>
+		<td><?= h($obj->name) ?></td>
+		<td><?= h($obj->title) ?></td>
+		<td><?= h($obj->content) ?></td>
+	</tr>
+<?php endforeach; ?>
+</tbody>
+</table>
+
+
+リスト3-8
+<h1>Databaseサンプル</h1>
+<table>
+<tr>
+	<th>ID</th>
+	<th>NAME</th>
+	<th>TITLE</th>
+	<th>CONTENT</th>
+</tr>
+<?php
+$arr = $data->toArray();
+for($i = 0;$i < count($arr);$i++){
+	echo $this->Html->tableCells(
+		$arr[$i]->toArray(),
+		['style'=>'background-color:#f0f0f0'],
+		['style'=>'font-weight:bold'],
+		true);
+}
+?>
+</table>
+
+
+リスト3-9
+'default' => [
+	'className' => 'Cake\Database\Connection',
+	'driver' => 'Cake\Database\Driver\Mysql',
+	'persistent' => false,
+	'host' => 'localhost',
+	'username' => 'root',
+	'password' => '',
+	'database' => 'mydata',
+	'encoding' => 'utf8',
+	'timezone' => 'UTC',
+	'flags' => [],
+	'cacheMetadata' => true,
+	'log' => false,
+	'quoteIdentifiers' => false,
+	'url' => env('DATABASE_URL', null),
+],
+
+
+リスト3-10
+<h1>Databaseサンプル</h1>
+<?=$this->Form->create($entity,['url'=>['action'=>'addRecord']]) ?>
+<fieldset>
+<?=$this->Form->text("name") ?>
+<?=$this->Form->text("title") ?>
+<?=$this->Form->textarea("content") ?>
+</fieldset>
+<?=$this->Form->button("送信") ?>
+<?=$this->Form->end() ?>
+
+<hr>
+
+<table>
+<tr>
+	<th>ID</th>
+	<th>NAME</th>
+	<th>TITLE</th>
+	<th>CONTENT</th>
+</tr>
+<?php
+$arr = $data->toArray();
+for($i = 0;$i < count($arr);$i++){
+	echo $this->Html->tableCells(
+		$arr[$i]->toArray(),
+		['style'=>'background-color:#f0f0f0'],
+		['style'=>'font-weight:bold'],
+		true);
+}
+?>
+</table>
+
+
+リスト3-11
+<?php
+namespace App\Controller;
+
+class BoardsController extends AppController {
+	
+	public function index(){
+		$data = $this->Boards->find('all');
+		$this->set('data',$data);
+		$this->set('entity',$this->Boards->newEntity());
+	}
+
+	public function addRecord(){
+		if ($this->request->is('post')) {
+			$board = $this->Boards->newEntity($this->request->data);
+			$this->Boards->save($board);
+		}
+		return $this->redirect(['action' => 'index']);
+	}
+}
+
+
+リスト3-12
+<form method="post" accept-charset="utf-8" action="/boards/add-record">
+	<div style="display:none;">
+		<input type="hidden" name="_method" value="POST"/>
+	</div>
+	<fieldset>
+		<input type="text" name="name" required="required"/>
+		<input type="text" name="title"/>
+		<textarea name="content" rows="5"></textarea>
+	</fieldset>
+	<button type="submit">送信</button>
+</form>
+
+
+リスト3-13
+public function addRecord(){
+	if ($this->request->is('post')) {
+		$board = $this->Boards->newEntity($this->request->data);
+		$this->Boards->save($board);
+	}
+	$this->autoRender =false;
+	echo "<pre>";
+	print_r($this->request->data);
+	echo "</pre>";
+}
+
+
+リスト3-15
+<h1>Databaseサンプル</h1>
+<?=$this->Form->create($entity,['url'=>['action'=>'index']]) ?>
+<fieldset>
+<?=$this->Form->text("id") ?>
+</fieldset>
+<?=$this->Form->button("送信") ?>
+<?=$this->Form->end() ?>
+
+<hr>
+
+<table>
+<tr>
+	<th>ID</th>
+	<th>NAME</th>
+	<th>TITLE</th>
+	<th>CONTENT</th>
+</tr>
+<?php
+$arr = $data->toArray();
+for($i = 0;$i < count($arr);$i++){
+	echo $this->Html->tableCells(
+		$arr[$i]->toArray(),
+		['style'=>'background-color:#f0f0f0'],
+		['style'=>'font-weight:bold'],
+		true);
+}
+?>
+</table>
+
+
+リスト3-16
+public function index(){
+	$this->set('entity',$this->Boards->newEntity());
+	if ($this->request->is('post')) {
+		$data = $this->Boards->find('all', [
+			'conditions'=>[id' => $this->request->data['id']]
+		]);
+	} else {
+		$data = $this->Boards->find('all');
+	}
+	$this->set('data',$data);
+}
+
+
+リスト3-17——index.ctp
+<h1>Databaseサンプル</h1>
+<?=$this->Form->create($entity,['url'=>['action'=>'index']]) ?>
+<fieldset>
+<?=$this->Form->text("name") ?>
+</fieldset>
+<?=$this->Form->button("送信") ?>
+<?=$this->Form->end() ?>
+
+<hr>
+
+<table>
+<tr>
+	<th>ID</th>
+	<th>NAME</th>
+	<th>TITLE</th>
+	<th>CONTENT</th>
+</tr>
+<?php
+$arr = $data->toArray();
+for($i = 0;$i < count($arr);$i++){
+	echo $this->Html->tableCells(
+		$arr[$i]->toArray(),
+		['style'=>'background-color:#f0f0f0'],
+		['style'=>'font-weight:bold'],
+		true);
+}
+?>
+</table>
+
+
+リスト3-18——コントローラのアクションメソッド
+public function index(){
+	$this->set('entity',$this->Boards->newEntity());
+	if ($this->request->is('post')) {
+		$data = $this->Boards->find('all',[
+			'conditions'=>[
+				'name like'=>"%{$this->request->data['name']}%"
+			]
+		]);
+	} else {
+		$data = $this->Boards->find('all');
+	}
+	$this->set('data',$data);
+}
+
+
+リスト3-19
+<h1>Databaseサンプル</h1>
+<?=$this->Form->create($entity,['url'=>['action'=>'index']]) ?>
+<fieldset>
+<?=$this->Form->text("name") ?>
+</fieldset>
+<?=$this->Form->button("送信") ?>
+<?=$this->Form->end() ?>
+
+<hr>
+<p>COUNT: <?=$count ?></p>
+<p>first: <?php print_r($first); ?></p>
+<p>min: <?=$min ?></p>
+<p>max: <?=$max ?></p>
+<table>
+<tr>
+	<th>ID</th>
+	<th>NAME</th>
+	<th>TITLE</th>
+	<th>CONTENT</th>
+</tr>
+<?php
+for($i = 0;$i < count($data);$i++){
+	echo $this->Html->tableCells(
+		$data[$i]->toArray(),
+		['style'=>'background-color:#f0f0f0'],
+		['style'=>'font-weight:bold'],
+		true);
+}
+?>
+</table>
+
+
+リスト3-20
+public function index(){
+	$this->set('entity',$this->Boards->newEntity());
+	if ($this->request->is('post')) {
+		$data = $this->Boards->find('all',[
+			'conditions'=>[
+				'name like '=>"%{$this->request->data['name']}%"
+			]
+		]);
+	} else {
+		$data = $this->Boards->find('all');
+	}
+	$this->set('data',$data->toArray());
+	$this->set('count', $data->count());
+	$this->set('min', $data->min('id'));
+	$this->set('max', $data->max('id'));
+	$this->set('first', $data->first()->toArray());
+}
+
+
+リスト3-21
+public function index(){
+	$this->set('entity',$this->Boards->newEntity());
+	if ($this->request->is('post')) {
+		$data = $this->Boards->find('all',[
+			'conditions'=>[
+				'name like '=>"%{$this->request->data['name']}%"
+			]
+		]);
+	} else {
+		$data = $this->Boards->find('all');
+	}
+	$data->order(['name'=>'ASC','id'=>'DESC']);
+	$this->set('data',$data->toArray());
+	$this->set('count', $data->count());
+}
+
+
+リスト3-22――index.ctp
+<h1>Databaseサンプル</h1>
+<?=$this->Form->create($entity,['url'=>['action'=>'index']]) ?>
+<fieldset>
+<?=$this->Form->text("id") ?>
+</fieldset>
+<?=$this->Form->button("送信") ?>
+<?=$this->Form->end() ?>
+
+<hr>
+<p>COUNT: <?=$count ?></p>
+<table>
+<tr>
+	<th>ID</th>
+	<th>NAME</th>
+	<th>TITLE</th>
+	<th>CONTENT</th>
+</tr>
+<?php
+for($i = 0;$i < count($data);$i++){
+	echo $this->Html->tableCells(
+		$data[$i]->toArray(),
+		['style'=>'background-color:#f0f0f0'],
+		['style'=>'font-weight:bold'],
+		true);
+}
+?>
+</table>
+
+
+リスト3-23――コントローラクラスのindexメソッド
+public function index(){
+	$this->set('entity',$this->Boards->newEntity());
+	if ($this->request->is('post')) {
+		$data = $this->Boards->findById($this->request->data['id']);
+	} else {
+		$data = $this->Boards->find('all');
+	}
+	$this->set('data',$data->toArray());
+	$this->set('count', $data->count());
+}
+
+
+リスト3-24
+public function index(){
+	$this->set('entity',$this->Boards->newEntity());
+	if ($this->request->is('post')) {
+		$id = $this->request->data['id'];
+		$data = $this->Boards->findByIdOrName($id, $id);
+	} else {
+		$data = $this->Boards->find('all');
+	}
+	$this->set('data',$data->toArray());
+	$this->set('count', $data->count());
+}
+
+
+リスト3-25——index.ctpの送信フォーム部分
+<?=$this->Form->create($entity,['url'=>['action'=>'delRecord']]) ?>
+<fieldset>
+<?=$this->Form->text("id") ?>
+</fieldset>
+<?=$this->Form->button("送信") ?>
+<?=$this->Form->end() ?>
+
+
+リスト3-26——コントローラの追加メソッド
+// 以下のuse文を追記する
+// use \Exception;
+// use Cake\Log\Log;
+
+public function delRecord(){
+	if ($this->request->is('post')) {
+		try {
+			$entity = $this->Boards->get($this->request->data['id']);
+			$this->Boards->delete($entity);
+		} catch(Exception $e){
+			Log::write('debug', $e->getMessage());
+		}
+
+}
+	$this->redirect(['action' => 'index']);
+}
+
+
+リスト3-27——index.ctpの送信フォーム
+<?=$this->Form->create($entity,['url'=>['action'=>'delRecord']]) ?>
+<fieldset>
+<?=$this->Form->text("name") ?>
+</fieldset>
+<?=$this->Form->button("送信") ?>
+<?=$this->Form->end() ?>
+
+
+リスト3-28——コントローラのアクションメソッド
+public function delRecord(){
+	if ($this->request->is('post')) {
+		$this->Boards->deleteAll(
+			['name'=>$this->request->data['name']]
+		);
+	}
+	$this->redirect(['action' => 'index']);
+}
+
+リスト3-29——送信フォーム
+<?=$this->Form->create($entity,['url'=>['action'=>'editRecord']]) ?>
+<fieldset>
+<p><?='ID = ' . $entity->id ?></p>
+<?=$this->Form->hidden("id") ?>
+<?=$this->Form->text("name") ?>
+<?=$this->Form->text("title") ?>
+<?=$this->Form->textarea("content") ?>
+</fieldset>
+<?=$this->Form->button("送信") ?>
+<?=$this->Form->end() ?>
+
+
+リスト3-30——BoardsController/indexメソッドの更新
+public function index($id = null){
+	$this->set('entity',$this->Boards->newEntity());
+	if($id != null){
+		try {
+			$entity = $this->Boards->get($id);
+			$this->set('entity',$entity);
+		} catch(Exception $e){
+			Logg:write('debug',$e->getMessage());
+		}
+	}
+	$data = $this->Boards->find('all')->order(['id'=>'DESC']);
+	$this->set('data',$data->toArray());
+	$this->set('count', $data->count());
+}
+
+
+リスト3-31——BoardsController/editRecordメソッドの追加
+public function editRecord(){
+	if ($this->request->is('put')) {
+		try {
+			$entity = $this->Boards->get($this->request->data['id']);
+			$this->Boards->patchEntity($entity, $this->request->data);
+			$this->Boards->save($entity);
+		} catch(Exception $e){
+			Logg:write('debug',$e->getMessage());
+		}
+	}
+	return $this->redirect(['action' => 'index']);
+}
+
+
+リスト3-32——送信フォーム
+<?=$this->Form->create($entity,['url'=>['action'=>'editRecord']]) ?>
+<fieldset>
+<p><?='ID = ' . $entity->id ?></p>
+<?=$this->Form->hidden("id") ?>
+<?=$this->Form->textarea("content") ?>
+</fieldset>
+<?=$this->Form->button("送信") ?>
+<?=$this->Form->end() ?>
+
+
+リスト33——コントローラのアクションメソッド
+public function editRecord(){
+	if ($this->request->is('put')) {
+		try {
+			$entity = $this->Boards->get($this->request->data['id']);
+			$entity->content = $this->request->data['content'];
+			$this->Boards->save($entity);
+		} catch(Exception $e){
+			Log::write('debug', $e->getMessage());
+		}
+	}
+	return $this->redirect(['action' => 'index']);
+}
+
+
+リスト3-34――index.ctpのフォーム
+<?=$this->Form->create($entity,['url'=>['action'=>'editRecord']]) ?>
+<fieldset>
+<?=$this->Form->text("name") ?>
+<?=$this->Form->text("title") ?>
+</fieldset>
+<?=$this->Form->button("送信") ?>
+<?=$this->Form->end() ?>
+
+
+リスト3-35――BoardsControllerのeditRecordメソッド
+public function editRecord(){
+	if ($this->request->is('post')) {
+		$arr1 = ['name'=>$this->request->data['name']];
+		$arr2 = ['title'=>$this->request->data['title']];
+		$this->Boards->updateAll($arr2, $arr1);
+	}
+	return $this->redirect(['action' => 'index']);
+}
+
+
+リスト3-36
+CREATE TABLE `books` (
+	`id`	INTEGER PRIMARY KEY AUTOINCREMENT,
+	`title`	TEXT,
+	`author`	TEXT,
+	`price`	INTEGER
+);
+
+
+リスト3-37
+<?php
+namespace App\Model\Table;
+
+use Cake\ORM\Query;
+use Cake\ORM\RulesChecker;
+use Cake\ORM\Table;
+use Cake\Validation\Validator;
+
+class BooksTable extends Table
+{
+
+	public function initialize(array $config)
+	{
+		parent::initialize($config);
+
+		$this->table('books');
+		$this->displayField('title');
+		$this->primaryKey('id');
+	}
+
+	public function validationDefault(Validator $validator)
+	{
+		$validator
+			->integer('id')
+			->allowEmpty('id', 'create');
+
+		$validator
+			->allowEmpty('title');
+
+		$validator
+			->allowEmpty('author');
+
+		$validator
+			->integer('price')
+			->allowEmpty('price');
+
+		return $validator;
+	}
+}
+
+
+リスト3-38
+<?php
+namespace App\Model\Entity;
+
+use Cake\ORM\Entity;
+
+class Book extends Entity
+{
+
+	protected $_accessible = [
+		'*' => true,
+		'id' => false
+	];
+}
+
+
+リスト3-39
+public function index()
+{
+	$books = $this->paginate($this->Books);
+
+	$this->set(compact('books'));
+	$this->set('_serialize', ['books']);
+}
+
+
+リスト3-40
+<table cellpadding="0" cellspacing="0">
+<thead>
+	<tr>
+		<th scope="col"><?= $this->Paginator->sort('id') ?></th>
+		<th scope="col"><?= $this->Paginator->sort('price') ?></th>
+		<th scope="col" class="actions"><?= __('Actions') ?></th>
+	</tr>
+</thead>
+<tbody>
+	<?php foreach ($books as $book): ?>
+	<tr>
+		<td><?= $this->Number->format($book->id) ?></td>
+		<td><?= $this->Number->format($book->price) ?></td>
+		<td class="actions">
+			<?= $this->Html->link(__('View'), ['action' => 'view', $book->id]) ?>
+			<?= $this->Html->link(__('Edit'), ['action' => 'edit', $book->id]) ?>
+			<?= $this->Form->postLink(__('Delete'), ['action' => 'delete', 
+				$book->id], ['confirm' => __('Are you sure you want to delete # {0}?', $book->id)]) ?>
+		</td>
+	</tr>
+	<?php endforeach; ?>
+</tbody>
+</table>
+
+
+リスト3-41
+public function view($id = null)
+{
+	$book = $this->Books->get($id, [
+		'contain' => []
+	]);
+
+	$this->set('book', $book);
+	$this->set('_serialize', ['book']);
+}
+
+
+
+リスト3-42
+<div class="books view large-9 medium-8 columns content">
+	<h3><?= h($book->title) ?></h3>
+	<table class="vertical-table">
+		<tr>
+			<th scope="row"><?= __('Id') ?></th>
+			<td><?= $this->Number->format($book->id) ?></td>
+		</tr>
+		<tr>
+			<th scope="row"><?= __('Price') ?></th>
+			<td><?= $this->Number->format($book->price) ?></td>
+		</tr>
+	</table>
+	<div class="row">
+		<h4><?= __('Title') ?></h4>
+		<?= $this->Text->autoParagraph(h($book->title)); ?>
+	</div>
+	<div class="row">
+		<h4><?= __('Author') ?></h4>
+		<?= $this->Text->autoParagraph(h($book->author)); ?>
+	</div>
+</div>
+
+
+リスト3-43
+<div class="books form large-9 medium-8 columns content">
+	<?= $this->Form->create($book) ?>
+	<fieldset>
+		<legend><?= __('Add Book') ?></legend>
+		<?php
+			echo $this->Form->input('title');
+			echo $this->Form->input('author');
+			echo $this->Form->input('price');
+		?>
+	</fieldset>
+	<?= $this->Form->button(__('Submit')) ?>
+	<?= $this->Form->end() ?>
+</div>
+
+
+リスト3-44
+public function add()
+{
+	$book = $this->Books->newEntity();
+	if ($this->request->is('post')) {
+		$book = $this->Books->patchEntity($book, $this->request->data);
+		if ($this->Books->save($book)) {
+			$this->Flash->success(__('The book has been saved.'));
+
+			return $this->redirect(['action' => 'index']);
+		} else {
+			$this->Flash->error(__('The book could not be saved. Please, try again.'));
+		}
+	}
+	$this->set(compact('book'));
+	$this->set('_serialize', ['book']);
+}
+
+
+リスト3-45
+public function edit($id = null)
+{
+	$book = $this->Books->get($id, [
+		'contain' => []
+	]);
+	if ($this->request->is(['patch', 'post', 'put'])) {
+		$book = $this->Books->patchEntity($book, $this->request->data);
+		if ($this->Books->save($book)) {
+			$this->Flash->success(__('The book has been saved.'));
+
+			return $this->redirect(['action' => 'index']);
+		} else {
+			$this->Flash->error(__('The book could not be saved. Please, try again.'));
+		}
+	}
+	$this->set(compact('book'));
+	$this->set('_serialize', ['book']);
+}
+
+
+リスト3-46
+public function delete($id = null)
+{
+	$this->request->allowMethod(['post', 'delete']);
+	$book = $this->Books->get($id);
+	if ($this->Books->delete($book)) {
+		$this->Flash->success(__('The book has been deleted.'));
+	} else {
+		$this->Flash->error(__('The book could not be deleted. Please, try again.'));
+	}
+
+	return $this->redirect(['action' => 'index']);
+}
+
+
+リスト4-1――indexメソッド
+public function index($id = null){
+	$data = $this->Boards->find('all');
+	$this->set('data',$data->toArray());
+	$this->set('count', $data->count());
+}
+
+
+リスト4-2――index.ctp
+<h1>Databaseサンプル</h1>
+<p>COUNT:<?=$count ?></p>
+<pre>
+<?php print_r($data); ?>
+</pre>
+
+
+リスト4-3
+class BoardsTable extends Table {
+
+	public function initialize(array $config){
+		parent::initialize($config);
+
+		$this->table('books');
+	}
+}
+
+
+リスト4-4
+public function initialize(array $config){
+	parent::initialize($config);
+
+	$this->primaryKey('name');
+}
+
+
+リスト4-5
+public function index($id = null){
+	$data = $this->Boards->get('hanako'); // ●
+	$this->set('data',$data);
+}
+
+
+リスト4-6
+public function initialize(array $config){
+	parent::initialize($config);
+
+	$this->displayField('title');
+}
+
+
+リスト4-7
+public function index($id = null){
+	$data = $this->Boards->find('list')->toArray();
+	$this->set('data',$data);
+}
+
+
+リスト4-8
+public function initialize(array $config){
+	parent::initialize($config);
+
+	$this->entityClass('Book');
+}
+
+
+リスト4-9
+public function index($id = null){
+	$data = $this->Boards->find('all')->toArray();
+	$this->set('data',$data);
+}
+
+
+リスト4-10
+'Datasources' => [
+	
+	'default' => [
+		'className' => 'Cake\Database\Connection',
+		'driver' => 'Cake\Database\Driver\Sqlite',
+		'persistent' => false,
+		'username' => '',
+		'password' => '',
+		'database' => ROOT . DS . 'db' . DS . 'mydata.sqlite3',
+		'encoding' => 'utf8',
+		'cacheMetadata' => true,
+	],
+	'default2' => [
+		'className' => 'Cake\Database\Connection',
+		'driver' => 'Cake\Database\Driver\Sqlite',
+		'persistent' => false,
+		'username' => '',
+		'password' => '',
+		'database' => ROOT . DS . 'db' . DS . 'mydata2.sqlite3',
+		'encoding' => 'utf8',
+		'cacheMetadata' => true,
+	],
+	……以下略……
+
+
+リスト4-11
+public static function defaultConnectionName(){
+	return 'default2';
+}
+
+
+リスト4-12
+// 以下のuser文を追記
+// use Cake\Event\Event;
+
+class BoardsTable extends Table {
+	public $qdata = null;
+
+	public function beforeFind(Event $event){
+		$qstr = '';
+		for($i = 0;$i < count($event->data);$i++){
+			$qstr .= $event->data[0]->sql() . '<br>\n';
+		}
+		$this->qdata = $qstr;
+
+		$query = $event->data[0];
+		$this->qdata = $query->sql();
+	}
+	……以下略……
+
+
+リスト4-13――BoardsControllerクラスのindexメソッドの修正
+public function index($id = null){
+	$data = $this->Boards->find('all');
+	$this->set('data',$data->toArray());
+	$this->set('qdata',$this->Boards->qdata);
+}
+
+
+リスト4-14――「Boards」フォルダ内のindex.ctpの修正
+<h1>Databaseサンプル</h1>
+<p><?=$qdata ?></p>
+<hr>
+<pre>
+	<?php print_r($data); ?>
+</pre>
+
+
+リスト4-15
+class BoardsTable extends Table {
+
+	public function beforeFind(Event $event,Query $query){
+		$query->order(['name'=>'ASC']);
+	}
+	……以下略……
+
+
+リスト4-16――BoardsControllerクラスのindexメソッド
+public function index($id = null){
+	$data = $this->Boards->find('all');
+	$this->set('data',$data);
+}
+
+
+リスト4-17――「Boards」フォルダのindex.ctp
+<h1>Databaseサンプル</h1>
+<table>
+	<?php foreach ($data as $obj): ?>
+	<tr>
+		<td><?=$obj->id . ': ' . $obj->name ?></td>
+	</tr>
+	<?php endforeach; ?>
+</table>
+
+
+リスト4-18
+public function beforeSave(Event $event, EntityInterface $entity, $options){
+	$n = $this->find('all',['conditions'=>['name'=>$entity->name]])->count();
+	if ($n == 0){
+		return true;
+	} else {
+		return false;
+	}
+}
+
+
+リスト4-19
+public function index($id = null){
+	$data = $this->Boards->find('all');
+	$this->set('data',$data);
+	$this->set('entity', $this->Boards->newEntity());
+}
+
+public function addRecord(){
+	if ($this->request->is('post')) {
+		$board = $this->Boards->newEntity($this->request->data);
+		$this->Boards->save($board);
+	}
+	return $this->redirect(['action' => 'index']);
+}
+
+
+リスト4-20
+<h1>Databaseサンプル</h1>
+<?=$this->Form->create($entity,['url'=>['action'=>'addRecord']]) ?>
+<fieldset>
+	<?=$this->Form->text("name") ?>
+	<?=$this->Form->text("title") ?>
+	<?=$this->Form->textarea("content") ?>
+</fieldset>
+<?=$this->Form->button("送信") ?>
+<?=$this->Form->end() ?>
+
+<table>
+	<?php foreach ($data as $obj): ?>
+	<tr>
+	<td><?=$obj->id . ': ' . $obj->name . ' (' . $obj->title . ')' ?></td>
+	</tr>
+	<?php endforeach; ?>
+</table>
+
+
+リスト4-21――「Boards」フォルダのindex.ctp
+<h1>Databaseサンプル</h1>
+<?=$this->Form->create($entity) ?>
+<fieldset>
+	<?=$this->Form->text("input") ?>
+</fieldset>
+<?=$this->Form->button("送信") ?>
+<?=$this->Form->end() ?>
+
+<table>
+	<?php foreach ($data as $obj): ?>
+	<tr>
+		<td><?=$obj ?></td>
+	</tr>
+	<?php endforeach; ?>
+</table>
+
+
+リスト4-22――BoardsControllerクラスのindexメソッド
+public function index($id = null){
+	$data = $this->Boards->find();
+	$this->set('data',$data);
+	$this->set('entity', $this->Boards->newEntity());
+}
+
+
+リスト4-23
+public function index($id = null){
+	$data = $this->Boards->find();
+	if ($this->request->is('post')) {
+		$input = $this->request->data['input'];
+		$data = $this->Boards
+			->find()
+			->where(['name'=>$input]);
+	}
+	$this->set('data',$data);
+	$this->set('entity', $this->Boards->newEntity());
+}
+
+
+リスト4-24
+public function index($id = null){
+	$data = $this->Boards->find();
+	if ($this->request->is('post')) {
+		$input = $this->request->data['input'];
+		$data = $this->Boards
+			->find()
+			->where(['id <='=>$input]);
+	}
+	$this->set('data',$data);
+	$this->set('entity', $this->Boards->newEntity());
+}
+
+
+リスト4-25
+public function index($id = null){
+	$data = $this->Boards->find();
+	if ($this->request->is('post')) {
+		$input = $this->request->data['input'];
+		$data = $this->Boards
+			->find()
+			->where(['id <='=>$input])
+			->order(['id'=>'DESC']);
+	}
+	$this->set('data',$data);
+	$this->set('entity', $this->Boards->newEntity());
+}
+
+
+リスト4-26
+public function index($id = null){
+	$data = $this->Boards->find();
+	if ($this->request->is('post')) {
+		$input = $this->request->data['input'];
+		$data = $this->Boards
+			->find()
+			->where(['name like'=>'%' . $input . '%'])
+			->orWhere(['title like'=>'%' . $input . '%'])
+			->orWhere(['content like'=>'%' . $input . '%']);
+	}
+	$this->set('data',$data);
+	$this->set('entity', $this->Boards->newEntity());
+}
+
+
+リスト4-27
+public function index($id = null){
+	$data = $this->Boards->find();
+	if ($this->request->is('post')) {
+		$input = $this->request->data['input'];
+		$data = $this->Boards
+			->find()
+			->where(['name like'=>'%' . $input . '%'])
+			->select(['name','title']);
+	}
+	$this->set('data',$data);
+	$this->set('entity', $this->Boards->newEntity());
+}
+
+
+リスト4-28
+public function index($id = null){
+	$data = $this->Boards->find();
+	if ($this->request->is('post')) {
+		$input = $this->request->data['input'];
+		$data = $this->Boards
+			->find()
+			->where(function ($exp, $q) use($input) {
+				return $exp->eq('id',$input);
+			});
+	}
+	$this->set('data',$data);
+	$this->set('entity', $this->Boards->newEntity());
+}
+
+
+リスト4-29
+<table>
+	<?php foreach ($data as $obj): ?>
+	<tr>
+		<td><?php print_r($obj); ?></td>
+	</tr>
+	<?php endforeach; ?>
+</table>
+
+
+リスト4-30
+public function index($id = null){
+	if (!$this->request->is('post')) {
+		$connection = ConnectionManager::get('default');
+		$data = $connection
+			->execute('SELECT * FROM boards')
+			->fetchAll('assoc');
+	} else {
+		$input = $this->request->data['input'];
+		$connection = ConnectionManager::get('default');
+		$data = $connection
+			->execute('SELECT * FROM boards where id = :id', ['id'=>$input])
+			->fetchAll('assoc');
+	}
+	$this->set('data',$data);
+	$this->set('entity', $this->Boards->newEntity());
+}
+
+
+リスト4-31
+<?php
+namespace App\Model\Table;
+
+use Cake\ORM\Query;
+use Cake\ORM\RulesChecker;
+use Cake\ORM\Table;
+use Cake\Validation\Validator;
+
+class BoardsTable extends Table {
+
+	public function validationDefault(Validator $validator){
+		$validator
+			->integer('id');
+		$validator
+			->notEmpty('name');
+		$validator
+			->notEmpty('title');
+		$validator
+			->notEmpty('content');
+		return $validator;
+	}
+}
+
+
+リスト4-32——index.ctp
+<h1>Databaseサンプル</h1>
+<?=$this->Form->create($entity,['url'=>['action'=>'addRecord']]) ?>
+<fieldset>
+	<?=$this->Form->input('name', ['type'=>'text']) ?>
+	<?=$this->Form->input('title', ['type'=>'text']) ?>
+	<?=$this->Form->input("content") ?>
+</fieldset>
+<?=$this->Form->button("送信") ?>
+<?=$this->Form->end() ?>
+<table>
+	<?php foreach ($data as $obj): ?>
+	<tr>
+		<td><?=$obj ?></td>
+	</tr>
+	<?php endforeach; ?>
+</table>
+
+
+リスト4-33——add_record.ctp
+<h1>Databaseサンプル</h1>
+<?=$this->Form->create($entity,['url'=>['action'=>'addRecord']]) ?>
+<fieldset>
+	<?=$this->Form->input('name', ['type'=>'text']) ?>
+	<?=$this->Form->input('title', ['type'=>'text']) ?>
+	<?=$this->Form->input("content") ?>
+</fieldset>
+<?=$this->Form->button("送信") ?>
+<?=$this->Form->end() ?>
+
+
+リスト4-34
+<?php
+namespace App\Controller;
+
+class BoardsController extends AppController {
+	
+	public function index($id = null){
+		$data = $this->Boards->find('all');
+		$this->set('data',$data);
+		$this->set('entity', $this->Boards->newEntity());
+	}
+
+	public function addRecord(){
+		if ($this->request->is('post')) {
+			$board = $this->Boards->newEntity($this->request->data);
+			if ($this->Boards->save($board)){
+				$this->redirect(['action' => 'index']);
+			}
+			$this->set('entity',$board);
+		}
+	}
+}
+
+
+リスト4-35
+public function validationDefault(Validator $validator){
+	$validator
+		->integer('id');
+	$validator
+		->notEmpty('name')
+		->minLength('name',3)
+		->maxLength('name',20);
+	$validator
+		->notEmpty('title');
+	$validator
+		->notEmpty('content');
+	
+	return $validator;
+}
+
+
+リスト4-36
+$validator
+	->notEmpty('name')
+	->minLength('name',3,'3文字以上入力ください。')
+	->maxLength('name',20,'20文字以下で入力ください。');
+
+
+リスト4-37
+<script>
+var nameElement = document.querySelector('#name');
+nameElement.addEventListener('invalid', function(e) {
+	if (nameElement.validity.valueMissing){
+		e.target.setCustomValidity("ちゃんと入力してね"); 
+	} else if (!nameElement.validity.valid) {
+	} 
+}, false);
+</script>
+
+
+リスト4-38
+<div class="input text required error">
+	<label for="name">Name</label>
+	<input type="text" name="name" required="required" id="name" 
+		class="form-error" value="">
+	<div class="error-message">This field cannot be left empty</div>
+</div>
+
+
+リスト4-39
+<style>
+.error { color:red; font-size:smaller; font-weight:bold;}
+</style>
+<h1>Databaseサンプル</h1>
+<?=$this->Form->create($entity,['url'=>['action'=>'addRecord']]) ?>
+<fieldset>
+	<div class="error"><?=$this->Form->error('name') ?></div>
+	<?=$this->Form->text('name') ?>
+	<div class="error"><?=$this->Form->error('title') ?></div>
+	<?=$this->Form->text('title') ?>
+	<div class="error"><?=$this->Form->error('content') ?></div>
+	<?=$this->Form->textarea("content") ?>
+</fieldset>
+<?=$this->Form->button("送信") ?>
+<?=$this->Form->end() ?>
+
+
+リスト4-40
+// use Cake\ORM\RulesChecker; が必要
+
+public function buildRules(RulesChecker $rules){
+	$rules->add($rules->isUnique(['name'], '既に登録済みです。'));
+	return $rules;
+}
+
+
+リスト4-41
+// 以下のuse文を追記する
+// use Cake\Validation\Validator;
+
+public function addRecord(){
+	if ($this->request->is('post')) {
+		$board = $this->Boards->newEntity($this->request->data);
+
+		$validator = new Validator();
+		$validator->email('name');
+		$errors = $validator->errors($this->request->data);
+		if (!empty($errors)){
+			$this->Flash->error('EMAIL ERROR!!');
+		} else {
+			if ($this->Boards->save($board)){
+				$this->redirect(['action' => 'index']);
+			}
+		}
+		$this->set('entity',$board);
+	}
+}
+
+
+リスト4-42
+$validator->add('content','custom',
+	[
+		'rule'=>['custom', "/\A\d+\z/"],
+		'message' => '整数を入力してください。'
+	]);
+
+
+リスト4-43
+<?php
+namespace App\Model\Table;
+
+use Cake\ORM\Query;
+use Cake\ORM\RulesChecker;
+use Cake\ORM\Table;
+use Cake\Validation\Validator;
+
+class BoardsTable extends Table {
+	
+	public function validationDefault(Validator $validator) {
+		$validator
+			->integer('id');
+		$validator
+			->notEmpty('name','必須項目です。');
+		$validator
+			->notEmpty('title','必須項目です。');
+		$validator
+			->notEmpty('content','必須項目です。');
+		
+		$validator
+			->add('name', 'maxRecords', 
+			[
+				'rule' => ['maxRecords','name',5],
+				'message' => __('最大数を超えています。'),
+				'provider' => 'table',
+			]);
+	
+		return $validator;
+	}
+
+	public function maxRecords($data,$field,$num) {
+		$n = $this->find()
+			->where([$field=>$data])
+			->count();
+		return $n < $num ? true : false;
+	}
+
+}
+
+
+リスト4-44
+CREATE TABLE `people` (
+	`id`	INTEGER PRIMARY KEY AUTOINCREMENT,
+	`name`	TEXT NOT NULL,
+	`password`	TEXT NOT NULL,
+	`comment`	TEXT NOT NULL
+);
+
+
+リスト4-45
+CREATE TABLE `mydata`.`people` (
+	`id` INT NOT NULL AUTO_INCREMENT ,
+	`name` VARCHAR(255) NOT NULL ,
+	`password` VARCHAR(255) NOT NULL ,
+	`comment` TEXT NOT NULL ,
+	PRIMARY KEY (`id`)
+) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+リスト4-46
+ALTER TABLE `boards` DROP `name`;
+ALTER TABLE `boards` ADD `person_id` INT NOT NULL AFTER `id`;
+
+
+リスト4-47
+<?php
+namespace App\Model\Entity;
+
+use Cake\ORM\Entity;
+
+class Person extends Entity {
+
+	protected $_accessible = [
+		'*' => true,
+		'id' => false
+	];
+
+}
+
+
+リスト4-48
+<?php
+namespace App\Model\Table;
+
+use Cake\ORM\Query;
+use Cake\ORM\RulesChecker;
+use Cake\ORM\Table;
+use Cake\Validation\Validator;
+
+class PeopleTable extends Table {
+
+public function initialize(array $config){
+	$this->hasOne('Boards');
+}
+
+	public function validationDefault(Validator $validator){
+		$validator
+			->integer('id');
+		$validator
+			->notEmpty('name','必須項目です。');
+		$validator
+			->notEmpty('password','必須項目です。');
+		$validator
+			->notEmpty('comment','必須項目です。');
+		
+		return $validator;
+	}
+	
+	public function buildRules(RulesChecker $rules){
+		$rules->isUnique(['name'],'既に登録済みです。');
+		return $rules;
+	}
+
+}
+
+
+リスト4-49
+<?php
+namespace App\Controller;
+
+class PeopleController extends AppController {
+	
+	public function index($id = null){
+		$data = $this->People
+			->find('all')
+			->contain(['Boards']);
+		$this->set('data',$data);
+	}
+
+}
+
+
+リスト4-50
+<h1>Peopleサンプル</h1>
+<?php foreach ($data as $obj): ?>
+	<pre><?php print_r($obj->toArray()) ?></pre>
+<?php endforeach; ?>
+
+
+リスト4-51
+public function initialize(array $config){
+	$this->hasMany('Boards');
+}
+
+
+リスト4-52
+<?php
+namespace App\Model\Table;
+
+use Cake\ORM\Query;
+use Cake\ORM\RulesChecker;
+use Cake\ORM\Table;
+use Cake\Validation\Validator;
+
+class BoardsTable extends Table {
+
+	public function initialize(array $config){
+		$this->belongsTo('People');
+	}
+
+	public function validationDefault(Validator $validator){
+
+		……中略……
+		
+		return $validator;
+	}
+
+}
+
+
+リスト4-53
+<?php
+namespace App\Controller;
+
+use Cake\Validation\Validator;
+
+class BoardsController extends AppController {
+	
+	public function index($id = null){
+		$data = $this->Boards
+			->find('all')
+			->contain(['People']);
+		$this->set('data',$data);
+	}
+
+	……以下略……
+
+}
+
+
+リスト4-54
+<h1>Boardサンプル</h1>
+<?php foreach ($data as $obj): ?>
+	<pre><?php print_r($obj->toArray()) ?></pre>
+<?php endforeach; ?>
+
+
+リスト4-55
+public function initialize(array $config){
+	//$this->hasMany('Boards'); // コメントアウトする
+}
+
+
+リスト4-56
+public function index($id = null){
+	$this->People->hasMany('Boards');
+	$data = $this->People
+		->find('all')
+		->contain(['Boards']);
+	$this->set('data',$data);
+}
+
+
+リスト4-57――BoardsTable.php
+<?php
+namespace App\Model\Table;
+
+use Cake\ORM\Query;
+use Cake\ORM\RulesChecker;
+use Cake\ORM\Table;
+use Cake\Validation\Validator;
+
+class BoardsTable extends Table {
+
+	public function initialize(array $config){
+		$this->belongsTo('People');
+	}
+
+	public function validationDefault(Validator $validator){
+		$validator
+			->integer('id');
+		$validator
+			->integer('person_id')
+			->requirePresence('person_id');
+		$validator
+			->notEmpty('name','必須項目です。');
+		$validator
+			->notEmpty('title','必須項目です。');
+		$validator
+			->notEmpty('content','必須項目です。');
+		
+		return $validator;
+	}
+
+}
+
+
+リスト4-58――PeopleTable.php
+<?php
+namespace App\Model\Table;
+
+use Cake\Event\Event;
+use Cake\ORM\Query;
+use Cake\ORM\RulesChecker;
+use Cake\ORM\Table;
+use Cake\Validation\Validator;
+
+class PeopleTable extends Table {
+
+	public function initialize(array $config){
+		$this->hasMany('Boards');
+	}
+
+	public function validationDefault(Validator $validator){
+		$validator
+			->integer('id');
+		$validator
+			->notEmpty('name','必須項目です。');
+		$validator
+			->notEmpty('password','必須項目です。');
+		$validator
+			->notEmpty('comment','必須項目です。');
+		
+		return $validator;
+	}
+	
+	public function buildRules(RulesChecker $rules){
+		$rules->isUnique(['name'],'既に登録済みです。');
+		return $rules;
+	}
+
+	public function checkNameAndPass($data){
+		$n = $this->find()
+			->where(['name'=>$data['name']])
+			->andWhere(['password'=>$data['password']])
+			->count();
+		return $n > 0 ? true : false;
+	}
+
+}
+
+
+リスト4-59——BoardsConroller.php
+<?php
+namespace App\Controller;
+
+use Cake\ORM\TableRegistry;
+use Cake\Validation\Validator;
+
+class BoardsController extends AppController {
+	private $people;
+
+	public function initialize(){
+		parent::initialize();
+		$this->people = TableRegistry::get('People');
+	}
+	
+	public function index(){
+		$data = $this->Boards
+			->find('all')
+			->order(['Boards.id' => 'DESC'])
+			->contain(['People']);
+		$this->set('data',$data);
+	}
+}
+
+
+リスト4-60——「Boards」フォルダ内のindex.ctp
+<h1>Boardサンプル</h1>
+<p><?=$this->Html->link(
+    '※投稿する',
+    ['action' => 'add']
+) ?></p>
+<div>
+<table>
+<tr>
+<th width="25%">投稿者</th><th>タイトル</th>
+</tr>
+<?php foreach ($data as $obj): ?>
+	<tr>
+	<td><?=$this->Html->link(
+		$obj['person']['name'],
+		['action' => 'show2',$obj['person_id']]
+	) ?></td>
+	<td><?=$this->Html->link(
+		$obj['title'],
+		['action' => 'show',$obj['id']]
+	) ?></td>
+	</tr>
+<?php endforeach; ?>
+</table>
+</div>
+
+
+リスト4-61——BoardsControllerのaddメソッド
+public function add(){
+	if ($this->request->isPost()){
+		if (!$this->people->checkNameAndPass($this->request->data)){
+			$this->Flash->error('名前かパスワードを確認ください。');
+		} else {
+			$res = $this->people->find()
+				->where(['name'=>$this->request->data['name']])
+				->andWhere(['password'=>$this->request->data['password']])
+				->first();
+			$board = $this->Boards->newEntity();
+			$board->name = $this->request->data['name'];
+			$board->title = $this->request->data['title'];
+			$board->content = $this->request->data['content'];
+			$board->person_id = $res['id'];
+			if($this->Boards->save($board)){
+				$this->redirect(['action' => 'index']);
+			}
+		}
+	}
+	$this->set('entity', $this->Boards->newEntity());
+}
+
+
+リスト4-62——「Boards」フォルダのadd.ctp
+<h1>投稿フォーム</h1>
+<p><?=$this->Html->link(
+    '※一覧に戻る',
+    ['action' => 'index']
+) ?></p>
+<?=$this->Form->create($entity) ?>
+<fieldset>
+	<div class="error"><?=$this->Form->error('name') ?></div>
+	<?=$this->Form->input('name',['type'=>'text']) ?>
+	<div class="error"><?=$this->Form->error('password') ?></div>
+	<?=$this->Form->input('password',['type'=>'password']) ?>
+	<div class="error"><?=$this->Form->error('title') ?></div>
+	<?=$this->Form->input('title',['type'=>'text']) ?>
+	<div class="error"><?=$this->Form->error('content') ?></div>
+	<?=$this->Form->textarea("content") ?>
+</fieldset>
+<?=$this->Form->button("送信") ?>
+<?=$this->Form->end() ?>
+
+
+リスト4-63——BoardsController.phpのshow, show2メソッド
+public function show($param = 0){
+	$data = $this->Boards
+		->find()
+		->where(['Boards.id'=>$param])
+		->contain(['People'])
+		->first();
+	$this->set('data',$data);
+}
+
+public function show2($param = 0){
+	$data = $this->People->get($param);
+	$this->set('data',$data);
+}
+
+
+リスト4-64——「Boards」フォルダのshow.ctp
+<h1>掲示板</h1>
+<p><?=$this->Html->link(
+    '※一覧に戻る',
+    ['action' => 'index']
+) ?></p>
+<table>
+	<tr><th width="25%">投稿者</th>
+		<td><?=$data['person']['name'] ?></td></tr>
+	<tr><th width="25%">タイトル</th>
+		<td><?=$data['title'] ?></td></tr>
+	<tr><th width="25%">内容</th>
+		<td><?=$data['content'] ?></td></tr>
+</table>
+<p><?=$this->Html->link(
+    '※この投稿を編集する',
+    ['action' => 'edit',$data['id']]
+) ?></p>
+
+
+リスト4-65——「Boards」フォルダのshow2.ctp
+<h1>掲示板</h1>
+<p><?=$this->Html->link(
+    '※一覧に戻る',
+    ['action' => 'index']
+) ?></p>
+<table>
+	<tr><th width="25%">投稿者</th>
+		<td><?=$data['name'] ?></td></tr>
+	<tr><th width="25%">コメント</th>
+		<td><?=$data['comment'] ?></td></tr>
+</table>
+
+
+リスト4-66——BoardsController.phpのeditメソッド
+public function edit($param=0){
+	if ($this->request->isPut()){
+		$board = $this->Boards
+			->find()
+			->where(['Boards.id'=>$param])
+			->contain(['People'])
+			->first();
+		$board->title = $this->request->data['title'];
+		$board->content = $this->request->data['content'];
+		$board->person_id = $this->request->data['person_id'];
+		if (!$this->people->checkNameAndPass($this->request->data)){
+			$this->Flash->error('名前かパスワードを確認ください。');
+		} else {
+			if($this->Boards->save($board)){
+				$this->redirect(['action' => 'index']);
+			}
+		}
+	} else {
+		$board = $this->Boards
+			->find()
+			->where(['Boards.id'=>$param])
+			->contain(['People'])
+			->first();
+	}
+	$this->set('entity',$board);
+}
+
+
+リスト4-67——「Boards」フォルダのedit.ctp
+<h1>投稿の編集</h1>
+<p><?=$this->Html->link(
+    '※一覧に戻る',
+    ['action' => 'index']
+) ?></p>
+<table>
+<fieldset>
+	<?=$this->Form->create($entity) ?>
+	<?=$this->Form->input('id',['type'=>'hidden']) ?>
+	<?=$this->Form->input('person_id',['type'=>'hidden']) ?>
+	<?=$this->Form->input('name',['type'=>'hidden','value'=>$entity['person']['name']]) ?>
+	<div class="error"><?=$this->Form->error('name') ?></div>
+	<div>名前：<?=$entity['person']['name'] ?></dov>
+	<div class="error"><?=$this->Form->error('password') ?></div>
+	<div>パスワード：<?=$this->Form->password('password') ?></div>
+	<div class="error"><?=$this->Form->error('title') ?></div>
+	<div>タイトル：<?=$this->Form->text('title') ?></div>
+	<div class="error"><?=$this->Form->error('content') ?></div>
+	<?=$this->Form->textarea("content") ?>
+</fieldset>
+<?=$this->Form->button("送信") ?>
+<?=$this->Form->end() ?>
+
+
+リスト5-1
+<?=$this->Html->charset('utf-8') ?>
+
+
+リスト5-3
+<?=$this->Html->css('hello'); ?>
+
+
+リスト5-5
+<p style='<?=$this->Html->style(['color'=>'red','font-size'=>'14',
+	'font-weight'=>'bold'],false); ?>'>Hello</p>
+
+
+リスト5-7
+<?=$this->Html->doctype('xhtml-strict'); ?>
+
+
+リスト5-9
+<?=$this->Html->meta('keywords',null,
+	array('content'=>'php,cakephp,bake,フレームワーク'),false); ?>
+
+
+リスト5-11
+<?=$this->Html->image('sample.jpg',
+	array('width'=>'200','height'=>'200','alt'=>'sample image')); ?>
+
+
+リスト5-13
+<?=$this->Html->link('<<sample link>>',
+	'http://google.com',['target'=>'_blank']) ?>
+
+
+リスト5-15
+<?=$this->Html->para('p_style',
+	'これは、&lt;p&gt;タグを自動生成したものです。',
+	['align'=>'center', 'font-size'=>'24pt']); ?>
+
+
+リスト5-17
+<?=$this->Html->div('div_style',
+	'これは、&lt;div&gt;タグを自動生成したものです。',
+	['onclick'=>'alert("クリックしました。")']); ?>
+
+
+リスト5-19
+<table>
+<tr>
+	<th width="25%">投稿者</th><th>タイトル</th>
+</tr>
+<?php foreach ($data as $obj): ?>
+	<tr  style='color:#000099; background-color: #DDDDFF'>
+	<td><?=$obj['person']['name'] ?></td>
+	<td><?=$obj['title'] ?></td>
+	</tr>
+<?php endforeach; ?>
+</table>
+
+
+リスト5-20
+<table>
+<?=$this->Html->tableHeaders(
+	['投稿者','タイトル'],
+	['style'=>'color:#000066; background-color: #AAAAFF'],
+	['style'=>'color:#000066; background-color: #EEEEFF'] 
+); ?>
+<?php foreach ($data as $obj): ?>
+<?=$this->Html->tableCells(
+	[$obj['person']['name'],$obj['title']],
+	['style'=>'color:#000099; background-color: #CCCCFF'],
+	['style'=>'color:#006600; background-color: #EEFFEE'],
+	false, true) ?>
+<?php endforeach; ?>
+</table>
+
+
+リスト5-22
+<span style='font-size: 18pt; font-weight: 700;'>
+<?=$this->Html->nestedList(
+	['階層化されたリスト'=>
+		['最初の項目',
+			'次の項目'=>
+				['サブ項目1','サブ項目2'],
+			'最後の項目'=>
+				['サブ項目A','サブ項目B']]],
+	['style'=>'font-size: smaller; font-weight: lighter','tag'=>'ol'],
+	['style'=>'color: #006600']
+); ?>
+</span>
+
+
+リスト5-24
+<p>
+	<?php
+		$this->Html->addCrumb('First','one');
+		$this->Html->addCrumb('Second','two');
+		$this->Html->addCrumb('Last','end');
+	?>
+	<?=$this->Html->getCrumbs(' | ','TOP') ?>
+</p>
+
+
+リスト5-26
+<?=$this->Html->tag('span',
+	'これはHTMLヘルパーによる<span>タグの出力です。',
+	['style'=>'color: #006600; font-weight: bold'],
+	true) ?>
+
+
+リスト5-28
+<?=$this->Html->tag('span',
+	h('これはHTMLヘルパーによる<span>タグの出力です。'),
+	['style'=>'color: #006600; font-weight: bold'],
+	true); ?>
+
+
+リスト5-29
+<h1>Boardサンプル</h1>
+<p><?=$this->Html->link(
+    '※投稿する',
+    ['action' => 'add']
+) ?></p>
+
+<div>
+
+<table>
+<tr>
+<th width="25%">投稿者</th><th>タイトル</th>
+</tr>
+<?php foreach ($data as $obj): ?>
+	<tr>
+	<td><?=$this->Html->link(
+		$obj['person']['name'],
+		['action' => 'show2',$obj['person_id']]
+	) ?></td>
+	<td><?=$this->Html->link(
+		$obj['title'],
+		['action' => 'show',$obj['id']]
+	) ?></td>
+	</tr>
+<?php endforeach; ?>
+</table>
+
+</div>
+
+
+リスト5-30
+<h1><?=__('board') ?></h1>
+<p><a href="/boards/add"><?=__('post') ?></a></p>
+
+<div>
+
+<table>
+<tr>
+<th width="25%"><?=__('user') ?></th>
+	<th><?=__('title') ?></th>
+</tr>
+<?php foreach ($data as $obj): ?>
+	<tr>
+	<td><?=$this->Html->link(
+		$obj['person']['name'],
+		['action' => 'show2',$obj['person_id']]
+	) ?></td>
+	<td><?=$this->Html->link(
+		$obj['title'],
+		['action' => 'show',$obj['id']]
+	) ?></td>
+	</tr>
+<?php endforeach; ?>
+</table>
+
+</div>
+
+
+リスト5-32
+#: Template/Boards/index.ctp:1
+msgid "board"
+msgstr "board"
+
+#: Template/Boards/index.ctp:2
+msgid "post"
+msgstr "post"
+
+#: Template/Boards/index.ctp:8
+msgid "user"
+msgstr "user"
+
+#: Template/Boards/index.ctp:9
+msgid "title"
+msgstr "title"
+
+
+リスト5-33——「en_US」内のdefault.po
+#: Template/Boards/index.ctp:1
+msgid "board"
+msgstr "mini Board"
+
+#: Template/Boards/index.ctp:2
+msgid "post"
+msgstr "* post your message! *"
+
+#: Template/Boards/index.ctp:8
+msgid "user"
+msgstr "user name"
+
+#: Template/Boards/index.ctp:9
+msgid "title"
+msgstr "title"
+
+
+リスト5-34――「ja_JP」内のdefault.po
+#: Template/Boards/index.ctp:1
+msgid "board"
+msgstr "掲示板"
+
+#: Template/Boards/index.ctp:2
+msgid "post"
+msgstr "※投稿する"
+
+#: Template/Boards/index.ctp:8
+msgid "user"
+msgstr "利用者"
+
+#: Template/Boards/index.ctp:9
+msgid "title"
+msgstr "タイトル"
+
+
+リスト5-35
+'App' => [
+	'namespace' => 'App',
+	'encoding' => env('APP_ENCODING', 'UTF-8'),
+	'defaultLocale' => env('APP_DEFAULT_LOCALE', 'en_US'),
+	……以下略……
+
+
+リスト5-36
+'defaultLocale' => env('APP_DEFAULT_LOCALE', 'ja_JP'),
+
+
+リスト5-37
+'defaultLocale' => env('APP_DEFAULT_LOCALE', 'fr'),
+
+
+リスト5-38
+// use Cake\I18n\I18n; を追記
+
+public function initialize(){
+	parent::initialize();
+	$this->people = TableRegistry::get('People');
+	I18n::locale('en_US'); // ●
+}
+
+
+リスト5-39
+<p><?=__('{0} post',$count) ?></p>
+
+
+リスト5-40――default.pot
+msgid "{0} post"
+msgstr "{0} post."
+
+
+リスト5-41――「en_US」のdefault.po
+msgid "{0} post"
+msgstr "post count:{0}"
+
+
+リスト5-42――「ja_JP」のdefault.po
+msgid "{0} post"
+msgstr "{0}個の投稿があります。"
+
+
+リスト5-43
+public function index(){
+	$data = $this->Boards
+		->find('all')
+		->order(['Boards.id' => 'DESC'])
+		->contain(['People']);
+	$this->set('data',$data);
+	$this->set('count',$data->count());
+}
+
+
+リスト5-44
+<?php
+namespace App\Controller;
+
+use Cake\ORM\TableRegistry;
+
+class BoardsController extends AppController {
+	private $people;
+	
+	public $paginate = [
+		'limit' => 5,
+		'order' => [
+			'id' => 'DESC'
+		],
+		'contain' => ['People']
+	];
+
+	public function initialize(){
+		parent::initialize();
+		$this->people = TableRegistry::get('People');
+		$this->loadComponent('Paginator');
+	}
+	
+	public function index(){
+		$data = $this->paginate($this->Boards);
+		$this->set('data',$data);
+		$this->set('count',$data->count());
+	}
+
+	……以下略……
+
+}
+
+
+リスト5-45
+<h1><?=__('board') ?></h1>
+<p><a href="/boards/add"><?=__('post') ?></a></p>
+
+<p><?=__('{0} post',$count) ?></p>
+
+<div>
+<table>
+<?=$this->Html->tableHeaders(
+	['ID','投稿者','タイトル'],
+	[],
+	[ 'style'=>'color:#EEEEFF; 
+		background-color: #000099; 
+		font-weight:bold' ] 
+); ?>
+<?php foreach ($data as $obj): ?>
+<?=$this->Html->tableCells(
+	[
+		$obj['id'],
+		$obj['person']['name'],
+		$obj['title']
+	],
+	['style'=>'color:#000066; background-color: #CCCCFF'],
+	['style'=>'color:#006600; background-color: #EEFFEE'],
+	false, true) ?>
+<?php endforeach; ?>
+</table>
+</div>
+
+
+リスト5-46
+<div class="paginator">
+	<ul class="pagination">
+		<?=$this->Paginator->prev(' << first ') ?>
+		<?=$this->Paginator->prev(' < prev ') ?>
+		<?=$this->Paginator->next(' next > ') ?>
+		<?=$this->Paginator->next(' last >> ') ?>
+	</ul>
+</div>
+
+
+リスト5-48
+ul.pagination li a {
+	color: rgba(0, 0 ,0 , 0.54);
+}
+
+ul.pagination li.active a {
+	background-color: #DCE47E;
+	color: #FFF;
+	font-weight: bold;
+	cursor: default;
+}
+ul.pagination .disabled:hover a {
+	background: none;
+}
+
+.paginator {
+	text-align: center;
+}
+
+.paginator ul.pagination li {
+	float: none;
+	display: inline-block;
+}
+
+.paginator p {
+	text-align: right;
+	color: rgba(0, 0 ,0 , 0.54);
+}
+
+
+リスト5-49
+<div class="paginator">
+	<ul class="pagination">
+		<?=$this->Paginator->numbers() ?>
+	</ul>
+</div>
+
+
+リスト5-51
+<div class="paginator">
+	<ul class="pagination">
+		<?=$this->Paginator->numbers([
+			'before'=>$this->Paginator->first('<<') . '・',
+			'after'=>'・' . $this->Paginator->last('>>'),
+			'modulus'=>4,
+			'separator'=>'・'
+		]) ?>
+	</ul>
+</div>
+
+
+リスト5-53
+<div class="paginator">
+	<ul class="pagination">
+		<?=$this->Paginator->numbers([
+			'before'=>$this->Paginator->hasPrev() ? 
+				$this->Paginator->first('<<') . '・' : '',
+			'after'=>$this->Paginator->hasNext() ? 
+				'・' . $this->Paginator->last('>>') : '',
+			'modulus'=>4,
+			'separator'=>'・'
+		]) ?>
+	</ul>
+</div>
+
+
+リスト5-54
+<table>
+<tr>
+	<th><?=$this->Paginator->sort('id','投稿順') ?></th>
+	<th><?=$this->Paginator->sort('Person.name','名前') ?></th>
+	<th><?=$this->Paginator->sort('title','タイトル') ?></th>
+</tr>
+
+<?php foreach ($data as $obj): ?>
+<?=$this->Html->tableCells(
+	[
+		$obj['id'],
+		$obj['person']['name'],
+		$obj['title']
+	],
+	['style'=>'color:#000066; background-color: #CCCCFF'],
+	['style'=>'color:#006600; background-color: #EEFFEE'],
+	false, true) ?>
+<?php endforeach; ?>
+</table>
+
+
+リスト5-56
+<?php
+return [
+	'number'=>'<span style="border:solid 1px black;padding:10px;margin:1px;">
+		<a href="{{url}}">{{text}}</a></span>',
+	'current'=>'<span style="background-color:black;color:white;
+		border:solid 1px black;padding:10px;margin:1px;">{{text}}</span>'
+];
+
+
+リスト5-57
+<?php
+namespace App\View;
+
+use Cake\View\View;
+
+class AppView extends View
+{
+	public function initialize()
+	{
+	}
+}
+
+
+リスト5-58
+public function initialize(){
+	$this->loadHelper('Paginator', ['templates' => 'my-paginator-temp']);
+}
+
+
+リスト5-59――SQLite利用の場合
+'test' => [
+	'className' => 'Cake\Database\Connection',
+	'driver' => 'Cake\Database\Driver\Sqlite',
+	'persistent' => false,
+	'username' => '',
+	'password' => '',
+	'database' => ROOT . DS . 'db' . DS . 'temp_mydata.sqlite3',
+	'encoding' => 'utf8',
+	'cacheMetadata' => true,
+],
+
+
+リスト5-60――MySQL利用の場合
+'test' => [
+	'className' => 'Cake\Database\Connection',
+	'driver' => 'Cake\Database\Driver\Mysql',
+	'persistent' => false,
+	'host' => 'localhost',
+	'username' => '利用者名',
+	'password' => 'パスワード',
+	'database' => 'temp_mydata',
+	'encoding' => 'utf8',
+	'timezone' => 'UTC',
+	'cacheMetadata' => true,
+	'quoteIdentifiers' => false,
+	'log' => false,
+	//'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
+	'url' => env('DATABASE_TEST_URL', null),
+],
+
+
+リスト5-61——BoardsFixture.php
+<?php
+namespace App\Test\Fixture;
+
+use Cake\TestSuite\Fixture\TestFixture;
+
+class BoardsFixture extends TestFixture
+{
+
+	public $fields = [
+		'id' => ['type' => 'integer', 'length' => null, 'unsigned' => false, 'null' => false, 'default' => null, 'autoIncrement' => true, 'precision' => null, 'comment' => null],
+		'person_id' => ['type' => 'integer', 'length' => null, 'unsigned' => false, 'null' => false, 'default' => null, 'precision' => null, 'comment' => null, 'autoIncrement' => null],
+		'title' => ['type' => 'text', 'length' => null, 'null' => true, 'default' => null, 'precision' => null, 'comment' => null, 'collate' => null],
+		'content' => ['type' => 'text', 'length' => null, 'null' => true, 'default' => null, 'precision' => null, 'comment' => null, 'collate' => null],
+		'_constraints' => [
+			'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
+		],
+	];
+
+	public $records = [
+		[
+			'id' => 1,
+			'person_id' => 1,
+			'title' => 'Lorem ipsum dolor sit ……中略……nunc mattis convallis.'
+		],
+	];
+}
+
+
+リスト5-62——PeopleFixture.php
+<?php
+namespace App\Test\Fixture;
+
+use Cake\TestSuite\Fixture\TestFixture;
+
+class PeopleFixture extends TestFixture
+{
+
+	public $fields = [
+		'id' => ['type' => 'integer', 'length' => null, 'unsigned' => false, 'null' => false, 'default' => null, 'autoIncrement' => true, 'precision' => null, 'comment' => null],
+		'name' => ['type' => 'text', 'length' => null, 'null' => false, 'default' => null, 'precision' => null, 'comment' => null, 'collate' => null],
+		'password' => ['type' => 'text', 'length' => null, 'null' => false, 'default' => null, 'precision' => null, 'comment' => null, 'collate' => null],
+		'comment' => ['type' => 'text', 'length' => null, 'null' => false, 'default' => null, 'precision' => null, 'comment' => null, 'collate' => null],
+		'_constraints' => [
+			'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
+		],
+	];
+
+	public $records = [
+		[
+			'id' => 1,
+			'name' => 'Lorem ipsum dolor sit ……中略……nunc mattis convallis.',
+			'password' => 'Lorem ipsum dolor sit ……中略……nunc mattis convallis.',
+			'comment' => 'Lorem ipsum dolor sit ……中略……nunc mattis convallis.'
+		],
+	];
+}
+
+
+リスト5-63――BoardsFixture.php
+public $records = [
+	[
+		'id' => 1001,
+		'person_id' => 1001,
+		'title' => 'test title 1',
+		'content' => 'test content 1'
+	],
+	[
+		'id' => 1002,
+		'person_id' => 1002,
+		'title' => 'test title 2',
+		'content' => 'test content 2'
+	],
+	[
+		'id' => 1003,
+		'person_id' => 1003,
+		'title' => 'test title 3',
+		'content' => 'test content 3'
+	],
+];
+
+
+リスト5-64――PeopleFixture.php
+public $records = [
+	[
+		'id' => 1001,
+		'name' => 'test name 1',
+		'password' => 'test password 1',
+		'comment' => 'test comment 1'
+	],
+	[
+		'id' => 1002,
+		'name' => 'test name 2',
+		'password' => 'test password 2',
+		'comment' => 'test comment 2'
+	],
+	[
+		'id' => 1003,
+		'name' => 'test name 3',
+		'password' => 'test password 3',
+		'comment' => 'test comment 3'
+	],
+];
+
+
+リスト5-65——Entity/BoardTest.php
+<?php
+namespace App\Test\TestCase\Model\Entity;
+
+use App\Model\Entity\Board;
+use Cake\TestSuite\TestCase;
+
+class BoardTest extends TestCase
+{
+
+	public $Board;
+
+	public function setUp()
+	{
+		parent::setUp();
+		$this->Board = new Board();
+	}
+
+	public function tearDown()
+	{
+		unset($this->Board);
+
+		parent::tearDown();
+	}
+
+	public function testInitialization()
+	{
+		$this->markTestIncomplete('Not implemented yet.');
+	}
+}
+
+
+リスト5-66——Table/BoardsTableTest.php
+<?php
+namespace App\Test\TestCase\Model\Table;
+
+use App\Model\Table\BoardsTable;
+use Cake\ORM\TableRegistry;
+use Cake\TestSuite\TestCase;
+
+class BoardsTableTest extends TestCase
+{
+
+	public $BoardsTable;
+
+	public $fixtures = [
+		'app.boards',
+		'app.people'
+	];
+
+	public function setUp()
+	{
+		parent::setUp();
+		$config = TableRegistry::exists('Boards') ? [] : ['className' => 'App\Model\Table\BoardsTable'];
+		$this->BoardsTable = TableRegistry::get('Boards', $config);
+	}
+
+	public function tearDown()
+	{
+		unset($this->BoardsTable);
+
+		parent::tearDown();
+	}
+
+	public function testInitialize()
+	{
+		$this->markTestIncomplete('Not implemented yet.');
+	}
+
+	public function testValidationDefault()
+	{
+		$this->markTestIncomplete('Not implemented yet.');
+	}
+}
+
+
+リスト5-67——Entity/BoardTest.php
+<?php
+namespace App\Test\TestCase\Model\Entity;
+
+use App\Model\Entity\Board;
+use Cake\TestSuite\TestCase;
+
+class BoardTest extends TestCase {
+	public $Board;
+
+	public function setUp() {
+		parent::setUp();
+		$this->Board = new Board();
+	}
+
+	public function tearDown() {
+		unset($this->Board);
+		parent::tearDown();
+	}
+
+	public function testInitialization() {
+	}
+
+	/** $this->Board test */
+	public function testBoardInstance() {
+		$this->assertTrue(is_a($this->Board,'App\Model\Entity\Board'));
+	}
+
+}
+
+
+リスト5-68——Table/BoardsTableTest.php
+<?php
+namespace App\Test\TestCase\Model\Table;
+
+use App\Model\Table\BoardsTable;
+use Cake\ORM\TableRegistry;
+use Cake\TestSuite\TestCase;
+
+class BoardsTableTest extends TestCase {
+
+	public $BoardsTable;
+
+	public $fixtures = [
+		'app.boards',
+		'app.people'
+	];
+
+	public function setUp() {
+		parent::setUp();
+		$config = TableRegistry::exists('Boards') ? [] : 
+			['className' => 'App\Model\Table\BoardsTable'];
+		$this->BoardsTable = TableRegistry::get('Boards', $config);
+	}
+
+	public function tearDown() {
+		unset($this->BoardsTable);
+		parent::tearDown();
+	}
+
+	public function testInitialize() {
+	}
+
+	public function testValidationDefault() {
+	}
+
+	/** find Board test */
+	public function testBoardsTableFind() {
+		$result = $this->BoardsTable->find('all')->first();
+		$this->assertFalse(empty($result));
+		$this->assertTrue(is_a($result,'App\Model\Entity\Board'));
+		$this->assertEquals($result->id, 1001);
+		$this->assertStringStartsWith('test title 1', $result->title);
+	}
+
+}
+
+
+リスト5-69
+<?php
+namespace App\Test\TestCase\Controller;
+
+use App\Controller\BoardsController;
+use Cake\TestSuite\IntegrationTestCase;
+
+class BoardsControllerTest extends IntegrationTestCase
+{
+
+	public $fixtures = [
+		'app.boards',
+		'app.people'
+	];
+
+	public function testInitialize()
+	{
+		$this->markTestIncomplete('Not implemented yet.');
+	}
+
+	public function testIndex()
+	{
+		$this->markTestIncomplete('Not implemented yet.');
+	}
+
+	public function testAdd()
+	{
+		$this->markTestIncomplete('Not implemented yet.');
+	}
+
+	public function testEdit()
+	{
+		$this->markTestIncomplete('Not implemented yet.');
+	}
+
+	public function testShow()
+	{
+		$this->markTestIncomplete('Not implemented yet.');
+	}
+
+	public function testShow2()
+	{
+		$this->markTestIncomplete('Not implemented yet.');
+	}
+
+	public function testAddRecord()
+	{
+		$this->markTestIncomplete('Not implemented yet.');
+	}
+
+	public function testEditRecord()
+	{
+		$this->markTestIncomplete('Not implemented yet.');
+	}
+
+	public function testDelRecord()
+	{
+		$this->markTestIncomplete('Not implemented yet.');
+	}
+}
+
+
+リスト5-70
+<?php
+namespace App\Test\TestCase\Controller;
+
+use App\Controller\BoardsController;
+use Cake\TestSuite\IntegrationTestCase;
+use Cake\ORM\TableRegistry;
+
+class BoardsControllerTest extends IntegrationTestCase {
+
+	public $fixtures = [
+		'app.boards',
+		'app.people'
+	];
+
+	public function testIndex() {
+		$this->get('/boards');
+		$this->assertResponseOk();
+	}
+
+	public function testShow() {
+		$this->get('/boards/show/1');
+		$this->assertResponseOk();
+	}
+
+	public function testAddPost(){
+		$data = [
+			'name' => 'test name 1',
+			'password' => 'test password 1',
+			'title' => 'test new title 1',
+			'content' => 'test new content 1'
+		];
+		$this->post('/boards/add', $data);
+
+		$this->assertResponseSuccess();
+		$boards = TableRegistry::get('Boards');
+		$query = $boards->find()->where(['title' => $data['title']]);
+		$this->assertEquals(1, $query->count());
+	}
+}
+
+
+リスト6-1
+$routes->extensions(['rss']);
+
+
+リスト6-2
+public function initialize() {
+	$this->loadHelper('Paginator', ['templates' => 'my-paginator-temp']);
+	$this->loadHelper('Rss');
+}
+
+
+public function index() {
+	if ($this->RequestHandler->isRss() ) {
+		$boards = $this->Boards
+			->find()
+			->limit(10)
+			->order(['id' => 'DESC']);
+		$this->set(compact('boards'));
+	} else {
+		$data = $this->paginate($this->Boards);
+		$this->set('data',$data);
+		$this->set('count',$data->count());
+	}
+}
+
+
+リスト6-4
+<?php
+if (!isset($channel)):
+	$channel = [];
+endif;
+if (!isset($channel['title'])):
+	$channel['title'] = $this->fetch('title');
+endif;
+
+echo $this->Rss->document(
+	$this->Rss->channel(
+		[], $channel, $this->fetch('content')
+	)
+);
+?>
+
+
+リスト6-5
+<?php
+foreach ($data as $board) {
+	$link = [
+		'controller' => 'Boards',
+		'action' => 'show/' . $board->id
+	];
+	$content = h($board->content);
+	$body = $this->Text->truncate($content, 200, [
+		'ending' => '...',
+		'exact'  => true,
+		'html'   => true,
+	]);
+
+	echo $this->Rss->item([], [
+		'title' => $board->title,
+		'link' => $link,
+		'guid' => [
+			'url' => $link, 
+			'isPermaLink' => 'true'
+		],
+		'description' => $body,
+		'pubDate' => null
+	]);
+}
+
+
+リスト6-6
+<?php
+$res = $this->Text->autoLink("please check http://google.com/ .",array());
+echo $this->Html->para(null,$res,array());
+?>
+
+
+リスト6-8
+<?php
+$str = "<p>please check <a href=\"http://google.com/\">http:www.tuyano.com/</a> .</p>";
+echo $this->Text->stripLinks ($str);
+?>
+
+
+リスト6-10
+<?php $content = 'this is <b>sample page</b> for cake3app.'; ?>
+
+<p><?=$this->Text->excerpt(
+	$content, 'page', 10, '***'
+) ?></p>
+
+<p><?=$this->Text->truncate(
+	$content, 15, ['ellipsis'=>'...?', 'html' => true,]
+) ?></p>
+
+
+リスト6-11
+<style type="text/css">
+span.highlight {
+	color:white;
+	background:blue;
+	font-weight:bold;
+}
+</style>
+
+
+リスト6-12
+<?php
+	$content = "テキストの一部をハイライト表示します。";
+	$hstr = $this->Text->highlight(
+		$content, 
+		"ハイライト表示", 
+		[
+			'format' => 
+				'<span class="highlight">\1</span>',
+			'html' => true
+		]
+	);
+?>
+<?=$this->Html->para('p', $hstr) ?>
+
+
+リスト6-14
+<?php $num = "12345.6789"; ?>
+<p><?=$this->Number->currency($num, 'EUR') ?></p>
+<p><?=$this->Number->precision($num, 3) ?></p>
+<p><?=$this->Number->toPercentage($num, 1) ?></p>
+
+
+リスト6-15
+<p><?=$this->Number->toReadableSize(12345678) ?></p>
+
+
+リスト6-16
+<?php $t = time(); ?>
+<p><?=$this->Time->fromString($t) ?></p>
+<p><?=$this->Time->toUnix($t) ?></p>
+<p><?=$this->Time->gmt($t) ?></p>
+
+
+リスト6-17
+<?php $t = '2016-10-24 12:34:56'; ?>
+<p><?=$this->Time->format($t, 'yyyy年MM月dd日 HH時mm分ss秒') ?></p>
+<p><?=$this->Time->nice($t) ?></p>
+<p><?=$this->Time->toAtom($t) ?></p>
+<p><?=$this->Time->toRSS($t) ?></p>
+
+
+リスト6-18
+<pre>
+<?php 
+	$t = time(); 
+	print_r($this->Time->toQuarter($t,true))
+?>
+</pre>
+
+
+リスト6-19
+<p><?=$this->Time->timeAgoInWords(
+	'1999-12-24',
+	[
+		'format'=>'Y-m-d',
+		'end'=>'20 year'
+	]
+) ?></p>
+
+
+リスト6-20
+<pre>
+<?php
+$t = time();
+echo $this->Time->nice($t) . "について：\n";
+echo $this->Time->isToday( $t ) ? "今日です\n" : "...\n";
+echo $this->Time->wasYesterday( $t ) ? "昨日です\n" : "...\n";
+echo $this->Time->isTomorrow( $t ) ? "明日です\n" : "...\n";
+echo $this->Time->isThisWeek( $t ) ? "今週です\n" : "...\n";
+echo $this->Time->isThisMonth( $t ) ? "今月です\n" : "...\n";
+echo $this->Time->isThisYear( $t ) ? "今年です\n" : "...\n";
+?>
+</pre>
+
+
+リスト6-21
+<p><?php
+$w = '3 years';
+$d = '2015-1-1';
+echo $this->Time->wasWithinLast($w,$d) ?
+	"今日は、" . $d . "から" . $w . "以内です。" :
+	"範囲外！";
+?></p>
+
+
+リスト6-22
+<?php
+namespace App\View\Helper;
+
+use Cake\View\Helper;
+
+class RgbTextHelper extends Helper {
+
+	public function initialize(array $config) {
+		parent::initialize($config);
+	}
+
+	public function redString($str){
+		return "<span style=\"background-color:#FF0000;color:#FFFFFF\">
+			 {$str}</span>";
+	}
+
+	public function greenString($str){
+		return "<span style=\"background-color:#00FF00;color:#FFFFFF\">
+			{$str}</span>";
+	}
+
+	public function blueString($str){
+		return "<span style=\"background-color:#0000FF;color:#FFFFFF\">
+			{$str}</span>";
+	}
+
+}
+
+
+リスト6-23
+$this->loadHelper('RgbText');
+
+
+リスト6-24――BoardsControllerクラスのindexメソッド
+<?php
+namespace App\Controller;
+
+use Cake\ORM\TableRegistry;
+
+class BoardsController extends AppController {
+	private $people;
+	
+	public $paginate = [
+		'limit' => 5,
+		'order' => [
+			'id' => 'DESC'
+		],
+		'contain' => ['People']
+	];
+
+	public function initialize(){
+		parent::initialize();
+		$this->people = TableRegistry::get('People');
+		$this->loadComponent('Paginator');
+		$this->loadComponent('RequestHandler');
+	}
+
+	public function index(){
+		$data = $this->paginate($this->Boards);
+		$this->set('data',$data);
+	}
+	
+}
+
+
+リスト6-25――/Boards/index.ctpの修正
+<h1><?=$this->RgbText->redString('掲示板') ?></h1>
+<p><a href="/cake3app/boards/add">
+	<?=$this->RgbText->greenString('※投稿する') ?></a></p>
+
+<div>
+<table>
+<tr>
+	<th>id</th>
+	<th>name</th>
+	<th>title</th>
+</tr>
+
+<?php foreach ($data as $obj): ?>
+<?=$this->Html->tableCells(
+	[
+		$obj['id'],
+		$obj['person']['name'],
+		$obj['title']
+	],
+	['style'=>'color:#000066; background-color: #CCCCFF'],
+	['style'=>'color:#006600; background-color: #EEFFEE'],
+	false, true) ?>
+<?php endforeach; ?>
+</table>
+</div>
+
+<a href="/cake3app/">
+	<?php echo $this->RgbText->blueString('※トップに戻る'); ?>
+
+
+リスト6-26
+<?php
+namespace App\View\Helper;
+
+use Cake\View\Helper; // 追加
+
+class RgbTextHelper extends Helper {
+	public $helpers = ['Html']; // 追加
+
+	public function initialize(array $config) {
+		parent::initialize($config);
+	}
+
+	public function redString($str){
+		return "<span style=\"background-color:#FF0000;color:#FFFFFF\">
+				 {$str}</span>";
+	}
+	public function greenString($str){
+		return "<span style=\"background-color:#00FF00;color:#FFFFFF\">
+				{$str}</span>";
+	}
+	public function blueString($str){
+		return "<span style=\"background-color:#0000FF;color:#FFFFFF\">
+				{$str}</span>";
+	}
+
+	// ●ここから追加したもの
+	public function redLink($str,$url){
+		$style = "background-color:#FF0000; color:#FFFFFF";
+		return $this->Html->link($str,$url,['style'=>$style]);
+	}
+	public function greenLink($str,$url){
+		$style = "background-color:#00FF00; color:#FFFFFF";
+		return $this->Html->link($str,$url,['style'=>$style]);
+	}
+	public function blueLink($str,$url){
+		$style = "background-color:#0000FF; color:#FFFFFF";
+		return $this->Html->link($str,$url,['style'=>$style]);
+	}
+}
+
+
+リスト6-27
+<h1><?=$this->RgbText->redString('掲示板') ?></h1>
+<p><?=$this->RgbText->greenLink('※投稿する','/boards/add') ?></p>
+
+<div>
+<table>
+	……<table>部分は変更ないので省略……
+</table>
+</div>
+
+<?=$this->RgbText->blueLink('※トップに戻る','/') ?>
+
+
+リスト6-28
+<?php
+$imgTag = $this->Html->image('cake.power.gif',
+	['alt'=>'Cake.PHP','width'=>100,'height'=>15]);
+$aTag = $this->Html->link($imgTag,'http://www.cakephp.org',
+	['target'=>'_blank','escape'=>false]);
+$msg = '<span> copyright CakePHP.</span>'
+?>
+<p><?=$this->RgbText->redString($aTag . $msg) ?></p>
+
+
+リスト6-29
+<?php echo $this->element('SampleBanner'); ?>
+
+
+リスト6-30
+public function index(){
+	$this->Flash->set('クリックすると消えます。');
+}
+
+
+リスト6-31
+<h1>サンプル見出し</h1>
+<p>これはサンプルページです。</p>
+
+
+リスト6-32
+<?= $this->Flash->render() ?>
+
+
+リスト6-33
+public function index(){
+	$this->Flash->success('成功しました！',['element'=>'flash']);
+	$this->Flash->error('失敗です...',['element'=>'flash']);
+}
+
+
+リスト6-34
+<style>
+div.flashInfo {
+	text-align:right;
+	font-size:16pt;
+    font-weight: bold;
+    background-color: #60a060;
+    color: white;
+}
+</style>
+<div class="message flashInfo" 
+	onclick="this.classList.add('hidden');">
+	<?= h($message) ?></div>
+
+
+リスト6-35
+public function index(){
+	$this->Flash->info('infoメッセージを表示します。');
+}
+
+
+リスト6-36
+public function index(){
+	$this->Flash->set('メッセージを表示します。',
+		[
+			'element' => 'info',
+			'key'=>'info'
+		]
+	);
+}
+
+
+リスト6-37
+<h1>サンプル見出し</h1>
+
+<p>これはサンプルページです。</p>
+
+<div><?=$this->Flash->render('info') ?></div>
+
+
+リスト6-38
+parent::initialize(); $this->loadComponent('Csrf');
+
+
+リスト6-39
+<h1>サンプル見出し</h1>
+
+<p>これはサンプルページです。</p>
+
+<?=$this->Form->create() ?>
+	<fieldset>
+		<?=$this->Form->text("name") ?>
+		<?=$this->Form->password("password") ?>
+	</fieldset>
+	<?=$this->Form->button("送信") ?>
+<?=$this->Form->end() ?>
+
+
+リスト6-40
+public function initialize(){
+	parent::initialize(); 
+	$this->loadComponent('Csrf');
+}
+
+public function index(){
+	if ($this->request->isPost()){
+		if (!empty($this->request->data['name']) && 
+				!empty($this->request->data['password'])){
+			$this->Flash->success('OK!');
+		} else {
+			$this->Flash->error('bad...');
+		}
+	} else {
+		$this->Flash->info('please input form:');
+	}
+}
+
+
+リスト6-41
+public function beforeFilter(Event $event) {
+	$this->eventManager()->off($this->Csrf);
+}
+
+
+リスト6-42
+CREATE TABLE `users` (
+	`id`	INTEGER PRIMARY KEY AUTOINCREMENT,
+	`username`	VARCHAR(50),
+	`password`	VARCHAR(255),
+	`role`	VARCHAR(20),
+	`created`	DATETIME DEFAULT NULL,
+	`modified`	DATETIME DEFAULT NULL
+);
+
+
+リスト6-43
+// use Cake\Auth\DefaultPasswordHasher; を追加
+
+protected function _setPassword($password){
+	return (new DefaultPasswordHasher)->hash($password);
+}
+
+
+リスト6-44
+'Security' => [
+	'salt' => env('SECURITY_SALT', '……ランダムな文字列……'),
+],
+
+
+リスト6-45
+public function initialize(){
+	parent::initialize();
+
+	$this->loadComponent('RequestHandler');
+	$this->loadComponent('Flash');
+
+	$this->loadComponent('Auth', [
+		'authorize' => ['Controller'],
+		'authenticate' => [
+			'Form' => [
+				'fields' => [
+					'username' => 'username',
+					'password' => 'password'
+				]
+			]
+		],
+		'loginRedirect' => [
+			'controller' => 'Users',
+			'action' => 'index'
+		],
+		'logoutRedirect' => [
+			'controller' => 'Users',
+			'action' => 'login',
+		],
+		'authError' => 'ログインしてください。',
+	]);
+}
+
+
+リスト6-46
+<div class="users form">
+<?= $this->Flash->render('auth') ?>
+<?= $this->Form->create() ?>
+	<fieldset>
+		<legend>アカウント名とパスワードを入力ください。</legend>
+		<?= $this->Form->input('username') ?>
+		<?= $this->Form->input('password') ?>
+	</fieldset>
+<?= $this->Form->button(__('送信')); ?>
+<?= $this->Form->end() ?>
+</div>
+
+
+リスト6-47
+function login(){
+	if($this->request->isPost()) {
+		$user = $this->Auth->identify();
+		if(!empty($user)){
+			$this->Auth->setUser($user);
+			return $this->redirect($this->Auth->redirectUrl());
+		}
+		$this->Flash->error('ユーザー名かパスワードが間違っています。');
+	}
+}
+
+
+リスト6-48
+public function logout() {
+	$this->request->session()->destroy();
+	return $this->redirect($this->Auth->logout());
+}
+
+
+リスト6-49
+public function beforeFilter(Event $event) {
+	parent::beforeFilter($event);
+	$this->Auth->allow(['add', 'login']);
+}
+
+
+リスト6-50
+public function isAuthorized($user = null){
+	$action = $this->request->params['action'];
+
+	if (in_array($action, ['index','view'])){
+		return true;
+	}
+	if($user['role'] === 'admin'){
+	   return true;
+	}
+	if($user['role'] === 'user'){
+	   return true;
+	}
+	return false;
+}
+
+
+リスト6-51
+public function isAuthorized($user = null){
+	return false;
+}
+
+
+リスト6-52
+public function isAuthorized($user = null){
+	if (in_array($action, [ アクション1, アクション2, …… ])){
+		return true;
+	}
+	return 	false;
+}
+
+
+リスト6-53
+public function isAuthorized($user = null){
+	if($user['role'] === 'admin'){
+	   return true;
+	}
+	if (in_array($action, [ アクション ])){
+		return true;
+	}
+	return 	false;
+}
+
+
+リスト6-54
+<?php
+namespace App\Controller;
+
+use Cake\Event\Event;
+use Cake\Network\Exception\InvalidCsrfTokenException;
+
+class HelloController extends AppController {
+
+	public function initialize() {
+		parent::initialize();
+		$this->loadComponent('Cookie');
+		$this->Cookie->config('path', '/');
+		$this->Cookie->config('domain', 'localhost');
+		$this->Cookie->config('expires', 0);
+		$this->Cookie->config('secure', false);
+		$this->Cookie->config('httpOnly', true);
+		$this->Cookie->config('encryption', false);
+   }
+
+	public function index(){
+		$data = $this->Cookie->read('mykey');
+		$this->set('data',$data);
+ 	}
+		
+	public function write(){
+		$val = $this->request->query['val'];
+		$this->Cookie->write('mykey',$val);
+		$this->redirect(['action' => 'index']);
+	}
+}
+
+
+リスト6-55――index.ctp
+<h1>cookie sample</h1>
+<p>cookie: <?=$data ?></p>
+
+
+リスト6-56
+public function beforeFilter(Event $e){
+	$this->Security->config('blackHoleCallback', 'error');
+	……セキュリティの設定……
+}
+
+public function error(){
+	echo "<html><head><title>ERROR</title></head>";
+	echo '<bodystyle="background-color:black;color:white">
+	<h1>SECURITY ERROR!!!</h1></body></html>';
+	exit;
+}
+
+
+リスト6-57
+<?php
+namespace App\Controller\Component;
+
+use Cake\Controller\Component;
+
+class DataArrayComponent extends Component {
+	public $name = "DataArray";
+	
+	public function getMergedArray($data){
+		$arr = [];
+		foreach ($data as $obj){
+			array_push($arr,$obj->toArray());
+		}
+		return $arr;
+	}
+	
+}
+
+
+リスト6-58
+<?php
+namespace App\Controller;
+
+use Cake\ORM\TableRegistry;
+
+class BoardsController extends AppController {
+	private $people;
+	
+	public $paginate = [
+		'limit' => 5,
+		'order' => [
+			'id' => 'DESC'
+		],
+		'contain' => ['People']
+	];
+
+	public function initialize(){
+		parent::initialize();
+		$this->people = TableRegistry::get('People');
+		$this->loadComponent('Paginator');
+		$this->loadComponent('RequestHandler');
+		$this->loadComponent('DataArray');
+	}
+
+	public function index(){
+		$data = $this->paginate($this->Boards); // ページネーション利用
+		//$data = $this->Boards->find('all'); // 通常のfind利用
+		$this->set('data',$this->DataArray->getMergedArray($data));
+	}
+	
+}
+
+
+リスト6-59
+<table>
+<tr>
+	<th>id</th>
+	<th>name</th>
+	<th>title</th>
+	<th>content</th>
+</tr>
+
+<?php foreach ($data as $arr): ?>
+<tr>
+	<td><?=$arr['id'] ?></td>
+	<td><?=$arr['person']['name'] ?></td>
+	<td><?=$arr['title'] ?></td>
+	<td><?=$arr['content'] ?></td>
+</tr>
+
+<?php endforeach; ?>
+</table>
+
+
+リスト6-60
+<?php
+namespace App\Controller\Component;
+
+use Cake\Controller\Component;
+use Cake\ORM\TableRegistry;
+
+class DataArrayComponent extends Component {
+	public $name = "DataArray";
+	public $controller;
+
+	public function initialize(array $config){
+		parent::initialize($config);
+		$this->controller = $this->_registry->getController();
+	}
+
+	public function getMergedArray($tablename){
+		$table = TableRegistry::get($tablename);
+		$data = $table->find('all');
+
+		$arr = [];
+		foreach ($data as $obj){
+			array_push($arr,$obj->toArray());
+		}
+		$this->controller->set('marged',$arr);
+	}
+	
+}
+
+
+リスト6-61
+<h1>掲示板</h1>
+<p><?=$this->Html->link(
+	'※投稿する',
+	['action' => 'add']
+) ?></p>
+
+<div>
+<table>
+<?php $flg = true; ?>
+<?php foreach ($marged as $arr): ?>
+<?php if ($flg){ ?>
+<tr>
+<?php foreach ($arr as $key=>$item): ?>
+	<th><?=$key ?></th>
+<?php endforeach; ?>
+</tr>
+<?php $flg = false; } ?>
+<tr>
+	<?php foreach ($arr as $item): ?>
+	<td><?=$item ?></td>
+	<?php endforeach; ?>
+</tr>
+
+<?php endforeach; ?>
+</table>
+</div>
+
+<p><?=$this->Html->link(
+	'※一覧に戻る',
+	['action' => 'index']
+) ?></p>
+
+
+リスト6-62
+public function index(){
+	$this->set('data',$this->DataArray->getMergedArray('boards'));
+}
+
+
+リスト6-63――MySQL
+CREATE TABLE `mydata`.`next_boards` (
+	`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+	`parent_id` INT NOT NULL DEFAULT '0',
+	`person_id` INT NOT NULL ,
+	`title` VARCHAR( 255 ) NOT NULL ,
+	`content` VARCHAR( 255 ) NOT NULL ,
+	`lft` INT NOT NULL ,
+	`rght` INT NOT NULL
+) DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+リスト6-64――SQLite
+CREATE TABLE `next_boards` (
+	`id`	INTEGER PRIMARY KEY AUTOINCREMENT,
+	`parent_id`	INT NOT NULL,
+	`person_id`	INT NOT NULL,
+	`title`	VARCHAR(255) NOT NULL,
+	`content`	VARCHAR(255) NOT NULL,
+	`lft`	INT NOT NULL,
+	`rght`	INT NOT NULL
+);
+
+
+リスト6-65
+<?php
+namespace App\Model\Table;
+
+use Cake\ORM\Query;
+use Cake\ORM\RulesChecker;
+use Cake\ORM\Table;
+use Cake\Validation\Validator;
+
+class NextBoardsTable extends Table {
+
+	public function initialize(array $config) {
+		parent::initialize($config);
+
+		$this->addBehavior('Tree'); // ●
+
+		$this->belongsTo('People');
+	}
+
+	public function validationDefault(Validator $validator) {
+		$validator
+			->integer('id')
+			->requirePresence('title')
+			->requirePresence('parent_id')
+			->requirePresence('person_id')
+			->notEmpty('title')
+			->requirePresence('content')
+			->notEmpty('content');
+
+		return $validator;
+	}
+
+	public function buildRules(RulesChecker $rules) {
+		 $rules->add($rules->existsIn(['person_id'], 'People'));
+		return $rules;
+	}
+}
+
+
+リスト6-66――NextBoardsController/addメソッド
+public function add() {
+	$nextBoard = $this->NextBoards->newEntity();
+	if ($this->request->is('post')) {
+		$nextBoard = $this->NextBoards->
+			patchEntity($nextBoard, $this->request->data);
+		if ($this->NextBoards->save($nextBoard)) {
+			$this->Flash->success(
+			__('The next board has been saved.'));
+
+			return $this->redirect(['action' => 'index']);
+		} else {
+			$this->Flash->error(
+			__('The next board could not be saved. Please, try again.'));
+		}
+	}
+	$people = $this->NextBoards->People->find('list', ['limit' => 200]);
+	$this->set('people',$people);
+	$this->set('nextBoard',$nextBoard);
+}
+
+
+リスト6-67――add.ctp
+<nav class="large-3 medium-4 columns" id="actions-sidebar">
+	<ul class="side-nav">
+		<li class="heading"><?= __('Actions') ?></li>
+		<li><?= $this->Html->link(__('List Next Boards'), 
+			['action' => 'index']) ?></li>
+		<li><?= $this->Html->link(__('List People'), 
+			['controller' => 'People', 'action' => 'index']) ?></li>
+		<li><?= $this->Html->link(__('New Person'), 
+			['controller' => 'People', 'action' => 'add']) ?></li>
+	</ul>
+</nav>
+<div class="nextBoards form large-9 medium-8 columns content">
+	<?= $this->Form->create($nextBoard) ?>
+	<fieldset>
+		<legend><?= __('Add Next Board') ?></legend>
+		<?php
+			echo $this->Form->text('parent_id');
+			echo $this->Form->input('person_id', ['options' => $people]);
+			echo $this->Form->input('title');
+			echo $this->Form->input('content');
+		?>
+	</fieldset>
+	<?= $this->Form->button(__('Submit')) ?>
+	<?= $this->Form->end() ?>
+</div>
+
+
+リスト6-68
+public function show($id = null){
+	if (empty($id)){
+		$this->getTreeBoard(0);
+	} else {
+		$this->getTreeBoard($id);
+	}
+}
+
+public function getTreeBoard($id) {
+	if ($id != 0) {
+		$data = $this->NextBoards
+			->find()
+			->where(['NextBoards.id' => $id])
+			->contain(['People']);
+		$this->set('data', $data);
+		if (!empty($data)) {
+			$child = $this->NextBoards
+				->find('children',['for' => $id],false)
+				->find('threaded')
+				->contain(['People']);
+			$this->set('child', $child);
+		}
+	} else {
+		$query = $this->NextBoards->find('treeList', [
+			'keyPath' => 'id',
+			'valuePath' => 'title',
+			'spacer' => '　　'
+		]);
+		$this->set('query', $query);
+		$child = $this->NextBoards
+			->find()
+			->where(['parent_id' => 0])
+			->contain(['People']);
+		$this->set('child', $child);
+	}
+}
+
+
+リスト6-69
+<h1>掲示板</h1>
+<br /><a href="/cake3app/next_boards/index">※一覧に戻る</a><br />
+<pre>
+<?php if (!empty($query)){
+	foreach($query as $key => $val){
+		echo "{$val}[{$key}]\n";
+	}
+} ?>
+</pre>
+<p>
+<div>※トピック</div>
+<table>
+<?php
+if (!empty($data)){
+	echo "<tr><th>ID</th><th>NAME</th><th>TITLE</th><th>CONTENT</th></tr>";
+	foreach($data as $rec){
+		echo "<tr><td>{$rec->id}</td>";
+		echo "<td>{$rec->person->name}</td>";
+		echo "<td>{$rec->title}</td>";
+		echo "<td>{$rec->content}</td></tr>";
+	}
+} else {
+	echo "<tr><th>※トピックはありません</th></tr>";
+}
+?>
+</table>
+</p>
+<p>
+<div>※トピックへの投稿</div>
+<table>
+<?php
+if (!empty($child)){
+	echo "<tr><th>ID</th><th>NAME</th><th>TITLE</th></tr>";
+	foreach($child as $rec){
+		echo "<tr><td><a href=\"/next-boards/show/{$rec->id}\">{$rec->id}</a></td>";
+		echo "<td>{$rec->person->name}</td>";
+		echo "<td>{$rec->title}</td></tr>";
+	}
+}
+
+?>
+</table>
+
+
+リスト6-70
+CREATE TABLE `i18n` (
+	`id`	INTEGER PRIMARY KEY AUTOINCREMENT,
+	`locale`	varchar(6) NOT NULL,
+	`model`	varchar(255) NOT NULL,
+	`foreign_key`	int(10) NOT NULL,
+	`field`	varchar(255) NOT NULL,
+	`content`	text
+);
+
+
+リスト6-71――Boardの修正
+<?php
+namespace App\Model\Entity;
+
+use Cake\ORM\Entity;
+use Cake\ORM\Behavior\Translate\TranslateTrait; // ●追加
+
+class Board extends Entity {
+    
+	use TranslateTrait; // ●追加
+
+	……以下略……
+
+
+リスト6-72――Personの修正
+<?php
+namespace App\Model\Entity;
+
+use Cake\ORM\Entity;
+use Cake\ORM\Behavior\Translate\TranslateTrait; // ●追加
+
+class Person extends Entity {
+
+	use TranslateTrait; // ●追加
+
+	……以下略……
+
+
+リスト6-73――BoardsTableの修正
+public function initialize(array $config){
+	$this->belongsTo('People');
+	$this->addBehavior('Translate', ['fields' => ['title']]); // ●追加
+}
+
+
+リスト6-74――PeopleTableの修正
+public function initialize(array $config){
+	$this->hasMany('Boards');
+	$this->addBehavior('Translate', ['fields' => ['name']]); // ●追加
+}
+
+
+リスト6-75
+public function beforeFilter(Event $event){
+	parent::beforeFilter($event);
+	I18n::locale('en'); // ●英語に設定
+}
+
+
+リスト6-76――BoardsController.phpのindexメソッド
+public function index(){
+	$data = $this->paginate($this->Boards);
+	$this->set(compact('data'));
+}
+
+
+リスト6-77――/Boards/index.ctp
+<h1>掲示板</h1>
+<p><?=$this->Html->link(
+    '※投稿する',
+    ['action' => 'add']
+) ?></p>
+
+<div>
+<table>
+<tr>
+	<th>id</th>
+	<th>name</th>
+	<th>title</th>
+</tr>
+
+<?php foreach ($data as $obj): ?>
+<?=$this->Html->tableCells(
+	[
+		$obj['id'],
+		$obj['person']['name'],
+		$obj['title']
+	],
+	['style'=>'color:#000066; background-color: #CCCCFF'],
+	['style'=>'color:#006600; background-color: #EEFFEE'],
+	false, true) ?>
+<?php endforeach; ?>
+</table>
+</div>
+
+<p><?=$this->Html->link(
+    '※一覧に戻る',
+    ['action' => 'index']
+) ?></p>
+
+
+リスト6-78――boardsテーブルのtitle用データ
+INSERT INTO `i18n` VALUES (1,'en','Boards',1,'title','english title.');
+INSERT INTO `i18n` VALUES (2,'ja','Boards',1,'title','日本語タイトル');
+INSERT INTO `i18n` VALUES (3,'en','Boards',2,'title','Hello!');
+INSERT INTO `i18n` VALUES (4,'ja','Boards',2,'title','こんにちは！');
+INSERT INTO `i18n` VALUES (5,'en','Boards',3,'title','Hi!');
+INSERT INTO `i18n` VALUES (6,'ja','Boards',3,'title','ハーイ！');
+
+
+リスト6-79――peopleテーブルのname用データ
+INSERT INTO `i18n` VALUES (7,'en','People',1,'name','tuyano');
+INSERT INTO `i18n` VALUES (8,'ja','People',1,'name','つやの');
+INSERT INTO `i18n` VALUES (9,'en','People',2,'name','hanako');
+INSERT INTO `i18n` VALUES (10,'ja','People',2,'name','はなこ');
+INSERT INTO `i18n` VALUES (11,'en','People',3,'name','sachiko');
+INSERT INTO `i18n` VALUES (12,'ja','People',3,'name','さちこ');
+
+
+リスト6-80
+<?php
+namespace App\Model\Behavior;
+
+use Cake\ORM\Behavior;
+use Cake\ORM\Table;
+
+class SuperTableBehavior extends Behavior {
+	
+	public function initialize(array $config) {
+	}
+
+	public function anyData(){
+		$count = $this->_table->find()->count();
+		$n = mt_rand(0,$count - 1);
+		$data = $this->_table->find()->offset($n)->first();
+		return $data;
+	}
+	
+}
+
+
+リスト6-81
+public function initialize(array $config){
+	$this->belongsTo('People');
+	$this->addBehavior('SuperTable');
+}
+
+
+リスト6-82――HelloControllerの修正
+// use Cake\ORM\TableRegistry; // 追記する
+
+public function initialize() {
+	parent::initialize();
+	$this->boards = TableRegistry::get('Boards');
+}
+
+public function index(){
+	$data = $this->boards->anyData();
+	$this->set('data',$data);
+}
+
+
+リスト6-83――index.ctpに追記
+<pre><?php print_r($data->toArray()) ?></pre>
+
+
+リスト6-84
+<?php
+namespace App\Model\Behavior;
+
+use Cake\ORM\Behavior;
+use Cake\ORM\Table;
+use Cake\ORM\Query;
+
+class SuperTableBehavior extends Behavior {
+
+	public function initialize(array $config) {
+	}
+
+	public function anyData(){
+		……変更ないため省略……
+	}
+	
+	// ●追加したメソッド
+	public function findSomething(Query $query, array $options) {
+		$count= $query
+			->where(["{$options['field']} like "=>$options['value']])
+			->count();
+		$n = mt_rand(0,$count - 1);
+		$data= $query
+			->where(["{$options['field']} like "=>$options['value']])
+			->offset($n)
+			->first();
+		return $data;
+	}
+}
+
+
+リスト6-85
+public function index(){
+	$data = $this->boards
+		->find('something',['field'=>'title','value'=>'%hello%']);
+	$this->set('data',$data);
+}
+
+
+リスト7-1
+Plugin::routes();
+
+
+リスト7-2
+CREATE TABLE "personal_datum" ( 
+	`id`	INTEGER PRIMARY KEY AUTOINCREMENT, 
+	`username`	TEXT NOT NULL UNIQUE, 
+	`email`	TEXT, 
+	`tel`	TEXT, 
+	`address`	TEXT, 
+	`comment`	TEXT 
+);
+
+
+リスト7-3――Entity/PersonalData.php
+<?php
+namespace PersonalDatum\Model\Entity;
+
+use Cake\ORM\Entity;
+
+class PersonalData extends Entity {
+
+	protected $_accessible = [
+		'*' => true,
+		'id' => false
+	];
+}
+
+
+リスト7-4――Table/PersonalDatumTable.php
+<?php
+namespace PersonalDatum\Model\Table;
+
+use Cake\ORM\Query;
+use Cake\ORM\RulesChecker;
+use Cake\ORM\Table;
+use Cake\Validation\Validator;
+
+class PersonalDatumTable extends Table {
+
+	public function initialize(array $config) {
+		parent::initialize($config);
+	}
+
+	public function validationDefault(Validator $validator) {
+		$validator
+			->integer('id')
+			->allowEmpty('id', 'create');
+
+		$validator
+			->allowEmpty('name');
+
+		return $validator;
+	}
+}
+
+
+リスト7-5
+<?php
+namespace PersonalDatum\Controller;
+
+use Cake\Event\Event;
+use Cake\Network\Exception\InvalidCsrfTokenException;
+
+use Cake\ORM\TableRegistry;
+
+class PersonalDatumController extends AppController {
+
+	public function index() {
+		$data = $this->PersonalDatum->find('all');
+		$this->set('data',$data);
+	}
+}
+
+
+リスト7-6
+<?php foreach($data as $obj): ?>
+<pre>
+<?php print_r($obj->toArray()); ?>
+</pre>
+<?php endforeach; ?>
+
+
+リスト7-7
+Plugin::load('PersonalDatum', ['bootstrap' => false, 'routes' => true]);
+
+
+リスト7-8
+<?php
+namespace PersonalDatum\Controller\Component;
+
+use Cake\Controller\Component;
+use Cake\ORM\TableRegistry;
+
+class PersonalDataInfoComponent extends Component {
+	public $name = "PersonalDataInfo";
+	
+	public function getByName($name){
+		$table = TableRegistry::get("PersonalDatum");
+		$data = $table->findByUsername($name)->first();
+		return $data;
+	}
+}
+
+
+リスト7-9
+<?php
+namespace App\Controller;
+
+use Cake\Event\Event;
+
+class HelloController extends AppController {
+
+	public function initialize() {
+		parent::initialize();
+		$this->loadComponent('PersonalDatum.PersonalDataInfo');
+	}
+
+	public function index(){
+		$data = $this->PersonalDataInfo->getByName("tuyano"); 
+		$this->set('data',$data);
+	}
+
+}
+
+
+リスト7-10
+<h1>Behavior sample</h1>
+<style>
+span.bold {
+	color:#66a; font-weight:bold; font-size:smaller;
+}
+div.box {
+	 border:1px solid #ddd;
+	 margin:5px; padding:5px;
+}
+</style>
+<p>※<?=$data->username ?> の情報</p>
+<ul>
+<li><span class="bold">NAME:</span> <?=$data->username ?></li>
+<li><span class="bold">MAIL:</span> <?=$data->mail ?></li>
+<li><span class="bold">TEL :</span> <?=$data->tel ?></li>
+</ul>
+<div class="box">
+	<span class="bold">ADDRESS:</span><br>
+	<?=$data->address ?></div>
+<div class="box">
+	<span class="bold">COMMENT:</span><br>
+	<?=$data->comment ?></div>
+
+
+リスト7-11
+<?php
+namespace PersonalDatum\View\Helper;
+
+use Cake\View\Helper;
+
+class PersonalDataInfoHelper extends Helper {
+	public $helpers = ['Html'];
+
+	public function initialize(array $config) {
+		parent::initialize($config);
+	}
+
+	public function showPersonalDataInfo($data){
+		$result = '<table style="width:300px;font-size:9pt;">';
+		$result .= "<tr><th>OWNER:</th><td>" . $data->username . "</td></tr>";
+		$result .= "<tr><th>EMAIL:</th><td>" . $data->email . "</td></tr>";
+		$result .= "<tr><th>TEL:</th><td>" . $data->tel . "</td></tr>";
+		$result .= "<tr><th>ADDRESS:</th><td>" . $data->address . "</td></tr>";
+		$result .= "</table>";
+		return $result;
+	}
+	
+}
+
+
+リスト7-12
+$this->loadHelper('PersonalDatum.PersonalDataInfo');
+
+
+リスト7-13
+<p>※<?=$data->username ?> の情報</p>
+<?=$this->PersonalDataInfo->showPersonalDataInfo($data); ?>
+
+
+リスト7-14
+<?php
+namespace PersonalDatum\Model\Behavior;
+
+use Cake\ORM\Behavior;
+use Cake\ORM\Table;
+use Cake\ORM\Query;
+
+class ByNumberBehavior extends Behavior {
+	
+	public function initialize(array $config) {
+	}
+
+	public function getByNumber($n) {
+		$data = $this->_table->find()
+			->offset($n)->first();
+		return $data;
+	}
+	
+}
+
+
+リスト7-15
+public function initialize(array $config) {
+	parent::initialize($config);
+	$this->addBehavior('PersonalDatum.ByNumber');
+}
+
+
+リスト7-16
+public function initialize() {
+	parent::initialize();
+	$this->pd = TableRegistry::get('PersonalDatum.PersonalDatum');
+	$this->loadComponent('PersonalDatum.PersonalDataInfo');
+}
+
+public function index($n = 0){
+	$data = $this->pd->getByNumber($n);
+	$this->set('data',$data);
+}
+
+
+リスト7-17
+<p>※<?=$data->username ?> の情報</p>
+<pre><?php print_r($data->toArray()); ?></pre>
+
+
+リスト7-18
+<?php
+namespace App\Shell;
+
+use Cake\Console\ConsoleOptionParser;
+use Cake\Console\Shell;
+use Cake\Log\Log;
+
+class MyCmdShell extends Shell {
+
+	public function main(){
+		$this->out("this is MyCmd Shell.");
+	}
+}
+
+
+リスト7-19
+public function main($n){
+	$res = 0;
+	for($i = 1;$i <= $n;$i++){
+		$res += $i;
+	}
+	$this->out("1から{$n}までの合計: " . $res);
+}
+
+
+リスト7-20
+public function main(...$num){
+	$res = 0;
+	foreach($num as $n){
+		$res += $n;
+	}
+	$this->out("合計: " . $res);
+}
+
+
+リスト7-21
+<?php
+namespace App\Shell;
+
+use Cake\Console\ConsoleOptionParser;
+use Cake\Console\Shell;
+use Cake\Log\Log;
+use Cake\ORM\TableRegistry;
+
+class MyCmdShell extends Shell {
+
+	public function initialize() {
+		parent::initialize();
+		$this->loadModel('Boards');
+	}
+
+	public function main($num){
+		$data = $this->Boards->get($num);
+		$this->out(print_r($data->toArray()));
+	}
+
+}
+
+
+リスト7-22
+<?php
+namespace App\Shell;
+
+use Cake\Console\ConsoleOptionParser;
+use Cake\Console\Shell;
+use Cake\Log\Log;
+
+class MyCmdShell extends Shell {
+
+	public function initialize() {
+		parent::initialize();
+	}
+
+	public function main(){
+		$this->out('※以下のテーブルが利用できます。');
+		$this->out('[B]oards');
+		$this->out('[P]eople');
+		$t = $this->in('テーブルを選択：', ['B', 'P'], 'B');
+		$t = strtoupper($t);
+		$table = null;
+		$id = $this->in('ID番号を入力：', null, 1);
+		$data = null;
+		switch($t){
+			case 'B':
+				$table = 'Boards';
+				$this->loadModel('Boards');
+				$data = $this->Boards->get($id);
+				break;
+			case 'P':
+				$table = 'People';
+				$this->loadModel('People');
+				$data = $this->People->get($id);
+				break;
+			default:
+				$this->info("can't access Database...");
+				exit();
+		}
+		$this->out();
+		$this->out("※{$table} id={$id} のレコード：");
+		$this->out(print_r($data->toArray()));
+	}
+
+}
+
+
+リスト7-23
+<?php
+namespace App\Shell;
+
+use Cake\Console\ConsoleOutput;
+use Cake\Console\ConsoleOptionParser;
+use Cake\Console\Shell;
+use Cake\Log\Log;
+
+class MyCmdShell extends Shell {
+
+	public function initialize() {
+		parent::initialize();
+	}
+
+	public function main(){
+		$this->out('※以下のテーブルが利用できます。');
+		$this->out('[B]oards');
+		$this->out('[P]eople');
+		$t = $this->in('テーブルを選択：', ['B', 'P'], 'B');
+		$t = strtoupper($t);
+		$n = $this->in('ID番号を入力：', null, 1);
+		switch($t){
+			case 'B':
+				$this->boards($n);
+				break;
+			case 'P':
+				$this->people($n);
+				break;
+			default:
+				$this->info("can't access Database...");
+				exit();
+		}
+	}
+
+	public function boards($id){
+		$this->loadModel('Boards');
+		$data = $this->Boards->get($id);
+		$this->out("※Boards id={$id}");
+		$this->out(print_r($data->toArray()));
+	}
+
+	public function people($id){
+		$this->loadModel('People');
+		$data = $this->People->get($id);
+		$this->out("※People id={$id}");
+		$this->out(print_r($data->toArray()));
+	}
+
+}
+
+
+リスト7-24
+<?php
+namespace App\Shell\Task;
+
+use Cake\Console\ConsoleOutput;
+use Cake\Console\ConsoleOptionParser;
+use Cake\Console\Shell;
+use Cake\Log\Log;
+use Cake\ORM\TableRegistry;
+
+class DbTask extends Shell {
+
+	public function main(){
+		$this->out();
+		$this->out('***Db Task.***');
+	}
+
+	public function get($t, $id){
+		$table = TableRegistry::get($t);
+		$data = $table->get($id);
+		$this->out("「{$t}」テーブル id={$id} のレコード");
+		foreach($data->toArray() as $key=>$val){
+			$this->out("{$key}: {$val}");
+		}
+	}
+}
+
+
+リスト7-25
+<?php
+namespace App\Shell;
+
+use Cake\Console\ConsoleOutput;
+use Cake\Console\ConsoleOptionParser;
+use Cake\Console\Shell;
+use Cake\Log\Log;
+
+class MyCmdShell extends Shell {
+	public $tasks = ['Db'];
+
+	public function main(){
+		$this->out("※以下のテーブルが利用できます。");
+		$this->out('[B]oards');
+		$this->out('[P]eople');
+		$t = $this->in("テーブルを選択：", ['B', 'P'], 'B');
+		$t = strtoupper($t);
+		$table = null;
+		$id = $this->in('ID番号を入力：', null, 1);
+		$data = null;
+		switch($t){
+			case 'B':
+				$table = 'Boards';
+				break;
+			case 'P':
+				$table = 'People';
+				break;
+			default:
+				$this->info("can't access Database...");
+				exit();
+		}
+		$this->Db();
+		$this->Db->get($table, $id);
+	}
+
+}
+
+
+リスト7-26
+public function bh ($target) {
+	$this->out("※「bake {$target}」のヘルプを表示します。");
+	$this->dispatchShell('bake', $target, '-h');
+}
+
+
+リスト7-27
+<?php
+namespace App\Shell;
+
+use Cake\Console\ConsoleOutput;
+use Cake\Console\ConsoleOptionParser;
+use Cake\Console\Shell;
+use Cake\Log\Log;
+use Cake\ORM\TableRegistry;
+
+class MyCmdShell extends Shell {
+	public $tasks = ['Db'];
+
+	public function main($opt = null){
+		$this->out("※以下のテーブルが利用できます。");
+		$this->out('[B]oards');
+		$this->out('[P]eople');
+		$t = $this->in("テーブルを選択：", ['B', 'P'], 'B');
+		$t = strtoupper($t);
+		$table = null;
+		$id = $this->in('ID番号を入力：', null, 1);
+		$data = null;
+		switch($t){
+			case 'B':
+				$table = 'Boards';
+				break;
+			case 'P':
+				$table = 'People';
+				break;
+			default:
+				$this->info("can't access Database...");
+				exit();
+		}
+		$this->table($table,$id);
+	}
+
+	public function boards($id = null){
+		if ($id == null){
+			$n = $this->in('ID番号を入力：', null, 1);
+		} else {
+			$n = $id;
+		}
+		$this->table('boards',$id);
+	}
+
+	public function people($id = null){
+		if ($id == null){
+			$n = $this->in('ID番号を入力：', null, 1);
+		} else {
+			$n = $id;
+		}
+		$this->table('people',$id);
+	}
+
+	public function table($table,$id){
+		if ($this->params['db']){
+			$this->Db->main();
+			$this->Db->get($table, $id);
+		} else {
+			$data = TableRegistry::get($table)->get($id);
+			$this->out(print_r($data->toArray()));
+		}
+	}
+
+	public function getOptionParser() {
+		$parser = new ConsoleOptionParser('mycmd');
+		$parser->description(
+			"これは、サンプルで作成したシェルプログラムです。"
+		)->addArgument(
+			'boards $n', 
+			[
+				'help' => 'Boardsテーブルの利用。ID番号をつけて実行。',
+				'require' => false
+			]
+		)->addArgument(
+			'people $n', 
+			[
+				'help' => 'Peopleテーブルの利用。ID番号をつけて実行。',
+				'require' => false
+			]
+		)->addArgument(
+			'table $t $n', 
+			[
+				'help' => 'テーブル名とID番号をつけて実行。',
+				'require' => false
+			]
+		)->addOption(
+			'db',
+			 [
+				'short' => 'd',
+				'boolean' => true,
+				'help' => 'DbTaskを使います。'
+			]
+		)->epilog(
+			'※便利に使ってね！'
+		);
+		return $parser;
+	}
+
+}
+
+

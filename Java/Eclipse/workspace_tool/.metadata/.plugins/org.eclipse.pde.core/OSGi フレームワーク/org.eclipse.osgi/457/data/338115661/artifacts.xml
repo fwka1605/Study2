@@ -1,0 +1,1874 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
+  <properties size='1'>
+    <property name='p2.timestamp' value='1452068604030'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='179'>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.debug.ui.memory.traditional' version='1.3.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='154309'/>
+        <property name='download.size' value='154309'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.debug.ui.memory.traditional_1.3.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.debug.ui.memory.traditional_1.3.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.valgrind.memcheck' version='1.1.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='32356'/>
+        <property name='download.size' value='32356'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.valgrind.memcheck_1.1.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.valgrind.memcheck_1.1.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.profiling.docs' version='1.0.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='444789'/>
+        <property name='download.size' value='444789'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.profiling.docs_1.0.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.profiling.docs_1.0.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.changelog.core' version='2.8.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='116016'/>
+        <property name='download.size' value='116016'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.changelog.core_2.8.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.changelog.core_2.8.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.gdb' version='7.0.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='16905'/>
+        <property name='download.size' value='16905'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.gdb_7.0.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.gdb_7.0.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.cdt.autotools.core' version='2.0.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='11494'/>
+        <property name='download.size' value='11494'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.cdt.autotools.core_2.0.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.cdt.autotools.core_2.0.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.p2.edit' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='46297'/>
+        <property name='download.size' value='46297'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.p2.edit_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.p2.edit_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.tracecompass.common.core' version='1.1.0.201509141028'>
+      <properties size='2'>
+        <property name='artifact.size' value='19916'/>
+        <property name='download.size' value='19916'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.tracecompass.common.core_1.1.0.201509141028.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.tracecompass.common.core_1.1.0.201509141028.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.antlr.runtime' version='3.2.0.v201101311130'>
+      <properties size='2'>
+        <property name='artifact.size' value='213978'/>
+        <property name='download.size' value='213978'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.antlr.runtime_3.2.0.v201101311130.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.antlr.runtime_3.2.0.v201101311130.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.build.crossgcc' version='1.1.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='31218'/>
+        <property name='download.size' value='31218'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.build.crossgcc_1.1.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.build.crossgcc_1.1.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.launch.remote' version='2.4.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='93733'/>
+        <property name='download.size' value='93733'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.launch.remote_2.4.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.launch.remote_2.4.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.dataviewers' version='6.0.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='102916'/>
+        <property name='download.size' value='102916'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.dataviewers_6.0.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.dataviewers_6.0.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.valgrind.launch' version='3.0.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='79805'/>
+        <property name='download.size' value='79805'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.valgrind.launch_3.0.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.valgrind.launch_3.0.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.tracecompass.tmf.ctf' version='1.1.0.201509141028'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.tracecompass.tmf.ctf_1.1.0.201509141028/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.tracecompass.tmf.ctf_1.1.0.201509141028'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.cdt.libhover.glibc' version='1.2.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='494524'/>
+        <property name='download.size' value='494524'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.cdt.libhover.glibc_1.2.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.cdt.libhover.glibc_1.2.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.gprof.launch' version='1.1.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='26720'/>
+        <property name='download.size' value='26720'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.gprof.launch_1.1.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.gprof.launch_1.1.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.preferences' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='77204'/>
+        <property name='download.size' value='77204'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.preferences_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.preferences_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.rpm.core' version='2.2.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='51841'/>
+        <property name='download.size' value='51841'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.rpm.core_2.2.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.rpm.core_2.2.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.debug.application.doc' version='1.1.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='11411845'/>
+        <property name='download.size' value='11411845'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.debug.application.doc_1.1.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.debug.application.doc_1.1.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.setup.doc' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='2610848'/>
+        <property name='download.size' value='2610848'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.setup.doc_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.setup.doc_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.tracecompass.gdbtrace.ui' version='1.0.0.201509141028'>
+      <properties size='2'>
+        <property name='artifact.size' value='29304'/>
+        <property name='download.size' value='29304'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.tracecompass.gdbtrace.ui_1.0.0.201509141028.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.tracecompass.gdbtrace.ui_1.0.0.201509141028.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.doc.user' version='5.4.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='18823785'/>
+        <property name='download.size' value='18823785'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.doc.user_5.4.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.doc.user_5.4.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.launch.remote.source' version='2.4.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='44934'/>
+        <property name='download.size' value='44934'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.launch.remote.source_2.4.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.launch.remote.source_2.4.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.managedbuilder.gnu.ui' version='8.3.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='52221'/>
+        <property name='download.size' value='52221'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.managedbuilder.gnu.ui_8.3.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.managedbuilder.gnu.ui_8.3.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.workingsets' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='45869'/>
+        <property name='download.size' value='45869'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.workingsets_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.workingsets_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.swtchart' version='0.7.0.v201201201914'>
+      <properties size='2'>
+        <property name='artifact.size' value='111122'/>
+        <property name='download.size' value='111122'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.swtchart_0.7.0.v201201201914.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.swtchart_0.7.0.v201201201914.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.tracecompass.tmf.core' version='1.1.0.201509141028'>
+      <properties size='2'>
+        <property name='artifact.size' value='506562'/>
+        <property name='download.size' value='506562'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.tracecompass.tmf.core_1.1.0.201509141028.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.tracecompass.tmf.core_1.1.0.201509141028.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.cdt.build.crossgcc' version='8.8.0.201509131935'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.cdt.build.crossgcc_8.8.0.201509131935/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.cdt.build.crossgcc_8.8.0.201509131935'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.codan.core.cxx' version='3.3.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='74047'/>
+        <property name='download.size' value='74047'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.codan.core.cxx_3.3.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.codan.core.cxx_3.3.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.cdt.debug.ui.memory' version='8.8.0.201509131935'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.cdt.debug.ui.memory_8.8.0.201509131935/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.cdt.debug.ui.memory_8.8.0.201509131935'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.oomph.setup' version='1.2.0.v20150915-0926'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.oomph.setup_1.2.0.v20150915-0926/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.oomph.setup_1.2.0.v20150915-0926'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.cdt' version='8.8.0.201509131935'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.cdt_8.8.0.201509131935/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.cdt_8.8.0.201509131935'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.tracecompass.lttng2.kernel.ui' version='1.0.0.201509141028'>
+      <properties size='2'>
+        <property name='artifact.size' value='17096'/>
+        <property name='download.size' value='17096'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.tracecompass.lttng2.kernel.ui_1.0.0.201509141028.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.tracecompass.lttng2.kernel.ui_1.0.0.201509141028.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.gprof' version='5.0.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='95385'/>
+        <property name='download.size' value='95385'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.gprof_5.0.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.gprof_5.0.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.native.serial' version='1.0.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='120869'/>
+        <property name='download.size' value='120869'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.native.serial_1.0.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.native.serial_1.0.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.oomph.p2' version='1.2.0.v20150915-0926'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.oomph.p2_1.2.0.v20150915-0926/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.oomph.p2_1.2.0.v20150915-0926'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.codan.core' version='3.3.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='148215'/>
+        <property name='download.size' value='148215'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.codan.core_3.3.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.codan.core_3.3.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.linuxtools.cdt.libhover.feature' version='4.1.0.201509161915'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.linuxtools.cdt.libhover.feature_4.1.0.201509161915/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.linuxtools.cdt.libhover.feature_4.1.0.201509161915'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.ui' version='5.11.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='6121754'/>
+        <property name='download.size' value='6121754'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.ui_5.11.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.ui_5.11.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.linuxtools.gprof.feature' version='4.1.0.201509161915'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.linuxtools.gprof.feature_4.1.0.201509161915/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.linuxtools.gprof.feature_4.1.0.201509161915'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.tracecompass.analysis.os.linux.core' version='1.0.0.201509141028'>
+      <properties size='2'>
+        <property name='artifact.size' value='52436'/>
+        <property name='download.size' value='52436'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.tracecompass.analysis.os.linux.core_1.0.0.201509141028.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.tracecompass.analysis.os.linux.core_1.0.0.201509141028.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.debug.application' version='1.1.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.debug.application_1.1.0.201509131935/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.debug.application_1.1.0.201509131935'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.rpm.ui.editor.doc' version='1.0.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='1919728'/>
+        <property name='download.size' value='1919728'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.rpm.ui.editor.doc_1.0.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.rpm.ui.editor.doc_1.0.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.tracecompass.lttng2.ust.core' version='1.0.0.201509141028'>
+      <properties size='2'>
+        <property name='artifact.size' value='26747'/>
+        <property name='download.size' value='26747'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.tracecompass.lttng2.ust.core_1.0.0.201509141028.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.tracecompass.lttng2.ust.core_1.0.0.201509141028.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.cdt.libhover.library.docs' version='1.0.2.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='20801'/>
+        <property name='download.size' value='20801'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.cdt.libhover.library.docs_1.0.2.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.cdt.libhover.library.docs_1.0.2.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.remote.core' version='2.0.0.201508262001'>
+      <properties size='2'>
+        <property name='artifact.size' value='144659'/>
+        <property name='download.size' value='144659'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.remote.core_2.0.0.201508262001.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.remote.core_2.0.0.201508262001.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.cdt.debug.standalone' version='8.8.0.201509131935'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.cdt.debug.standalone_8.8.0.201509131935/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.cdt.debug.standalone_8.8.0.201509131935'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.tracecompass.lttng2.control.core' version='1.0.0.201509141028'>
+      <properties size='2'>
+        <property name='artifact.size' value='106525'/>
+        <property name='download.size' value='106525'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.tracecompass.lttng2.control.core_1.0.0.201509141028.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.tracecompass.lttng2.control.core_1.0.0.201509141028.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.rpm.rpmlint' version='1.0.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='60638'/>
+        <property name='download.size' value='60638'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.rpm.rpmlint_1.0.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.rpm.rpmlint_1.0.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.setup.p2' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='39727'/>
+        <property name='download.size' value='39727'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.setup.p2_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.setup.p2_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.rpm.createrepo' version='1.0.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='105101'/>
+        <property name='download.size' value='105101'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.rpm.createrepo_1.0.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.rpm.createrepo_1.0.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.tracecompass.tmf.ctf.core' version='1.0.0.201509141028'>
+      <properties size='2'>
+        <property name='artifact.size' value='59583'/>
+        <property name='download.size' value='59583'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.tracecompass.tmf.ctf.core_1.0.0.201509141028.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.tracecompass.tmf.ctf.core_1.0.0.201509141028.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.valgrind.doc' version='1.0.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='1279028'/>
+        <property name='download.size' value='1279028'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.valgrind.doc_1.0.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.valgrind.doc_1.0.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.jreinfo.ui' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='52344'/>
+        <property name='download.size' value='52344'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.jreinfo.ui_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.jreinfo.ui_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.cdt.gnu.dsf' version='8.8.0.201509131935'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.cdt.gnu.dsf_8.8.0.201509131935/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.cdt.gnu.dsf_8.8.0.201509131935'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.extractor.lib' version='1.1.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='23036'/>
+        <property name='download.size' value='23036'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.extractor.lib_1.1.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.extractor.lib_1.1.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.gcov.docs' version='1.0.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='311545'/>
+        <property name='download.size' value='311545'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.gcov.docs_1.0.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.gcov.docs_1.0.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.linuxtools.cdt.libhover.devhelp.feature' version='4.1.0.201509161915'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.linuxtools.cdt.libhover.devhelp.feature_4.1.0.201509161915/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.linuxtools.cdt.libhover.devhelp.feature_4.1.0.201509161915'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.tracecompass.doc.dev' version='1.0.0.201509141028'>
+      <properties size='2'>
+        <property name='artifact.size' value='2846895'/>
+        <property name='download.size' value='2846895'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.tracecompass.doc.dev_1.0.0.201509141028.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.tracecompass.doc.dev_1.0.0.201509141028.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.cdt.msw' version='8.8.0.201509131935'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.cdt.msw_8.8.0.201509131935/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.cdt.msw_8.8.0.201509131935'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.p2.ui' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='224151'/>
+        <property name='download.size' value='224151'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.p2.ui_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.p2.ui_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.msw.build' version='1.0.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='19639'/>
+        <property name='download.size' value='19639'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.msw.build_1.0.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.msw.build_1.0.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.launch' version='7.3.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='251961'/>
+        <property name='download.size' value='251961'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.launch_7.3.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.launch_7.3.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.cdt.launch.remote' version='8.8.0.201509131935'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.cdt.launch.remote_8.8.0.201509131935/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.cdt.launch.remote_8.8.0.201509131935'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.dataviewers.charts' version='6.0.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='40740'/>
+        <property name='download.size' value='40740'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.dataviewers.charts_6.0.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.dataviewers.charts_6.0.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.rpm.ui.editor' version='2.0.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='280471'/>
+        <property name='download.size' value='280471'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.rpm.ui.editor_2.0.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.rpm.ui.editor_2.0.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.dsf.gdb.ui' version='2.5.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='723813'/>
+        <property name='download.size' value='723813'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.dsf.gdb.ui_2.5.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.dsf.gdb.ui_2.5.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.dsf.gdb' version='4.8.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='1739751'/>
+        <property name='download.size' value='1739751'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.dsf.gdb_4.8.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.dsf.gdb_4.8.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.linuxtools.valgrind' version='4.1.0.201509161915'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.linuxtools.valgrind_4.1.0.201509161915/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.linuxtools.valgrind_4.1.0.201509161915'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.tracecompass.lttng2.control' version='1.1.0.201509141028'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.tracecompass.lttng2.control_1.1.0.201509141028/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.tracecompass.lttng2.control_1.1.0.201509141028'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.tracecompass.lttng2.kernel' version='1.1.0.201509141028'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.tracecompass.lttng2.kernel_1.1.0.201509141028/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.tracecompass.lttng2.kernel_1.1.0.201509141028'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.dsf.ui' version='2.5.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='1475661'/>
+        <property name='download.size' value='1475661'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.dsf.ui_2.5.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.dsf.ui_2.5.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.gprof.docs' version='1.0.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='442516'/>
+        <property name='download.size' value='442516'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.gprof.docs_1.0.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.gprof.docs_1.0.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.debug.ui.memory.memorybrowser' version='1.3.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='68243'/>
+        <property name='download.size' value='68243'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.debug.ui.memory.memorybrowser_1.3.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.debug.ui.memory.memorybrowser_1.3.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.codan.ui.cxx' version='3.2.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='27603'/>
+        <property name='download.size' value='27603'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.codan.ui.cxx_3.2.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.codan.ui.cxx_3.2.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.p2.core' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='171496'/>
+        <property name='download.size' value='171496'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.p2.core_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.p2.core_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.linuxtools.rpm' version='4.1.0.201509161915'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.linuxtools.rpm_4.1.0.201509161915/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.linuxtools.rpm_4.1.0.201509161915'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.setup.editor' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='258834'/>
+        <property name='download.size' value='258834'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.setup.editor_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.setup.editor_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.cdt.platform' version='8.8.0.201509131935'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.cdt.platform_8.8.0.201509131935/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.cdt.platform_8.8.0.201509131935'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.tracecompass.tmf.analysis.xml.ui' version='1.0.0.201509141028'>
+      <properties size='2'>
+        <property name='artifact.size' value='74896'/>
+        <property name='download.size' value='74896'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.tracecompass.tmf.analysis.xml.ui_1.0.0.201509141028.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.tracecompass.tmf.analysis.xml.ui_1.0.0.201509141028.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.remote' version='2.0.1.201508262001'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.remote_2.0.1.201508262001/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.remote_2.0.1.201508262001'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.cdt.gdb' version='8.8.0.201509131935'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.cdt.gdb_8.8.0.201509131935/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.cdt.gdb_8.8.0.201509131935'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.codan.ui' version='3.2.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='127510'/>
+        <property name='download.size' value='127510'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.codan.ui_3.2.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.codan.ui_3.2.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.managedbuilder.core' version='8.3.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='1341220'/>
+        <property name='download.size' value='1341220'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.managedbuilder.core_8.3.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.managedbuilder.core_8.3.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.cdt.mylyn' version='5.13.0.v20150625-2044'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.cdt.mylyn_5.13.0.v20150625-2044/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.cdt.mylyn_5.13.0.v20150625-2044'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.jreinfo.win32.x86_64' version='1.1.100.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='24156'/>
+        <property name='download.size' value='24156'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.jreinfo.win32.x86_64_1.1.100.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.jreinfo.win32.x86_64_1.1.100.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.tracecompass.tmf.remote.core' version='1.0.0.201509141028'>
+      <properties size='2'>
+        <property name='artifact.size' value='38458'/>
+        <property name='download.size' value='38458'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.tracecompass.tmf.remote.core_1.0.0.201509141028.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.tracecompass.tmf.remote.core_1.0.0.201509141028.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.tracecompass.ctf.parser' version='1.0.0.201509141028'>
+      <properties size='2'>
+        <property name='artifact.size' value='131742'/>
+        <property name='download.size' value='131742'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.tracecompass.ctf.parser_1.0.0.201509141028.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.tracecompass.ctf.parser_1.0.0.201509141028.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.debug.ui.memory.search' version='1.3.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='65335'/>
+        <property name='download.size' value='65335'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.debug.ui.memory.search_1.3.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.debug.ui.memory.search_1.3.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.binutils' version='5.0.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='47939'/>
+        <property name='download.size' value='47939'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.binutils_5.0.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.binutils_5.0.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.valgrind.massif' version='1.1.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='91482'/>
+        <property name='download.size' value='91482'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.valgrind.massif_1.1.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.valgrind.massif_1.1.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.remote.core' version='1.0.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='21023'/>
+        <property name='download.size' value='21023'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.remote.core_1.0.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.remote.core_1.0.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.valgrind.ui' version='2.0.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='46384'/>
+        <property name='download.size' value='46384'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.valgrind.ui_2.0.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.valgrind.ui_2.0.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.cdt.gnu.build' version='8.8.0.201509131935'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.cdt.gnu.build_8.8.0.201509131935/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.cdt.gnu.build_8.8.0.201509131935'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.setup.edit' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='139146'/>
+        <property name='download.size' value='139146'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.setup.edit_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.setup.edit_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.profiling.ui' version='3.1.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='34094'/>
+        <property name='download.size' value='34094'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.profiling.ui_3.1.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.profiling.ui_3.1.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.p2.doc' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='320227'/>
+        <property name='download.size' value='320227'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.p2.doc_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.p2.doc_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.rpm.ui' version='1.1.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='66649'/>
+        <property name='download.size' value='66649'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.rpm.ui_1.1.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.rpm.ui_1.1.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.make.ui' version='7.2.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='496582'/>
+        <property name='download.size' value='496582'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.make.ui_7.2.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.make.ui_7.2.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.valgrind.cachegrind' version='1.0.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='56648'/>
+        <property name='download.size' value='56648'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.valgrind.cachegrind_1.0.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.valgrind.cachegrind_1.0.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.tracecompass.ctf' version='1.1.0.201509141028'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.tracecompass.ctf_1.1.0.201509141028/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.tracecompass.ctf_1.1.0.201509141028'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.tracecompass.lttng2.ust.ui' version='1.0.0.201509141028'>
+      <properties size='2'>
+        <property name='artifact.size' value='22474'/>
+        <property name='download.size' value='22474'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.tracecompass.lttng2.ust.ui_1.0.0.201509141028.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.tracecompass.lttng2.ust.ui_1.0.0.201509141028.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.tracecompass.lttng2.kernel.core' version='1.0.0.201509141028'>
+      <properties size='2'>
+        <property name='artifact.size' value='59457'/>
+        <property name='download.size' value='59457'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.tracecompass.lttng2.kernel.core_1.0.0.201509141028.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.tracecompass.lttng2.kernel.core_1.0.0.201509141028.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.workingsets.edit' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='37205'/>
+        <property name='download.size' value='37205'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.workingsets.edit_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.workingsets.edit_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.debug.core' version='7.7.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='582348'/>
+        <property name='download.size' value='582348'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.debug.core_7.7.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.debug.core_7.7.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.gcov.launch' version='1.1.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='21211'/>
+        <property name='download.size' value='21211'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.gcov.launch_1.1.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.gcov.launch_1.1.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.tracecompass.tmf' version='1.1.0.201509141028'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.tracecompass.tmf_1.1.0.201509141028/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.tracecompass.tmf_1.1.0.201509141028'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.gcov.core' version='5.1.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='127718'/>
+        <property name='download.size' value='127718'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.gcov.core_5.1.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.gcov.core_5.1.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.cdt.libhover' version='1.2.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='51944'/>
+        <property name='download.size' value='51944'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.cdt.libhover_1.2.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.cdt.libhover_1.2.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.changelog.doc' version='2.7.1.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='737534'/>
+        <property name='download.size' value='737534'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.changelog.doc_2.7.1.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.changelog.doc_2.7.1.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.setup.core' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='182004'/>
+        <property name='download.size' value='182004'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.setup.core_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.setup.core_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.cdt.autotools' version='8.8.0.201509131935'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.cdt.autotools_8.8.0.201509131935/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.cdt.autotools_8.8.0.201509131935'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.remote.ui' version='2.0.0.201508262001'>
+      <properties size='2'>
+        <property name='artifact.size' value='155023'/>
+        <property name='download.size' value='155023'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.remote.ui_2.0.0.201508262001.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.remote.ui_2.0.0.201508262001.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.cdt.gnu.debug' version='8.8.0.201509131935'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.cdt.gnu.debug_8.8.0.201509131935/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.cdt.gnu.debug_8.8.0.201509131935'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.managedbuilder.ui' version='8.2.2.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='501232'/>
+        <property name='download.size' value='501232'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.managedbuilder.ui_8.2.2.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.managedbuilder.ui_8.2.2.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.codan.checkers.ui' version='3.2.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='33695'/>
+        <property name='download.size' value='33695'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.codan.checkers.ui_3.2.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.codan.checkers.ui_3.2.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.cdt.libhover.devhelp' version='1.1.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='57732'/>
+        <property name='download.size' value='57732'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.cdt.libhover.devhelp_1.1.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.cdt.libhover.devhelp_1.1.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.codan.checkers' version='3.2.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='91562'/>
+        <property name='download.size' value='91562'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.codan.checkers_3.2.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.codan.checkers_3.2.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.tracecompass.doc.user' version='1.1.0.201509141028'>
+      <properties size='2'>
+        <property name='artifact.size' value='6572384'/>
+        <property name='download.size' value='6572384'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.tracecompass.doc.user_1.1.0.201509141028.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.tracecompass.doc.user_1.1.0.201509141028.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt' version='8.8.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='38763'/>
+        <property name='download.size' value='38763'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt_8.8.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt_8.8.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.tracecompass.tmf.ui' version='1.1.0.201509141028'>
+      <properties size='2'>
+        <property name='artifact.size' value='2032318'/>
+        <property name='download.size' value='2032318'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.tracecompass.tmf.ui_1.1.0.201509141028.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.tracecompass.tmf.ui_1.1.0.201509141028.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.autotools.core' version='1.5.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='125907'/>
+        <property name='download.size' value='125907'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.autotools.core_1.5.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.autotools.core_1.5.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.valgrind.ui.editor' version='1.0.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='50892'/>
+        <property name='download.size' value='50892'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.valgrind.ui.editor_1.0.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.valgrind.ui.editor_1.0.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.dataviewers.piechart' version='2.0.1.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='18835'/>
+        <property name='download.size' value='18835'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.dataviewers.piechart_2.0.1.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.dataviewers.piechart_2.0.1.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.base.edit' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='56204'/>
+        <property name='download.size' value='56204'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.base.edit_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.base.edit_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.setup.ui' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='519929'/>
+        <property name='download.size' value='519929'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.setup.ui_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.setup.ui_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.remote.jsch.core' version='1.0.0.201508262001'>
+      <properties size='2'>
+        <property name='artifact.size' value='91884'/>
+        <property name='download.size' value='91884'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.remote.jsch.core_1.0.0.201508262001.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.remote.jsch.core_1.0.0.201508262001.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.profiling.launch' version='3.2.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='146014'/>
+        <property name='download.size' value='146014'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.profiling.launch_3.2.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.profiling.launch_3.2.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.cyberneko.html' version='1.9.14.v201105210654'>
+      <properties size='2'>
+        <property name='artifact.size' value='134821'/>
+        <property name='download.size' value='134821'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.cyberneko.html_1.9.14.v201105210654.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.cyberneko.html_1.9.14.v201105210654.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.dsf' version='2.6.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='339543'/>
+        <property name='download.size' value='339543'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.dsf_2.6.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.dsf_2.6.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.p2' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='60983'/>
+        <property name='download.size' value='60983'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.p2_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.p2_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.remote.jsch.ui' version='1.0.0.201508262001'>
+      <properties size='2'>
+        <property name='artifact.size' value='46254'/>
+        <property name='download.size' value='46254'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.remote.jsch.ui_1.0.0.201508262001.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.remote.jsch.ui_1.0.0.201508262001.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.setup' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='260981'/>
+        <property name='download.size' value='260981'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.setup_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.setup_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.epp.package.cpp.feature' version='4.5.1.20150917-1200'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.epp.package.cpp.feature_4.5.1.20150917-1200/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.epp.package.cpp.feature_4.5.1.20150917-1200'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.oomph.setup.core' version='1.2.0.v20150915-0926'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.oomph.setup.core_1.2.0.v20150915-0926/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.oomph.setup.core_1.2.0.v20150915-0926'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.predicates' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='67592'/>
+        <property name='download.size' value='67592'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.predicates_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.predicates_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.setup.sync' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='97411'/>
+        <property name='download.size' value='97411'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.setup.sync_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.setup.sync_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.tracecompass.tmf.analysis.xml.core' version='1.0.0.201509141028'>
+      <properties size='2'>
+        <property name='artifact.size' value='90759'/>
+        <property name='download.size' value='90759'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.tracecompass.tmf.analysis.xml.core_1.0.0.201509141028.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.tracecompass.tmf.analysis.xml.core_1.0.0.201509141028.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.linuxtools.gcov' version='4.1.0.201509161915'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.linuxtools.gcov_4.1.0.201509161915/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.linuxtools.gcov_4.1.0.201509161915'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.debug.mi.ui' version='6.2.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='158545'/>
+        <property name='download.size' value='158545'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.debug.mi.ui_6.2.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.debug.mi.ui_6.2.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.tools.launch.core' version='3.2.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='24713'/>
+        <property name='download.size' value='24713'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.tools.launch.core_3.2.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.tools.launch.core_3.2.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.tracecompass.gdbtrace.core' version='1.0.0.201509141028'>
+      <properties size='2'>
+        <property name='artifact.size' value='50380'/>
+        <property name='download.size' value='50380'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.tracecompass.gdbtrace.core_1.0.0.201509141028.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.tracecompass.gdbtrace.core_1.0.0.201509141028.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.linuxtools.profiling' version='4.1.0.201509161915'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.linuxtools.profiling_4.1.0.201509161915/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.linuxtools.profiling_4.1.0.201509161915'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.autotools.ui' version='1.0.1.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='836058'/>
+        <property name='download.size' value='836058'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.autotools.ui_1.0.1.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.autotools.ui_1.0.1.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.tracecompass.analysis.os.linux.ui' version='1.1.0.201509141028'>
+      <properties size='2'>
+        <property name='artifact.size' value='86587'/>
+        <property name='download.size' value='86587'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.tracecompass.analysis.os.linux.ui_1.1.0.201509141028.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.tracecompass.analysis.os.linux.ui_1.1.0.201509141028.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.debug.ui.memory.transport' version='2.1.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='124056'/>
+        <property name='download.size' value='124056'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.debug.ui.memory.transport_2.1.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.debug.ui.memory.transport_2.1.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.make.core' version='7.3.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='449789'/>
+        <property name='download.size' value='449789'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.make.core_7.3.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.make.core_7.3.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.ui' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='298768'/>
+        <property name='download.size' value='298768'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.ui_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.ui_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.gdb.ui' version='7.0.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='11579'/>
+        <property name='download.size' value='11579'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.gdb.ui_7.0.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.gdb.ui_7.0.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.linuxtools.changelog.c' version='4.1.0.201509161915'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.linuxtools.changelog.c_4.1.0.201509161915/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.linuxtools.changelog.c_4.1.0.201509161915'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.autotools.docs' version='2.0.2.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='1931570'/>
+        <property name='download.size' value='1931570'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.autotools.docs_2.0.2.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.autotools.docs_2.0.2.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.rpmstubby' version='1.2.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='69205'/>
+        <property name='download.size' value='69205'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.rpmstubby_1.2.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.rpmstubby_1.2.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.tracecompass.gdbtrace.doc.user' version='1.0.0.201509141028'>
+      <properties size='2'>
+        <property name='artifact.size' value='198127'/>
+        <property name='download.size' value='198127'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.tracecompass.gdbtrace.doc.user_1.0.0.201509141028.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.tracecompass.gdbtrace.doc.user_1.0.0.201509141028.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.predicates.edit' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='54461'/>
+        <property name='download.size' value='54461'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.predicates.edit_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.predicates.edit_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.resources' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='113492'/>
+        <property name='download.size' value='113492'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.resources_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.resources_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.setup.p2.edit' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='24185'/>
+        <property name='download.size' value='24185'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.setup.p2.edit_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.setup.p2.edit_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.mylyn.ui' version='3.17.0.v20150625-2044'>
+      <properties size='2'>
+        <property name='artifact.size' value='74005'/>
+        <property name='download.size' value='74005'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.mylyn.ui_3.17.0.v20150625-2044.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.mylyn.ui_3.17.0.v20150625-2044.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.workingsets.editor' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='105526'/>
+        <property name='download.size' value='105526'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.workingsets.editor_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.workingsets.editor_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.tracecompass.gdbtrace' version='1.1.0.201509141028'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.tracecompass.gdbtrace_1.1.0.201509141028/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.tracecompass.gdbtrace_1.1.0.201509141028'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.debug.ui.memory.floatingpoint' version='1.0.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='145220'/>
+        <property name='download.size' value='145220'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.debug.ui.memory.floatingpoint_1.0.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.debug.ui.memory.floatingpoint_1.0.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.jreinfo' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='32552'/>
+        <property name='download.size' value='32552'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.jreinfo_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.jreinfo_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.changelog.cparser' version='2.7.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='14556'/>
+        <property name='download.size' value='14556'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.changelog.cparser_2.7.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.changelog.cparser_2.7.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.tracecompass.ctf.core' version='1.1.0.201509141028'>
+      <properties size='2'>
+        <property name='artifact.size' value='199263'/>
+        <property name='download.size' value='199263'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.tracecompass.ctf.core_1.1.0.201509141028.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.tracecompass.ctf.core_1.1.0.201509141028.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.tracecompass.tmf.remote.ui' version='1.0.0.201509141028'>
+      <properties size='2'>
+        <property name='artifact.size' value='130249'/>
+        <property name='download.size' value='130249'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.tracecompass.tmf.remote.ui_1.0.0.201509141028.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.tracecompass.tmf.remote.ui_1.0.0.201509141028.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.resources.edit' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='28903'/>
+        <property name='download.size' value='28903'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.resources.edit_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.resources.edit_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.epp.package.cpp' version='4.5.1.20150917-1200'>
+      <properties size='2'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.epp.package.cpp_4.5.1.20150917-1200/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.epp.package.cpp_4.5.1.20150917-1200'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.tools.launch.ui' version='2.0.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='20706'/>
+        <property name='download.size' value='20706'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.tools.launch.ui_2.0.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.tools.launch.ui_2.0.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.debug.mi.core' version='7.3.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='574344'/>
+        <property name='download.size' value='574344'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.debug.mi.core_7.3.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.debug.mi.core_7.3.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.valgrind.helgrind' version='1.1.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='24173'/>
+        <property name='download.size' value='24173'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.valgrind.helgrind_1.1.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.valgrind.helgrind_1.1.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.linuxtools.valgrind.core' version='1.0.0.201509161915'>
+      <properties size='2'>
+        <property name='artifact.size' value='24129'/>
+        <property name='download.size' value='24129'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.linuxtools.valgrind.core_1.0.0.201509161915.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.linuxtools.valgrind.core_1.0.0.201509161915.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.debug.ui' version='7.5.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='1228741'/>
+        <property name='download.size' value='1228741'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.debug.ui_7.5.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.debug.ui_7.5.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.tracecompass.statesystem.core' version='1.0.0.201509141028'>
+      <properties size='2'>
+        <property name='artifact.size' value='96243'/>
+        <property name='download.size' value='96243'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.tracecompass.statesystem.core_1.0.0.201509141028.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.tracecompass.statesystem.core_1.0.0.201509141028.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.tracecompass.lttng2.ust' version='1.1.0.201509141028'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.tracecompass.lttng2.ust_1.1.0.201509141028/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.tracecompass.lttng2.ust_1.1.0.201509141028'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.cdt.core' version='5.11.0.201509131935'>
+      <properties size='2'>
+        <property name='artifact.size' value='5422556'/>
+        <property name='download.size' value='5422556'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.cdt.core_5.11.0.201509131935.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.cdt.core_5.11.0.201509131935.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.setup.ui.questionnaire' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='340436'/>
+        <property name='download.size' value='340436'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.setup.ui.questionnaire_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.setup.ui.questionnaire_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipse.cdt.native' version='8.8.0.201509131935'>
+      <properties size='3'>
+        <property name='artifact.size' value='4096'/>
+        <property name='download.size' value='4096'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+      <repositoryProperties size='3'>
+        <property name='artifact.folder' value='true'/>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/features/org.eclipse.cdt.native_8.8.0.201509131935/'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\features\org.eclipse.cdt.native_8.8.0.201509131935'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.base' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='69781'/>
+        <property name='download.size' value='69781'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.base_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.base_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.oomph.util' version='1.2.0.v20150915-0926'>
+      <properties size='2'>
+        <property name='artifact.size' value='199710'/>
+        <property name='download.size' value='199710'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.oomph.util_1.2.0.v20150915-0926.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.oomph.util_1.2.0.v20150915-0926.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.tracecompass.lttng2.control.ui' version='1.0.0.201509141028'>
+      <properties size='2'>
+        <property name='artifact.size' value='403604'/>
+        <property name='download.size' value='403604'/>
+      </properties>
+      <repositoryProperties size='2'>
+        <property name='artifact.reference' value='file:/C:/pleiades-e4.5-ultimate-jre_20151002/pleiades/eclipse/dropins/EclipseCPP/eclipse/plugins/org.eclipse.tracecompass.lttng2.control.ui_1.0.0.201509141028.jar'/>
+        <property name='file.name' value='C:\pleiades-e4.5-ultimate-jre_20151002\pleiades\eclipse\dropins\EclipseCPP\eclipse\plugins\org.eclipse.tracecompass.lttng2.control.ui_1.0.0.201509141028.jar'/>
+      </repositoryProperties>
+    </artifact>
+  </artifacts>
+</repository>

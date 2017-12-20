@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8" />
+<title>AngularJS</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-message-format.min.js"></script>
+<script src="scripts/select.js"></script>
+</head>
+<body ng-controller="MyController as my">
+
+<div ng-select>{{my.gender, selecct,
+  male {男}
+  female{女}
+  other{その他}
+  }}</div>
+
+
+
+</body>
+</html>

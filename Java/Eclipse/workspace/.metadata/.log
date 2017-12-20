@@ -1,0 +1,28 @@
+!SESSION 2016-11-10 10:01:17.538 -----------------------------------------------
+eclipse.buildId=4.6.1.M20160907-1200
+java.version=1.8.0_102
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ja_JP
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+This is a continuation of log file C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\Java\Eclipse\workspace\.metadata\.bak_0.log
+Created Time: 2016-11-10 13:43:21.325
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-11-10 13:43:21.325
+!MESSAGE Using platform encoding (MS932 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-11-10 13:43:21.327
+!MESSAGE Using platform encoding (MS932 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY oracle.eclipse.tools.glassfish 1 1 2016-11-10 13:43:36.355
+!MESSAGE GlassFish: Deploy direcotry C:\glassfish-4.1.1\glassfish4\glassfish\domains\domain1\eclipseApps\jsfDemo
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-11-10 13:45:28.811
+!MESSAGE Using platform encoding (MS932 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-11-10 13:45:28.813
+!MESSAGE Using platform encoding (MS932 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY oracle.eclipse.tools.glassfish 1 1 2016-11-10 13:45:43.830
+!MESSAGE GlassFish: Deploy direcotry C:\glassfish-4.1.1\glassfish4\glassfish\domains\domain1\eclipseApps\jsfDemo

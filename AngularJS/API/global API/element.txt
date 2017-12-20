@@ -1,0 +1,32 @@
+angular.element(elm)
+
+	elm: 要素オブジェクト、またはHTML文字列
+
+説明：
+
+ AngularJSでは、ビューの操作はディレクティブにゆだねるという性質上、
+文書ツリーを直接操作すべきではない。
+ ただし、それでも例外的に文書ツリーを操作したいという場合、elementメソッドを
+呼び出すことでjQueryの軽量互換ライブラリであるjqListe(jQuery Lite)を呼び出すこと
+ができます。
+ただし、AngularJSをインポートする前に、jQueryをインポートしておくと、jqLiteを
+jQueryに置き換えることも可能です。
+
+
+例：
+<script>
+angular.element(
+  document.getElementsByClassName('gihyo')).css('color', 'red');
+angular.element(
+  document.getElementsByTagName('body')).append('<div>書籍一覧</div>');
+</script>
+
+例：
+<script>
+var result = [];
+var elm = angular.element(document.getElementById('php'));
+for(var prop in elm) {
+  if (angular.isFunction(elm[prop])) { result.push(prop); }
+}
+console.log(result);
+</script>

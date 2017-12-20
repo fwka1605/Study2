@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Hello Canvas</title>
+	<style>
+		.canvas {
+			border: 1px solid gray;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="./../js/canvas.js"></script>
+</head>
+
+<body>
+<br>
+三角形を２つ描画
+<br>
+<canvas id="canvas1" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+三角形を２つ別々に描画
+<br>
+<canvas id="canvas2" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+線や塗りつぶしの色
+<br>
+<canvas id="canvas3" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+
+<script>
+	//ロード時に描画関数(draw)を呼び出す
+	window.addEventListener('load',function(){
+		draw1();
+		draw2();
+		draw3();
+	});
+
+	function draw1(){
+		var ctx = getCanvasContextById("canvas1");
+
+		ctx.beginPath();
+		ctx.moveTo(150,50);
+		ctx.lineTo(30,200);
+		ctx.lineTo(300,250);
+		ctx.closePath();
+
+		ctx.moveTo(480,70);
+		ctx.lineTo(330,100);
+		ctx.lineTo(590,350);
+		ctx.closePath();
+
+		ctx.fill();
+	}
+
+	function draw2(){
+		var ctx = getCanvasContextById("canvas2");
+
+		ctx.beginPath();
+		ctx.moveTo(150,50);
+		ctx.lineTo(30,200);
+		ctx.lineTo(300,250);
+		ctx.closePath();
+		ctx.stroke();
+
+		ctx.beginPath();
+		ctx.moveTo(480,70);
+		ctx.lineTo(330,100);
+		ctx.lineTo(590,350);
+		ctx.closePath();
+		ctx.fill();
+
+	}
+
+	function draw3(){
+		var ctx = getCanvasContextById("canvas3");
+
+		ctx.beginPath();
+		ctx.moveTo(10,10);
+		ctx.lineTo(450,30);
+		ctx.lineTo(30,150);
+		ctx.closePath();
+		ctx.fillStyle='red'
+		ctx.fill();
+
+		ctx.beginPath();
+		ctx.moveTo(30,180);
+		ctx.lineTo(230,180);
+		ctx.lineTo(230,380);
+		ctx.lineTo(30,380);
+		ctx.closePath();
+		ctx.strokeStyle = 'green';
+		ctx.stroke();
+
+		ctx.beginPath();
+		ctx.moveTo(450,70);
+		ctx.lineTo(280,195);
+		ctx.lineTo(365,340);
+		ctx.lineTo(535,340);
+		ctx.lineTo(620,195);
+		ctx.closePath();
+		ctx.fillStyle = 'blue';
+		ctx.fill();
+
+	}	
+
+</script>
+
+</body>
+
+</html>

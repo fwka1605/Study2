@@ -1,0 +1,83 @@
+orderBy
+
+{{expression | orderby:sort[:reverse] }}
+
+expression:ソート対象の文字列
+sort:ソート式(ソート規則を決めるための式で、文字列/関数/配列のいずれかで指定できます。）
+reverse:配列を逆順に並べるか？（デフォルトはfalse)
+
+<table class="table">
+  <tr>
+    <th>書名</th><th>価格</th><th>出版社</th><th>刊行日</th>
+  </tr>
+  <tr ng-repeat="book in books | orderBy: 'price'">
+    <td><a ng-href="http://www.wings.msn.to/index.php/-/A-03/{{book.isbn}}/">
+      {{book.title}}</a></td>
+    <td>{{book.price}}円</td>
+    <td>{{book.publish}}</td>
+    <td>{{book.published | date}}</td>
+  </tr>
+</table>
+priceで昇順にソート
+
+
+<tr ng-repeat="book in books | orderBy: '-price'">
+priceのマイナスで昇順にソート
+
+<tr ng-repeat="book in books | orderBy: 'price': true">
+priceで降順にソート
+
+〇複数のキーでソート
+
+<table class="table">
+  <tr>
+    <th>書名</th><th>価格</th><th>出版社</th><th>刊行日</th>
+  </tr>
+  <tr ng-repeat="book in books | orderBy: ['publish', 'price']">
+    <td><a ng-href="http://www.wings.msn.to/index.php/-/A-03/{{book.isbn}}/">
+      {{book.title}}</a></td>
+    <td>{{book.price}}円</td>
+    <td>{{book.publish}}</td>
+    <td>{{book.published | date}}</td>
+  </tr>
+</table>
+
+
+〇独自ソート
+
+<ul>
+  <li ng-repeat="member in members | orderBy : mySort">
+    {{member.name}}（{{member.role}}・{{member.old}}歳）
+  </li>
+</ul>
+
+angular.module('myApp', [])
+  .controller('MyController', ['$scope', function($scope) {
+    $scope.members = [
+      { name: '鈴木太郎', role: '課長', old: 55 },
+      { name: '田中一郎', role: '部長', old: 58 },
+      { name: '山田理央', role: '担当', old: 25 },
+      { name: '腰掛奈美', role: '主任', old: 35 },
+      { name: '佐藤大輔', role: '課長', old: 45 }
+    ];
+
+    $scope.mySort = function(member) {
+      //return Math.random();
+      var roles = { '部長': 0, '課長': 1, '主任': 2, '担当': 3 };
+      return roles[member.role];
+    };
+  }]);
+
+独自ソートの条件
+１．引数としてソート対象オブジェクトを受け取る。
+２．戻り値としてソートに利用される数値を返す。
+
+<li ng-repeat="member in members | orderBy : mySort: true">
+独自ソートにも降順してができる。
+
+<li ng-repeat="member in members | orderBy : [mySort, 'old']">
+独自ソートも、複数ソートキーを指定できる。
+
+
+
+

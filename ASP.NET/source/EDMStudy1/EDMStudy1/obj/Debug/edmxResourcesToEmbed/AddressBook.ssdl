@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AddressBook.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="AddressBookStoreContainer">
+    <EntitySet Name="Entries" EntityType="AddressBook.Store.Entries" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Categories" EntityType="AddressBook.Store.Categories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EntryCategory" EntityType="AddressBook.Store.EntryCategory" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_EntryCategory_Entry" Association="AddressBook.Store.FK_EntryCategory_Entry">
+      <End Role="Entry" EntitySet="Entries" />
+      <End Role="EntryCategory" EntitySet="EntryCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EntryCategory_Category" Association="AddressBook.Store.FK_EntryCategory_Category">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="EntryCategory" EntitySet="EntryCategory" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Entries">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="MailAddress" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TelNo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Age" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Detail" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EntryCategory">
+    <Key>
+      <PropertyRef Name="Entries_ID" />
+      <PropertyRef Name="Categories_ID" />
+    </Key>
+    <Property Name="Entries_ID" Type="int" Nullable="false" />
+    <Property Name="Categories_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_EntryCategory_Entry">
+    <End Role="Entry" Type="AddressBook.Store.Entries" Multiplicity="1" />
+    <End Role="EntryCategory" Type="AddressBook.Store.EntryCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Entry">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EntryCategory">
+        <PropertyRef Name="Entries_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EntryCategory_Category">
+    <End Role="EntryCategory" Type="AddressBook.Store.EntryCategory" Multiplicity="*" />
+    <End Role="Category" Type="AddressBook.Store.Categories" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="EntryCategory">
+        <PropertyRef Name="Categories_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

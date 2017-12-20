@@ -1,0 +1,6 @@
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\ASP.NET\source\TestConsoleApplication\TestConsoleApplication\bin\Debug\TestConsoleApplication.exe.config
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\ASP.NET\source\TestConsoleApplication\TestConsoleApplication\bin\Debug\TestConsoleApplication.exe
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\ASP.NET\source\TestConsoleApplication\TestConsoleApplication\bin\Debug\TestConsoleApplication.pdb
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\ASP.NET\source\TestConsoleApplication\TestConsoleApplication\obj\Debug\TestConsoleApplication.csprojResolveAssemblyReference.cache
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\ASP.NET\source\TestConsoleApplication\TestConsoleApplication\obj\Debug\TestConsoleApplication.exe
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\ASP.NET\source\TestConsoleApplication\TestConsoleApplication\obj\Debug\TestConsoleApplication.pdb

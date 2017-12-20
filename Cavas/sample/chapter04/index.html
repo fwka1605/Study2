@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Hello Canvas</title>
+	<style>
+		.canvas {
+			border: 1px solid gray;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="./../js/canvas.js"></script>
+</head>
+
+<body>
+<br>
+線・塗りつぶしを描画（色付き）
+<br>
+<canvas id="canvas1" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+多角形の描画（グラデーション付き）
+<br>
+<canvas id="canvas2" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+
+<script>
+	//ロード時に描画関数(draw)を呼び出す
+	window.addEventListener('load',function(){
+		draw1();
+		draw2();
+	});
+
+	function draw1(){
+		var ctx = getCanvasContextById("canvas1");
+
+		ctx.beginPath();
+		ctx.moveTo(10,10);
+		ctx.lineTo(300,380);
+
+		ctx.strokeStyle='red';
+		ctx.stroke();
+
+		ctx.beginPath();
+		ctx.moveTo(450,100);
+		ctx.lineTo(300,330);
+		ctx.lineTo(600,330);
+		ctx.closePath();
+
+		ctx.fillStyle="#f0f";
+		ctx.fill();
+	}
+
+	function draw2(){
+		let ctx = getCanvasContextById("canvas2");
+
+		ctx.beginPath();
+		ctx.moveTo(10,30);
+		ctx.lineTo(630,30);
+
+		let linearGrad1 = ctx.createLinearGradient(10,30,630,30);
+		linearGrad1.addColorStop(0,'red');
+		linearGrad1.addColorStop(1,'blue');
+
+		ctx.strokeStyle = linearGrad1;
+		ctx.stroke();
+
+		ctx.beginPath();
+		ctx.moveTo(160,100);
+		ctx.lineTo(10,330);
+		ctx.lineTo(310,330);
+		ctx.closePath();
+
+		let linearGrad2 = ctx.createLinearGradient(310,330,85,165);
+		linearGrad2.addColorStop(0,'yellow');
+		linearGrad2.addColorStop(0.25,'red');
+		linearGrad2.addColorStop(0.5,'green');
+		linearGrad2.addColorStop(1,'blue');
+		ctx.fillStyle=linearGrad2;
+		ctx.fill();
+
+		ctx.beginPath();
+		ctx.moveTo(480,100);
+		ctx.lineTo(330,330);
+		ctx.lineTo(630,330);
+		ctx.closePath();
+
+		var radialGrad = ctx.createRadialGradient(480,260,50,480,260,140);
+
+		radialGrad.addColorStop(0,'yellow');
+		radialGrad.addColorStop(0.25,'red');
+		radialGrad.addColorStop(0.5,'green');
+		radialGrad.addColorStop(1,'blue');
+
+		ctx.fillStyle = radialGrad;
+
+		ctx.fill();
+
+	}
+
+</script>
+
+</body>
+
+</html>

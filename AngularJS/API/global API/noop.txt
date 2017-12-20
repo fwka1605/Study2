@@ -1,0 +1,29 @@
+angular.noop
+
+空の関数を返すだけのメソッドです。
+
+高階関数などで関数が指定されなかった場合に、
+
+例：
+<script>
+var process = function(value ,success, fail) {
+  if (value > 0) {
+    (success || angular.noop)(value);
+  } else {
+    (fail || angular.noop)(value);
+  }
+};
+
+process(-10,
+  function(value) { 
+    console.log('success：' + value);
+  }, 
+  function(value) { 
+    console.log('fail：' + value);
+  });
+</script>
+
+process関数は、引数valueが正数かどうかによて、
+コールバック関数success,またはfailを実行します。
+
+ただし、success/failが無指定の場合には何もしません。

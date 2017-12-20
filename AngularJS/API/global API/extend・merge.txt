@@ -1,0 +1,65 @@
+angular.extend(target,src ...)
+
+	target	拡張対象のオブジェクト
+	src	連結するオブジェクト
+
+説明：
+・同名のプロパティは、後のもので上書きされる。
+・再帰的なマージには未対応
+
+angular.merge(target,src ...)
+
+	target	拡張対象のオブジェクト
+	src	連結するオブジェクト
+
+説明：
+・同名のプロパティは、後のもので上書きされる。
+・再帰的なマージにも対応
+
+注意点：
+extend/mergeメソッドは、引数targetで指定したオブジェクトを置き換えます。
+オリジナルのオブジェクトを残しておきたい場合には、以下のように記載する。
+
+angular.extend({}, book, book2, book3);
+
+これによって、空のオブジェクト（{}）に対して、book/book2/boo3を結合しろという
+意味になるので、bookがtargetからsrcに変更されるため、マージしてもbookには
+影響が及ばない。
+
+例：
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+<script>
+var book = {
+  isbn: '978-4-7741-7078-7',
+  title: 'JSPポケットリファレンス',
+  description: {
+    published: '2015-01-08'
+  }
+};
+
+var book2 = {
+  title: 'サーブレット＆JSPポケットリファレンス',
+  price: 2680,
+  description: {
+    publish: '技術評論社'
+  }
+};
+
+var book3 = {
+  pages: 400,
+  image: 'http://www.wings.msn.to/books/978-4-7741-7078-7/978-4-7741-7078-7.jpg'
+};
+
+angular.extend(book, book2, book3);
+//angular.merge(book, book2, book3);
+console.log(book);
+
+・同名のプロパティは、あとのもので上書きされるため、titleはサーブレット&JSPポケット
+リファレンスになる。
+・再帰的なマージには未対応のため、descrptionのプロパティはマージされない。入れ子になった
+オブジェクトまでマージするには、extendメソッドの代わりに、mergeメソッドを利用する必要がある。
+
+
+
+
+

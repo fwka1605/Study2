@@ -1,0 +1,17 @@
+animation	アニメーションを定義
+
+controller	コントローラーを定義
+
+directive	ディレクティブを定義
+
+filter		フィルターを定義
+
+service		サービスを定義
+factory		サービスを定義
+provider	サービスを定義
+value		サービスを定義
+constant	サービスを定義
+
+config	モジュールの構成情報を定義
+fun	アプリの初期化情報を定義
+

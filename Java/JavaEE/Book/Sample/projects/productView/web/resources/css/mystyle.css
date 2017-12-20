@@ -1,0 +1,74 @@
+body {
+    font-family: メイリオ ,Osaka;	/* 全体のフォント */
+    font-size: 10pt;				/* 全体の文字サイズ */
+    margin: 20px 10px 10px 20px;	/* 上右下左の順でマージンを指定 */
+    line-height: 1.6em;
+}
+h1 {
+    font-size: 1.2em;				/* 文字サイズ */
+    border-bottom: solid 1px #999;	/* ボーダーライン（下） */
+    text-align: center;				/* 中央揃え */
+
+}
+ul {
+    margin-top: 0px;				/* 上端のマージンを0に */
+    background-color: #eee;			/* 背景色（グレー） */
+    font-size: 0.9em;				/* 文字サイズ（中）*/
+}
+address{
+    font-style: normal;				/* 斜体字にしない */
+    font-size: 0.7em;				/* 文字サイズ（小） */
+    text-align: center;				/* 中央揃え */
+    border-top: solid 1px #999;		/* ボーダーライン（上） */
+}
+.error{
+    font-size: 0.7em;	/* エラーメッセージ用 */		
+}
+.hd {/* ヘッダー行 */
+    font-weight: normal;		/* 太字にしない */
+    text-align: center;			/* 中央揃え */
+    vertical-align:middle;
+    height: 40px;
+    background-color: #efefef;	/* グレーの背景色 */
+}
+.row {/* ヘッダー以外の行 */
+    background-color:  #d5eaf8;	/* 薄い青の背景色 */
+}
+.c1	{/* １列目 */
+    width: 200px;				/* 横幅を100pxに */
+    vertical-align: top;
+    padding: 10px;
+}
+.c2	{/* ２列目 */
+    width: 150px;				/* 横幅を100pxに */
+    padding: 10px;				/* 左端に10pxの余白 */
+    vertical-align: top;
+    text-align: center;
+}
+.c3	{/* ３列目 */
+    width: 80px;				/* 横幅を300pxに */
+    padding: 10px;			/* 左端に10pxの余白 */
+    vertical-align: top;
+    text-align: center;
+}
+.c4	{/* ４列目 */
+    width: 80px;				/* 横幅を100pxに */
+    padding: 10px;			/* 左端に10pxの余白 */
+    vertical-align: top;
+    text-align: center;
+}
+.c5	{/* ５列目 */
+    width: 400px;				/* 横幅を300pxに */
+    padding: 10px;			/* 左端に10pxの余白 */
+    vertical-align: top;
+}
+.jpql{
+    padding: 3px;
+    font-size: 1.2em;
+    color:  #0847c6;
+    margin: 5px;
+}
+.btn    {
+    margin: 5px;
+}
+

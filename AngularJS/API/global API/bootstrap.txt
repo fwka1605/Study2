@@ -1,0 +1,29 @@
+angular.bootstrap(element [,modules])
+
+	element		AngularJSアプリのルート要素
+	modules		アプリが依存するモジュール（配列）
+
+説明：
+
+AngularJSは、ng-app属性をトリガーに起動するのが基本です。ただし、
+例外的にAngularJSが有効になる前に初期化処理をはさみたいなどの理由から、
+AngularJSを自動で起動してほしくない（=手動で起動したい）
+そのような場合に利用するのが、angular.bootstrapメソッドになります。
+
+例：
+
+<body>
+<!--AngularJSを利用したページ-->
+{{3 + 5}}
+<script>
+angular.element(document).ready(function() {
+  angular.module('myApp', []);
+  angular.bootstrap(document.getElementById('my'), ['myApp']);
+});
+</script>
+</body>
+
+この例では、bootstrapの引数elementにidがmyの要素を指定し、myApp（AngularJS)を
+有効にしています。
+bootstrapの引数modulesに指定するモジュールは、あらかじめmoduleメソッドで
+定義しておく必要があります。

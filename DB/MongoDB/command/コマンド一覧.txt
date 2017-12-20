@@ -1,0 +1,13 @@
+'起動 
+'注意：--logpath にはファイル名まで含めて指定すること。
+mongod --dbpath C:\Users\NVLCLT13\MongoDBData\data --logpath C:\Users\NVLCLT13\MongoDBData\logs\mongodb.log
+mongod  --config C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DB\MongoDB\command\mongodb.conf
+
+'停止
+'①DBへ接続
+mongo
+'②管理者に変更
+use admin
+'③停止コマンドの実行
+db.shutdownServer()
+x

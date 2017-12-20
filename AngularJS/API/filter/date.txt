@@ -1,0 +1,50 @@
+{{datetime | date[:format[:timezone]]}}
+
+datetime:日付時刻値
+format:日付時刻書式(デフォルトはmediumDate)
+timezone:タイムゾーン(+0430など）
+
+日付時刻値には、JavaScript標準のDateオブジェクトのほか、
+タイムスタンプ値(1970/01/01からの経過ミリ秒),日付文字列
+などが指定できる。
+
+引数formatには、あらかじめ決められた書式型の他、個別の
+書式指定子を組み合わせて使用することができる。
+
+1.medium	2015/01/01 8:01:03
+2.short		2015/01/01 8:01
+3.fullDate	2015年1月1日木曜日
+4.longDate	2015年1月1日
+5.mediumDate	2015/01/01
+6.shortDate	2015/01/01
+7.mediumTime	8:01:03
+8.shortTime	8:01
+
+yyyy,yy
+MMMM,MMM,MM,M
+dd,d
+EEEE,EEE
+ww,w
+HH,H,hh,h
+min,m
+ss,s
+.sss
+a
+z
+
+例
+
+<ul>
+  <li>整形なし：{{today}}</li>
+  <li>整形あり（デフォルト）：{{today | date}}</li>
+  <li>整形あり（medium）：{{today | date: 'medium'}}</li>
+  <li>整形あり（書式指定）：{{today | date: 'yyyy年MM月dd日（EEEE） a hh:mm:ss'}}</li>
+</ul>
+
+・整形なし："2017-08-22T06:21:46.674Z"
+・整形あり（デフォルト）：2017/08/22
+・整形あり（medium）：2017/08/22 15:21:46
+・整形あり（書式指定）：2017年08月22日（火曜日） 午後 03:21:46
+
+
+

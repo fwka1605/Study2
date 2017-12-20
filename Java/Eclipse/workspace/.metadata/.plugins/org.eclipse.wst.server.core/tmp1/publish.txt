@@ -1,0 +1,4 @@
+#GlassFish 3
+#Thu Nov 10 13:45:45 JST 2016
+org.eclipse.jst.jee.server\:jsfDemo=C\:\\glassfish-4.1.1\\glassfish4\\glassfish\\domains\\domain1\\eclipseApps\\jsfDemo
+org.eclipse.jst.jee.server\:JsfStudy=C\:\\glassfish-4.1.1\\glassfish4\\glassfish\\domains\\domain1\\eclipseApps\\JsfStudy

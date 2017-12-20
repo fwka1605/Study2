@@ -1,0 +1,29 @@
+$sceDelegateProvider
+
+$sceDelegateProviderは、src同様にAnguraJSでサイトの信頼性を設定する際などに使用します。
+
+$scope.url = $sce.trustAsResourceUrl(' http:// www. wings. msn. to/');
+$scope.url = $sce.trustAs($sce.RESOURCE_URL,'http://www.wings.msn.to/');
+
+$sceのtrustAsでは、URL毎にいちいち呼び出す必要がある。
+
+その代わりに、$sceDelegateProviderを利用して、そのサイト自体をホワイトリストに追加すれば、
+そのサイト自体が安全と宣言することになり、trustASを呼び出す必要がなくなる。
+
+$sceDelegateProvider.resourceUrlWhitelist([
+	'self',
+	'http://www.wings.msn.to/**'
+]);	
+
+ホワイトリストの反対で、ブラックリストもある。 この場合は、resourceUrlBlacklistを呼び出すことになる。
+
+$sceDelegateProvider.resourceUrlBlacklist([
+	'http://www.wings.msn.to/index.php/-/A-07/**'
+]); 
+
+これで、http://www.wings.msn.to/ 配下のリソースは認めるが、例外的に http://www.wings.msn.to/index.php/-/A-07/
+配下のリソースは認めない意味になります。
+
+
+
+

@@ -1,0 +1,9 @@
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\Calc\Calc\Calc\bin\Debug\Calc.exe.config
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\Calc\Calc\Calc\bin\Debug\Calc.exe
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\Calc\Calc\Calc\bin\Debug\Calc.pdb
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\Calc\Calc\Calc\obj\Debug\Calc.Form1.resources
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\Calc\Calc\Calc\obj\Debug\Calc.Properties.Resources.resources
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\Calc\Calc\Calc\obj\Debug\Calc.csproj.GenerateResource.Cache
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\Calc\Calc\Calc\obj\Debug\Calc.exe
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\Calc\Calc\Calc\obj\Debug\Calc.pdb
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\DotNet\Calc\Calc\Calc\obj\Debug\Calc.csprojResolveAssemblyReference.cache

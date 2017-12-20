@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Hello Canvas</title>
+	<style>
+		.canvas {
+			border: 1px solid gray;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="./../js/canvas.js"></script>
+</head>
+
+<body>
+<br>
+円弧を描く
+<br>
+<canvas id="canvas1" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+円弧を描く(逆)
+<br>
+<canvas id="canvas2" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+
+<script>
+	//ロード時に描画関数(draw)を呼び出す
+	window.addEventListener('load',function(){
+		draw1();
+		draw2();
+	});
+
+	function draw1(){
+		var ctx = getCanvasContextById("canvas1");
+
+		ctx.beginPath();
+
+		ctx.arc(320,130,120,0,360*Math.PI/180,false);
+		ctx.strokeStyle='red';
+		ctx.stroke();
+
+		ctx.beginPath();
+
+		ctx.arc(150,270,120,0,180*Math.PI/180,false);
+		ctx.fillStyle='green';
+		ctx.fill();
+
+		ctx.beginPath();
+
+		ctx.arc(490,270,120,30*Math.PI/180,210*Math.PI/180,false);
+		ctx.fillStyle ='blue';
+		ctx.fill();
+	}
+
+	function draw2(){
+		var ctx = getCanvasContextById("canvas2");
+
+		ctx.beginPath();
+
+		ctx.arc(320,130,120,0,360*Math.PI/180,true);
+		ctx.strokeStyle='red';
+		ctx.stroke();
+
+		ctx.beginPath();
+
+		ctx.arc(150,270,120,0,180*Math.PI/180,true);
+		ctx.fillStyle='green';
+		ctx.fill();
+
+		ctx.beginPath();
+
+		ctx.arc(490,270,120,30*Math.PI/180,210*Math.PI/180,true);
+		ctx.fillStyle ='blue';
+		ctx.fill();
+	}
+
+
+</script>
+
+</body>
+
+</html>

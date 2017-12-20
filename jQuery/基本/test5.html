@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<title>セレクター、:nth-child()、:even、:odd</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style>
+body {
+	margin:20px;
+}
+</style>
+</head>
+
+
+
+
+
+<style>
+ol, ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+</style>
+
+
+<!-- ▼▼▼【コード始まり】▼▼▼ --><form>
+
+<textarea  width="2000" height="100" cols="100" rows="30" style="font-size:1.2em;">
+<table>
+<tr>
+<td>
+	<ul>
+		<li>太郎</li>
+		<li>次郎</li>
+		<li>三郎</li>
+		<li>四郎</li>
+	</ul>
+</td>
+<td>
+	<ul>
+		<li>与太郎</li>
+	</ul>
+</td>
+<td>
+	<ul>
+		<li>グレン</li>
+		<li>テーン</li>
+		<li>ラルフ</li>
+		<li>デビッド</li>
+		<li>マイク</li>
+		<li>キアヌ</li>
+	</ul>
+</td>
+</tr>
+</table></textarea>
+
+</form><!-- ▲▲▲【コード終わり】▲▲▲ -->
+
+
+<table id="nth_table">
+<tr>
+<td style="width: 100px;" valign="top">
+	
+	<ul style="border: 1px solid gray;">
+		<li>太郎　<span></span></li>
+		<li>次郎　<span></span></li>
+		<li>三郎　<span></span></li>
+		<li>四郎　<span></span></li>
+	</ul>
+</td>
+<td style="width: 100px;" valign="top">
+	<ul style="border: 1px solid gray;">
+		<li>与太郎　<span></span></li>
+	</ul>
+</td>
+<td style="width: 100px;" valign="top">
+	<ul style="border: 1px solid gray;">
+		<li>グレン　<span></span></li>
+		<li>テーン　<span></span></li>
+		<li>ラルフ　<span></span></li>
+		<li>デビッド　<span></span></li>
+		<li>マイク　<span></span></li>
+		<li>キアヌ　<span></span></li>
+	</ul>
+</td>
+</tr>
+</table>
+
+<br />
+
+<table id="nth_button">
+<tr>
+<td valign="top">
+<button id="nth_even">:nth-child(even)</button><br />
+<button id="nth_odd">:nth-child(odd)</button><br />
+<button id="nth_3n">:nth-child(3n)</button><br />
+<button id="nth_2">:nth-child(2)</button>
+</td>
+<td valign="top">
+<button id="nth_3n_1">:nth-child(3n+1)</button><br />
+<button id="nth_3n_2">:nth-child(3n+2)</button><br />
+<button id="nth_filter_even">:even</button><br />
+<button id="nth_filter_odd">:odd</button>
+</td>
+
+</tr>
+</table>
+
+<span id="nth_pushed_disp"></span>
+
+<script>
+jQuery(function ($) {
+	
+	$("#nth_button").on("click", "button", function (event) {
+		var kubun = $(this).html();
+		$("#nth_table li").css("background-color", "#ffffff");
+		$("#nth_table li" + kubun).css("background-color", "#FFCCFF");
+		
+		if ((kubun === ":even") || (kubun === ":odd")) {
+			$("#nth_table ul li").each(function (n, ele) {
+				$("span", this).html(n);
+			});
+		} else {
+			$("#nth_table ul:eq(0) li").each(function (n, ele) {
+				$("span", this).html(n + 1);
+			});
+			$("#nth_table ul:eq(1) li").each(function (n, ele) {
+				$("span", this).html(n + 1);
+			});
+			$("#nth_table ul:eq(2) li").each(function (n, ele) {
+				$("span", this).html(n + 1);
+			});
+		}
+		
+		$("#nth_pushed_disp").html("li" + kubun + "");
+	});
+
+});
+</script>
+
+<br /><br />
+
+<!--
+JavaScriptとCSSの違いということで、0と1の混乱は防げそうですが、混乱した時のために、私なりの強引な覚え方を紹介しておきます。nth の thは、英語の forth, fifth, sixth の th ですね。でも、zeroth って聞きますか？あまり聞かないですね。あまり聞かないから、nthは、0ではなく、1から始まる。と、覚えています。<br />（実は、zerothという英単語も存在しますが…）
+-->
+
+【解説】:nth-child(even)をクリックすると、各親から数えた場合の偶数（2.4,6）が選択されます。
+一方、:evenの場合、全体でカウントして、それにおける偶数を選択します。ここでは、人名の後にjQueryがどのように数えているかの数字を表示しています。
+:evenの場合、太郎が0番で、キアヌが通し番号で10番になっています。
+
+
+
+
+
+
+
+
+
+
+<script src="js/codemirror-compressed.js"></script>
+<script>
+(function ($) {
+	'use strict';
+	var conf = {
+		mode: "text/html",
+		lineNumbers: true,
+		readOnly: true,
+		tabSize: 2
+	};
+	$("textarea.mixed").each(function (n, ele) {
+		CodeMirror.fromTextArea(ele, conf);
+	});
+	
+	conf = {
+		mode: "text/javascript",
+		lineNumbers: true,
+		readOnly: true,
+		tabSize: 2
+	};
+	$("textarea.js").each(function (n, ele) {
+		CodeMirror.fromTextArea(ele, conf);
+	});
+}(jQuery));
+</script>
+
+</body>
+</html>

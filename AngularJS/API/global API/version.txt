@@ -1,0 +1,26 @@
+version
+
+AngularJSの現在のバージョンを取得する。
+
+例：
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+<script>
+console.log(angular.version);
+</script>
+
+結果： versionプロパティの戻り値は、バージョン情報を含んだオブジェクトになります。
+{
+  full: "1.4.1",
+  major: 1,
+  minor: 4,
+  dot: 1,
+  codeName: "hyperionic-illumination"
+}
+
+full:バージョン番号の完全表記
+major:メジャーバージョン番号
+minor:マイナーバージョン番号
+dot:ドットバージョン番号
+codeName:コード名
+
+

@@ -1,0 +1,19 @@
+task hello <<{
+	println "Hello BODY!"
+}
+
+hello.doFirst{
+	println "Hello doFirst!"
+}
+
+hello.doLast{
+	println "Hello doLast!"
+}
+
+hello.doLast{
+	println "Greetings from the $hello.name task."
+}
+
+hello <<{
+	println "Hello Add!"
+}

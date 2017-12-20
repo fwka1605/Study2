@@ -1,0 +1,9 @@
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\ASP.NET\source\EFCodeFrist\EFCodeFrist\bin\Debug\EFCodeFrist.exe.config
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\ASP.NET\source\EFCodeFrist\EFCodeFrist\bin\Debug\EFCodeFrist.exe
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\ASP.NET\source\EFCodeFrist\EFCodeFrist\bin\Debug\EFCodeFrist.pdb
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\ASP.NET\source\EFCodeFrist\EFCodeFrist\bin\Debug\EntityFramework.dll
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\ASP.NET\source\EFCodeFrist\EFCodeFrist\bin\Debug\EntityFramework.xml
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\ASP.NET\source\EFCodeFrist\EFCodeFrist\obj\x86\Debug\EFCodeFrist.exe
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\ASP.NET\source\EFCodeFrist\EFCodeFrist\obj\x86\Debug\EFCodeFrist.pdb
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\ASP.NET\source\EFCodeFrist\EFCodeFrist\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\NVLCLT13\Documents\nouvelle\Git\server\Study\ASP.NET\source\EFCodeFrist\EFCodeFrist\bin\Debug\EntityFramework.SqlServer.xml

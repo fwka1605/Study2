@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Hello Canvas</title>
+	<style>
+		.canvas {
+			border: 1px solid gray;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="./../js/canvas.js"></script>
+</head>
+
+<body>
+<br>
+保存と復元
+<br>
+<canvas id="canvas1" class="canvas" width="640px" height="400px">
+	Canvasに対応したブラウザを使用してください。
+</canvas>
+<br>
+
+
+
+<script>
+	//ロード時に描画関数(draw)を呼び出す
+	window.addEventListener('load',function(){
+		draw1();
+	});
+
+	function draw1(){
+		var ctx = getCanvasContextById("canvas1");
+
+		ctx.globalAlpha = 0.5
+		// スタックに１．半透明を保存
+		ctx.save();
+
+		// スタックに２．半透明＋緑色を保存
+		ctx.fillStyle = 'green';
+		ctx.save();
+
+		ctx.fillStyle = 'red';
+		ctx.shadowColor='black';
+		ctx.shadowOffsetX=5;
+		ctx.shadowOffsetY=5;
+		ctx.shadowBlur=5;
+		ctx.fillRect(70,100,50,50);
+
+		// スタックの先頭（２．半透明＋緑色）を取り出す
+		ctx.restore();
+		ctx.fillRect(170,100,50,50);
+
+		// スタックの先頭（１．半透明）を取り出す
+		ctx.restore();
+		ctx.fillRect(270,100,50,50);
+
+	}
+
+
+
+</script>
+
+</body>
+
+</html>
