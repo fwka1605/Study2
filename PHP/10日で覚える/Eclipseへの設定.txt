@@ -1,0 +1,25 @@
+1.PDTのインストール
+	１．メニューから「ヘルプ」「新規ソフトウェアのインストール」を選択
+	２．作業対象として、http://download.eclipse.org/releases/neon/201610111000を選択
+		＊releaseより後ろはEclipseのバージョンによって異なる。
+	３．フィルターにPDTを入力
+	４．プログラミング言語にチェックを付けて、次へを押す。
+	５．インストールが開始される。 インストールが終了するとEclipseが再起動される。
+
+２．EclipseでのDebugの設定
+	１．XDebugの設定（PHP用のデバッガー）
+		１．phpinfo()の結果を「https://xdebug.org/wizard.php」のサイトに入力する。
+		２．Analyse my phpinfo() output()ボタンを押す。
+		３．この内容から必要なXDebug用のDLLやphp.iniの編集を教えてくれる。
+			（例）	１．Download php_xdebug-2.5.4-7.1-vc14-x86_64.dll
+				２．Move the downloaded file to C:\php\ext
+				３．Edit C:\php\php.ini and add the line
+					zend_extension = C:\php\ext\php_xdebug-2.5.4-7.1-vc14-x86_64.dll
+	２．ExclipseでのDebugの設定
+		１．メニューから「実行」「デバック構成」を選択する。
+		２．「デバッガー」タブを選択し、構成ボタンを押す。
+		３．「XDebug」を選択する。
+		参考：XDebugがインストールされていない場合は、以下のメッセージが表示される。
+			XDebug extension is not installed. Please visit http://xdebug.org/docs/install to see how to install it.
+		
+			

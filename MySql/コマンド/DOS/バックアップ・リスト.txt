@@ -1,0 +1,93 @@
+〇バックアップ
+
+	〇コマンド
+
+		mysqldump -uID -hLOCALHOST -pPASS DATABASE [TABLELIST]
+
+		mysqldump -uroot -pfoafoa --all-databases > D:\database.dmp
+
+	〇オプション
+
+		-u	ユーザー名
+		-h	DBサーバー（IPまたはサーバー名）
+		-p	パスワード付き
+
+		TABLELIST	テーブルのリストをスペース区切りで指定
+				TABLELISTを省略するとDB内の全テーブルがバックアップ対象になる。
+
+		--all-databases	DBサーバー内の全てのDBのバックアップを取得する。
+	備考
+		-pを付与しないと接続できない
+
+
+〇リストア
+	
+	リストア自体はバックアップを<（イン・リダイレクト）を利用して、
+	DBに取り込むだけのため、通常のmysqlコマンドで実現できる。
+
+
+〇バックアップファイル（例）
+	１．テーブルのDrop文
+	２．テーブルのCreate文
+	３．テーブルのLock文
+	４．テーブルのInsert文
+	５．テーブルのUnlock文
+
+	※全DBのバックアップ取得時には、以下の２つの処理が追加される。
+	（１．DBの作成）
+	（２．使用DBの設定）
+
+
+	-- MySQL dump 10.13  Distrib 5.6.35, for Win64 (x86_64)
+	--
+	-- Host: localhost    Database: angular
+	-- ------------------------------------------------------
+	-- Server version	5.6.35-log
+
+	/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+	/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+	/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+	/*!40101 SET NAMES utf8 */;
+	/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+	/*!40103 SET TIME_ZONE='+00:00' */;
+	/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+	/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+	/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+	/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+	--
+	-- Table structure for table `books`
+	--
+
+	DROP TABLE IF EXISTS `books`;
+	/*!40101 SET @saved_cs_client     = @@character_set_client */;
+	/*!40101 SET character_set_client = utf8 */;
+	CREATE TABLE `books` (
+	  `isbn` char(17) NOT NULL,
+	  `title` varchar(100) DEFAULT NULL,
+	  `price` int(11) DEFAULT NULL,
+	  `publish` varchar(30) DEFAULT NULL,
+	  `published` date DEFAULT NULL,
+	  PRIMARY KEY (`isbn`)
+	) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+	/*!40101 SET character_set_client = @saved_cs_client */;
+
+	--
+	-- Dumping data for table `books`
+	--
+
+	LOCK TABLES `books` WRITE;
+	/*!40000 ALTER TABLE `books` DISABLE KEYS */;
+	INSERT INTO `books` VALUES ('978-4-7741-6410-6','Rails 4アプリケーションプログラミング',3500,'技術評論社','2014-04-11'),('978-4-7741-6566-0','PHPライブラリ＆サンプル実践活用',2480,'技術評論社','2014-06-24'),('978-4-7741-XXXX-X','AngularJSポケットリファレンス',3000,'技術評論社','2015-10-10'),('978-4-7980-4179-7','ASP.NET MVC 5実践プログラミング',3500,'秀和システム','2014-09-20'),('978-4-7981-3546-5','JavaScript逆引きレシピ',3000,'翔泳社','2014-08-28'),('978-4-8222-9634-6','アプリを作ろう！Android入門',2000,'日経BP','2014-12-20');
+	/*!40000 ALTER TABLE `books` ENABLE KEYS */;
+	UNLOCK TABLES;
+
+	/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+	/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+	/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+	/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+	/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+	/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+	/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+	-- Dump completed on 2017-10-20 11:53:20

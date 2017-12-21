@@ -1,0 +1,22 @@
+〇コマンド
+
+	desc tbl_name
+
+〇オプション
+
+	tbl_name	テーブル名
+
+〇例
+
+ desc books
+    -> ;
++-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| isbn      | char(17)     | NO   | PRI | NULL    |       |
+| title     | varchar(100) | YES  |     | NULL    |       |
+| price     | int(11)      | YES  |     | NULL    |       |
+| publish   | varchar(30)  | YES  |     | NULL    |       |
+| published | date         | YES  |     | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+5 rows in set (0.03 sec)

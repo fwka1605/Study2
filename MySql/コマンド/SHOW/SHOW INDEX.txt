@@ -1,0 +1,17 @@
+〇コマンド
+
+	show index from tbl_name [from db_name]
+
+〇オプション
+
+	table_name	テーブル名
+	db_name		DB名
+
+〇例
+
+	show index from books from angular;
+
+備考
+	索引の一覧を表示する。
+	
+

@@ -1,0 +1,37 @@
+①外部接続権限状況の確認
+select user, host, password from mysql.user;
+
+mysql> select user, host, password from mysql.user;
++---------+-----------+-------------------------------------------+
+| user    | host      | password                                  |
++---------+-----------+-------------------------------------------+
+| root    | localhost | *2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19 |
+| root    | 127.0.0.1 | *2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19 |
+| root    | ::1       | *2470C0C06DEE42FD1618BB99005ADCA2EC9D1E19 |
+| bitnami | localhost | *D854B01908D187FBF79E9697685BD28CA48F7EA5 |
++---------+-----------+-------------------------------------------+
+
+②IPアドレスが192.168.11.*のrootユーザに全ての権限を設定
+GRANT ALL PRIVILEGES ON *.* TO root@"192.168.11.%" IDENTIFIED BY 'password' WITH GRANT OPTION;
+
+grant all privileges on *.* to `d-nuo00004`@"localhost" identified by 'd-nuo1358' WITH GRANT OPTION;
+grant all privileges on *.* to `d-nuo00004`@"127.0.0.1" identified by 'd-nuo1358' WITH GRANT OPTION;
+grant all privileges on *.* to `d-nuo00004`@"153.156.87.58" identified by 'd-nuo1358' WITH GRANT OPTION;
+
+grant all privileges on *.* to `enkarz10`@"localhost" identified by 'd-nuo1358' WITH GRANT OPTION;
+grant all privileges on *.* to `enkarz10`@"127.0.0.1" identified by 'd-nuo1358' WITH GRANT OPTION;
+grant all privileges on *.* to `enkarz10`@"153.156.87.58" identified by 'd-nuo1358' WITH GRANT OPTION;
+
+grant all privileges on *.* to `test_dnuo00004`@"localhost" identified by 'dnuo1358' WITH GRANT OPTION;
+grant all privileges on *.* to `test_dnuo00004`@"127.0.0.1" identified by 'dnuo1358' WITH GRANT OPTION;
+grant all privileges on *.* to `test_dnuo00004`@"192.168.11.%" identified by 'dnuo1358' WITH GRANT OPTION;
+
+※上記でもまだエラーが発生する場合
+１．Windowsのファイアウォール、Linuxのiptablesなどポートが接続許可されているか確認。
+２．DBのバインド用のIPが127.0.0.1になっていないかを確認する。
+	my.iniのbind-addressの値をチェックする。
+	bind-addressが127.0.0.1になっている時は、DBと127.0.0.1で接続できるPCしか使用できない。
+	bind-addressが192.168.1.**などローカルIPの時は、DBと127.0.0.1で接続できなくなる。
+	そのため、この指定自体を削除すると127.0.0.1と192.168.1.**の両方でアクセス可能になる。
+
+

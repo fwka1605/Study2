@@ -1,0 +1,30 @@
+通常はインストール時にデータディレクトリを指定する。
+後から変更する際には、以下の手順を実施する。
+
+1.DBのシャットダウン
+mysqladmin -u root -p shutdown
+※Windowsの場合はサービス停止
+
+２.my.iniファイル内の設定箇所の変更
+
+旧）
+# Path to the database root
+datadir=C:/pg/MySQL/MySQL Server 5.7\Data
+
+新）
+# Path to the database root
+datadir=C:/pg/MySQL/MySQL Server\Data
+
+３ファイルの移動
+C:/pg/MySQL/MySQL Server 5.7\Data配下の全ファイルを、
+datadir=C:/pg/MySQL/MySQL Server\Dataに移動またはコピーする。
+
+４、MySQLの起動
+
+ /etc/init.d/mysqld start
+※Windowsの場合はサービス起動
+
+５．設定の確認
+show variables like 'datadir';
+datadirがC:/pg/MySQL/MySQL Server\Data
+に変更されている。

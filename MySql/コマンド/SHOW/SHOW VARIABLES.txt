@@ -1,0 +1,15 @@
+〇コマンド
+
+	show variables LIKE 'pattern';
+
+〇オプション
+
+	'pattern'	検索条件（正規表現）
+
+〇例
+
+	show variables LIKE 'charset%';
+
+備考
+	DBの設定情報を表示する。
+
