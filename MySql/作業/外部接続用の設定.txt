@@ -22,9 +22,15 @@ grant all privileges on *.* to `enkarz10`@"localhost" identified by 'd-nuo1358' 
 grant all privileges on *.* to `enkarz10`@"127.0.0.1" identified by 'd-nuo1358' WITH GRANT OPTION;
 grant all privileges on *.* to `enkarz10`@"153.156.87.58" identified by 'd-nuo1358' WITH GRANT OPTION;
 
+
+grant all privileges on *.* to `d-nuo00004`@"localhost" identified by 'dnuo1358' WITH GRANT OPTION;
+grant all privileges on *.* to `linker`@"localhost" identified by 'dnuo1358' WITH GRANT OPTION;
+grant all privileges on *.* to `enkarz10`@"localhost" identified by 'dnuo1358' WITH GRANT OPTION;
 grant all privileges on *.* to `test_dnuo00004`@"localhost" identified by 'dnuo1358' WITH GRANT OPTION;
-grant all privileges on *.* to `test_dnuo00004`@"127.0.0.1" identified by 'dnuo1358' WITH GRANT OPTION;
-grant all privileges on *.* to `test_dnuo00004`@"192.168.11.%" identified by 'dnuo1358' WITH GRANT OPTION;
+grant all privileges on *.* to `d-nuo00004`@"%" identified by 'dnuo1358' WITH GRANT OPTION;
+grant all privileges on *.* to `linker`@"%" identified by 'dnuo1358' WITH GRANT OPTION;
+grant all privileges on *.* to `enkarz10`@"%" identified by 'dnuo1358' WITH GRANT OPTION;
+grant all privileges on *.* to `test_dnuo00004`@"%" identified by 'dnuo1358' WITH GRANT OPTION;
 
 ※上記でもまだエラーが発生する場合
 １．Windowsのファイアウォール、Linuxのiptablesなどポートが接続許可されているか確認。

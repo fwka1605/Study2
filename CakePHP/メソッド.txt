@@ -1,0 +1,36 @@
+〇コントローラークラス
+
+public $autoRender = true;	テンプレートを使用するかどうか。
+
+$this->viewBuilder()->autoLayout(false);	レイアウト機能を使用するかどうか。
+$this->viewBuilder()->layout("Hello");	レイアウトの指定。これで指定しないとdefault.ctpがレイアウトになる。
+
+function initialize()	クラスの初期化処理
+
+〇フォルダー
+src/Template/アクションクラス/アクションメソッド.ctp	テンプレート
+
+src/Template/Layout/レイアウト名.ctp	レイアウト
+
+src/Template/Layout/default.ctp	デフォルトのレイアウト
+
+〇レイアウト
+
+<?= $this->Html->charset() ?>	charsetの呼び出しで<meta charset="utf-8"/>を生成する。
+
+<?= $this->fetch('title') ?>	タイトルの出力で、コントローラー内で指定した$this->nameを表示している。		
+
+<?= $this->Html->css('cake.hello') ?>	cssブロックへの追加
+<?= $this->fetch('css') ?>	cssブロックのすべてを取り出し、<link rel="stylesheet" href="/css/CSSブロック名.css"/>を表示する。
+
+<?= $this->Html->script('cake.hello') ?>	scriptブロックの追加
+<?= $this->fetch('script') ?>	scriptブロックのすべてを取り出し、 <script src="/js/cake.hello.js"></script>を表示する。
+
+<?= $this->fetch('content') ?>	テンプレートを取り出し、表示する。
+
+〇テンプレート
+
+
+〇エレメント	レイアウトの内部にはめ込んで利用するテンプレートです。
+
+
