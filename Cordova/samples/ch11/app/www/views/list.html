@@ -1,0 +1,16 @@
+<div class="app-header">
+    <h1>一覧から取得</h1>
+</div>
+<div class="app-contents">
+    <div class="list-group">
+        <a class="list-group-item" ng-repeat="contact in list" ng-click="select(contact)">
+            <div class="photo">
+                <img ng-src="{{contact.photo}}" width="60" height="60">
+            </div>
+            <div class="contents">
+                <div>{{contact.displayName}}</div>
+                <div>{{contact.email}}</div>
+            </div>
+        </a>
+    </div>
+</div>

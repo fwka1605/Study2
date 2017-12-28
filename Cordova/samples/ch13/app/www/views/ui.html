@@ -1,0 +1,28 @@
+<div class="app-header">
+    <h1>カレンダーアプリの起動</h1>
+</div>
+<div class="app-contents">
+
+    <div class="container">
+        <p>カレンダーアプリを起動します。</p>
+        <button class="btn btn-primary btn-block" ng-click="open()">OPEN</button>
+    </div>
+
+    <div class="container" style="padding-top: 1em">
+        <p>カレンダーアプリを日付を指定した状態で起動します</p>
+        <form method="POST" novalidate name="form">
+            <div class="alert alert-danger" role="alert" ng-show="error">
+                入力エラー
+            </div>
+
+            <div class="form-group">
+                <label for="date">日付</label>
+                <input type="date" class="form-control" ng-model="date" id="date" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block" ng-click="openDate()">OPEN</button>
+            </div>
+        </form>
+    </div>
+</div>

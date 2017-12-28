@@ -1,0 +1,14 @@
+<nav class="navbar-fixed-top">
+    <h1>Plugin-ImagePicker</h1>
+</nav>
+<div class="container">
+
+    <h5>画像ギャラリーから選択</h5>
+    <button type="button" class="btn btn-block btn-primary" ng-click="load()">読み込み</button>
+
+    <br />
+    <div ng-repeat="item in results">
+        <p>{{item}}</p>
+    </div>
+    <div class="alert alert-warning" role="alert" ng-show="message">{{message}}</div>
+</div>

@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.coltware.cdv.SampleApp14"
+        version="1.0"
+        ios-CFBundleVersion="1.0.3"
+        android-versionCode="10001"
+
+        android-packageName="com.coltware.cdv.android.SampleApp14"
+        ios-CFBundleIdentifier="com.coltware.cdv.ios.SampleApp14"
+
+        xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>SampleApp14</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+
+    <!-- この行を入れる事で、追加がされない -->
+    <preference name="cordova-custom-config-autorestore" value="true" />
+
+    <platform name="android">
+        <allow-intent href="market:*" />
+
+        <framework src="extra.gradle" custom="true" type="gradleReference" />
+
+        <!-- バージョンを変更する -->
+
+        <!-- <preference name="android-manifest/@android:versionCode" value="10001" /> -->
+        <!-- <preference name="android-manifest/android:versionName" value="1.0.1" /> -->
+
+        <preference name="android-manifest/application/activity/@android:label" value="サンプルアプリ" />
+
+        <!-- URLスキームでアプリを起動する -->
+        <config-file target="AndroidManifest.xml" parent="./application/activity" mode="add">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="hoge" />
+            </intent-filter>
+        </config-file>
+
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+
+        <!-- パッケージ名を変更する -->
+        <config-file platform="ios" target="*-Info.plist" parent="CFBundleIdentifier">
+            <string>com.coltware.cdv.ios.SampleApp2</string>
+        </config-file>
+
+        <config-file platform="ios" target="*-Info.plist" parent="CFBundleDisplayName">
+            <string>サンプルアプリ1</string>
+        </config-file>
+
+        <preference name="ios-XCBuildConfiguration-IPHONEOS_DEPLOYMENT_TARGET" value="8.3" quote="none" />
+
+        <!-- URLスキームでアプリを起動する -->
+        <config-file platform="ios" target="*-Info.plist" parent="CFBundleURLTypes">
+            <array>
+                <dict>
+                    <key>CFBundleURLSchemes</key>
+                    <array>
+                        <string>hoge</string>
+                    </array>
+                </dict>
+            </array>
+        </config-file>
+
+        <!-- アプリの基本言語を設定する -->
+        <config-file platform="ios" target="*-Info.plist" parent="CFBundleDevelopmentRegion">
+            <string>ja_JP</string>
+        </config-file>
+
+        <!-- ローカライゼーション（日本）に対応 -->
+        <config-file platform="ios" target="*-Info.plist" parent="CFBundleLocalizations">
+            <array>
+                <string>ja</string>
+            </array>
+        </config-file>
+
+        <!-- バックグラウンドモードを設定 -->
+        <config-file platform="ios" target="*-Info.plist" parent="UIBackgroundModes">
+            <array>
+                <string>location</string>
+            </array>
+        </config-file>
+    </platform>
+    <plugin name="cordova-custom-config" spec="~3.1.2" />
+</widget>

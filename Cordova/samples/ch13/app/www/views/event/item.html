@@ -1,0 +1,42 @@
+<div class="app-header">
+    <h1>イベントの詳細</h1>
+</div>
+<div class="app-contents">
+    <form method="POST" novalidate name="form">
+        <div class="alert alert-danger" role="alert" ng-show="error">
+            入力エラー
+        </div>
+        <div class="alert alert-success" role="alert" ng-show="update">
+            更新されました
+        </div>
+
+        <div class="form-group">
+            <label for="title">タイトル</label>
+            <input type="text" class="form-control" ng-model="model.title" id="title" required>
+        </div>
+        <div class="form-group">
+            <label for="location">場所</label>
+            <input type="text" class="form-control" ng-model="model.location" id="location" required>
+        </div>
+
+        <div class="form-group">
+            <label for="startDate">開始日</label>
+            <input type="date" class="form-control" ng-model="model.startDate" id="startDate" placeholder="表示名" required>
+        </div>
+        <div class="form-group">
+            <label for="endDate">終了日</label>
+            <input type="date" class="form-control" ng-model="model.endDate" id="endDate" required>
+        </div>
+        <div class="form-group">
+            <label for="notes">メモ</label>
+            <input type="text" class="form-control" ng-model="model.notes" id="notes">
+        </div>
+        <div class="form-group" ng-show="platform == 'iOS'">
+            <button type="submit" class="btn btn-primary btn-block" ng-click="modifyEvent()">更新(modifyEvent)</button>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-danger btn-block" ng-click="deleteEvent()">削除</button>
+        </div>
+    </form>
+</div>

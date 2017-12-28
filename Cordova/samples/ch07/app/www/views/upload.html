@@ -1,0 +1,17 @@
+<div class="container">
+    <h2>FileTransfer - アップロード</h2>
+
+    <div>アップロードする画像</div>
+    <div class="image">
+        <img src="img/upload.png" width="100%">
+    </div>
+
+    <hr />
+    <div class="alert alert-warning" role="alert" ng-show="message">{{message}}</div>
+
+    <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="upload()">アップロード</button>
+
+    <div class="container">
+        {{progress}}
+    </div>
+</div>

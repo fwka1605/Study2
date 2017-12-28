@@ -1,0 +1,35 @@
+<div class="app-header">
+    <h1>カレンダー</h1>
+    <div class="actions">
+        <a class="btn btn-default" ui-sref="cal.add">作成</a>
+    </div>
+</div>
+<div class="app-contents" type="list">
+    <div class="list-group">
+        <a class="list-group-item" ng-repeat="cal in list" ng-click="showDialog(cal)">
+            <div class="contents">
+                <h5>{{cal.name}}</h5>
+                <div>Type:{{cal.type}}</div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="cal_delete">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">カレンダーを削除します</h4>
+            </div>
+            <div class="modal-body">
+                {{target.name}}を削除します
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" ng-click="deleteItem()">削除</button>
+            </div>
+        </div>
+
+    </div>
+</div>

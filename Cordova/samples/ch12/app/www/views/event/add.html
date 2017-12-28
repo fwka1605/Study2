@@ -1,0 +1,39 @@
+<div class="app-header">
+    <h1>イベントの作成</h1>
+</div>
+<div class="app-contents">
+    <form method="POST" novalidate name="form">
+        <div class="alert alert-danger" role="alert" ng-show="error">
+            入力エラー
+        </div>
+        <div class="alert alert-success" role="alert" ng-show="update">
+            更新されました
+        </div>
+
+        <div class="form-group">
+            <label for="title">タイトル</label>
+            <input type="text" class="form-control" ng-model="model.title" id="title" required>
+        </div>
+        <div class="form-group">
+            <label for="location">場所</label>
+            <input type="text" class="form-control" ng-model="model.location" id="location" required>
+        </div>
+
+        <div class="form-group">
+            <label for="startDate">開始日</label>
+            <input type="date" class="form-control" ng-model="model.startDate" id="startDate" placeholder="表示名" required>
+        </div>
+        <div class="form-group">
+            <label for="endDate">終了日</label>
+            <input type="date" class="form-control" ng-model="model.endDate" id="endDate" required>
+        </div>
+        <div class="form-group">
+            <label for="memo">メモ</label>
+            <input type="text" class="form-control" ng-model="model.memo" id="memo">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block" ng-click="createEvent()">登録(createEvent)</button>
+            <button type="submit" class="btn btn-primary btn-block" ng-click="createEventInteractively()">登録(createEventInteractively)</button>
+        </div>
+    </form>
+</div>

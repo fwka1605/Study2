@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>画像</h2>
+    <form name="form" role="form">
+        <div class="form-group">
+            <label>画像の保存と表示</label>
+            <input id="file" type="file" ng-model="input" class="form-control">
+        </div>
+        <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="save()">保存</button>
+    </form>
+
+    <hr />
+    <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="load()">保存した画像を読みこみ</button>
+    <p>直近で保存した画像を表示します</p>
+    <br />
+    <img id="img_path" ng-src="{{img_path}}" width="100%">
+</div>

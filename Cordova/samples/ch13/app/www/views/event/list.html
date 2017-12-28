@@ -1,0 +1,42 @@
+<div class="app-header">
+    <h1>イベント</h1>
+    <div class="actions">
+        <a class="btn btn-default" ui-sref="event.add">作成</a>
+    </div>
+</div>
+<div class="app-contents">
+    <form method="POST" novalidate name="form">
+        <div class="alert alert-danger" role="alert" ng-show="error">
+            入力エラー
+        </div>
+        <div class="alert alert-success" role="alert" ng-show="update">
+            更新されました
+        </div>
+
+        <div class="form-group">
+            <label for="startDate">開始日</label>
+            <input type="date" class="form-control" ng-model="model.startDate" id="startDate" placeholder="表示名" required>
+        </div>
+        <div class="form-group">
+            <label for="endDate">終了日</label>
+            <input type="date" class="form-control" ng-model="model.endDate" id="endDate" required>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block" ng-click="listEventsInRange()">listEventsInRange(Androidのみ)</button>
+            <button type="submit" class="btn btn-primary btn-block" ng-click="findEvent()">findEvent</button>
+            <button type="submit" class="btn btn-primary btn-block" ng-click="findEventWithOptions()">findEventWithOptions</button>
+        </div>
+    </form>
+
+    <div class="list-group">
+        <a class="list-group-item" ng-repeat="event in list" ng-click="selectItem(event)">
+            <div class="contents">
+                <div>タイトル:{{event.title}}</div>
+                <div>場所:{{event.location}}</div>
+                <div>日付:{{event.startDate}} - {{event.endDate}}</div>
+                <div>メモ:{{event.message}}</div>
+            </div>
+        </a>
+    </div>
+</div>

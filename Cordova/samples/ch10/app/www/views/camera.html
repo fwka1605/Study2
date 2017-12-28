@@ -1,0 +1,52 @@
+<nav class="navbar-fixed-top">
+    <h1>Plugin-Camera</h1>
+</nav>
+<div class="container">
+
+    <h5>カメラを起動</h5>
+    <button type="button" class="btn btn-block btn-primary" ng-click="camera()">起動</button>
+
+    <hr />
+    <h5>オプションを指定して起動</h5>
+    <button type="button" class="btn btn-block btn-primary" ng-click="select()">選択</button>
+
+
+    <div class="form-group">
+        <div>SourceTypeの選択</div>
+        <select ng-model="sourceType" class="form-control">
+            <option value="0" >PHOTOLIBRARY</option>
+            <option value="1" >CAMERA</option>
+            <option value="2" >SAVEDPHOTOALBUM</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <div>MediaTypeの選択</div>
+        <select ng-model="mediaType" class="form-control">
+            <option value="0" >PICTURE</option>
+            <option value="1" >VIDEO</option>
+            <option value="2" >ALLMEDIA</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <div>EncodingTypeの選択</div>
+        <select ng-model="encodingType" class="form-control">
+            <option value="0" >JPEG</option>
+            <option value="1" >PNG</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <div>CameraDirection</div>
+        <select ng-model="cameraDirection" class="form-control">
+            <option value="0" >BACK</option>
+            <option value="1" >FRONT</option>
+        </select>
+    </div>
+
+    <img id="image" style="width: 100%">
+    <br />
+    <p>{{path}}</p>
+    <div class="alert alert-warning" role="alert" ng-show="message">{{message}}</div>
+</div>

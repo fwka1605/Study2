@@ -1,0 +1,10 @@
+<div>
+    <h2>ディレクトリの読込</h2>
+    <div class="list-group">
+        <div class="list-group-item" ng-repeat="item in files">
+            <span class="glyphicon glyphicon-folder-close" aria-hidden="true" ng-show="item.isDirectory"></span>
+            <span class="glyphicon glyphicon-file" aria-hidden="true" ng-show="item.isFile"></span>
+            <span>{{item.name}}</span>
+        </div>
+    </div>
+</div>

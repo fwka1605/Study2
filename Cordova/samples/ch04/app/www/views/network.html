@@ -1,0 +1,16 @@
+<div>
+    <h2>ネットワーク情報</h2>
+    <div class="list-group">
+        <div class="list-group-item">
+            <h5>connection.type</h5>
+            <p>{{type}}</p>
+        </div>
+    </div>
+
+    <div class="alert alert-success" role="alert" ng-show="online">
+        <p>オンラインです</p>
+    </div>
+    <div class="alert alert-danger" role="alert" ng-show="offline">
+        <p>オフラインです</p>
+    </div>
+</div>

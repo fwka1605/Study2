@@ -1,0 +1,44 @@
+<div class="app-header">
+   <h1>リストから選択</h1>
+    <div class="actions">
+        <button class="btn btn-default" ng-click="deleteContact()">削除</button>
+    </div>
+</div>
+<div class="app-contents">
+    <div class="alert alert-info" ng-show="!found">
+        対象の連絡先が見つかりませんでした。
+    </div>
+
+    <form method="POST" novalidate name="form" ng-show="found">
+        <div class="alert alert-danger" role="alert" ng-show="error">
+            入力エラー
+        </div>
+        <div class="alert alert-success" role="alert" ng-show="update">
+            更新されました
+        </div>
+
+        <div class="form-group">
+            <label for="displayName">displayName</label>
+            <input type="text" class="form-control" ng-model="model.displayName" id="displayName" placeholder="表示名" required>
+        </div>
+        <div class="form-group">
+            <label for="familyName">name.familyName</label>
+            <input type="text" class="form-control" ng-model="model.familyName" id="familyName" placeholder="名字" required>
+        </div>
+        <div class="form-group">
+            <label for="givenName">name.givenName</label>
+            <input type="text" class="form-control" ng-model="model.givenName" id="givenName" placeholder="名前" required>
+        </div>
+        <div class="form-group">
+            <label for="email">email</label>
+            <input type="email" class="form-control" ng-model="model.email" id="email" placeholder="メールアドレス" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">phone</label>
+            <input type="tel" class="form-control" ng-model="model.phone" id="phone" placeholder="電話番号" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block" ng-click="updateContact()">更新</button>
+        </div>
+    </form>
+</div>

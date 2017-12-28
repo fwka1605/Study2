@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta charset="UTF-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script type="text/javascript" src="vendors/jquery-2.2.1.min.js"></script>
+        <script type="text/javascript" src="vendors/bootstrap/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="vendors/bootstrap/css/bootstrap.min.css">
+        <title>Sample Camera App</title>
+    </head>
+    <body>
+        <div id="device-not-ready">
+            <span>デバイスはまだ準備中です</span>
+        </div>
+        <div id="device-ready" style="display: none">
+            <div>デバイスの準備が整いました</div>
+
+            <button class="btn btn-primary btn-block" id="camera-call">カメラを起動</button>
+
+            <img id="image" src="">
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

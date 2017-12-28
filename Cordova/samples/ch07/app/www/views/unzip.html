@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>Unzip</h2>
+
+    <hr />
+    <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="unzip()">実行</button>
+
+    <div class="container">
+        {{progress}}
+    </div>
+
+    <div class="alert alert-warning" role="alert" ng-show="message">{{message}}</div>
+
+    <div class="image" ng-show="img_path">
+        <img ng-src="{{img_path}}" width="100%" />
+    </div>
+</div>
