@@ -1,0 +1,155 @@
+1.プロジェクトの作成
+cordova create hello com.coltware.hello
+
+2.以下のファイルが作成される
+
+─hello
+    │  config.xml
+    │  package.json
+    ├─hooks
+    │      README.md
+    ├─platforms
+    ├─plugins
+    └─www
+        │  index.html
+        │
+        ├─css
+        │      index.css
+        │
+        ├─img
+        │      logo.png
+        │
+        └─js
+                index.js
+
+3.helloフォルダーに移動する。
+
+4.Androidをplatformとして追加する。
+
+C:\Users\maruy\Documents\maruyama\Cordova\hello>cordova platform add android
+Using cordova-fetch for cordova-android@~7.0.0
+Adding android project...
+Creating Cordova project for the Android platform:
+        Path: platforms\android
+        Package: com.coltware.hello
+        Name: HelloCordova
+        Activity: MainActivity
+        Android target: android-26
+Subproject Path: CordovaLib
+Subproject Path: app
+Android project created with cordova-android@7.0.0
+Android Studio project detected
+Android Studio project detected
+Discovered plugin "cordova-plugin-whitelist" in config.xml. Adding it to the project
+Installing "cordova-plugin-whitelist" for android
+
+               This plugin is only applicable for versions of cordova-android greater than 4.0. If you have a previous platform version, you do *not* need this plugin since the whitelist will be built in.
+
+Adding cordova-plugin-whitelist to package.json
+Saved plugin info for "cordova-plugin-whitelist" to config.xml
+--save flag or autosave detected
+Saving android@~7.0.0 into config.xml file ...
+
+5.プラットフォームリストの確認
+
+C:\Users\maruy\Documents\maruyama\Cordova\hello>cordova platform list
+Installed platforms:
+  android 7.0.0
+Available platforms:
+  browser ~5.0.1
+  ios ~4.5.4
+  osx ~4.0.1
+  windows ~5.0.0
+  www ^3.12.0
+
+6.ビルドする。 エラーになる場合は、Platformのバージョンがインストールされていない可能性があるため、
+SDKManagerで追加する。
+
+C:\Users\maruy\Documents\maruyama\Cordova\hello>cordova build android
+Android Studio project detected
+ANDROID_HOME=C:\Users\maruy\AppData\Local\Android\Sdk
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_152
+studio
+Subproject Path: CordovaLib
+Subproject Path: app
+publishNonDefault is deprecated and has no effect anymore. All variants are now published.
+Download https://repo1.maven.org/maven2/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar
+The Task.leftShift(Closure) method has been deprecated and is scheduled to be removed in Gradle 5.0. Please use Task.doLast(Action) instead.
+        at build_8ymh7rpth1m3wlfy55agv4yku.run(C:\Users\maruy\Documents\maruyama\Cordova\hello\platforms\android\app\build.gradle:143)
+:CordovaLib:preBuild UP-TO-DATE
+:CordovaLib:preDebugBuild UP-TO-DATE
+:CordovaLib:compileDebugAidl
+:CordovaLib:compileDebugRenderscript
+:CordovaLib:checkDebugManifest
+:CordovaLib:generateDebugBuildConfig
+:CordovaLib:prepareLintJar
+:CordovaLib:generateDebugResValues
+:CordovaLib:generateDebugResources
+:CordovaLib:packageDebugResources
+:CordovaLib:platformAttrExtractor
+:CordovaLib:processDebugManifest
+:CordovaLib:javaPreCompileDebug
+:CordovaLib:processDebugJavaRes NO-SOURCE
+:app:preBuild UP-TO-DATE
+:app:preDebugBuild
+:app:compileDebugAidl
+:CordovaLib:packageDebugRenderscript NO-SOURCE
+:app:compileDebugRenderscript
+:app:checkDebugManifest
+:app:generateDebugBuildConfig
+:app:prepareLintJar
+:app:generateDebugResValues
+:app:generateDebugResources
+:app:mergeDebugResources
+:app:createDebugCompatibleScreenManifests
+:app:processDebugManifest
+:app:splitsDiscoveryTaskDebug
+:app:compileDebugNdk NO-SOURCE
+:CordovaLib:mergeDebugShaders
+:CordovaLib:compileDebugShaders
+:CordovaLib:generateDebugAssets
+:CordovaLib:mergeDebugAssets
+:app:mergeDebugShaders
+:app:compileDebugShaders
+:app:generateDebugAssets
+:app:mergeDebugAssets
+:app:extractTryWithResourcesSupportJarDebug
+:CordovaLib:compileDebugNdk NO-SOURCE
+:CordovaLib:mergeDebugJniLibFolders
+:CordovaLib:transformNativeLibsWithMergeJniLibsForDebug
+:CordovaLib:transformNativeLibsWithIntermediateJniLibsForDebug
+:app:mergeDebugJniLibFolders
+:app:processDebugJavaRes NO-SOURCE
+:app:validateSigningDebug
+:CordovaLib:processDebugResources
+:CordovaLib:generateDebugSources
+:CordovaLib:compileDebugJavaWithJavac
+
+:CordovaLib:transformClassesAndResourcesWithPrepareIntermediateJarsForDebug
+:app:processDebugResources
+:app:generateDebugSources
+:app:javaPreCompileDebug
+:app:compileDebugJavaWithJavac
+:app:compileDebugSources
+:app:transformClassesWithStackFramesFixerForDebug
+:app:transformClassesWithDesugarForDebug
+:app:transformClassesWithDexBuilderForDebug
+:app:transformDexArchiveWithExternalLibsDexMergerForDebug
+:app:transformDexArchiveWithDexMergerForDebug
+:app:transformNativeLibsWithMergeJniLibsForDebug
+:app:transformResourcesWithMergeJavaResForDebug
+:app:packageDebug
+:app:assembleDebug
+:app:cdvBuildDebug
+
+BUILD SUCCESSFUL in 39s
+47 actionable tasks: 47 executed
+Built the following apk(s):
+        C:\Users\maruy\Documents\maruyama\Cordova\hello\platforms\android\app\build\outputs\apk\debug\app-debug.apk
+
+
+6.Android Studioを起動して、新規プロジェクトを作成して、エミュレーターを設定する。
+
+7.エミュレータで実行する。
+
+cordova emulate android
