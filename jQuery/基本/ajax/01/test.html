@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>jQuery test1</title>
+	<script src="http://code.jquery.com/jquery-3.3.1.js"></script>	
+	<script>
+		jQuery(function($){
+			$("#sample1").on("click",
+				function(){
+					$.ajax({
+						url:"sample.txt",
+						type:"GET",
+						dataType:"text",
+						success:function(data){
+							console.log(data);
+						}
+					});
+				}
+			);
+		});
+	</script>
+</head>
+
+<body>
+
+<form>
+	<input type="button" id="sample1" value="サンプル1">
+</form>
+	
+</html>
