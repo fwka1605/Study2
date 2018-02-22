@@ -30,6 +30,15 @@
     <Compile Include="02\greet.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="02\save_csv_join.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="02\scrape_re.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="02\scrape_rss.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="02\urlopen_encoding.py">
       <SubType>Code</SubType>
     </Compile>

@@ -1,0 +1,28 @@
+●Pleiadesダウンロード
+
+http://mergedoc.osdn.jp/
+
+All in Oneではなくて、プラグイン本体のみ落とす。
+「Pleiades プラグイン・ダウンロード」→「安定版」→「pleiades_X.X.X.zip」
+
+
+●pleiades_X.X.X.zipを解凍
+解凍ソフトではエラーが発生することがあるので、Windows標準の解凍ソフトで解凍。
+
+●plugins/featuresのコピー
+解凍したフォルダー内のpluginsとfeaturesを、STSのpluginsとfeaturesにコピー
+
+参考：plugins/featuresフォルダーにはjp.sourceforge.mergedoc.pleiadesが入っている。
+
+●STS.iniの最終行の追加
+-Xverify:none
+-javaagent:plugins/jp.sourceforge.mergedoc.pleiades/pleiades.jar
+
+●STSのキャッシュのクリーン
+初回起動は-cleanで起動します。それ以降は普通にSTS.exeから。
+
+１．「pleiades_X.X.X.zip」を解凍した中に入っている
+　　"eclipse.exe -clean.cmd" をSTS.exeと同じディレクトリにおきます。
+２．"eclipse.exe -clean.cmd"を右クリックで編集
+３．eclipse.exeをSTS.exeに書き換えて保存。
+４．"eclipse.exe -clean.cmd"をダブルクリックで実行

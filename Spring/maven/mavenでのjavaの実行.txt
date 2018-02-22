@@ -1,0 +1,23 @@
+1.プラグインの追加
+
+pom.xmlに以下を追加する。
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.6.0</version>
+				<configuration>
+					<mainClass>jp.maru.spring.sample1.App</mainClass>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+２．Mavenの実行
+
+mvn exec:java
+
+注意：これはあくまでもtarget内のclassの実行(java)のみである。 
+そのため事前にmvn installを行い、コンパイルしたclassをtarget内に作成する必要がある。
