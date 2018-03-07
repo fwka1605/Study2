@@ -4,8 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>71ed84cc-83fe-4aaf-a9d2-236ca72cfa98</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>
-    </StartupFile>
+    <StartupFile>02\python_scraper.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,12 +24,28 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="02\" />
+    <Folder Include="03\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="02\greet.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="02\python_scraper.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="02\save_csv_dict.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="02\save_csv.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="02\save_csv_join.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="02\save_json.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="02\save_sqllite3.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="02\scrape_re.py">
