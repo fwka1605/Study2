@@ -8,8 +8,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 @WebServlet("/sample")
 public class MySampleServlet extends HttpServlet {
@@ -17,16 +19,21 @@ public class MySampleServlet extends HttpServlet {
 
 	private ApplicationContext app = null;
 	
+	@Autowired
+	private MyBean2 mybean2;
+	
+	@Autowired
+	private MyBeanEventService beanService;
+	
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		super.init();
-		app = new ClassPathXmlApplicationContext("/spring/application-config.xml");
+		SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		MyBean mybean1 = (MyBean) app.getBean("mybean1");
-		request.setAttribute("mybean", mybean1);
+		request.setAttribute("mybean", mybean2);
 		request.getRequestDispatcher("/index.jsp").forward(request, response);
 	}
 
@@ -36,8 +43,7 @@ public class MySampleServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String message = request.getParameter("message");
-		MyBean mybean1 = (MyBean) app.getBean("mybean1");
-		mybean1.addMessage(message);
+		beanService.doService(message);
 		response.sendRedirect("sample");
 	}
 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<aop:config>
+		<aop:aspect id="mybeanaspect1" ref="aop1">
+			<aop:pointcut expression="execution(* jp.tuyano.spring.aop1.IMyBean.addData(..))" id="p1"/>
+			<aop:before method="addDataBefore" pointcut-ref="p1" />
+		</aop:aspect>
+	</aop:config>
+	<bean id="aop1" class="jp.tuyano.spring.aop1.MyBeanAspect"></bean>
+
+	<bean id="bean1" class="jp.tuyano.spring.aop1.MyBean1"></bean>
+</beans>
