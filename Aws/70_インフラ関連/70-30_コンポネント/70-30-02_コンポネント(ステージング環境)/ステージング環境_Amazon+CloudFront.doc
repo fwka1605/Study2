@@ -1,0 +1,467 @@
+Date: Thu, 12 Mar 2020 08:21:16 +0000 (UTC)
+Message-ID: <1476080353.73.1584001276973@31c954bd6c98>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_72_970791613.1584001276973"
+
+------=_Part_72_970791613.1584001276973
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>=E3=82=B9=E3=83=86=E3=83=BC=E3=82=B8=E3=83=B3=E3=82=B0=E7=92=B0=
+=E5=A2=83_Amazon CloudFront</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: #fff !important;
+        color: #000 !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: #000;
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>=E3=82=B9=E3=83=86=E3=83=BC=E3=82=B8=E3=83=B3=E3=82=B0=E7=92=B0=E5=
+=A2=83_Amazon CloudFront</h1>
+    <div class=3D"Section1">
+        <ul>
+<li><p><strong>Amazon CloudFront</strong></p></li>
+</ul>
+<div class=3D"table-wrap">
+<table data-layout=3D"default" class=3D"confluenceTable">
+<tbody>
+<tr>
+<th data-highlight-colour=3D"#deebff" class=3D"confluenceTh"><p><strong>Del=
+ivery Method</strong></p></th>
+<th data-highlight-colour=3D"#deebff" class=3D"confluenceTh"><p><strong>ID<=
+/strong></p></th>
+<th data-highlight-colour=3D"#deebff" class=3D"confluenceTh"><p><strong>Dom=
+ainName</strong></p></th>
+<th data-highlight-colour=3D"#deebff" class=3D"confluenceTh"><p><strong>CNA=
+MEs</strong></p></th>
+<th data-highlight-colour=3D"#deebff" class=3D"confluenceTh"><p><strong>ELB=
+</strong></p></th>
+<th data-highlight-colour=3D"#deebff" class=3D"confluenceTh"><p><strong>S3<=
+/strong></p></th>
+<th data-highlight-colour=3D"#deebff" class=3D"confluenceTh"><p><strong>SSL=
+=E8=A8=BC=E6=98=8E=E6=9B=B8</strong></p></th>
+<th data-highlight-colour=3D"#deebff" class=3D"confluenceTh"><p><strong>=E5=
+=82=99=E8=80=83</strong></p></th>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>Web</p></td>
+<td class=3D"confluenceTd"><p>E1PBLPU7BU6MQ0</p></td>
+<td class=3D"confluenceTd"><p>d1xxgpsg5gzq8g.cloudfront.net</p></td>
+<td class=3D"confluenceTd"><p>portal-stg.stellamock.com</p></td>
+<td class=3D"confluenceTd"><p>stella-stg-portal-elb-1753433187.ap-northeast=
+-1.elb.amazonaws.com </p></td>
+<td class=3D"confluenceTd"><p>stella-stg-s3-front.s3.amazonaws.com</p></td>
+<td class=3D"confluenceTd"><p>=E3=81=82=E3=82=8A</p></td>
+<td class=3D"confluenceTd"><p>=E3=83=9D=E3=83=BC=E3=82=BF=E3=83=AB=E3=82=B5=
+=E3=82=A4=E3=83=88</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>Web</p></td>
+<td class=3D"confluenceTd"><p>E1XIBU01PX44Y8</p></td>
+<td class=3D"confluenceTd"><p>d3bbzihup7u4io.cloudfront.net</p></td>
+<td class=3D"confluenceTd"><p>customerdb-stg.stellamock.com</p></td>
+<td class=3D"confluenceTd"><p>stella-stg-customer-elb-1003721984.ap-northea=
+st-1.elb.amazonaws.com</p></td>
+<td class=3D"confluenceTd"><p>stella-stg-s3-front.s3.amazonaws.com</p></td>
+<td class=3D"confluenceTd"><p>=E3=81=82=E3=82=8A</p></td>
+<td class=3D"confluenceTd"><p>=E9=A1=A7=E5=AE=A2DB</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>Web</p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<ul>
+<li><p><strong>=E3=83=AB=E3=83=BC=E3=83=86=E3=82=A3=E3=83=B3=E3=82=B0=EF=BC=
+=88Stella-STG-Portal-=E3=83=9D=E3=83=BC=E3=82=BF=E3=83=AB=E3=82=B5=E3=82=A4=
+=E3=83=88=EF=BC=89</strong></p></li>
+</ul>
+<p>Headers=E3=82=92=E8=BF=BD=E5=8A=A0=E5=BF=85=E8=A6=81=EF=BC=88CloudFront-=
+Forwarded-Proto=E3=80=81X-Forwarded-For=E3=80=81Accept-Language=EF=BC=89</p=
+>
+<ul>
+<li><p>Origins and Origin Groups</p></li>
+</ul>
+<div class=3D"table-wrap">
+<table data-layout=3D"default" class=3D"confluenceTable">
+<tbody>
+<tr>
+<th class=3D"confluenceTh"><p>Origin Domain Name and Path</p></th>
+<th class=3D"confluenceTh"><p>HTTPS Port</p></th>
+<th class=3D"confluenceTh"><p>HTTP Port</p></th>
+<th class=3D"confluenceTh"><p><strong>=E5=82=99=E8=80=83</strong></p></th>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>stella-stg-s3-front.s3.amazonaws.com</p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p>=E3=83=95=E3=83=AD=E3=83=B3=E3=83=88</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>stella-stg-portal-elb-1753433187.ap-northeast=
+-1.elb.amazonaws.com</p></td>
+<td class=3D"confluenceTd"><p>443</p></td>
+<td class=3D"confluenceTd"><p>80</p></td>
+<td class=3D"confluenceTd"><p>=E3=82=B5=E3=83=BC=E3=83=90</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>&nbsp;</p>
+<ul>
+<li><p>Behaviors</p></li>
+</ul>
+<div class=3D"table-wrap">
+<table data-layout=3D"default" class=3D"confluenceTable">
+<colgroup>
+<col style=3D"width: 66.0px;">
+<col style=3D"width: 117.0px;">
+<col style=3D"width: 188.0px;">
+<col style=3D"width: 131.0px;">
+<col style=3D"width: 178.0px;">
+</colgroup>
+<tbody>
+<tr>
+<th class=3D"confluenceTh"><p>Precedence</p></th>
+<th class=3D"confluenceTh"><p>Path Pattern</p></th>
+<th class=3D"confluenceTh"><p>Origin or Origin Group</p></th>
+<th class=3D"confluenceTh"><p>Viewer Protocol Policy</p></th>
+<th class=3D"confluenceTh"><p>Forwarded Query Strings</p></th>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>0</p></td>
+<td class=3D"confluenceTd"><p>/main/*</p></td>
+<td class=3D"confluenceTd"><p>ELB-stella-stg-portal-elb-1753433187</p></td>
+<td class=3D"confluenceTd"><p>HTTP and HTTPS</p></td>
+<td class=3D"confluenceTd"><p>Yes</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>1</p></td>
+<td class=3D"confluenceTd"><p>/portal/*</p></td>
+<td class=3D"confluenceTd"><p>ELB-stella-stg-portal-elb-1753433187</p></td>
+<td class=3D"confluenceTd"><p>HTTP and HTTPS</p></td>
+<td class=3D"confluenceTd"><p>Yes</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>2</p></td>
+<td class=3D"confluenceTd"><p>/download/portal/*</p></td>
+<td class=3D"confluenceTd"><p>ELB-stella-stg-portal-elb-1753433187</p></td>
+<td class=3D"confluenceTd"><p>HTTP and HTTPS</p></td>
+<td class=3D"confluenceTd"><p>Yes</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>3</p></td>
+<td class=3D"confluenceTd"><p>Default (*)</p></td>
+<td class=3D"confluenceTd"><p>S3-stella-stg-s3-front</p></td>
+<td class=3D"confluenceTd"><p>HTTP and HTTPS</p></td>
+<td class=3D"confluenceTd"><p>No</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p></p>
+<ul>
+<li><p><strong>=E3=83=AB=E3=83=BC=E3=83=86=E3=82=A3=E3=83=B3=E3=82=B0=EF=BC=
+=88Stella-STG-Customer-ec2-=E9=A1=A7=E5=AE=A2=EF=BC=89</strong></p></li>
+</ul>
+<p>Headers=E3=82=92=E8=BF=BD=E5=8A=A0=E5=BF=85=E8=A6=81=EF=BC=88CloudFront-=
+Forwarded-Proto=E3=80=81X-Forwarded-For=E3=80=81Accept-Language=EF=BC=89</p=
+>
+<ul>
+<li><p>Origins and Origin Groups</p></li>
+</ul>
+<div class=3D"table-wrap">
+<table data-layout=3D"default" class=3D"confluenceTable">
+<tbody>
+<tr>
+<td class=3D"confluenceTd"><p>stella-stg-s3-front.s3.amazonaws.com</p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p>=E3=83=95=E3=83=AD=E3=83=B3=E3=83=88</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>stella-stg-customer-elb-1003721984.ap-northea=
+st-1.elb.amazonaws.com</p></td>
+<td class=3D"confluenceTd"><p>443</p></td>
+<td class=3D"confluenceTd"><p>80</p></td>
+<td class=3D"confluenceTd"><p>=E3=82=B5=E3=83=BC=E3=83=90</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><p>Behaviors</p></li>
+</ul>
+<div class=3D"table-wrap">
+<table data-layout=3D"default" class=3D"confluenceTable">
+<colgroup>
+<col style=3D"width: 66.0px;">
+<col style=3D"width: 117.0px;">
+<col style=3D"width: 188.0px;">
+<col style=3D"width: 131.0px;">
+<col style=3D"width: 178.0px;">
+</colgroup>
+<tbody>
+<tr>
+<th class=3D"confluenceTh"><p>Precedence</p></th>
+<th class=3D"confluenceTh"><p>Path Pattern</p></th>
+<th class=3D"confluenceTh"><p>Origin or Origin Group</p></th>
+<th class=3D"confluenceTh"><p>Viewer Protocol Policy</p></th>
+<th class=3D"confluenceTh"><p>Forwarded Query Strings</p></th>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>0</p></td>
+<td class=3D"confluenceTd"><p>/customer/*</p></td>
+<td class=3D"confluenceTd"><p>ELB-stella-stg-customer-elb-1003721984</p></t=
+d>
+<td class=3D"confluenceTd"><p>HTTP and HTTPS</p></td>
+<td class=3D"confluenceTd"><p>Yes</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>1</p></td>
+<td class=3D"confluenceTd"><p>/download/portal/*</p></td>
+<td class=3D"confluenceTd"><p>ELB-stella-stg-customer-elb-1003721984</p></t=
+d>
+<td class=3D"confluenceTd"><p>HTTP and HTTPS</p></td>
+<td class=3D"confluenceTd"><p>Yes</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>2</p></td>
+<td class=3D"confluenceTd"><p>Default (*)</p></td>
+<td class=3D"confluenceTd"><p>S3-stella-stg-s3-front</p></td>
+<td class=3D"confluenceTd"><p>HTTP and HTTPS</p></td>
+<td class=3D"confluenceTd"><p>Yes</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p></p>
+    </div>
+</body>
+</html>
+------=_Part_72_970791613.1584001276973--

@@ -1,0 +1,836 @@
+Date: Thu, 12 Mar 2020 08:23:40 +0000 (UTC)
+Message-ID: <1261017525.47.1584001420258@027799f74838>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_46_996587624.1584001420257"
+
+------=_Part_46_996587624.1584001420257
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>=E6=9C=AC=E7=95=AA=E7=92=B0=E5=A2=83_=E3=82=BB=E3=82=AD=E3=83=A5=
+=E3=83=AA=E3=83=86=E3=82=A3=E3=82=B0=E3=83=AB=E3=83=BC=E3=83=97</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: #fff !important;
+        color: #000 !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: #000;
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>=E6=9C=AC=E7=95=AA=E7=92=B0=E5=A2=83_=E3=82=BB=E3=82=AD=E3=83=A5=E3=
+=83=AA=E3=83=86=E3=82=A3=E3=82=B0=E3=83=AB=E3=83=BC=E3=83=97</h1>
+    <div class=3D"Section1">
+        <ul>
+<li><p><strong>SecurityGroup</strong></p></li>
+</ul>
+<p><strong>stella-prod-ssh-from-maintainer</strong></p>
+<p><strong>=E3=80=80(=E3=82=BB=E3=82=AD=E3=83=A5=E3=83=AA=E3=83=86=E3=82=A3=
+=E3=82=B0=E3=83=AB=E3=83=BC=E3=83=97 ID=EF=BC=9Asg-0a61083f1c6446be7)</stro=
+ng></p>
+<p><strong>=E3=80=80=E3=82=A4=E3=83=B3=E3=82=BF=E3=83=BC=E3=83=8D=E3=83=83=
+=E3=83=88=E7=B5=8C=E7=94=B1=E3=81=AE=E9=96=A2=E4=BF=82=E5=90=84=E7=A4=BE=E3=
+=81=8B=E3=82=89=E3=81=AESSH=E8=A8=B1=E5=8F=AF</strong></p>
+<div class=3D"table-wrap">
+<table data-layout=3D"default" class=3D"confluenceTable">
+<tbody>
+<tr>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E3=
+=82=BF=E3=82=A4=E3=83=97</strong></p></td>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E3=
+=83=97=E3=83=AD=E3=83=88=E3=82=B3=E3=83=AB</strong></p></td>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E3=
+=83=9D=E3=83=BC=E3=83=88=E7=AF=84=E5=9B=B2</strong></p></td>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E9=
+=80=81=E4=BF=A1=E5=85=83</strong></p></td>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E5=
+=82=99=E8=80=83</strong></p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>SSH</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>22</p></td>
+<td class=3D"confluenceTd"><p>124.38.245.90/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>SSH</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>22</p></td>
+<td class=3D"confluenceTd"><p>221.245.250.58/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>SSH</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>22</p></td>
+<td class=3D"confluenceTd"><p>203.141.136.194/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>SSH</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>22</p></td>
+<td class=3D"confluenceTd"><p>221.115.122.18/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>SSH</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>22</p></td>
+<td class=3D"confluenceTd"><p>210.229.179.170/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>SSH</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>22</p></td>
+<td class=3D"confluenceTd"><p>211.128.86.128/27</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>SSH</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>22</p></td>
+<td class=3D"confluenceTd"><p>96.45.197.202/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>SSH</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>22</p></td>
+<td class=3D"confluenceTd"><p>72.138.67.80/29</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>SSH</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>22</p></td>
+<td class=3D"confluenceTd"><p>202.212.205.190</p></td>
+<td class=3D"confluenceTd"><p>T-GAIA_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>SSH</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>22</p></td>
+<td class=3D"confluenceTd"><p>121.101.92.74</p></td>
+<td class=3D"confluenceTd"><p>PS</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p></p>
+<p><strong>stella-prod-vpn-access-from-t-gaia</strong></p>
+<p><strong>=E3=80=80(=E3=82=BB=E3=82=AD=E3=83=A5=E3=83=AA=E3=83=86=E3=82=A3=
+=E3=82=B0=E3=83=AB=E3=83=BC=E3=83=97 ID=EF=BC=9Asg-047ad63b2305844dc)</stro=
+ng></p>
+<p>=E3=80=80<strong>=E3=83=86=E3=82=A3=E3=83=BC=E3=82=AC=E3=82=A4=E3=82=A2=
+=E6=A7=98=E3=81=AEVPN=E7=B5=8C=E7=94=B1=E3=81=A7=E3=81=AESSH=E8=A8=B1=E5=8F=
+=AF</strong></p>
+<div class=3D"table-wrap">
+<table data-layout=3D"default" class=3D"confluenceTable">
+<tbody>
+<tr>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E3=
+=82=BF=E3=82=A4=E3=83=97</strong></p></td>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E3=
+=83=97=E3=83=AD=E3=83=88=E3=82=B3=E3=83=AB</strong></p></td>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E3=
+=83=9D=E3=83=BC=E3=83=88=E7=AF=84=E5=9B=B2</strong></p></td>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E9=
+=80=81=E4=BF=A1=E5=85=83</strong></p></td>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E5=
+=82=99=E8=80=83</strong></p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>SSH</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>22</p></td>
+<td data-highlight-colour=3D"#fff0b3" class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p>=E3=83=86=E3=82=A3=E3=83=BC=E3=82=AC=E3=82=A4=
+=E3=82=A2=E6=A7=98VPN=E6=8E=A5=E7=B6=9A=E5=85=83</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>RDP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>3389</p></td>
+<td data-highlight-colour=3D"#fff0b3" class=3D"confluenceTd"><p></p></td>
+<td class=3D"confluenceTd"><p>=E3=83=86=E3=82=A3=E3=83=BC=E3=82=AC=E3=82=A4=
+=E3=82=A2=E6=A7=98VPN=E6=8E=A5=E7=B6=9A=E5=85=83</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p></p>
+<p><strong>stella-prod-rdp-from-maintainer</strong></p>
+<p><strong>=E3=80=80(=E3=82=BB=E3=82=AD=E3=83=A5=E3=83=AA=E3=83=86=E3=82=A3=
+=E3=82=B0=E3=83=AB=E3=83=BC=E3=83=97 ID=EF=BC=9Asg-054ce11fc574488ce)</stro=
+ng></p>
+<p><strong>=E3=80=80=E3=82=A4=E3=83=B3=E3=82=BF=E3=83=BC=E3=83=8D=E3=83=83=
+=E3=83=88=E7=B5=8C=E7=94=B1=E3=81=AE=E9=96=A2=E4=BF=82=E5=90=84=E7=A4=BE=E3=
+=81=8B=E3=82=89=E3=81=AERDP=E8=A8=B1=E5=8F=AF=E3=80=80=E2=80=BB=E8=B8=8F=E3=
+=81=BF=E5=8F=B0=E3=82=B5=E3=83=BC=E3=83=90=E3=81=ABWindows=E3=81=8C=E3=81=
+=AA=E3=81=91=E3=82=8C=E3=81=B0=E4=BD=9C=E6=88=90=E4=B8=8D=E8=A6=81</strong>=
+</p>
+<div class=3D"table-wrap">
+<table data-layout=3D"default" class=3D"confluenceTable">
+<tbody>
+<tr>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E3=
+=82=BF=E3=82=A4=E3=83=97</strong></p></td>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E3=
+=83=97=E3=83=AD=E3=83=88=E3=82=B3=E3=83=AB</strong></p></td>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E3=
+=83=9D=E3=83=BC=E3=83=88=E7=AF=84=E5=9B=B2</strong></p></td>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E9=
+=80=81=E4=BF=A1=E5=85=83</strong></p></td>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E5=
+=82=99=E8=80=83</strong></p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>RDP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>3389</p></td>
+<td class=3D"confluenceTd"><p>124.38.245.90/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>RDP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>3389</p></td>
+<td class=3D"confluenceTd"><p>221.245.250.58/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>RDP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>3389</p></td>
+<td class=3D"confluenceTd"><p>203.141.136.194/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>RDP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>3389</p></td>
+<td class=3D"confluenceTd"><p>221.115.122.18/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>RDP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>3389</p></td>
+<td class=3D"confluenceTd"><p>210.229.179.170/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>RDP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>3389</p></td>
+<td class=3D"confluenceTd"><p>211.128.86.128/27</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>RDP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>3389</p></td>
+<td class=3D"confluenceTd"><p>96.45.197.202/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>RDP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>3389</p></td>
+<td class=3D"confluenceTd"><p>72.138.67.80/29</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>RDP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>3389</p></td>
+<td class=3D"confluenceTd"><p>202.212.205.190</p></td>
+<td class=3D"confluenceTd"><p>T-GAIA_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>RDP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>3389</p></td>
+<td class=3D"confluenceTd"><p>121.101.92.74</p></td>
+<td class=3D"confluenceTd"><p>PS</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p></p>
+<p><strong>stella-prod-jig-saw-monitoring</strong></p>
+<p><strong>=E3=80=80(=E3=82=BB=E3=82=AD=E3=83=A5=E3=83=AA=E3=83=86=E3=82=A3=
+=E3=82=B0=E3=83=AB=E3=83=BC=E3=83=97 ID=EF=BC=9Asg-02006663de50af4f9)</stro=
+ng></p>
+<p><strong>=E3=80=80JIG-SAW=E7=9B=A3=E8=A6=96=E7=94=A8=EF=BC=88=E3=82=A4=E3=
+=83=B3=E3=82=BF=E3=83=BC=E3=83=8D=E3=83=83=E3=83=88=E7=B5=8C=E7=94=B1=EF=BC=
+=89</strong></p>
+<div class=3D"table-wrap">
+<table data-layout=3D"default" class=3D"confluenceTable">
+<tbody>
+<tr>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E3=
+=82=BF=E3=82=A4=E3=83=97</strong></p></td>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E3=
+=83=97=E3=83=AD=E3=83=88=E3=82=B3=E3=83=AB</strong></p></td>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E3=
+=83=9D=E3=83=BC=E3=83=88=E7=AF=84=E5=9B=B2</strong></p></td>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E9=
+=80=81=E4=BF=A1=E5=85=83</strong></p></td>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E5=
+=82=99=E8=80=83</strong></p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>ICMP</p></td>
+<td class=3D"confluenceTd"><p>=E3=81=99=E3=81=B9=E3=81=A6</p></td>
+<td class=3D"confluenceTd"><p>=E8=A9=B2=E5=BD=93=E3=81=AA=E3=81=97</p></td>
+<td class=3D"confluenceTd"><p>221.245.250.58/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>ICMP</p></td>
+<td class=3D"confluenceTd"><p>=E3=81=99=E3=81=B9=E3=81=A6</p></td>
+<td class=3D"confluenceTd"><p>=E8=A9=B2=E5=BD=93=E3=81=AA=E3=81=97</p></td>
+<td class=3D"confluenceTd"><p>210.229.179.170/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>ICMP</p></td>
+<td class=3D"confluenceTd"><p>=E3=81=99=E3=81=B9=E3=81=A6</p></td>
+<td class=3D"confluenceTd"><p>=E8=A9=B2=E5=BD=93=E3=81=AA=E3=81=97</p></td>
+<td class=3D"confluenceTd"><p>211.128.86.128/27</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>ICMP</p></td>
+<td class=3D"confluenceTd"><p>=E3=81=99=E3=81=B9=E3=81=A6</p></td>
+<td class=3D"confluenceTd"><p>=E8=A9=B2=E5=BD=93=E3=81=AA=E3=81=97</p></td>
+<td class=3D"confluenceTd"><p>203.141.136.194/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>ICMP</p></td>
+<td class=3D"confluenceTd"><p>=E3=81=99=E3=81=B9=E3=81=A6</p></td>
+<td class=3D"confluenceTd"><p>=E8=A9=B2=E5=BD=93=E3=81=AA=E3=81=97</p></td>
+<td class=3D"confluenceTd"><p>124.38.245.90/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>ICMP</p></td>
+<td class=3D"confluenceTd"><p>=E3=81=99=E3=81=B9=E3=81=A6</p></td>
+<td class=3D"confluenceTd"><p>=E8=A9=B2=E5=BD=93=E3=81=AA=E3=81=97</p></td>
+<td class=3D"confluenceTd"><p>58.12.243.208/28</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>ICMP</p></td>
+<td class=3D"confluenceTd"><p>=E3=81=99=E3=81=B9=E3=81=A6</p></td>
+<td class=3D"confluenceTd"><p>=E8=A9=B2=E5=BD=93=E3=81=AA=E3=81=97</p></td>
+<td class=3D"confluenceTd"><p>221.245.235.248/29</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>ICMP</p></td>
+<td class=3D"confluenceTd"><p>=E3=81=99=E3=81=B9=E3=81=A6</p></td>
+<td class=3D"confluenceTd"><p>=E8=A9=B2=E5=BD=93=E3=81=AA=E3=81=97</p></td>
+<td class=3D"confluenceTd"><p>35.200.36.54/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>ICMP</p></td>
+<td class=3D"confluenceTd"><p>=E3=81=99=E3=81=B9=E3=81=A6</p></td>
+<td class=3D"confluenceTd"><p>=E8=A9=B2=E5=BD=93=E3=81=AA=E3=81=97</p></td>
+<td class=3D"confluenceTd"><p>35.200.63.242/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>ICMP</p></td>
+<td class=3D"confluenceTd"><p>=E3=81=99=E3=81=B9=E3=81=A6</p></td>
+<td class=3D"confluenceTd"><p>=E8=A9=B2=E5=BD=93=E3=81=AA=E3=81=97</p></td>
+<td class=3D"confluenceTd"><p>35.197.17.40/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>ICMP</p></td>
+<td class=3D"confluenceTd"><p>=E3=81=99=E3=81=B9=E3=81=A6</p></td>
+<td class=3D"confluenceTd"><p>=E8=A9=B2=E5=BD=93=E3=81=AA=E3=81=97</p></td>
+<td class=3D"confluenceTd"><p>221.115.122.18/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>ICMP</p></td>
+<td class=3D"confluenceTd"><p>=E3=81=99=E3=81=B9=E3=81=A6</p></td>
+<td class=3D"confluenceTd"><p>=E8=A9=B2=E5=BD=93=E3=81=AA=E3=81=97</p></td>
+<td class=3D"confluenceTd"><p>96.45.197.202/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>ICMP</p></td>
+<td class=3D"confluenceTd"><p>=E3=81=99=E3=81=B9=E3=81=A6</p></td>
+<td class=3D"confluenceTd"><p>=E8=A9=B2=E5=BD=93=E3=81=AA=E3=81=97</p></td>
+<td class=3D"confluenceTd"><p>72.138.67.80/29</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>ICMP</p></td>
+<td class=3D"confluenceTd"><p>=E3=81=99=E3=81=B9=E3=81=A6</p></td>
+<td class=3D"confluenceTd"><p>=E8=A9=B2=E5=BD=93=E3=81=AA=E3=81=97</p></td>
+<td class=3D"confluenceTd"><p>35.199.191.1/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>80</p></td>
+<td class=3D"confluenceTd"><p>221.245.250.58/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>80</p></td>
+<td class=3D"confluenceTd"><p>210.229.179.170/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>80</p></td>
+<td class=3D"confluenceTd"><p>211.128.86.128/27</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>80</p></td>
+<td class=3D"confluenceTd"><p>203.141.136.194/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>80</p></td>
+<td class=3D"confluenceTd"><p>124.38.245.90/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>80</p></td>
+<td class=3D"confluenceTd"><p>58.12.243.208/28</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>80</p></td>
+<td class=3D"confluenceTd"><p>221.245.235.248/29</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>80</p></td>
+<td class=3D"confluenceTd"><p>35.200.36.54/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>80</p></td>
+<td class=3D"confluenceTd"><p>35.200.63.242/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>80</p></td>
+<td class=3D"confluenceTd"><p>35.197.17.40/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>80</p></td>
+<td class=3D"confluenceTd"><p>221.115.122.18/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>80</p></td>
+<td class=3D"confluenceTd"><p>96.45.197.202/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>80</p></td>
+<td class=3D"confluenceTd"><p>72.138.67.80/29</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTP</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>80</p></td>
+<td class=3D"confluenceTd"><p>35.199.191.1/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTPS</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>443</p></td>
+<td class=3D"confluenceTd"><p>221.245.250.58/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTPS</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>443</p></td>
+<td class=3D"confluenceTd"><p>210.229.179.170/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTPS</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>443</p></td>
+<td class=3D"confluenceTd"><p>211.128.86.128/27</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTPS</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>443</p></td>
+<td class=3D"confluenceTd"><p>203.141.136.194/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTPS</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>443</p></td>
+<td class=3D"confluenceTd"><p>124.38.245.90/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTPS</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>443</p></td>
+<td class=3D"confluenceTd"><p>58.12.243.208/28</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTPS</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>443</p></td>
+<td class=3D"confluenceTd"><p>221.245.235.248/29</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTPS</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>443</p></td>
+<td class=3D"confluenceTd"><p>35.200.36.54/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTPS</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>443</p></td>
+<td class=3D"confluenceTd"><p>35.200.63.242/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTPS</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>443</p></td>
+<td class=3D"confluenceTd"><p>35.197.17.40/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTPS</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>443</p></td>
+<td class=3D"confluenceTd"><p>221.115.122.18/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTPS</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>443</p></td>
+<td class=3D"confluenceTd"><p>96.45.197.202/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTPS</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>443</p></td>
+<td class=3D"confluenceTd"><p>72.138.67.80/29</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>HTTPS</p></td>
+<td class=3D"confluenceTd"><p>TCP</p></td>
+<td class=3D"confluenceTd"><p>443</p></td>
+<td class=3D"confluenceTd"><p>35.199.191.1/32</p></td>
+<td class=3D"confluenceTd"><p>JIG-SAW_Allow</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p></p>
+<p><strong>stella-prod-vpc-internal-all </strong></p>
+<p><strong>=E3=80=80(=E3=82=BB=E3=82=AD=E3=83=A5=E3=83=AA=E3=83=86=E3=82=A3=
+=E3=82=B0=E3=83=AB=E3=83=BC=E3=83=97 ID=EF=BC=9Asg-07c804f0232613ec8)</stro=
+ng></p>
+<p>=E3=80=80<strong>VPC=E5=86=85=E5=85=A8=E8=A8=B1=E5=8F=AF</strong></p>
+<div class=3D"table-wrap">
+<table data-layout=3D"default" class=3D"confluenceTable">
+<tbody>
+<tr>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E3=
+=82=BF=E3=82=A4=E3=83=97</strong></p></td>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E3=
+=83=97=E3=83=AD=E3=83=88=E3=82=B3=E3=83=AB</strong></p></td>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E3=
+=83=9D=E3=83=BC=E3=83=88=E7=AF=84=E5=9B=B2</strong></p></td>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E9=
+=80=81=E4=BF=A1=E5=85=83</strong></p></td>
+<td data-highlight-colour=3D"#deebff" class=3D"confluenceTd"><p><strong>=E5=
+=82=99=E8=80=83</strong></p></td>
+</tr>
+<tr>
+<td class=3D"confluenceTd"><p>=E3=81=99=E3=81=B9=E3=81=A6=E3=81=AE=E3=83=88=
+=E3=83=A9=E3=83=95=E3=82=A3=E3=83=83=E3=82=AF</p></td>
+<td class=3D"confluenceTd"><p>=E3=81=99=E3=81=B9=E3=81=A6</p></td>
+<td class=3D"confluenceTd"><p>=E3=81=99=E3=81=B9=E3=81=A6</p></td>
+<td class=3D"confluenceTd"><p>10.82.4.0/23</p></td>
+<td class=3D"confluenceTd"><p>VPC=E5=86=85=E5=85=A8=E8=A8=B1=E5=8F=AF</p></=
+td>
+</tr>
+</tbody>
+</table>
+</div>
+<p></p>
+<hr>
+<p>&nbsp;</p>
+<p></p>
+    </div>
+</body>
+</html>
+------=_Part_46_996587624.1584001420257--
