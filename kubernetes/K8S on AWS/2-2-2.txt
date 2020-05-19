@@ -1,0 +1,95 @@
+1.クラスターの作成
+
+	eksctl create cluster --vpc-public-subnets subnet-0a79ea6450fa866b0,subnet-06f2a18c233343643,subnet-052b9843fa715fbd8 --name eks-work-cluster --region ap-northeast-1 --without-nodegroup
+
+	削除）eksctl delete cluster --name eks-work-cluster --wait
+
+
+	参考）CloudFormationで、eksctl-eks-work-cluster-cluster スタックが作成される。
+		出力）
+		ARN	arn:aws:eks:ap-northeast-1:455488190385:cluster/eks-work-cluster	-	eksctl-eks-work-cluster-cluster::ARN
+		CertificateAuthorityData	LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJd01EVXhPVEF6TlRJMU1sb1hEVE13TURVeE56QXpOVEkxTWxvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTlNICktTYjdwTVRGT2VTNEJCeDJ1dittT3pOaGFZYWFJRDNCNW15RTRBUStoblkvQ3N6Y3I3WEVTcDVNY2JvbUpGL0YKN01BTzBWUDJYMEwzS01pNERlRXFhUlQ5WElDQ1YxSlU5OTIvTS9SOVB5YmI4V25LOFNHNzZ0NEtKL25EcUVneQovTFFueU5jbWlpUGppS2JwRG9uWHQ0TjRxdUpHSzZremxLSEF1Nmk2N3VyYlN5aUltT2VKc1dpa2szWnNBVSszCmJIN1dxK0JjMXgzSTRHUGJkelhHYjFSVUdKQ3E2UTIyNUpBMGlWb2pmbXJJQ2VpTmFjTUVPeHVseGNTZ1djUFgKNGxYa0xiZ2lkaG1IUnlxcjk1Q2FQMWZCU1pTdDh0UGczaFE0S0JyUWJKRXd1NVlIaU9IYnZ3a0ZTdDBKTjBmOAp6VTRJcDZHdzU3SzVSRkdyVDJjQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFIdHV2ZC84blI2ZHFlblJkSlJLV1loclJmR24KVGVJSFNFaGdNV050Q0pNODBJVWNMOE1YdS9XM01YUTg3OWFiRFUvckxIeE1Qd2RFL3ViWnF1RnZ2WjE5aHh2VApJenBVNU1Na2dYZVRIZkhSTDVNU284TkZxQW85WmI5VytTUEp5MGVCRGV4K213eFVaRkxxZk5Yak5yUGk2aDRZCmNsTGpvWTVncEw3amV1RkJhUzVNVUJ1aDZjS2pJTlBjcGRXcWR2MHpCREVtc2l5MllMK2wvUTkxa3ZqVmVoWU4KcVp3SGJLem9uZlFuYk5RMW5hNGtjc0RvenVyeWdndVg4WUxzMnhLc1F5YUk4ZlorM2VLbGdDRkcwZEUvZ0RldgpnYzVlZTdwajJPZHd0YTNSUkdITkxFdVFDZ2hQc3lEb1E0Qml6c1NGL0pmejFXNGc5SGljZzd0RWF0az0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=	-	-
+		ClusterSecurityGroupId	sg-0422fa0d5d97996a9	-	eksctl-eks-work-cluster-cluster::ClusterSecurityGroupId
+		ClusterStackName	eksctl-eks-work-cluster-cluster	-	-
+		Endpoint	https://24E16F0BB311C69D1B969465D5420308.gr7.ap-northeast-1.eks.amazonaws.com	-	eksctl-eks-work-cluster-cluster::Endpoint
+		FeatureNATMode	Disable	-	-
+		SecurityGroup	sg-056ffcad1470cf6b6	-	eksctl-eks-work-cluster-cluster::SecurityGroup
+		ServiceRoleARN	arn:aws:iam::455488190385:role/eksctl-eks-work-cluster-cluster-ServiceRole-DITKCVVJCGTR	-	eksctl-eks-work-cluster-cluster::ServiceRoleARN
+		SharedNodeSecurityGroup	sg-02573c778cc6e93c1	-	eksctl-eks-work-cluster-cluster::SharedNodeSecurityGroup
+		SubnetsPublic	subnet-052b9843fa715fbd8,subnet-06f2a18c233343643,subnet-0a79ea6450fa866b0	-	eksctl-eks-work-cluster-cluster::SubnetsPublic
+		VPC	vpc-069b37fe7215082b5
+
+２．サブネットの設定の変更
+
+	eksctl utils update-legacy-subnet-settings --cluster eks-work-cluster
+
+３．ノードグループ、ノードの追加
+
+	eksctl create nodegroup --cluster eks-work-cluster --name eks-work-nodegroup --node-type t2.small --nodes 2 --nodes-min 2 --nodes-max 5
+
+	削除）eksctl delete nodegroup --cluster eks-work-cluster --name eks-work-nodegroup --wait
+
+	参考）CloudFormationで、eksctl-eks-work-cluster-nodegroup-eks-work-nodegroup スタックが作成される。
+		出力）
+		FeatureLocalSecurityGroup	true	-	-
+		FeaturePrivateNetworking	false	-	-
+		FeatureSharedSecurityGroup	true	-	-
+		InstanceProfileARN	arn:aws:iam::455488190385:instance-profile/eksctl-eks-work-cluster-nodegroup-eks-work-nodegroup-NodeInstanceProfile-2UOWV17N7XGT	-	eksctl-eks-work-cluster-nodegroup-eks-work-nodegroup::InstanceProfileARN
+		InstanceRoleARN	arn:aws:iam::455488190385:role/eksctl-eks-work-cluster-nodegroup-NodeInstanceRole-154ZBCLAAMBGW	
+
+
+参考）クラスタの作成＋ノードグループを纏めてなるとエラーになった。
+
+	Error: timed out (after 25m0s) waiting for at least 2 nodes to join the cluster and become ready in
+
+
+参考）AWSネットワーク情報
+
+RouteTable	rtb-0e64767b246549729	-	-
+VPC	vpc-069b37fe7215082b5	-	-
+WorkerSubnets	subnet-0a79ea6450fa866b0,subnet-06f2a18c233343643,subnet-052b9843fa715fbd8
+
+
+４．コンテキストの確認
+
+	>kubectl config get-contexts
+	CURRENT   NAME                                              CLUSTER                                     AUTHINFO                                          NAMESPACE
+	*         admin@eks-work-cluster.ap-northeast-1.eksctl.io   eks-work-cluster.ap-northeast-1.eksctl.io   admin@eks-work-cluster.ap-northeast-1.eksctl.io
+
+５．ノードの確認
+
+	>kubectl get nodes
+	NAME                                               STATUS   ROLES    AGE   VERSION
+	ip-192-168-0-158.ap-northeast-1.compute.internal   Ready    <none>   26m   v1.15.11-eks-af3caf
+	ip-192-168-1-224.ap-northeast-1.compute.internal   Ready    <none>   26m   v1.15.11-eks-af3caf
+
+６．PODの追加（NGINX）
+
+	>kubectl apply -f "02_nginx_k8s.yaml"
+	pod/nginx-pod created
+
+７．PODの確認
+
+	>kubectl get pods
+	NAME        READY   STATUS    RESTARTS   AGE
+	nginx-pod   1/1     Running   0          18m
+
+８．IPフォワードの設定（8080から80へのフォワーディング）
+
+	>kubectl port-forward nginx-pod 8080:80
+	Forwarding from 127.0.0.1:8080 -> 80
+	Forwarding from [::1]:8080 -> 80
+
+９．ブラウザで動作確認
+
+	http://localhot:8080/
+
+	上記にアクセスすると、NGINX PODのWebサーバーのデフォルトページが表示される。
+
+１０．PODの削除
+
+>kubectl delete pod nginx-pod
+pod "nginx-pod" deleted
+
+
+	
