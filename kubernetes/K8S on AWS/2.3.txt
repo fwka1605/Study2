@@ -1,0 +1,35 @@
+１．RDSのエンドポイント
+
+	RDSEndpoint	eks-work-db.cz0rgrx9quyk.ap-northeast-1.rds.amazonaws.com	
+
+２．DB接続情報をSecretManagerから取得する。
+
+	{
+	  "password": "sG<]gG%Y2H;19P2h",
+	  "dbname": "eksworkdb",
+	  "engine": "postgres",
+	  "port": 5432,
+	  "host": "eks-work-db.cz0rgrx9quyk.ap-northeast-1.rds.amazonaws.com",
+	  "username": "eksdbadmin"
+	}
+
+３．アプリケーションユーザー用の情報をSecretManagerから取得する。
+
+	{
+	  "password": "W~5QiN?e$7uuxCbS",
+	  "username": "mywork"
+	}
+
+４．DBユーザーの作成
+
+createuser -d -U eksdbadmin -P -h eks-work-db.cz0rgrx9quyk.ap-northeast-1.rds.amazonaws.com mywork
+
+５．DBの作成
+
+createdb -U mywork -h eks-work-db.cz0rgrx9quyk.ap-northeast-1.rds.amazonaws.com mywork -E UTF8 myworkdb
+
+６．DBへの接続
+
+psql -U mywork -h eks-work-db.cz0rgrx9quyk.ap-northeast-1.rds.amazonaws.com mywork 
+
+
