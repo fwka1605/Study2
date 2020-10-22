@@ -1,9 +1,10 @@
-nest_list = [
-    [0,9],
-    [1,8],
-    [2,7],
-    [4,5],
-    [3,6],
-]
+import pandas as pd
 
-print(sorted(nest_list,key=lambda x:x[1]))
+df =pd.read_csv("http://archive.ics.uci.edu/ml/machine-learning-databases/wine/wine.data",header=None)
+
+df.columns = ["","Alcohol","Malic acid","Ash","Alcalinity of ash","Magnesium","Total phenols", \
+            "Flavanoids","Nonflavanoid phenols","Proanthocyanins","Color intensity","Hue", \
+            "OD280/OD315 of diluted wines","Proline"]
+
+print(df)
+
